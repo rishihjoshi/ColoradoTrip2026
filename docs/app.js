@@ -27,17 +27,8 @@ const WMO_ICONS = {
   95:'⛈', 96:'⛈', 99:'⛈',
 };
 
-const WMO_DESC = {
-  0:'Clear sky', 1:'Mainly clear', 2:'Partly cloudy', 3:'Overcast',
-  45:'Foggy', 48:'Foggy', 51:'Light drizzle', 53:'Drizzle', 55:'Heavy drizzle',
-  61:'Light rain', 63:'Rain', 65:'Heavy rain', 71:'Light snow', 73:'Snow',
-  75:'Heavy snow', 80:'Rain showers', 81:'Heavy showers', 82:'Violent showers',
-  95:'Thunderstorm', 96:'Thunderstorm', 99:'Thunderstorm',
-};
-
-const TRIP_START = new Date('2026-06-19T00:00:00-06:00');
-const TRIP_END   = new Date('2026-06-24T23:59:59-06:00');
-const FORECAST_WINDOW_MS = 16 * 24 * 60 * 60 * 1000;
+const TRIP_DATES = { start: '2026-06-19', end: '2026-06-24' };
+const FORECAST_DAYS = 16;
 
 const RESERVATION_ITEMS = [
   { id: 'res1', title: 'Maroon Bells — Round Trip Shuttle', category: 'Hiking',    date: 'June 22, 2026', refNote: '9:00 AM reservation · visitmaroonbells.com', status: 'confirmed', pdfPath: './assets/r8xKq2mP/CMBR.pdf',  pdfLabel: 'View Ticket (CMBR.pdf)' },
@@ -106,6 +97,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 function setupNavigation() {
   document.querySelectorAll('.nav-item').forEach(btn => {
     btn.addEventListener('click', () => switchTab(btn.dataset.tab));
+  });
+
+  // Delegated handler for Book Now chips (avoids inline onclick in innerHTML)
+  document.getElementById('main-content').addEventListener('click', e => {
+    const chip = e.target.closest('.status-book-now[data-url]');
+    if (chip && chip.dataset.url) window.open(chip.dataset.url, '_blank', 'noopener,noreferrer');
   });
 }
 
@@ -336,7 +333,7 @@ function buildStatusChip(act) {
   if (!s) return '';
   const labels = {
     'confirmed':  '<span class="status-chip status-confirmed">✓ Confirmed</span>',
-    'book-now':   `<span class="status-chip status-book-now" onclick="window.open('${act.bookingUrl||'#'}','_blank')">⚡ Book Now</span>`,
+    'book-now':   `<span class="status-chip status-book-now" data-url="${act.bookingUrl||''}" role="button" tabindex="0">⚡ Book Now</span>`,
     'optional':   '<span class="status-chip status-optional">Optional</span>',
     'free':       '<span class="status-chip status-free">Free Entry</span>',
     'included':   '<span class="status-chip status-included">✓ Included</span>',
