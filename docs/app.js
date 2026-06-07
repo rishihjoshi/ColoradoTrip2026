@@ -40,11 +40,13 @@ const TRIP_END   = new Date('2026-06-24T23:59:59-06:00');
 const FORECAST_WINDOW_MS = 16 * 24 * 60 * 60 * 1000;
 
 const RESERVATION_ITEMS = [
-  { id: 'res1', title: 'Maroon Bells — Round Trip Shuttle', category: 'Hiking',    date: 'June 22, 2026', refNote: '8:00 AM shuttle · visitmaroonbells.com',        status: 'book-now',  bookingUrl: 'https://www.visitmaroonbells.com' },
-  { id: 'res2', title: 'Pikes Peak Cog Railway',           category: 'Train',     date: 'June 20, 2026', refNote: '9:00 AM departure · cograilway.com',            status: 'book-now',  bookingUrl: 'https://www.cograilway.com' },
-  { id: 'res3', title: 'Residence Inn Glenwood Springs',   category: 'Hotel',     date: 'Jun 21-23, 2026', refNote: 'Confirmation: 73462520918893',                status: 'confirmed' },
-  { id: 'res4', title: 'Glenwood Hot Springs Lodge',       category: 'Hotel',     date: 'Jun 23-24, 2026', refNote: 'Ground floor, patio side · 1-800-537-7946',   status: 'book-now',  bookingUrl: 'https://reservations.hotspringspool.com' },
-  { id: 'res5', title: 'Blue Sky Adventures — Rafting',    category: 'Activity',  date: 'June 23, 2026', refNote: '9:00 AM · Half-day Shoshone Rapids',            status: 'book-now',  bookingUrl: 'https://blueskyrafting.com' },
+  { id: 'res1', title: 'Maroon Bells — Round Trip Shuttle', category: 'Hiking',    date: 'June 22, 2026', refNote: '9:00 AM reservation · visitmaroonbells.com', status: 'confirmed', pdfPath: './assets/r8xKq2mP/CMBR.pdf',  pdfLabel: 'View Ticket (CMBR.pdf)' },
+  { id: 'res2', title: 'Pikes Peak Cog Railway',            category: 'Train',     date: 'June 20, 2026', refNote: '9:00 AM departure · cograilway.com',          status: 'confirmed', pdfPath: './assets/r8xKq2mP/PPCRT.pdf', pdfLabel: 'View Ticket (PPCRT.pdf)' },
+  { id: 'res3', title: 'Quality Inn & Suites Denver Airport', category: 'Hotel',   date: 'Jun 19, 2026',  refNote: 'Expedia Conf: 73462444560278 · 6890 Tower Rd', status: 'confirmed' },
+  { id: 'res4', title: 'Academy Hotel Colorado Springs',    category: 'Hotel',     date: 'Jun 20, 2026',  refNote: 'Expedia Conf: 73462463671459 · 8110 N Academy Blvd', status: 'confirmed' },
+  { id: 'res5', title: 'Residence Inn Glenwood Springs',    category: 'Hotel',     date: 'Jun 21-23, 2026', refNote: 'Expedia Conf: 73462520918893 · 125 Wulfsohn Rd', status: 'confirmed' },
+  { id: 'res6', title: 'Glenwood Hot Springs Resort',       category: 'Hotel',     date: 'Jun 23-24, 2026', refNote: 'Conf: 1042873 · 415 E 6th St · 1-800-537-7946', status: 'confirmed' },
+  { id: 'res7', title: 'Blue Sky Adventures — Rafting',     category: 'Activity',  date: 'June 23, 2026', refNote: '9:00 AM · Half-day Shoshone Rapids · Class III', status: 'book-now',  bookingUrl: 'https://blueskyrafting.com' },
 ];
 
 const ACTIVITIES_DATA = [
@@ -1043,6 +1045,10 @@ function buildResCard(item) {
     ? `<a href="${item.bookingUrl}" target="_blank" rel="noopener" class="btn-mini gold">⚡ Book Now</a>`
     : '';
 
+  const pdfBtn = item.pdfPath
+    ? `<a href="${item.pdfPath}" target="_blank" rel="noopener" class="btn-mini gold">📄 ${item.pdfLabel || 'View Ticket'}</a>`
+    : '';
+
   card.innerHTML = `
     <div class="res-card-top">
       <span class="res-category">${item.category}</span>
@@ -1051,6 +1057,7 @@ function buildResCard(item) {
     <div class="res-title">${item.title}</div>
     <div class="res-date">${item.date}</div>
     <div class="res-ref">${item.refNote}</div>
+    ${pdfBtn ? `<div class="res-btns" style="margin-top:8px">${pdfBtn}</div>` : ''}
     ${imgHtml}
     ${bookBtn ? `<div class="res-btns">${bookBtn}</div>` : ''}
   `;

@@ -1,29 +1,165 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="80" fill="#1a2e1f"/>
-  <!-- Sun -->
-  <circle cx="256" cy="140" r="38" fill="#c8973a"/>
-  <!-- Sun rays -->
-  <g stroke="#c8973a" stroke-width="6" stroke-linecap="round">
-    <line x1="256" y1="85" x2="256" y2="68"/>
-    <line x1="256" y1="195" x2="256" y2="212"/>
-    <line x1="301" y1="95" x2="313" y2="83"/>
-    <line x1="211" y1="95" x2="199" y2="83"/>
-    <line x1="311" y1="140" x2="328" y2="140"/>
-    <line x1="201" y1="140" x2="184" y2="140"/>
-    <line x1="301" y1="185" x2="313" y2="197"/>
-    <line x1="211" y1="185" x2="199" y2="197"/>
+  <defs>
+    <clipPath id="rounded"><rect width="512" height="512" rx="90"/></clipPath>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3a6e9e"/>
+      <stop offset="55%" stop-color="#2a5278"/>
+      <stop offset="100%" stop-color="#1a3550"/>
+    </linearGradient>
+    <linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5dc8c8"/>
+      <stop offset="100%" stop-color="#3a9898"/>
+    </linearGradient>
+    <linearGradient id="snowGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#dde8f0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <g clip-path="url(#rounded)">
+    <!-- Sky -->
+    <rect width="512" height="380" fill="url(#skyGrad)"/>
+    <!-- Bottom banner background -->
+    <rect y="370" width="512" height="142" fill="#1a3550"/>
+
+    <!-- Sun (left side) -->
+    <circle cx="95" cy="75" r="28" fill="#f0c040"/>
+    <g stroke="#f0c040" stroke-width="4" stroke-linecap="round">
+      <line x1="95" y1="35" x2="95" y2="22"/>
+      <line x1="95" y1="115" x2="95" y2="128"/>
+      <line x1="55" y1="75" x2="42" y2="75"/>
+      <line x1="135" y1="75" x2="148" y2="75"/>
+      <line x1="67" y1="47" x2="58" y2="38"/>
+      <line x1="123" y1="103" x2="132" y2="112"/>
+      <line x1="123" y1="47" x2="132" y2="38"/>
+      <line x1="67" y1="103" x2="58" y2="112"/>
+    </g>
+
+    <!-- Moon (right side) -->
+    <path d="M415 45 Q445 60 445 90 Q445 120 415 130 Q440 118 448 95 Q456 70 440 52 Z" fill="#e8d890" opacity="0.9"/>
+    <!-- Stars -->
+    <circle cx="390" cy="52" r="3" fill="#ffffff" opacity="0.9"/>
+    <circle cx="470" cy="48" r="2" fill="#ffffff" opacity="0.8"/>
+    <circle cx="460" cy="72" r="2.5" fill="#ffffff" opacity="0.7"/>
+    <circle cx="375" cy="88" r="2" fill="#ffffff" opacity="0.6"/>
+
+    <!-- Mountain range back (lighter, snowy) -->
+    <polygon points="80,260 200,100 310,220 420,110 512,200 512,320 0,320" fill="#2a4860" opacity="0.6"/>
+
+    <!-- Left mountain peak (with snow) -->
+    <polygon points="30,320 165,95 260,240 200,320" fill="#3a5570"/>
+    <polygon points="165,95 140,148 165,138 192,148" fill="url(#snowGrad)"/>
+    <!-- Left mountain rocky detail -->
+    <polygon points="165,95 140,148 150,155 175,148 192,148" fill="#8a7060" opacity="0.5"/>
+
+    <!-- Center mountain peak (largest, with snow) -->
+    <polygon points="120,320 256,70 390,320" fill="#4a6880"/>
+    <polygon points="256,70 222,138 256,126 290,138" fill="url(#snowGrad)"/>
+    <!-- Snow detail -->
+    <polygon points="256,70 230,120 240,128 256,120 272,128 282,120" fill="white" opacity="0.9"/>
+
+    <!-- Right mountain peak -->
+    <polygon points="290,320 380,128 460,320 512,320" fill="#3a5570"/>
+    <polygon points="380,128 360,170 380,162 400,170" fill="url(#snowGrad)"/>
+
+    <!-- Pine trees left -->
+    <polygon points="40,320 60,270 80,320" fill="#2a5a30"/>
+    <polygon points="55,300 70,258 85,300" fill="#2a5a30"/>
+    <polygon points="25,310 45,272 65,310" fill="#336038"/>
+
+    <!-- Pine trees right -->
+    <polygon points="430,320 452,268 474,320" fill="#2a5a30"/>
+    <polygon points="450,305 468,262 486,305" fill="#2a5a30"/>
+    <polygon points="415,315 433,275 451,315" fill="#336038"/>
+
+    <!-- Orange/terrain diagonal band -->
+    <polygon points="200,280 400,220 512,290 512,330 120,330" fill="#c87830" opacity="0.75"/>
+
+    <!-- Train track (diagonal) -->
+    <g transform="translate(280,195) rotate(-22)">
+      <rect x="-10" y="0" width="160" height="6" fill="#8a7050" rx="2"/>
+      <rect x="-10" y="14" width="160" height="6" fill="#8a7050" rx="2"/>
+      <!-- Ties -->
+      <rect x="0"   y="-4" width="8" height="24" fill="#6a5040" rx="1"/>
+      <rect x="24"  y="-4" width="8" height="24" fill="#6a5040" rx="1"/>
+      <rect x="48"  y="-4" width="8" height="24" fill="#6a5040" rx="1"/>
+      <rect x="72"  y="-4" width="8" height="24" fill="#6a5040" rx="1"/>
+      <rect x="96"  y="-4" width="8" height="24" fill="#6a5040" rx="1"/>
+      <rect x="120" y="-4" width="8" height="24" fill="#6a5040" rx="1"/>
+    </g>
+
+    <!-- Steam locomotive -->
+    <g transform="translate(335,188)">
+      <!-- Cab/body -->
+      <rect x="0" y="8" width="55" height="32" fill="#c84030" rx="4"/>
+      <!-- Cab window -->
+      <rect x="5" y="12" width="14" height="16" fill="#f8d890" rx="2"/>
+      <!-- Boiler -->
+      <rect x="52" y="14" width="38" height="22" fill="#b03020" rx="8"/>
+      <!-- Smokestack -->
+      <rect x="76" y="2" width="10" height="14" fill="#5a3020" rx="2"/>
+      <rect x="73" y="0" width="16" height="5" fill="#6a4030" rx="2"/>
+      <!-- Smoke puffs -->
+      <circle cx="81" cy="-5" r="6" fill="#c8c8c8" opacity="0.7"/>
+      <circle cx="88" cy="-10" r="5" fill="#b8b8b8" opacity="0.5"/>
+      <!-- Wheels -->
+      <circle cx="14" cy="42" r="9" fill="#6a4030" stroke="#8a5040" stroke-width="2"/>
+      <circle cx="14" cy="42" r="4" fill="#c84030"/>
+      <circle cx="36" cy="42" r="9" fill="#6a4030" stroke="#8a5040" stroke-width="2"/>
+      <circle cx="36" cy="42" r="4" fill="#c84030"/>
+      <circle cx="72" cy="42" r="7" fill="#6a4030" stroke="#8a5040" stroke-width="2"/>
+      <circle cx="72" cy="42" r="3" fill="#b03020"/>
+    </g>
+
+    <!-- Hot springs pool / rocks -->
+    <!-- Rock surround -->
+    <ellipse cx="256" cy="340" rx="145" ry="58" fill="#c87838"/>
+    <ellipse cx="256" cy="340" rx="128" ry="48" fill="#d89050"/>
+    <!-- Pool water -->
+    <ellipse cx="256" cy="336" rx="108" ry="36" fill="url(#waterGrad)"/>
+    <!-- Water ripple -->
+    <ellipse cx="256" cy="336" rx="80" ry="14" fill="none" stroke="#7adcdc" stroke-width="1.5" opacity="0.5"/>
+    <!-- Small waterfall left -->
+    <path d="M148 295 Q155 310 150 328" stroke="#5dc8c8" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.8"/>
+
+    <!-- 3 Family figures in pool (just heads + shoulders) -->
+    <!-- Father (left) -->
+    <circle cx="210" cy="318" r="16" fill="#f0b090"/>
+    <!-- hair -->
+    <path d="M195 310 Q210 298 225 310" fill="#5a3820" stroke="none"/>
+    <!-- smile -->
+    <path d="M204 322 Q210 327 216 322" stroke="#8a5040" stroke-width="1.5" fill="none"/>
+    <!-- shoulders in water -->
+    <ellipse cx="210" cy="337" rx="24" ry="12" fill="#f0b090" opacity="0.6"/>
+
+    <!-- Daughter (center, smaller) -->
+    <circle cx="258" cy="320" r="13" fill="#f0c0a0"/>
+    <!-- pigtail bumps -->
+    <circle cx="246" cy="310" r="5" fill="#8a4020"/>
+    <circle cx="270" cy="310" r="5" fill="#8a4020"/>
+    <path d="M252 324 Q258 328 264 324" stroke="#8a5040" stroke-width="1.5" fill="none"/>
+    <ellipse cx="258" cy="336" rx="20" ry="10" fill="#f0c0a0" opacity="0.6"/>
+
+    <!-- Mother (right) -->
+    <circle cx="305" cy="318" r="16" fill="#f0b090"/>
+    <!-- hair -->
+    <path d="M290 305 Q305 295 320 308 Q316 316 305 315 Q295 316 290 305 Z" fill="#5a3020"/>
+    <!-- ponytail -->
+    <path d="M318 310 Q325 318 320 328" stroke="#5a3020" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M299 322 Q305 327 311 322" stroke="#8a5040" stroke-width="1.5" fill="none"/>
+    <ellipse cx="305" cy="337" rx="24" ry="12" fill="#f0b090" opacity="0.6"/>
+
+    <!-- Banner background line -->
+    <rect y="372" width="512" height="3" fill="#c87830" opacity="0.5"/>
+
+    <!-- "COLORADO" text -->
+    <text x="256" y="432" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="64" fill="white" text-anchor="middle" letter-spacing="2">COLORADO</text>
+
+    <!-- "FAMILY TRIP" text -->
+    <text x="256" y="475" font-family="Arial, sans-serif" font-weight="400" font-size="32" fill="#c8d8e8" text-anchor="middle" letter-spacing="4">FAMILY TRIP</text>
+
+    <!-- Border highlight -->
+    <rect width="512" height="512" rx="90" fill="none" stroke="white" stroke-width="8" opacity="0.15"/>
   </g>
-  <!-- Mountain range -->
-  <!-- Left small peak -->
-  <polygon points="90,370 190,230 260,310 195,370" fill="#2e5235"/>
-  <!-- Center large peak -->
-  <polygon points="150,370 256,180 362,370" fill="#4a7c5a"/>
-  <!-- Right small peak -->
-  <polygon points="252,370 322,250 420,370" fill="#2e5235"/>
-  <!-- Snow caps -->
-  <polygon points="256,180 228,230 256,222 284,230" fill="#f5efe3"/>
-  <polygon points="190,230 178,255 190,250 205,255" fill="#f5efe3"/>
-  <polygon points="322,250 312,270 322,266 334,270" fill="#f5efe3"/>
-  <!-- Ground line -->
-  <rect x="60" y="368" width="392" height="8" rx="4" fill="#c8973a" opacity="0.6"/>
 </svg>

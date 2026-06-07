@@ -32,11 +32,13 @@
       "badgeColor": "sky",
       "weatherLocationKey": 1,
       "hotel": {
-        "name": "Hyatt Place Denver Airport",
-        "address": "18300 E 68th Ave, Denver, CO 80249",
-        "phone": "+13034757015",
+        "name": "Quality Inn & Suites Denver International Airport",
+        "address": "6890 Tower Rd, Denver, CO 80249",
+        "phone": "+13037819300",
         "checkIn": "Late — ~1:00 AM",
-        "nights": 1
+        "nights": 1,
+        "confirmationNumber": "73462444560278",
+        "bookingSource": "Expedia"
       },
       "activities": [
         {
@@ -63,10 +65,10 @@
         {
           "id": "d1-a3",
           "time": "1:00 AM",
-          "title": "Check Into Hyatt Place Denver Airport",
+          "title": "Check Into Quality Inn & Suites Denver Airport",
           "description": "Sleep. Early checkout tomorrow 7:00 AM for Pikes Peak drive.",
-          "address": "18300 E 68th Ave, Denver, CO 80249",
-          "phone": "+13034757015",
+          "address": "6890 Tower Rd, Denver, CO 80249",
+          "phone": "+13037819300",
           "type": "hotel",
           "bookingStatus": "confirmed",
           "icon": "🏨"
@@ -88,6 +90,8 @@
         "phone": "+17195985770",
         "checkIn": "5:30 PM",
         "nights": 1,
+        "confirmationNumber": "73462463671459",
+        "bookingSource": "Expedia",
         "notes": "Free made-to-order breakfast. Indoor pool. Request upper floor. 20-30 min to Cog Railway."
       },
       "activities": [
@@ -174,11 +178,11 @@
       "day": 3,
       "date": "2026-06-21",
       "dayOfWeek": "Sunday",
-      "title": "Colorado Springs → Vail Farmers Market → Glenwood Springs",
+      "title": "Colorado Springs → Buena Vista → Twin Lakes → Glenwood Springs",
       "badge": "Scenic Drive",
       "badgeColor": "forest",
       "weatherLocationKey": 3,
-      "driveFromPrevious": { "duration": "4 hrs total", "distance": "214 miles", "via": "I-25 N → I-70 W" },
+      "driveFromPrevious": { "duration": "4 hrs total", "distance": "214 miles", "via": "Hwy 24 W → Hwy 285 N → Hwy 24 W → I-70 W" },
       "hotel": {
         "name": "Residence Inn by Marriott Glenwood Springs",
         "address": "125 Wulfsohn Road, Glenwood Springs, CO 81601",
@@ -191,38 +195,56 @@
       "activities": [
         {
           "id": "d3-a1",
-          "time": "10:00 AM",
-          "title": "Late Start — Leave Colorado Springs",
-          "description": "Intentionally late start after hectic Day 2. Grab breakfast at hotel. Drive I-25 N to I-70 W toward Vail.",
+          "time": "8:00 AM",
+          "title": "Depart Colorado Springs — Scenic Drive via Buena Vista",
+          "description": "Head west on Hwy 24 through Colorado's most dramatic mountain pass country. The route via Buena Vista and Twin Lakes is far more scenic than I-70 and only marginally longer. You'll pass the Collegiate Peaks (Harvard, Yale, Oxford, Columbia — all 14ers).",
           "address": "Colorado Springs, CO",
           "type": "drive",
           "icon": "🚗",
-          "driveInfo": { "duration": "2h 30m to Vail", "via": "I-25 N → I-70 W" }
+          "driveInfo": { "duration": "4 hrs total to Glenwood", "via": "Hwy 24 W → Buena Vista → Twin Lakes → Independence Pass or Hwy 82 → Glenwood" }
         },
         {
           "id": "d3-a2",
-          "time": "12:30 PM",
-          "title": "Vail Farmers Market & Art Show",
-          "description": "2026 season: Every Sunday June 14 – October 4, 9:30AM–3PM. East Meadow Drive, Vail Village. Fresh Colorado produce, artisan foods, handmade goods, fine art, live music, kids activities. Parking at Vail Village Parking or Lionshead Parking. Tip: bring cash — many vendors don't take cards.",
-          "address": "East Meadow Drive, Vail Village, Vail, CO 81657",
-          "website": "https://www.vailfarmersmarket.com",
+          "time": "10:00 AM",
+          "title": "Buena Vista — Coffee + Stretch",
+          "description": "Charming mountain town on the Arkansas River. Stop at Eddyline Brewery or Deerhammer for coffee and a stretch. Main Street has great views of the Collegiate Peaks. Quick 20 min stop.",
+          "address": "Buena Vista, CO 81211",
           "type": "activity",
           "bookingStatus": "free",
-          "icon": "🌿",
-          "duration": "2 hrs",
-          "cost": "Free entry",
-          "tips": ["Bring cash — many vendors don't take cards", "Market closes at 3PM — arrive by 12:30PM for 2 full hours", "Sunday June 21 confirmed in 2026 season"],
-          "flag": { "type": "info", "text": "Last entry to market comfortably 2PM. Leave by 3PM to reach Glenwood by 4PM." }
+          "icon": "☕",
+          "duration": "20 min",
+          "cost": "Free to stop"
         },
         {
           "id": "d3-drive1",
           "type": "drive-connector",
-          "duration": "1 hr",
-          "distance": "55 miles",
-          "via": "I-70 W through Glenwood Canyon"
+          "duration": "30 min",
+          "distance": "20 miles",
+          "via": "Hwy 24 W to Twin Lakes"
         },
         {
           "id": "d3-a3",
+          "time": "10:45 AM",
+          "title": "Twin Lakes — Photo Stop",
+          "description": "Two stunning glacial lakes at the base of Mount Elbert (Colorado's highest peak at 14,440 ft). The reflection of the mountains in the lake is iconic. Short walk along the lake shore. 20-30 min stop. This is genuinely one of Colorado's most photogenic spots.",
+          "address": "Twin Lakes, CO 81251",
+          "type": "activity",
+          "bookingStatus": "free",
+          "icon": "🏔",
+          "duration": "30 min",
+          "cost": "Free",
+          "tips": ["Drive to the east end of the lake for best mountain reflection shots", "Your daughter will love the flat pebble beach for skipping stones"],
+          "flag": { "type": "info", "text": "Independence Pass (12,095 ft, Hwy 82) is the most spectacular but CLOSED to vehicles over 35 ft and may have snow in early June — check cotrip.org morning of Jun 21." }
+        },
+        {
+          "id": "d3-drive2",
+          "type": "drive-connector",
+          "duration": "1h 45m",
+          "distance": "75 miles",
+          "via": "Hwy 82 W (or Hwy 24 + I-70 if pass closed)"
+        },
+        {
+          "id": "d3-a4",
           "time": "4:00 PM",
           "title": "Check Into Residence Inn Glenwood Springs",
           "description": "Check in, unpack. Full kitchen — settle in. You're here 2 nights.",
@@ -233,7 +255,7 @@
           "icon": "🏨"
         },
         {
-          "id": "d3-a4",
+          "id": "d3-a5",
           "time": "5:00 PM",
           "title": "Two Rivers Park — Evening Walk",
           "description": "Confluence of the Colorado and Roaring Fork Rivers. Paved walking trail, footbridge with mountain views, picnic areas. Free and flat. Your daughter can wade in the river shallows.",
@@ -274,9 +296,9 @@
         },
         {
           "id": "d4-a2",
-          "time": "8:00 AM",
+          "time": "9:00 AM",
           "title": "Maroon Bells — Round Trip Shuttle",
-          "description": "8AM shuttle from Aspen Highlands Welcome Center. 15 min ride. At Maroon Bells by 8:15AM — best light, clearest skies, lowest crowds. Maroon Lake Scenic Loop (0.5 mi flat). Crater Lake Trail (3.6 mi RT, moderate, 500 ft gain) if energy allows. HARD STOP: Be back at lake heading to shuttle by 12:30PM.",
+          "description": "9AM reservation shuttle from Aspen Highlands Welcome Center. 15 min ride. At Maroon Bells by 9:15AM. Maroon Lake Scenic Loop (0.5 mi flat — perfect for all ages). Crater Lake Trail (3.6 mi RT, moderate, 500 ft gain) if energy allows. HARD STOP: Be back at lake heading to shuttle by 12:30PM.",
           "address": "Maroon Bells Scenic Area, Aspen, CO 81611",
           "website": "https://www.visitmaroonbells.com",
           "type": "activity",
@@ -286,7 +308,7 @@
           "duration": "4.5 hrs on site",
           "cost": "$16/adult, $10/child",
           "tips": [
-            "8AM shuttle is critical — 9AM means clouds already building",
+            "9AM reservation — arrive at Aspen Highlands Welcome Center by 8:30AM",
             "Return shuttles are first-come-first-served — last shuttle down is 5PM",
             "Pack trail lunch from hotel — café at Bells is overpriced",
             "Hard weather stop at 12:30PM — do not be on exposed trail after this",
@@ -300,6 +322,16 @@
           "duration": "15 min",
           "distance": "9 miles",
           "via": "Maroon Creek Rd → Hwy 82 to Aspen"
+        },
+        {
+          "id": "d4-a2b",
+          "time": "1:00 PM",
+          "title": "Lunch in Aspen — White House Tavern / NY Pizza / Big Wrap",
+          "description": "Pick one: White House Tavern (kale salad, chicken sandwich — upscale casual), New York Pizza (cheap, quick slices on Hyman Ave), or Big Wrap (fastest — veggie wraps, great for kids). All within 2 blocks of the gondola base.",
+          "address": "Hyman Ave, Aspen, CO 81611",
+          "type": "restaurant",
+          "icon": "🍽️",
+          "duration": "45 min"
         },
         {
           "id": "d4-a3",
@@ -340,6 +372,16 @@
           "icon": "🍦",
           "duration": "1.5 hrs",
           "cost": "Free to walk"
+        },
+        {
+          "id": "d4-a6",
+          "time": "7:30 PM",
+          "title": "Dinner Back in Glenwood — Modern Brava / Masala & Curry / The Pullman",
+          "description": "Drive back (~45 min) then dinner. Modern Brava Trattoria (upscale Italian, great risotto), Masala & Curry (Indian, vegetarian-friendly, highly rated), or The Pullman (New American, lively, best deviled eggs). All on Grand Ave.",
+          "address": "Grand Ave, Glenwood Springs, CO 81601",
+          "type": "restaurant",
+          "icon": "🍽️",
+          "duration": "1.5 hrs"
         }
       ]
     },
@@ -352,12 +394,13 @@
       "badgeColor": "forest",
       "weatherLocationKey": 5,
       "hotel": {
-        "name": "Glenwood Hot Springs Lodge — Classic Double Queen",
-        "address": "415 East 6th Street, Glenwood Springs, CO 81601",
+        "name": "Glenwood Hot Springs Resort",
+        "address": "415 E 6th St, Glenwood Springs, CO 81602",
         "phone": "+18005377946",
-        "checkIn": "Check out Residence Inn by 12PM, Check into Lodge",
+        "checkIn": "Check out Residence Inn by 12PM, Check into Resort",
         "nights": 1,
-        "notes": "Classic Double Queen room. Request ground floor with patio access, away from elevators, pool-facing side. Unlimited pool access + breakfast included."
+        "confirmationNumber": "1042873",
+        "notes": "Unlimited pool access included. Sopris Splash Zone for kids. Request ground floor with patio access, pool-facing side, away from elevators."
       },
       "activities": [
         {
@@ -384,8 +427,8 @@
         {
           "id": "d5-a2",
           "time": "12:00 PM",
-          "title": "Checkout Residence Inn + Lunch",
-          "description": "Check out by noon. Drive to Nepal Restaurant for lunch (on Hwy 82). Then check into Glenwood Hot Springs Lodge.",
+          "title": "Checkout Residence Inn + Lunch + Check Into Resort",
+          "description": "Check out by noon. Lunch nearby (Sal Mex Restaurant or Sweet Coloradough on 27th St for donuts!). Then check into Glenwood Hot Springs Resort (Conf: 1042873).",
           "address": "125 Wulfsohn Road, Glenwood Springs, CO 81601",
           "type": "hotel",
           "icon": "🏨"

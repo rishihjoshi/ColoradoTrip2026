@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "colorado-pwa",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "docs", "-l", "3456", "--no-clipboard"],
+      "port": 3456
+    }
+  ]
+}
