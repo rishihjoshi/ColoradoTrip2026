@@ -1,0 +1,42 @@
+{
+  "id": "./",
+  "scope": "./",
+  "lang": "en",
+  "name": "Colorado Family Trip 2026",
+  "short_name": "Colorado 26",
+  "description": "Family trip planner — June 19-24, 2026",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "display_override": ["standalone"],
+  "background_color": "#1a2e1f",
+  "theme_color": "#1a2e1f",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false,
+  "categories": ["travel"],
+  "icons": [
+    {
+      "src": "./icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

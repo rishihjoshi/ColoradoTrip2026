@@ -1,0 +1,499 @@
+{
+  "trip": {
+    "name": "Colorado Family Trip",
+    "year": 2026,
+    "family": ["Rishi", "Wife", "Daughter (10)"],
+    "flights": {
+      "outbound": {
+        "flight": "WN #3914",
+        "from": "STL",
+        "to": "DEN",
+        "departs": "10:35 PM",
+        "arrives": "11:55 PM",
+        "date": "2026-06-19"
+      },
+      "return": {
+        "flight": "WN #1324",
+        "from": "DEN",
+        "to": "STL",
+        "departs": "8:45 PM",
+        "arrives": "11:55 PM",
+        "date": "2026-06-24"
+      }
+    }
+  },
+  "days": [
+    {
+      "day": 1,
+      "date": "2026-06-19",
+      "dayOfWeek": "Friday",
+      "title": "Travel Day — STL to Denver",
+      "badge": "Transit",
+      "badgeColor": "sky",
+      "weatherLocationKey": 1,
+      "hotel": {
+        "name": "Hyatt Place Denver Airport",
+        "address": "18300 E 68th Ave, Denver, CO 80249",
+        "phone": "+13034757015",
+        "checkIn": "Late — ~1:00 AM",
+        "nights": 1
+      },
+      "activities": [
+        {
+          "id": "d1-a1",
+          "time": "10:35 PM",
+          "title": "WN #3914 Departs STL Lambert",
+          "description": "2h 20m flight to Denver. Land 11:55PM.",
+          "address": "Lambert-St. Louis International Airport, St. Louis, MO 63145",
+          "type": "flight",
+          "bookingStatus": "confirmed",
+          "icon": "✈️"
+        },
+        {
+          "id": "d1-a2",
+          "time": "12:15 AM",
+          "title": "Rental Car Pickup at DEN",
+          "description": "Pick up full-size SUV at DEN on-airport facility. Book in advance. Drive 10 min to hotel.",
+          "address": "Denver International Airport, Denver, CO 80249",
+          "type": "transport",
+          "bookingStatus": "book-now",
+          "bookingUrl": "https://www.enterprise.com",
+          "icon": "🚗"
+        },
+        {
+          "id": "d1-a3",
+          "time": "1:00 AM",
+          "title": "Check Into Hyatt Place Denver Airport",
+          "description": "Sleep. Early checkout tomorrow 7:00 AM for Pikes Peak drive.",
+          "address": "18300 E 68th Ave, Denver, CO 80249",
+          "phone": "+13034757015",
+          "type": "hotel",
+          "bookingStatus": "confirmed",
+          "icon": "🏨"
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "date": "2026-06-20",
+      "dayOfWeek": "Saturday",
+      "title": "Colorado Springs — Pikes Peak + Garden of Gods",
+      "badge": "Full Day",
+      "badgeColor": "gold",
+      "weatherLocationKey": 2,
+      "driveFromPrevious": { "duration": "1 hr", "distance": "70 miles", "via": "I-25 South" },
+      "hotel": {
+        "name": "The Academy Hotel Colorado Springs",
+        "address": "8110 N Academy Blvd, Colorado Springs, CO 80920",
+        "phone": "+17195985770",
+        "checkIn": "5:30 PM",
+        "nights": 1,
+        "notes": "Free made-to-order breakfast. Indoor pool. Request upper floor. 20-30 min to Cog Railway."
+      },
+      "activities": [
+        {
+          "id": "d2-a1",
+          "time": "7:00 AM",
+          "title": "Depart Hotel — Drive to Manitou Springs",
+          "description": "Leave by 7AM sharp. 1 hr 15 min drive to Cog Railway depot. Must arrive by 8:30AM for 9AM train.",
+          "address": "Manitou Springs, CO 80829",
+          "type": "drive",
+          "icon": "🚗",
+          "driveInfo": { "duration": "1h 15m", "via": "I-25 S → Hwy 24 W" }
+        },
+        {
+          "id": "d2-a2",
+          "time": "9:00 AM",
+          "title": "Pikes Peak Cog Railway",
+          "description": "Board 9AM train. Sit on LEFT side going up (A/B/C seats) for best panoramic views. 40 min at summit (14,115 ft). Buy famous cinnamon donuts at summit. Photos first — gift shop last. Back at depot by 1:30PM.",
+          "address": "515 Ruxton Ave, Manitou Springs, CO 80829",
+          "phone": "+17196855401",
+          "website": "https://www.cograilway.com",
+          "type": "activity",
+          "bookingStatus": "book-now",
+          "bookingUrl": "https://www.cograilway.com",
+          "icon": "🚂",
+          "duration": "4.5 hours",
+          "cost": "$70/adult approx",
+          "tips": ["Book 2 weeks minimum in advance — sells out", "Sit LEFT side going up for best views", "Bring layers — summit is 30°F cooler than base", "Photos first, donuts second, gift shop last"],
+          "flag": { "type": "warning", "text": "Afternoon thunderstorms common at summit. Morning train is essential." }
+        },
+        {
+          "id": "d2-drive1",
+          "type": "drive-connector",
+          "duration": "15 min",
+          "distance": "5 miles",
+          "via": "Hwy 24 E"
+        },
+        {
+          "id": "d2-a3",
+          "time": "2:00 PM",
+          "title": "Garden of the Gods",
+          "description": "Free entry. Scenic loop drive 30-45 min. Perkins Central Garden Trail (1.5 mi easy, 45 min). Siamese Twins Trail adds geological arch views. Allow 2.5 hrs total.",
+          "address": "1805 N 30th St, Colorado Springs, CO 80904",
+          "website": "https://gardenofgods.com",
+          "type": "activity",
+          "bookingStatus": "free",
+          "icon": "🪨",
+          "duration": "2.5 hours",
+          "cost": "Free"
+        },
+        {
+          "id": "d2-drive2",
+          "type": "drive-connector",
+          "duration": "5 min",
+          "distance": "1.5 miles",
+          "via": "Garden of Gods Rd"
+        },
+        {
+          "id": "d2-a4",
+          "time": "4:15 PM",
+          "title": "Red Rock Canyon Open Space",
+          "description": "Same red sandstone formations as Garden of Gods but without tourist crowds. Mesa Trail (easy, 1.5 mi). Views back toward Garden of Gods. Local favorite — genuinely underrated.",
+          "address": "3550 W High St, Colorado Springs, CO 80904",
+          "type": "activity",
+          "bookingStatus": "free",
+          "icon": "🏜️",
+          "duration": "1.5 hours",
+          "cost": "Free"
+        },
+        {
+          "id": "d2-a5",
+          "time": "6:00 PM",
+          "title": "Check Into Academy Hotel",
+          "description": "Indoor pool for your daughter. Arcade. Dinner options on-site or nearby.",
+          "address": "8110 N Academy Blvd, Colorado Springs, CO 80920",
+          "phone": "+17195985770",
+          "type": "hotel",
+          "bookingStatus": "confirmed",
+          "icon": "🏨"
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "date": "2026-06-21",
+      "dayOfWeek": "Sunday",
+      "title": "Colorado Springs → Vail Farmers Market → Glenwood Springs",
+      "badge": "Scenic Drive",
+      "badgeColor": "forest",
+      "weatherLocationKey": 3,
+      "driveFromPrevious": { "duration": "4 hrs total", "distance": "214 miles", "via": "I-25 N → I-70 W" },
+      "hotel": {
+        "name": "Residence Inn by Marriott Glenwood Springs",
+        "address": "125 Wulfsohn Road, Glenwood Springs, CO 81601",
+        "phone": "+19709280900",
+        "checkIn": "4:00 PM",
+        "nights": 2,
+        "confirmationNumber": "73462520918893",
+        "notes": "All-suite with full kitchenettes. Free daily breakfast. Indoor heated pool + hot tub. Local bus to Aspen directly behind hotel. Parking $12/day."
+      },
+      "activities": [
+        {
+          "id": "d3-a1",
+          "time": "10:00 AM",
+          "title": "Late Start — Leave Colorado Springs",
+          "description": "Intentionally late start after hectic Day 2. Grab breakfast at hotel. Drive I-25 N to I-70 W toward Vail.",
+          "address": "Colorado Springs, CO",
+          "type": "drive",
+          "icon": "🚗",
+          "driveInfo": { "duration": "2h 30m to Vail", "via": "I-25 N → I-70 W" }
+        },
+        {
+          "id": "d3-a2",
+          "time": "12:30 PM",
+          "title": "Vail Farmers Market & Art Show",
+          "description": "2026 season: Every Sunday June 14 – October 4, 9:30AM–3PM. East Meadow Drive, Vail Village. Fresh Colorado produce, artisan foods, handmade goods, fine art, live music, kids activities. Parking at Vail Village Parking or Lionshead Parking. Tip: bring cash — many vendors don't take cards.",
+          "address": "East Meadow Drive, Vail Village, Vail, CO 81657",
+          "website": "https://www.vailfarmersmarket.com",
+          "type": "activity",
+          "bookingStatus": "free",
+          "icon": "🌿",
+          "duration": "2 hrs",
+          "cost": "Free entry",
+          "tips": ["Bring cash — many vendors don't take cards", "Market closes at 3PM — arrive by 12:30PM for 2 full hours", "Sunday June 21 confirmed in 2026 season"],
+          "flag": { "type": "info", "text": "Last entry to market comfortably 2PM. Leave by 3PM to reach Glenwood by 4PM." }
+        },
+        {
+          "id": "d3-drive1",
+          "type": "drive-connector",
+          "duration": "1 hr",
+          "distance": "55 miles",
+          "via": "I-70 W through Glenwood Canyon"
+        },
+        {
+          "id": "d3-a3",
+          "time": "4:00 PM",
+          "title": "Check Into Residence Inn Glenwood Springs",
+          "description": "Check in, unpack. Full kitchen — settle in. You're here 2 nights.",
+          "address": "125 Wulfsohn Road, Glenwood Springs, CO 81601",
+          "phone": "+19709280900",
+          "type": "hotel",
+          "bookingStatus": "confirmed",
+          "icon": "🏨"
+        },
+        {
+          "id": "d3-a4",
+          "time": "5:00 PM",
+          "title": "Two Rivers Park — Evening Walk",
+          "description": "Confluence of the Colorado and Roaring Fork Rivers. Paved walking trail, footbridge with mountain views, picnic areas. Free and flat. Your daughter can wade in the river shallows.",
+          "address": "740 Devereux Rd, Glenwood Springs, CO 81601",
+          "type": "activity",
+          "bookingStatus": "free",
+          "icon": "🌊",
+          "duration": "45 min",
+          "cost": "Free"
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "date": "2026-06-22",
+      "dayOfWeek": "Monday",
+      "title": "Maroon Bells + Downtown Aspen + Silver Queen Gondola",
+      "badge": "★ Highlight Day",
+      "badgeColor": "gold",
+      "weatherLocationKey": 4,
+      "hotel": {
+        "name": "Residence Inn by Marriott Glenwood Springs",
+        "address": "125 Wulfsohn Road, Glenwood Springs, CO 81601",
+        "phone": "+19709280900",
+        "checkIn": "Already checked in",
+        "nights": 0
+      },
+      "activities": [
+        {
+          "id": "d4-a1",
+          "time": "7:00 AM",
+          "title": "Depart Glenwood — Drive to Aspen Highlands",
+          "description": "Leave by 7AM. 30 miles via Hwy 82. Arrive Welcome Center by 7:45AM. Park in garage ($40 max for the day). Board 8AM shuttle.",
+          "address": "75 Boomerang Rd, Aspen, CO 81611",
+          "type": "drive",
+          "icon": "🚗",
+          "driveInfo": { "duration": "45 min", "via": "Hwy 82 East" }
+        },
+        {
+          "id": "d4-a2",
+          "time": "8:00 AM",
+          "title": "Maroon Bells — Round Trip Shuttle",
+          "description": "8AM shuttle from Aspen Highlands Welcome Center. 15 min ride. At Maroon Bells by 8:15AM — best light, clearest skies, lowest crowds. Maroon Lake Scenic Loop (0.5 mi flat). Crater Lake Trail (3.6 mi RT, moderate, 500 ft gain) if energy allows. HARD STOP: Be back at lake heading to shuttle by 12:30PM.",
+          "address": "Maroon Bells Scenic Area, Aspen, CO 81611",
+          "website": "https://www.visitmaroonbells.com",
+          "type": "activity",
+          "bookingStatus": "book-now",
+          "bookingUrl": "https://www.visitmaroonbells.com",
+          "icon": "🏔",
+          "duration": "4.5 hrs on site",
+          "cost": "$16/adult, $10/child",
+          "tips": [
+            "8AM shuttle is critical — 9AM means clouds already building",
+            "Return shuttles are first-come-first-served — last shuttle down is 5PM",
+            "Pack trail lunch from hotel — café at Bells is overpriced",
+            "Hard weather stop at 12:30PM — do not be on exposed trail after this",
+            "No swimming in Maroon Lake"
+          ],
+          "flag": { "type": "critical", "text": "BOOK NOW at visitmaroonbells.com — Round Trip Option 1, $16/adult $10/child. Fills fast even on weekdays." }
+        },
+        {
+          "id": "d4-drive1",
+          "type": "drive-connector",
+          "duration": "15 min",
+          "distance": "9 miles",
+          "via": "Maroon Creek Rd → Hwy 82 to Aspen"
+        },
+        {
+          "id": "d4-a3",
+          "time": "1:30 PM",
+          "title": "John Denver Sanctuary",
+          "description": "Free riverside park with sculptural rock installations and John Denver song lyrics embedded throughout. Open dawn to dusk. Emotional and peaceful — meaningful for the whole family. 20 min visit.",
+          "address": "Rio Grande Trail, Aspen, CO 81611",
+          "type": "activity",
+          "bookingStatus": "free",
+          "icon": "🎵",
+          "duration": "20 min",
+          "cost": "Free"
+        },
+        {
+          "id": "d4-a4",
+          "time": "2:00 PM",
+          "title": "Silver Queen Gondola — Aspen Mountain",
+          "description": "18-min gondola from downtown Aspen to 11,212 ft. Panoramic views of four mountain ranges. Sundeck restaurant at top. LAST RIDE UP IS 4PM — do not be late. Family Sightseeing Package covers 2 adults + up to 4 kids.",
+          "address": "601 E Dean St, Aspen, CO 81611",
+          "website": "https://www.aspensnowmass.com",
+          "type": "activity",
+          "bookingStatus": "book-now",
+          "bookingUrl": "https://www.aspensnowmass.com",
+          "icon": "🚡",
+          "duration": "2 hrs",
+          "cost": "$40/adult, $30/child or Family Package $149",
+          "tips": ["Last gondola up at 4PM — arrive by 3:45PM at latest"],
+          "flag": { "type": "warning", "text": "Last ride up at 4PM. If arriving from Maroon Bells — must leave lake by 12:30PM to make this." }
+        },
+        {
+          "id": "d4-a5",
+          "time": "4:30 PM",
+          "title": "Cooper Street Mall — Ice Cream + Walk",
+          "description": "Walkable pedestrian downtown. Ice cream at Paradise Bakery (unanimous local pick). Kids fountain to play in. Window shopping, galleries. Easy wind-down after the biggest day of the trip.",
+          "address": "Cooper Ave Mall, Aspen, CO 81611",
+          "type": "activity",
+          "bookingStatus": "free",
+          "icon": "🍦",
+          "duration": "1.5 hrs",
+          "cost": "Free to walk"
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "date": "2026-06-23",
+      "dayOfWeek": "Tuesday",
+      "title": "Glenwood Springs Full Day — Rafting + Hot Springs",
+      "badge": "Rest Day",
+      "badgeColor": "forest",
+      "weatherLocationKey": 5,
+      "hotel": {
+        "name": "Glenwood Hot Springs Lodge — Classic Double Queen",
+        "address": "415 East 6th Street, Glenwood Springs, CO 81601",
+        "phone": "+18005377946",
+        "checkIn": "Check out Residence Inn by 12PM, Check into Lodge",
+        "nights": 1,
+        "notes": "Classic Double Queen room. Request ground floor with patio access, away from elevators, pool-facing side. Unlimited pool access + breakfast included."
+      },
+      "activities": [
+        {
+          "id": "d5-a1",
+          "time": "9:00 AM",
+          "title": "White Water Rafting — Shoshone Rapids",
+          "description": "Blue Sky Adventures half-day Colorado River trip. Class III Shoshone Rapids in June (snowmelt keeps water high). Baptism, Tuttle's Tumble, Tombstone, The Wall, Maneater rapids. Wildlife: bighorn sheep, bald eagles, marmots. Done by noon. Tuesday departure is 9AM.",
+          "address": "152 W 6th St, Glenwood Springs, CO 81601",
+          "phone": "+19709455867",
+          "website": "https://blueskyrafting.com",
+          "type": "activity",
+          "bookingStatus": "book-now",
+          "bookingUrl": "https://blueskyrafting.com",
+          "icon": "🚣",
+          "duration": "3 hrs",
+          "cost": "~$85/adult",
+          "tips": [
+            "Minimum age 5+ — your daughter is fine at 10",
+            "Apply sunscreen to TOP of legs, arms, shoulders before getting in",
+            "Life jackets provided",
+            "Book in advance — June is peak season"
+          ]
+        },
+        {
+          "id": "d5-a2",
+          "time": "12:00 PM",
+          "title": "Checkout Residence Inn + Lunch",
+          "description": "Check out by noon. Drive to Nepal Restaurant for lunch (on Hwy 82). Then check into Glenwood Hot Springs Lodge.",
+          "address": "125 Wulfsohn Road, Glenwood Springs, CO 81601",
+          "type": "hotel",
+          "icon": "🏨"
+        },
+        {
+          "id": "d5-a3",
+          "time": "2:00 PM",
+          "title": "Glenwood Hot Springs Pool",
+          "description": "Unlimited access included with Lodge room. No reservations needed, no time limit, hand stamp for re-entry. Sopris Splash Zone: water slides + fountains for your daughter. Grand Pool for adults. Open daily 8AM–10PM.",
+          "address": "401 N River Street, Glenwood Springs, CO 81601",
+          "website": "https://hotspringspool.com",
+          "type": "activity",
+          "bookingStatus": "included",
+          "icon": "🏊",
+          "duration": "3.5 hrs",
+          "cost": "Included with Lodge room",
+          "tips": ["Get to pool early to claim chairs", "Hand stamp for re-entry"]
+        },
+        {
+          "id": "d5-a4",
+          "time": "6:00 PM",
+          "title": "Iron Mountain Hot Springs — Evening Soak",
+          "description": "13-min walk from Lodge. 16 riverside mineral pools (98–108°F) alongside the Colorado River. Adults-preferred quiet zones. Genuinely relaxing — different character from the main pool. Open until 10PM.",
+          "address": "1000 6th St, Glenwood Springs, CO 81601",
+          "phone": "+19709454545",
+          "website": "https://ironmountainhotsprings.com",
+          "type": "activity",
+          "bookingStatus": "book-now",
+          "bookingUrl": "https://ironmountainhotsprings.com",
+          "icon": "♨️",
+          "duration": "2 hrs",
+          "cost": "$28–32/adult approx",
+          "tips": ["Book in advance — fills on summer evenings", "13-min walk from Hot Springs Lodge"]
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "date": "2026-06-24",
+      "dayOfWeek": "Wednesday",
+      "title": "Red Rocks → Denver → Fly Home",
+      "badge": "Return Day",
+      "badgeColor": "red-flag",
+      "weatherLocationKey": 6,
+      "driveFromPrevious": { "duration": "2.5 hrs", "distance": "155 miles", "via": "I-70 East" },
+      "activities": [
+        {
+          "id": "d6-a1",
+          "time": "7:00 AM",
+          "title": "Checkout + Drive to Red Rocks",
+          "description": "Pack tonight (Day 5). Checkout 7AM. Drive I-70 East to Morrison, CO (~155 mi, 2.5 hrs). Arrive Red Rocks ~10:30AM.",
+          "address": "Glenwood Springs, CO 81601",
+          "type": "drive",
+          "icon": "🚗",
+          "driveInfo": { "duration": "2.5 hrs", "via": "I-70 East", "note": "Optional: Independence Pass via Hwy 82 — adds 45 min, spectacular scenery. Check cotrip.org for road conditions morning of Jun 24." }
+        },
+        {
+          "id": "d6-a2",
+          "time": "10:30 AM",
+          "title": "Red Rocks Park & Amphitheatre",
+          "description": "Free daytime entry. Trading Post Trail (1.4 mi easy loop — your daughter's easiest hike of the trip after a week of Colorado). Amphitheater walk — 192 stairs. Colorado Music Hall of Fame visitor center (7AM–7PM). Denver skyline visible on clear days. Perfect Colorado farewell.",
+          "address": "18300 W Alameda Pkwy, Morrison, CO 80465",
+          "website": "https://www.redrocksonline.com",
+          "type": "activity",
+          "bookingStatus": "free",
+          "icon": "🎸",
+          "duration": "2 hrs",
+          "cost": "Free daytime entry",
+          "tips": ["Park opens at 5AM", "Visitor center 7AM–7PM", "Trading Post Trail is easy — 1.4 mi loop"]
+        },
+        {
+          "id": "d6-drive1",
+          "type": "drive-connector",
+          "duration": "30 min",
+          "distance": "18 miles",
+          "via": "I-70 East to Denver"
+        },
+        {
+          "id": "d6-a3",
+          "time": "1:00 PM",
+          "title": "Farewell Lunch — RiNo Arts District Denver",
+          "description": "Denver's most interesting neighborhood. Zeppelin Station food hall for casual family lunch (global cuisines, vegetarian-friendly). Or Union Station's Denver Milk Market. Out by 3PM — don't linger.",
+          "address": "3501 Wazee St, Denver, CO 80216",
+          "type": "restaurant",
+          "icon": "🍽️",
+          "duration": "1.5 hrs",
+          "flag": { "type": "warning", "text": "Must leave lunch by 3PM. Return rental by 4:30PM. Be inside DEN by 5:30PM for 8:45PM flight." }
+        },
+        {
+          "id": "d6-a4",
+          "time": "3:30 PM",
+          "title": "Return Rental Car at DEN",
+          "description": "DEN on-airport rental facility. Allow 30–45 min for return + shuttle to terminal. Be inside terminal by 5:30PM minimum.",
+          "address": "Denver International Airport, Denver, CO 80249",
+          "type": "transport",
+          "icon": "🚗"
+        },
+        {
+          "id": "d6-a5",
+          "time": "8:45 PM",
+          "title": "WN #1324 Departs DEN → STL",
+          "description": "2h 10m flight. Arrive Lambert 11:55PM.",
+          "address": "Denver International Airport, Denver, CO 80249",
+          "type": "flight",
+          "bookingStatus": "confirmed",
+          "icon": "✈️"
+        }
+      ]
+    }
+  ]
+}

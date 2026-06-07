@@ -1,0 +1,80 @@
+{
+  "categories": [
+    {
+      "name": "Documents & Tech",
+      "icon": "📋",
+      "items": [
+        "Boarding passes (WN #3914 + WN #1324)",
+        "Driver's license / ID",
+        "Credit cards + cash for farmers markets",
+        "Phone charger + portable battery pack",
+        "Car charger",
+        "Earphones for daughter on flights",
+        "Download offline maps for Colorado before leaving"
+      ]
+    },
+    {
+      "name": "Clothing",
+      "icon": "👕",
+      "items": [
+        "Layers for Pikes Peak summit (30°F cooler than base)",
+        "Layers for Maroon Bells (9,580 ft — can be cold even in June)",
+        "Rain jacket / windbreaker (afternoon thunderstorms)",
+        "Comfortable hiking shoes (all 3 family members)",
+        "Swimsuit x3 (rafting + hot springs + main pool)",
+        "Water shoes / sandals for pool + river",
+        "Casual clothes for Aspen/Vail village walking",
+        "Warm fleece or light jacket for evenings at altitude"
+      ]
+    },
+    {
+      "name": "Hiking & Outdoors",
+      "icon": "🥾",
+      "items": [
+        "Sunscreen SPF 50+ (altitude sun is intense — apply on TOP of legs/arms for rafting)",
+        "Sunglasses + hat (UV stronger at altitude)",
+        "Reusable water bottles x3 (hydration critical — altitude dehydrates fast)",
+        "Small daypack for Maroon Bells trail",
+        "Trail snacks for Maroon Bells (café is overpriced)",
+        "Trekking poles (optional — helpful on Crater Lake Trail)",
+        "Insect repellent"
+      ]
+    },
+    {
+      "name": "Health & Altitude",
+      "icon": "💊",
+      "items": [
+        "Altitude: start hydrating on the plane — drink double usual water",
+        "Ibuprofen / Tylenol (altitude headaches common Days 1-3)",
+        "Consider Diamox if altitude sickness history (consult doctor)",
+        "Avoid alcohol first 48 hours at altitude",
+        "Hand sanitizer",
+        "Band-aids + blister pads (new hiking shoes + trails)",
+        "Motion sickness tablets (Independence Pass switchbacks if taking that route)"
+      ]
+    },
+    {
+      "name": "Daughter's Bag",
+      "icon": "🎒",
+      "items": [
+        "Snacks for long drive days",
+        "Activity book / tablet for I-70 stretches",
+        "Earphones",
+        "Small backpack for trail days",
+        "Camera or use phone for her own photos",
+        "Cash for farmers market treasures (Vail)"
+      ]
+    },
+    {
+      "name": "Car Essentials",
+      "icon": "🚗",
+      "items": [
+        "Download offline Google Maps before leaving",
+        "Check cotrip.org morning of Day 6 if taking Independence Pass",
+        "Confirm rental car is full-size SUV (luggage + mountain roads)",
+        "Car phone mount for navigation",
+        "Snacks + drinks for drive days"
+      ]
+    }
+  ]
+}

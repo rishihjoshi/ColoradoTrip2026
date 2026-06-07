@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Colorado 26">
+  <link rel="apple-touch-icon" href="./icons/icon.svg">
+  <meta name="application-name" content="Colorado 26">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#1a2e1f">
+  <meta name="description" content="Colorado Family Trip 2026 — June 19-24">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" type="image/svg+xml" href="./icons/icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Colorado 26</title>
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-inner">
+        <div class="header-brand">
+          <svg width="22" height="22" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="100,380 200,245 268,320 205,380" fill="#4a7c5a"/>
+            <polygon points="160,380 256,195 352,380" fill="#c8973a"/>
+            <polygon points="248,380 316,260 412,380" fill="#4a7c5a"/>
+            <polygon points="256,195 230,242 256,235 282,242" fill="#f5efe3"/>
+          </svg>
+          <span class="header-title">Colorado 26</span>
+        </div>
+        <div id="offline-indicator" class="offline-pill hidden">📡 Offline</div>
+      </div>
+    </header>
+
+    <!-- Tab Panels -->
+    <main class="main-content" id="main-content">
+      <!-- Tab: Itinerary -->
+      <section id="tab-itinerary" class="tab-panel active" role="tabpanel">
+        <div class="tab-hero">
+          <h1 class="tab-hero-title">Itinerary</h1>
+          <p class="tab-hero-sub">June 19–24, 2026 · Family of 3</p>
+        </div>
+        <div id="itinerary-days" class="days-list"></div>
+      </section>
+
+      <!-- Tab: Eats & Activities -->
+      <section id="tab-eats" class="tab-panel" role="tabpanel">
+        <div class="tab-hero">
+          <h1 class="tab-hero-title">Eats & Activities</h1>
+          <p class="tab-hero-sub">Curated for vegetarian · Family of 3</p>
+        </div>
+        <div class="eats-controls">
+          <div class="search-bar-wrap">
+            <input type="search" id="eats-search" class="search-input" placeholder="Search restaurants & activities…" autocomplete="off" autocorrect="off" spellcheck="false">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </div>
+          <div class="filter-row" id="cuisine-filters">
+            <button class="filter-chip active" data-filter="all">All</button>
+            <button class="filter-chip" data-filter="indian">Indian</button>
+            <button class="filter-chip" data-filter="mexican">Mexican</button>
+            <button class="filter-chip" data-filter="pizza">Pizza/Italian</button>
+            <button class="filter-chip" data-filter="thai">Thai</button>
+            <button class="filter-chip" data-filter="cafe">Cafes</button>
+            <button class="filter-chip" data-filter="activity">Activities</button>
+          </div>
+          <div class="filter-row" id="location-filters">
+            <button class="filter-chip active" data-loc="all">All Locations</button>
+            <button class="filter-chip" data-loc="denver">Denver</button>
+            <button class="filter-chip" data-loc="csprings">Colo Springs</button>
+            <button class="filter-chip" data-loc="glenwood">Glenwood</button>
+            <button class="filter-chip" data-loc="aspen">Aspen</button>
+            <button class="filter-chip" data-loc="vail">Vail</button>
+            <button class="filter-chip" data-loc="closest">📍 Closest First</button>
+          </div>
+        </div>
+        <div id="eats-list" class="eats-list"></div>
+      </section>
+
+      <!-- Tab: Reservations -->
+      <section id="tab-reservations" class="tab-panel" role="tabpanel">
+        <div id="res-auth-screen" class="auth-screen">
+          <div class="auth-card">
+            <div class="auth-icon">🔐</div>
+            <h2 class="auth-title">Passes & Reservations</h2>
+            <p class="auth-sub">Protected with Face ID or PIN</p>
+            <button id="btn-faceid" class="btn-auth btn-primary">
+              <span class="btn-icon">👁</span> Unlock with Face ID
+            </button>
+            <button id="btn-show-pin" class="btn-auth btn-secondary">Use PIN instead</button>
+          </div>
+        </div>
+
+        <div id="res-setup-screen" class="auth-screen hidden">
+          <div class="auth-card">
+            <div class="auth-icon">🔑</div>
+            <h2 class="auth-title">Set Up Access</h2>
+            <p class="auth-sub">Choose how to protect your reservations</p>
+            <button id="btn-setup-faceid" class="btn-auth btn-primary">
+              <span class="btn-icon">👁</span> Set Up Face ID / Biometrics
+            </button>
+            <div class="pin-setup-section">
+              <p class="auth-sub" style="margin-top:16px">Or set a 6-digit PIN:</p>
+              <div class="pin-display" id="setup-pin-display">
+                <span class="pin-dot" data-i="0"></span>
+                <span class="pin-dot" data-i="1"></span>
+                <span class="pin-dot" data-i="2"></span>
+                <span class="pin-dot" data-i="3"></span>
+                <span class="pin-dot" data-i="4"></span>
+                <span class="pin-dot" data-i="5"></span>
+              </div>
+              <div class="pin-pad" id="setup-pin-pad"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="res-pin-screen" class="auth-screen hidden">
+          <div class="auth-card">
+            <div class="auth-icon">🔢</div>
+            <h2 class="auth-title">Enter PIN</h2>
+            <p class="auth-sub" id="pin-error-msg"></p>
+            <div class="pin-display" id="auth-pin-display">
+              <span class="pin-dot" data-i="0"></span>
+              <span class="pin-dot" data-i="1"></span>
+              <span class="pin-dot" data-i="2"></span>
+              <span class="pin-dot" data-i="3"></span>
+              <span class="pin-dot" data-i="4"></span>
+              <span class="pin-dot" data-i="5"></span>
+            </div>
+            <div class="pin-pad" id="auth-pin-pad"></div>
+          </div>
+        </div>
+
+        <div id="res-content" class="hidden">
+          <div class="tab-hero">
+            <h1 class="tab-hero-title">Passes & Reservations</h1>
+            <p class="tab-hero-sub">Tap a card to view · Tap 🔒 to lock</p>
+          </div>
+          <div class="res-header-actions">
+            <button id="btn-lock" class="btn-lock">🔒 Lock</button>
+          </div>
+          <div id="reservations-list" class="res-list"></div>
+        </div>
+      </section>
+
+      <!-- Tab: Packing -->
+      <section id="tab-pack" class="tab-panel" role="tabpanel">
+        <div class="tab-hero">
+          <h1 class="tab-hero-title">Pack</h1>
+          <p class="tab-hero-sub">Interactive packing checklist</p>
+        </div>
+        <div class="pack-progress-wrap">
+          <div class="pack-progress-bar">
+            <div class="pack-progress-fill" id="pack-progress-fill"></div>
+          </div>
+          <div class="pack-progress-label">
+            <span id="pack-count">0</span> / <span id="pack-total">0</span> packed
+            <button id="btn-reset-pack" class="btn-reset">Reset All</button>
+          </div>
+        </div>
+        <div id="pack-categories" class="pack-categories"></div>
+      </section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav" role="navigation">
+      <button class="nav-item active" data-tab="itinerary">
+        <span class="nav-icon">🗺</span>
+        <span class="nav-label">Itinerary</span>
+      </button>
+      <button class="nav-item" data-tab="eats">
+        <span class="nav-icon">🍽</span>
+        <span class="nav-label">Eats</span>
+      </button>
+      <button class="nav-item" data-tab="reservations">
+        <span class="nav-icon">🔐</span>
+        <span class="nav-label">Passes</span>
+      </button>
+      <button class="nav-item" data-tab="pack">
+        <span class="nav-icon">🎒</span>
+        <span class="nav-label">Pack</span>
+      </button>
+    </nav>
+
+    <!-- FAB -->
+    <button class="fab" id="fab-btn" aria-label="Add item">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+    </button>
+  </div>
+
+  <!-- Modal: Add to Itinerary -->
+  <div id="modal-add-itinerary" class="modal-overlay hidden" role="dialog" aria-modal="true">
+    <div class="modal-sheet">
+      <div class="modal-handle"></div>
+      <h3 class="modal-title">Add to Itinerary</h3>
+      <form id="form-add-itinerary" class="modal-form">
+        <label class="form-label">Day
+          <select class="form-input" id="add-day" required>
+            <option value="1">Day 1 — Fri Jun 19</option>
+            <option value="2">Day 2 — Sat Jun 20</option>
+            <option value="3">Day 3 — Sun Jun 21</option>
+            <option value="4">Day 4 — Mon Jun 22</option>
+            <option value="5">Day 5 — Tue Jun 23</option>
+            <option value="6">Day 6 — Wed Jun 24</option>
+          </select>
+        </label>
+        <label class="form-label">Time
+          <input type="time" class="form-input" id="add-time" required>
+        </label>
+        <label class="form-label">Activity Name
+          <input type="text" class="form-input" id="add-title" placeholder="What are you doing?" required>
+        </label>
+        <label class="form-label">Description
+          <textarea class="form-input" id="add-description" rows="2" placeholder="Details…"></textarea>
+        </label>
+        <label class="form-label">Address
+          <input type="text" class="form-input" id="add-address" placeholder="Street, City, State">
+        </label>
+        <label class="form-label">Notes
+          <input type="text" class="form-input" id="add-notes" placeholder="Tips, reminders…">
+        </label>
+        <label class="form-label">Status
+          <select class="form-input" id="add-status">
+            <option value="optional">Optional</option>
+            <option value="confirmed">Confirmed</option>
+            <option value="book-now">Book Now</option>
+            <option value="free">Free Entry</option>
+          </select>
+        </label>
+        <div class="form-actions">
+          <button type="button" class="btn-cancel" id="btn-cancel-itinerary">Cancel</button>
+          <button type="submit" class="btn-save">Add</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal: Add to Eats -->
+  <div id="modal-add-eats" class="modal-overlay hidden" role="dialog" aria-modal="true">
+    <div class="modal-sheet">
+      <div class="modal-handle"></div>
+      <h3 class="modal-title">Add Restaurant or Activity</h3>
+      <form id="form-add-eats" class="modal-form">
+        <label class="form-label">Name
+          <input type="text" class="form-input" id="eats-add-name" placeholder="Restaurant or activity name" required>
+        </label>
+        <label class="form-label">Type
+          <select class="form-input" id="eats-add-type">
+            <option value="restaurant">Restaurant</option>
+            <option value="activity">Activity</option>
+          </select>
+        </label>
+        <label class="form-label">Location / City
+          <input type="text" class="form-input" id="eats-add-location" placeholder="e.g. Glenwood Springs">
+        </label>
+        <label class="form-label">Address
+          <input type="text" class="form-input" id="eats-add-address" placeholder="Street address">
+        </label>
+        <label class="form-label">Note
+          <textarea class="form-input" id="eats-add-note" rows="2" placeholder="What to order, tips…"></textarea>
+        </label>
+        <div class="form-actions">
+          <button type="button" class="btn-cancel" id="btn-cancel-eats">Cancel</button>
+          <button type="submit" class="btn-save">Add</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal: Image Lightbox -->
+  <div id="modal-lightbox" class="modal-overlay hidden" role="dialog" aria-modal="true">
+    <div class="lightbox-inner">
+      <button id="btn-close-lightbox" class="lightbox-close">✕</button>
+      <img id="lightbox-img" src="" alt="Reservation confirmation" class="lightbox-img">
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js').catch(err => console.warn('SW:', err));
+    }
+  </script>
+</body>
+</html>

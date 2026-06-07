@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Full bleed background, no rounded corners for maskable -->
+  <rect width="512" height="512" fill="#1a2e1f"/>
+  <!-- Content scaled within 80% safe zone (inner ~410x410, offset ~51px each side) -->
+  <!-- Sun -->
+  <circle cx="256" cy="155" r="34" fill="#c8973a"/>
+  <g stroke="#c8973a" stroke-width="5" stroke-linecap="round">
+    <line x1="256" y1="106" x2="256" y2="92"/>
+    <line x1="256" y1="204" x2="256" y2="218"/>
+    <line x1="297" y1="114" x2="308" y2="103"/>
+    <line x1="215" y1="114" x2="204" y2="103"/>
+    <line x1="305" y1="155" x2="319" y2="155"/>
+    <line x1="207" y1="155" x2="193" y2="155"/>
+    <line x1="297" y1="196" x2="308" y2="207"/>
+    <line x1="215" y1="196" x2="204" y2="207"/>
+  </g>
+  <!-- Mountains -->
+  <polygon points="100,380 200,245 268,320 205,380" fill="#2e5235"/>
+  <polygon points="160,380 256,195 352,380" fill="#4a7c5a"/>
+  <polygon points="248,380 316,260 412,380" fill="#2e5235"/>
+  <!-- Snow caps -->
+  <polygon points="256,195 230,242 256,235 282,242" fill="#f5efe3"/>
+  <polygon points="200,245 188,268 200,263 214,268" fill="#f5efe3"/>
+  <polygon points="316,260 306,278 316,274 328,278" fill="#f5efe3"/>
+  <!-- Ground -->
+  <rect x="80" y="378" width="352" height="7" rx="3" fill="#c8973a" opacity="0.5"/>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="80" fill="#1a2e1f"/>
+  <!-- Sun -->
+  <circle cx="256" cy="140" r="38" fill="#c8973a"/>
+  <!-- Sun rays -->
+  <g stroke="#c8973a" stroke-width="6" stroke-linecap="round">
+    <line x1="256" y1="85" x2="256" y2="68"/>
+    <line x1="256" y1="195" x2="256" y2="212"/>
+    <line x1="301" y1="95" x2="313" y2="83"/>
+    <line x1="211" y1="95" x2="199" y2="83"/>
+    <line x1="311" y1="140" x2="328" y2="140"/>
+    <line x1="201" y1="140" x2="184" y2="140"/>
+    <line x1="301" y1="185" x2="313" y2="197"/>
+    <line x1="211" y1="185" x2="199" y2="197"/>
+  </g>
+  <!-- Mountain range -->
+  <!-- Left small peak -->
+  <polygon points="90,370 190,230 260,310 195,370" fill="#2e5235"/>
+  <!-- Center large peak -->
+  <polygon points="150,370 256,180 362,370" fill="#4a7c5a"/>
+  <!-- Right small peak -->
+  <polygon points="252,370 322,250 420,370" fill="#2e5235"/>
+  <!-- Snow caps -->
+  <polygon points="256,180 228,230 256,222 284,230" fill="#f5efe3"/>
+  <polygon points="190,230 178,255 190,250 205,255" fill="#f5efe3"/>
+  <polygon points="322,250 312,270 322,266 334,270" fill="#f5efe3"/>
+  <!-- Ground line -->
+  <rect x="60" y="368" width="392" height="8" rx="4" fill="#c8973a" opacity="0.6"/>
+</svg>
