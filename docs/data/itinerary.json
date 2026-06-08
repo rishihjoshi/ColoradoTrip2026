@@ -97,9 +97,9 @@
       "activities": [
         {
           "id": "d2-a1",
-          "time": "7:00 AM",
+          "time": "7:30 AM",
           "title": "Depart Hotel — Drive to Manitou Springs",
-          "description": "Leave by 7AM sharp. 1 hr 15 min drive to Cog Railway depot. Must arrive by 8:30AM for 9AM train.",
+          "description": "Leave by 7:30AM. ~45 min drive to Cog Railway depot. Arrive by 9:00AM — train departs 9:05AM.",
           "address": "Manitou Springs, CO 80829",
           "type": "drive",
           "icon": "🚗",
@@ -107,20 +107,19 @@
         },
         {
           "id": "d2-a2",
-          "time": "9:00 AM",
-          "title": "Pikes Peak Cog Railway",
-          "description": "Board 9AM train. Sit on LEFT side going up (A/B/C seats) for best panoramic views. 40 min at summit (14,115 ft). Buy famous cinnamon donuts at summit. Photos first — gift shop last. Back at depot by 1:30PM.",
+          "time": "9:05 AM",
+          "title": "Pikes Peak Cog Railway — ✓ Booked",
+          "description": "Board train. Sit LEFT side going up — Car 1, Row 15, Seats A, B, C (already assigned). 40 min at summit (14,115 ft). Buy famous cinnamon donuts at summit. Photos first — gift shop last. Back at depot by 1:30PM.",
           "address": "515 Ruxton Ave, Manitou Springs, CO 80829",
           "phone": "+17196855401",
           "website": "https://www.cograilway.com",
           "type": "activity",
-          "bookingStatus": "book-now",
-          "bookingUrl": "https://www.cograilway.com",
+          "bookingStatus": "confirmed",
           "icon": "🚂",
           "duration": "4.5 hours",
-          "cost": "$70/adult approx",
-          "tips": ["Book 2 weeks minimum in advance — sells out", "Sit LEFT side going up for best views", "Bring layers — summit is 30°F cooler than base", "Photos first, donuts second, gift shop last"],
-          "flag": { "type": "warning", "text": "Afternoon thunderstorms common at summit. Morning train is essential." }
+          "cost": "Booked ✓",
+          "tips": ["✓ BOOKED — Car 1, Row 15, Seats A · B · C", "Sit LEFT side going up — seats already face the best views", "Bring layers — summit is 30°F cooler than base", "Photos first, donuts second, gift shop last"],
+          "flag": { "type": "info", "text": "Confirmed. Afternoon thunderstorms common at summit — morning departure already secured." }
         },
         {
           "id": "d2-drive1",
@@ -296,25 +295,24 @@
         },
         {
           "id": "d4-a2",
-          "time": "9:00 AM",
-          "title": "Maroon Bells — Round Trip Shuttle",
-          "description": "9AM reservation shuttle from Aspen Highlands Welcome Center. 15 min ride. At Maroon Bells by 9:15AM. Maroon Lake Scenic Loop (0.5 mi flat — perfect for all ages). Crater Lake Trail (3.6 mi RT, moderate, 500 ft gain) if energy allows. HARD STOP: Be back at lake heading to shuttle by 12:30PM.",
+          "time": "9:15 AM",
+          "title": "Maroon Bells — Round Trip Shuttle ✓ Booked",
+          "description": "Shuttle departs 9:15AM from Aspen Highlands Welcome Center. 15 min ride. At Maroon Bells by 9:30AM. Maroon Lake Scenic Loop (0.5 mi flat — perfect for all ages). Crater Lake Trail (3.6 mi RT, moderate, 500 ft gain) if energy allows. HARD STOP: Be back at lake heading to shuttle by 12:30PM.",
           "address": "Maroon Bells Scenic Area, Aspen, CO 81611",
           "website": "https://www.visitmaroonbells.com",
           "type": "activity",
-          "bookingStatus": "book-now",
-          "bookingUrl": "https://www.visitmaroonbells.com",
+          "bookingStatus": "confirmed",
           "icon": "🏔",
           "duration": "4.5 hrs on site",
-          "cost": "$16/adult, $10/child",
+          "cost": "Booked ✓",
           "tips": [
-            "9AM reservation — arrive at Aspen Highlands Welcome Center by 8:30AM",
+            "✓ BOOKED — Be at Aspen Highlands Welcome Center by 9:00AM",
             "Return shuttles are first-come-first-served — last shuttle down is 5PM",
             "Pack trail lunch from hotel — café at Bells is overpriced",
             "Hard weather stop at 12:30PM — do not be on exposed trail after this",
             "No swimming in Maroon Lake"
           ],
-          "flag": { "type": "critical", "text": "BOOK NOW at visitmaroonbells.com — Round Trip Option 1, $16/adult $10/child. Fills fast even on weekdays." }
+          "flag": { "type": "info", "text": "✓ Confirmed. See CMBR.pdf in Passes tab for your reservation confirmation." }
         },
         {
           "id": "d4-drive1",
@@ -349,7 +347,7 @@
           "id": "d4-a4",
           "time": "2:00 PM",
           "title": "Silver Queen Gondola — Aspen Mountain",
-          "description": "18-min gondola from downtown Aspen to 11,212 ft. Panoramic views of four mountain ranges. Sundeck restaurant at top. LAST RIDE UP IS 4PM — do not be late. Family Sightseeing Package covers 2 adults + up to 4 kids.",
+          "description": "18-min gondola from downtown Aspen to 11,212 ft. Panoramic views of four mountain ranges. Sundeck restaurant at top. Last ride up 4PM — do not be late. Family Sightseeing Package: 2 adults + up to 4 kids.",
           "address": "601 E Dean St, Aspen, CO 81611",
           "website": "https://www.aspensnowmass.com",
           "type": "activity",
@@ -357,9 +355,9 @@
           "bookingUrl": "https://www.aspensnowmass.com",
           "icon": "🚡",
           "duration": "2 hrs",
-          "cost": "$40/adult, $30/child or Family Package $149",
+          "cost": "$149 Family Pkg",
           "tips": ["Last gondola up at 4PM — arrive by 3:45PM at latest"],
-          "flag": { "type": "warning", "text": "Last ride up at 4PM. If arriving from Maroon Bells — must leave lake by 12:30PM to make this." }
+          "flag": { "type": "warning", "text": "Last ride up 4PM. Leave Maroon Bells by 12:30PM to make it." }
         },
         {
           "id": "d4-a5",
@@ -427,8 +425,8 @@
         {
           "id": "d5-a2",
           "time": "12:00 PM",
-          "title": "Checkout Residence Inn + Lunch + Check Into Resort",
-          "description": "Check out by noon. Lunch nearby (Sal Mex Restaurant or Sweet Coloradough on 27th St for donuts!). Then check into Glenwood Hot Springs Resort (Conf: 1042873).",
+          "title": "Checkout Residence Inn → Lunch → Check Into Hot Springs Resort",
+          "description": "Check out by noon. Lunch nearby — Sal Mex Restaurant (Mexican) or Sweet Coloradough (donuts + coffee, 2430 S Glen Ave). Then check into Glenwood Hot Springs Resort (Conf: 1042873). Pool access included — no extra booking needed.",
           "address": "125 Wulfsohn Road, Glenwood Springs, CO 81601",
           "type": "hotel",
           "icon": "🏨"
@@ -450,18 +448,15 @@
         {
           "id": "d5-a4",
           "time": "6:00 PM",
-          "title": "Iron Mountain Hot Springs — Evening Soak",
-          "description": "13-min walk from Lodge. 16 riverside mineral pools (98–108°F) alongside the Colorado River. Adults-preferred quiet zones. Genuinely relaxing — different character from the main pool. Open until 10PM.",
-          "address": "1000 6th St, Glenwood Springs, CO 81601",
-          "phone": "+19709454545",
-          "website": "https://ironmountainhotsprings.com",
+          "title": "Glenwood Hot Springs Resort — Evening Soak",
+          "description": "Head back to the pool for an evening session. Sopris Splash Zone still open until 10PM for the kids. Grand Pool for adults. Hand stamp for unlimited re-entry — no need to book anything extra.",
+          "address": "401 N River Street, Glenwood Springs, CO 81601",
+          "website": "https://hotspringspool.com",
           "type": "activity",
-          "bookingStatus": "book-now",
-          "bookingUrl": "https://ironmountainhotsprings.com",
-          "icon": "♨️",
+          "bookingStatus": "included",
+          "icon": "🌊",
           "duration": "2 hrs",
-          "cost": "$28–32/adult approx",
-          "tips": ["Book in advance — fills on summer evenings", "13-min walk from Hot Springs Lodge"]
+          "cost": "Included with room"
         }
       ]
     },
