@@ -79,7 +79,7 @@ const ACTIVITIES_DATA = [
 
 const LOCATION_KEY_MAP = {
   denver:   ['Denver', 'Aurora', 'Morrison', 'Greenwood Village'],
-  csprings: ['Colorado Springs', 'Manitou Springs'],
+  csprings: ['Colorado Springs', 'Manitou Springs', 'Buena Vista'],
   glenwood: ['Glenwood Springs'],
   aspen:    ['Aspen'],
   vail:     ['Vail'],
@@ -726,7 +726,7 @@ function buildEatsCard(item) {
     ? `<div class="eats-dishes"><strong>Popular: </strong>${item.popular_dishes.slice(0,4).join(', ')}</div>`
     : '';
 
-  const note = item.note || '';
+  const note = item.note || item.notes || '';
   const noteHtml = note ? `<div class="eats-note">${note}</div>` : '';
 
   const btns = [];
@@ -1454,17 +1454,13 @@ let askCurrentLocation     = null;
 let askInitialized         = false;
 
 function initAskTab() {
-  const storedKey = localStorage.getItem(ASK_KEY_STORAGE);
-  if (storedKey) {
-    showAskChat();
-    loadAskHistory();
-    updateAskContextPill();
-    if (askConversationHistory.length === 0) {
-      showAskWelcome();
-      showAskSuggestions();
-    }
-  } else {
-    showAskSetup();
+  // Key is always available (injected at build time); show chat directly
+  showAskChat();
+  loadAskHistory();
+  updateAskContextPill();
+  if (askConversationHistory.length === 0) {
+    showAskWelcome();
+    showAskSuggestions();
   }
   setupAskEventListeners();
   requestLocationSilently();
@@ -1473,13 +1469,15 @@ function initAskTab() {
 // ── API Key Management ───────────────────────────────────────────────────────
 
 function showAskSetup() {
-  document.getElementById('ask-setup').hidden = false;
-  document.getElementById('ask-chat').hidden  = true;
+  const setup = document.getElementById('ask-setup');
+  if (setup) setup.hidden = false;
+  document.getElementById('ask-chat').hidden = true;
 }
 
 function showAskChat() {
-  document.getElementById('ask-setup').hidden = true;
-  document.getElementById('ask-chat').hidden  = false;
+  const setup = document.getElementById('ask-setup');
+  if (setup) setup.hidden = true;
+  document.getElementById('ask-chat').hidden = false;
 }
 
 function saveAskKey(key) {
@@ -1886,24 +1884,6 @@ function setupAskEventListeners() {
   if (setup._listenersAttached) return;
   setup._listenersAttached = true;
 
-  document.getElementById('ask-key-save')?.addEventListener('click', () => {
-    const key = document.getElementById('ask-api-key-input').value.trim();
-    if (saveAskKey(key)) {
-      showAskChat();
-      loadAskHistory();
-      updateAskContextPill();
-      if (askConversationHistory.length === 0) {
-        showAskWelcome();
-        showAskSuggestions();
-      }
-    }
-  });
-
-  document.getElementById('ask-key-toggle')?.addEventListener('click', () => {
-    const input = document.getElementById('ask-api-key-input');
-    input.type = input.type === 'password' ? 'text' : 'password';
-  });
-
   document.getElementById('ask-send-btn')?.addEventListener('click', sendAskMessage);
 
   document.getElementById('ask-input')?.addEventListener('keydown', e => {
@@ -1922,10 +1902,5 @@ function setupAskEventListeners() {
 
   document.getElementById('ask-clear-btn')?.addEventListener('click', () => {
     if (confirm('Clear conversation history?')) clearAskHistory();
-  });
-
-  document.getElementById('ask-key-change-btn')?.addEventListener('click', () => {
-    localStorage.removeItem(ASK_KEY_STORAGE);
-    showAskSetup();
   });
 }

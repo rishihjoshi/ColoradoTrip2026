@@ -189,42 +189,12 @@
       <!-- Tab: Ask (AI Trip Assistant) -->
       <section id="tab-ask" class="tab-panel" role="tabpanel">
 
-        <!-- API Key Setup Screen (local dev only — hidden in production) -->
-        <div id="ask-setup" class="ask-setup" hidden>
-          <div class="ask-setup-inner">
-            <div class="ask-setup-icon">✨</div>
-            <h2 class="ask-setup-title">Trip Assistant</h2>
-            <p class="ask-setup-desc">
-              Enter your Anthropic API key to ask questions about your Colorado trip.
-              Your key is stored locally on this device only and never sent anywhere
-              except directly to Anthropic's API.
-            </p>
-            <div class="ask-key-input-wrap">
-              <input
-                type="password"
-                id="ask-api-key-input"
-                class="ask-key-input"
-                placeholder="sk-ant-api03-..."
-                autocomplete="off"
-                autocorrect="off"
-                spellcheck="false"
-              />
-              <button id="ask-key-toggle" class="ask-key-toggle" aria-label="Show key">👁</button>
-            </div>
-            <button id="ask-key-save" class="ask-key-btn">Save &amp; Start Chatting</button>
-            <p class="ask-key-note">
-              Get a key at console.anthropic.com · ~$0.01 per conversation
-            </p>
-          </div>
-        </div>
-
         <!-- Chat Interface -->
         <div id="ask-chat" class="ask-chat" hidden>
           <div class="ask-chat-header">
             <div id="ask-context-pill" class="ask-context-pill"></div>
             <div class="ask-chat-actions">
               <button id="ask-clear-btn" class="ask-icon-btn" aria-label="Clear chat" title="Clear conversation">🗑</button>
-              <button id="ask-key-change-btn" class="ask-icon-btn" aria-label="Change API key" title="Change API key">🔑</button>
             </div>
           </div>
           <div id="ask-messages" class="ask-messages" role="log" aria-live="polite" aria-label="Chat messages"></div>
