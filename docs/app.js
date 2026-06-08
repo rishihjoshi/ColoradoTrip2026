@@ -1125,7 +1125,7 @@ function onAuthPinDigit(digit) {
       const hash = await hashPin(entered);
       const storedHash = localStorage.getItem('res_pin_hash');
 
-      // Default PIN hash check (202606) if none set
+      // Fall back to default hash if no PIN has been set up yet
       const defaultHash = await hashPin('202606');
       const correct = hash === storedHash || (!storedHash && hash === defaultHash);
 
@@ -1221,9 +1221,10 @@ function buildResCard(item) {
   const storedImg = localStorage.getItem(`reservation_img_${item.id}`);
 
   // Priority: user-uploaded > pre-built imgPath > upload prompt (if no pdfPath/imgPath)
-  const displayImg = storedImg || (item.imgPath ? item.imgPath : null);
-  const imgHtml = displayImg
-    ? `<img src="${displayImg}" class="res-img-thumb" alt="Confirmation" data-res-id="${item.id}" data-img-src="${displayImg}">`
+  // data-res-id only — image src is resolved at click time from RESERVATION_ITEMS, not DOM
+  const hasImg = !!(storedImg || item.imgPath);
+  const imgHtml = hasImg
+    ? `<img src="${storedImg || item.imgPath}" class="res-img-thumb" alt="Confirmation" data-res-id="${item.id}">`
     : (item.pdfPath ? '' : `<label class="res-upload-btn">
          📤 Add confirmation photo / PDF
          <input type="file" class="res-upload-input" accept="image/*,application/pdf" data-res-id="${item.id}">
@@ -1233,8 +1234,9 @@ function buildResCard(item) {
     ? `<a href="${item.bookingUrl}" target="_blank" rel="noopener" class="btn-mini gold">⚡ Book Now</a>`
     : '';
 
+  // Use res-id only — asset path never written to DOM attributes
   const pdfBtn = item.pdfPath
-    ? `<button type="button" class="btn-mini gold btn-view-pdf" data-pdf-path="${item.pdfPath}">📄 ${item.pdfLabel || 'View Ticket'}</button>`
+    ? `<button type="button" class="btn-mini gold btn-view-pdf" data-res-id="${item.id}">📄 ${item.pdfLabel || 'View Ticket'}</button>`
     : '';
 
   card.innerHTML = `
@@ -1250,22 +1252,29 @@ function buildResCard(item) {
     ${bookBtn ? `<div class="res-btns">${bookBtn}</div>` : ''}
   `;
 
-  // Image thumbnail click → lightbox (works for both uploaded and pre-built images)
+  // Image thumbnail click → resolve src from data (never from DOM attribute)
   const thumb = card.querySelector('.res-img-thumb');
   if (thumb) {
     thumb.addEventListener('click', () => {
-      document.getElementById('lightbox-img').src = thumb.dataset.imgSrc;
+      const resId   = thumb.dataset.resId;
+      const stored  = localStorage.getItem(`reservation_img_${resId}`);
+      const resItem = RESERVATION_ITEMS.find(r => r.id === resId);
+      const src     = stored || resItem?.imgPath;
+      if (!src) return;
+      document.getElementById('lightbox-img').src = src;
       openModal('modal-lightbox');
     });
   }
 
-  // Ticket PDF click → in-app viewer (with a clear way back to the app)
+  // Ticket PDF click → look up path from data (never from DOM attribute)
   const pdfViewBtn = card.querySelector('.btn-view-pdf');
   if (pdfViewBtn) {
     pdfViewBtn.addEventListener('click', () => {
-      const path = pdfViewBtn.dataset.pdfPath;
-      document.getElementById('pdf-frame').src = path;
-      document.getElementById('pdf-frame-fallback').href = path;
+      const resId = pdfViewBtn.dataset.resId;
+      const resItem = RESERVATION_ITEMS.find(r => r.id === resId);
+      if (!resItem?.pdfPath) return;
+      document.getElementById('pdf-frame').src = resItem.pdfPath;
+      document.getElementById('pdf-frame-fallback').href = resItem.pdfPath;
       openModal('modal-pdf');
     });
   }
