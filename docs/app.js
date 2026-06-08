@@ -1455,7 +1455,7 @@ function getTodayMDT() {
 const INJECTED_API_KEY    = '__ANTHROPIC_API_KEY_PLACEHOLDER__';
 const ASK_KEY_STORAGE     = 'colorado26_ask_key';
 const ASK_HISTORY_STORAGE = 'colorado26_ask_history';
-const ASK_MODEL           = 'claude-sonnet-4-20250514';
+const ASK_MODEL           = 'claude-sonnet-4-5';
 const ASK_MAX_TOKENS      = 1024;
 const ASK_HISTORY_LIMIT   = 6;
 
