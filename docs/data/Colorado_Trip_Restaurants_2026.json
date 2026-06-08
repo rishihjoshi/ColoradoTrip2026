@@ -3,7 +3,7 @@
   "yelp_collection_url": "https://www.yelp.com/collection/G02VQ0XuPsBCuF_2tF0-6A/Colorado-Trip",
   "trip_dates": "June 19-24, 2026",
   "export_date": "2026-06-07",
-  "total_restaurants": 48,
+  "total_restaurants": 60,
   "itinerary_summary": {
     "Day 1 (Fri 6/19)": "Travel from STL to Denver - Overnight Denver Airport Hotel",
     "Day 2 (Sat 6/20)": "Denver to Colorado Springs - Pikes Peak, Garden of Gods - Overnight Colorado Springs",
@@ -1396,6 +1396,367 @@
       "itinerary_day": "Day 2 - Colorado Springs",
       "itinerary_location": "Colorado Springs",
       "yelp_url": "https://www.yelp.com/biz/zaika-indian-cuisine-colorado-springs-3"
+    },
+	{
+  "id": 49,
+  "name": "Wesley & Rose Lobby Bar",
+  "full_address": "1028 Wave St, Buena Vista, CO 81211",
+  "street_address": "1028 Wave St",
+  "city": "Buena Vista",
+  "state": "CO",
+  "zip_code": "81211",
+  "cuisine": [
+    "New American",
+    "Cocktail Bars"
+  ],
+  "popular_dishes": [
+  "Truffle Fries",
+  "Margherita Flatbread",
+  "Charcuterie Board",
+  "Seasonal Grain Bowl",
+  "Craft Cocktails"
+	],
+  "price_range": "$$",
+  "yelp_review_count": 245,
+  "yelp_rating": 4.5,
+  "itinerary_day": "Day 3 - Colorado Springs to Glenwood Springs (Lunch Stop)",
+  "itinerary_location": "Buena Vista",
+   "yelp_url": "https://www.yelp.com/biz/wesley-and-rose-lobby-bar-buena-vista",
+  "notes": "Located inside Surf Hotel. Upscale riverside dining and craft cocktails with vegetarian-friendly small plates."
+},
+{
+  "id": 50,
+  "name": "Eddyline Restaurant at South Main",
+  "full_address": "926 South Main St, Buena Vista, CO 81211",
+  "street_address": "926 South Main St",
+  "city": "Buena Vista",
+  "state": "CO",
+  "zip_code": "81211",
+  "cuisine": [
+    "Breweries",
+    "American"
+  ],
+  "popular_dishes": [
+  "Veggie Burger",
+  "Wood-Fired Pizza",
+  "Beer Cheese Pretzel",
+  "South Main Salad",
+  "Sweet Potato Fries"
+	],
+  "price_range": "$$",
+  "yelp_review_count": 586,
+  "yelp_rating": 3.5,
+  "itinerary_day": "Day 3 - Colorado Springs to Glenwood Springs (Lunch Stop)",
+  "itinerary_location": "Buena Vista",
+   "yelp_url":"https://www.yelp.com/biz/eddyline-restaurant-at-south-main-buena-vista",
+  "notes": "Popular South Main neighborhood brewpub. Good vegetarian burgers, salads, pizzas and outdoor seating."
+},
+{
+  "id": 51,
+  "name": "Simple Eatery",
+  "full_address": "402 E Main St, Buena Vista, CO 81211",
+  "street_address": "402 E Main St",
+  "city": "Buena Vista",
+  "state": "CO",
+  "zip_code": "81211",
+  "cuisine": [
+    "Bakeries",
+    "American"
+  ],
+  "popular_dishes": [
+  "Veggie Panini",
+  "Tomato Basil Soup",
+  "Breakfast Burrito",
+  "Fresh-Baked Cinnamon Roll",
+  "Avocado Toast"
+],
+  "price_range": "$$",
+  "yelp_review_count": 648,
+  "yelp_rating": 4.5,
+  "itinerary_day": "Day 3 - Colorado Springs to Glenwood Springs (Breakfast or Lunch Stop)",
+  "itinerary_location": "Buena Vista",
+   "yelp_url":"https://www.yelp.com/biz/simple-eatery-buena-vista-2",
+  "notes": "Excellent vegetarian-friendly café with sandwiches, soups, baked goods, coffee, and breakfast options."
+},
+    {
+      "id": 52,
+      "name": "Riviera Scratch Kitchen",
+      "full_address": "Glenwood Springs, CO",
+      "street_address": "",
+      "city": "Glenwood Springs",
+      "state": "CO",
+      "zip_code": "",
+      "location": {
+        "latitude": null,
+        "longitude": null
+      },
+      "cuisine": [
+        "New American"
+      ],
+      "price_range": "$$",
+      "yelp_review_count": null,
+      "tripadvisor_rating": 4.8,
+      "google_rating": 4.2,
+      "popular_dishes": [
+        "Seasonal Vegetable Dishes",
+        "Scratch-Made Pasta",
+        "House Salads",
+        "Daily Specials"
+      ],
+      "itinerary_day": "Day 3/4/5 - Glenwood Springs",
+      "itinerary_location": "Glenwood Springs",
+      "yelp_url": "",
+      "phone": "(970) 945-7692",
+      "notes": "Ranked #1 on TripAdvisor in Glenwood Springs. Excellent vegetarian options, scratch-made dishes from local ingredients."
+    },
+    {
+      "id": 53,
+      "name": "Daily Bread",
+      "full_address": "Glenwood Springs, CO",
+      "street_address": "",
+      "city": "Glenwood Springs",
+      "state": "CO",
+      "zip_code": "",
+      "location": {
+        "latitude": null,
+        "longitude": null
+      },
+      "cuisine": [
+        "Breakfast & Brunch",
+        "Bakeries"
+      ],
+      "price_range": "$",
+      "yelp_review_count": null,
+      "google_rating": 4.3,
+      "popular_dishes": [
+        "Vegetarian Breakfast Plates",
+        "Fresh-Baked Bread",
+        "Soups & Sandwiches",
+        "Breakfast Burritos"
+      ],
+      "itinerary_day": "Day 3/4/5 - Glenwood Springs",
+      "itinerary_location": "Glenwood Springs",
+      "yelp_url": "",
+      "phone": "(970) 945-6253",
+      "notes": "Top breakfast and lunch destination in Glenwood Springs. Consistently ranks among the best in town. Vegetarian-friendly menu."
+    },
+    {
+      "id": 54,
+      "name": "Glenwood Canyon Brewpub",
+      "full_address": "Glenwood Springs, CO",
+      "street_address": "",
+      "city": "Glenwood Springs",
+      "state": "CO",
+      "zip_code": "",
+      "location": {
+        "latitude": null,
+        "longitude": null
+      },
+      "cuisine": [
+        "Pubs",
+        "Breweries",
+        "American"
+      ],
+      "price_range": "$$",
+      "yelp_review_count": null,
+      "google_rating": 3.9,
+      "popular_dishes": [
+        "Veggie Burgers",
+        "Pretzels",
+        "House Salads",
+        "Flatbreads"
+      ],
+      "itinerary_day": "Day 3/4/5 - Glenwood Springs",
+      "itinerary_location": "Glenwood Springs",
+      "yelp_url": "",
+      "phone": "(970) 945-1276",
+      "notes": "One of the most-reviewed restaurants in Glenwood Springs. Strong vegetarian selection, family-friendly atmosphere."
+    },
+    {
+      "id": 55,
+      "name": "Native Son Agave Bar & Kitchen",
+      "full_address": "Glenwood Springs, CO",
+      "street_address": "",
+      "city": "Glenwood Springs",
+      "state": "CO",
+      "zip_code": "",
+      "location": {
+        "latitude": null,
+        "longitude": null
+      },
+      "cuisine": [
+        "New American",
+        "Cocktail Bars"
+      ],
+      "price_range": "$$",
+      "yelp_review_count": null,
+      "google_rating": 4.1,
+      "popular_dishes": [
+        "Buddha Bowl",
+        "Vegetarian Tacos",
+        "Seasonal Salads",
+        "Craft Cocktails"
+      ],
+      "itinerary_day": "Day 3/4/5 - Glenwood Springs",
+      "itinerary_location": "Glenwood Springs",
+      "yelp_url": "",
+      "phone": "(970) 230-9954",
+      "notes": "Newer downtown restaurant with strong reviews. Buddha Bowl and solid vegetarian offerings."
+    },
+    {
+      "id": 56,
+      "name": "Spring Cafe Aspen",
+      "full_address": "Aspen, CO",
+      "street_address": "",
+      "city": "Aspen",
+      "state": "CO",
+      "zip_code": "",
+      "location": {
+        "latitude": null,
+        "longitude": null
+      },
+      "cuisine": [
+        "Juice Bars & Smoothies",
+        "Vegan",
+        "Vegetarian"
+      ],
+      "price_range": "$$",
+      "yelp_review_count": null,
+      "google_rating": 3.3,
+      "popular_dishes": [
+        "Green Smoothie Bowls",
+        "Cold-Pressed Juices",
+        "Veggie Wraps",
+        "Acai Bowls",
+        "Avocado Toast"
+      ],
+      "itinerary_day": "Day 4 - Aspen",
+      "itinerary_location": "Aspen",
+      "yelp_url": "",
+      "phone": "(970) 429-8406",
+      "notes": "Best vegetarian-focused restaurant in Aspen per locals. Ideal fit for the family's dietary preferences."
+    },
+    {
+      "id": 57,
+      "name": "Campo de Fiori",
+      "full_address": "Aspen, CO",
+      "street_address": "",
+      "city": "Aspen",
+      "state": "CO",
+      "zip_code": "",
+      "location": {
+        "latitude": null,
+        "longitude": null
+      },
+      "cuisine": [
+        "Italian"
+      ],
+      "price_range": "$$$",
+      "yelp_review_count": null,
+      "google_rating": 3.9,
+      "popular_dishes": [
+        "Vegetarian Pasta",
+        "Margherita Pizza",
+        "Caprese Salad",
+        "Risotto",
+        "Tiramisu"
+      ],
+      "itinerary_day": "Day 4 - Aspen",
+      "itinerary_location": "Aspen",
+      "yelp_url": "",
+      "notes": "One of Aspen's most popular Italian restaurants. Great vegetarian pasta options, consistently recommended by locals."
+    },
+    {
+      "id": 58,
+      "name": "Elephant Thai",
+      "full_address": "Colorado Springs, CO",
+      "street_address": "",
+      "city": "Colorado Springs",
+      "state": "CO",
+      "zip_code": "",
+      "location": {
+        "latitude": null,
+        "longitude": null
+      },
+      "cuisine": [
+        "Thai"
+      ],
+      "price_range": "$$",
+      "yelp_review_count": null,
+      "google_rating": 4.4,
+      "popular_dishes": [
+        "Pad Thai",
+        "Green Curry",
+        "Massaman Curry",
+        "Spring Rolls",
+        "Tofu Stir Fry"
+      ],
+      "itinerary_day": "Day 2 - Colorado Springs",
+      "itinerary_location": "Colorado Springs",
+      "yelp_url": "",
+      "phone": "(719) 597-1175",
+      "notes": "Frequently recommended by locals as the best Thai in Colorado Springs. Strong vegetarian offerings, higher-rated than several Thai places on the current list."
+    },
+    {
+      "id": 59,
+      "name": "Nom Nom Thai",
+      "full_address": "Colorado Springs, CO",
+      "street_address": "",
+      "city": "Colorado Springs",
+      "state": "CO",
+      "zip_code": "",
+      "location": {
+        "latitude": null,
+        "longitude": null
+      },
+      "cuisine": [
+        "Thai"
+      ],
+      "price_range": "$$",
+      "yelp_review_count": null,
+      "google_rating": 4.2,
+      "popular_dishes": [
+        "Pad See Ew",
+        "Panang Curry",
+        "Pad Thai",
+        "Tom Kha Soup",
+        "Vegetarian Fried Rice"
+      ],
+      "itinerary_day": "Day 2 - Colorado Springs",
+      "itinerary_location": "Colorado Springs",
+      "yelp_url": "",
+      "phone": "(719) 573-7004",
+      "notes": "Excellent local Thai reputation, repeatedly recommended by Colorado Springs locals."
+    },
+    {
+      "id": 60,
+      "name": "Fern's Diner & Drinkery",
+      "full_address": "Manitou Springs, CO",
+      "street_address": "",
+      "city": "Manitou Springs",
+      "state": "CO",
+      "zip_code": "",
+      "location": {
+        "latitude": null,
+        "longitude": null
+      },
+      "cuisine": [
+        "American",
+        "Vegetarian",
+        "Vegan"
+      ],
+      "price_range": "$$",
+      "yelp_review_count": null,
+      "popular_dishes": [
+        "Veggie Burgers",
+        "Vegan Bowls",
+        "Breakfast Plates",
+        "House Salads"
+      ],
+      "itinerary_day": "Day 2 - Colorado Springs / Manitou Springs",
+      "itinerary_location": "Manitou Springs (near Pikes Peak)",
+      "yelp_url": "",
+      "notes": "Near Pikes Peak. Frequently recommended for vegetarian and vegan diners. Better fit than several average-rated options currently on the list."
     }
   ]
 }
