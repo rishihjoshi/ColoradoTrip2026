@@ -1572,7 +1572,7 @@ ${todayDayNum
 }
 
 FULL TRIP OVERVIEW (one line each):
-Day 1 — Fri Jun 19: Travel STL→Denver, arrive midnight. Hotel: Hyatt Place Denver Airport.
+Day 1 — Fri Jun 19: Travel STL→Denver, arrive midnight. Hotel: Quality Inn & Suites Denver Airport, 6890 Tower Rd.
 Day 2 — Sat Jun 20: Pikes Peak Cog Railway (9AM) + Garden of Gods + Red Rock Canyon. Hotel: Academy Hotel Colorado Springs.
 Day 3 — Sun Jun 21: Vail Farmers Market (12:30–3PM) → Glenwood Springs. Hotel: Residence Inn Glenwood Springs.
 Day 4 — Mon Jun 22: Maroon Bells 8AM shuttle (MAIN HIGHLIGHT) + Silver Queen Gondola + Cooper St Aspen. Hotel: Residence Inn Glenwood Springs.

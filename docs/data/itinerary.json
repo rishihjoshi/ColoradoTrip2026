@@ -32,14 +32,13 @@
       "badgeColor": "sky",
       "weatherLocationKey": 1,
       "hotel": {
-        "name": "Hyatt Place Denver Airport",
-        "address": "18300 E 68th Ave, Denver, CO 80249",
-        "phone": "+13033737900",
+        "name": "Quality Inn & Suites Denver International Airport",
+        "address": "6890 Tower Rd, Denver, CO 80249",
+        "phone": "+13037819300",
         "checkIn": "Late — ~1:00 AM",
         "nights": 1,
         "confirmationNumber": "73462444560278",
-        "bookingSource": "Expedia",
-        "notes": "10 min from DEN terminal. Free airport shuttle. No renovation. Free hot breakfast."
+        "bookingSource": "Expedia"
       },
       "activities": [
         {
@@ -66,10 +65,10 @@
         {
           "id": "d1-a3",
           "time": "1:00 AM",
-          "title": "Check Into Hyatt Place Denver Airport",
+          "title": "Check Into Quality Inn & Suites Denver Airport",
           "description": "Sleep. Early checkout tomorrow 7:00 AM for Pikes Peak drive.",
-          "address": "18300 E 68th Ave, Denver, CO 80249",
-          "phone": "+13033737900",
+          "address": "6890 Tower Rd, Denver, CO 80249",
+          "phone": "+13037819300",
           "type": "hotel",
           "bookingStatus": "confirmed",
           "icon": "🏨"
