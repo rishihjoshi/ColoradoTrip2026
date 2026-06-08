@@ -195,25 +195,25 @@
       "activities": [
         {
           "id": "d3-a1",
-          "time": "8:00 AM",
-          "title": "Depart Colorado Springs — Scenic Drive via Buena Vista",
-          "description": "Head west on Hwy 24 through Colorado's most dramatic mountain pass country. The route via Buena Vista and Twin Lakes is far more scenic than I-70 and only marginally longer. You'll pass the Collegiate Peaks (Harvard, Yale, Oxford, Columbia — all 14ers).",
+          "time": "10:00 AM",
+          "title": "Checkout & Depart Colorado Springs — Scenic Drive via Buena Vista",
+          "description": "Late checkout — no rush this morning. Head west on Hwy 24 through Colorado's most dramatic mountain pass country. The route via Buena Vista and Twin Lakes is far more scenic than I-70 and only marginally longer. You'll pass the Collegiate Peaks (Harvard, Yale, Oxford, Columbia — all 14ers). About 2 hrs to Buena Vista.",
           "address": "Colorado Springs, CO",
           "type": "drive",
           "icon": "🚗",
-          "driveInfo": { "duration": "4 hrs total to Glenwood", "via": "Hwy 24 W → Buena Vista → Twin Lakes → Independence Pass or Hwy 82 → Glenwood" }
+          "driveInfo": { "duration": "~4 hrs driving total to Glenwood", "via": "Hwy 24 W → Buena Vista → Twin Lakes → Independence Pass or Hwy 82 → Glenwood" }
         },
         {
           "id": "d3-a2",
-          "time": "10:00 AM",
-          "title": "Buena Vista — Coffee + Stretch",
-          "description": "Charming mountain town on the Arkansas River. Stop at Eddyline Brewery or Deerhammer for coffee and a stretch. Main Street has great views of the Collegiate Peaks. Quick 20 min stop.",
+          "time": "12:00 PM",
+          "title": "Buena Vista — Lunch Stop",
+          "description": "Charming mountain town on the Arkansas River — perfect spot to stop for lunch and stretch your legs. Eddyline Brewery and Deerhammer both have solid food menus, or grab a table on Main Street with views of the Collegiate Peaks. About an hour here, then push on toward Twin Lakes.",
           "address": "Buena Vista, CO 81211",
           "type": "activity",
           "bookingStatus": "free",
-          "icon": "☕",
-          "duration": "20 min",
-          "cost": "Free to stop"
+          "icon": "🍽️",
+          "duration": "1 hour",
+          "cost": "$15-25/person approx"
         },
         {
           "id": "d3-drive1",
@@ -224,7 +224,7 @@
         },
         {
           "id": "d3-a3",
-          "time": "10:45 AM",
+          "time": "1:30 PM",
           "title": "Twin Lakes — Photo Stop",
           "description": "Two stunning glacial lakes at the base of Mount Elbert (Colorado's highest peak at 14,440 ft). The reflection of the mountains in the lake is iconic. Short walk along the lake shore. 20-30 min stop. This is genuinely one of Colorado's most photogenic spots.",
           "address": "Twin Lakes, CO 81251",

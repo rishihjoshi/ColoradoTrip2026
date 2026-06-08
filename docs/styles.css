@@ -9,13 +9,13 @@
   --cream:     #f5efe3;
   --warm:      #ede4d4;
   --mist:      #d4c9b4;
-  --stone:     #8a7e6a;
+  --stone:     #a89c84;
   --red-flag:  #b84a35;
   --sky:       #3a6e9e;
   --text-dark: #1e1810;
   --text-lite: #e8e0d0;
-  --sub-dark:  #6a5e4a;
-  --sub-lite:  #8a9e8e;
+  --sub-dark:  #847859;
+  --sub-lite:  #aec1b3;
 
   --safe-t: env(safe-area-inset-top,    0px);
   --safe-b: env(safe-area-inset-bottom, 0px);
@@ -93,7 +93,7 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
 }
 
 .header-title {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Lora', serif;
   font-size: 20px;
   font-weight: 700;
   color: var(--gold);
@@ -102,7 +102,7 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
 
 .offline-pill {
   font-family: 'DM Mono', monospace;
-  font-size: 11px;
+  font-size: 12px;
   background: rgba(200,151,58,0.18);
   color: var(--gold2);
   border: 1px solid rgba(200,151,58,0.35);
@@ -134,7 +134,7 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
 }
 
 .tab-hero-title {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Lora', serif;
   font-size: 28px;
   font-weight: 700;
   color: var(--text-lite);
@@ -143,7 +143,7 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
 
 .tab-hero-sub {
   font-family: 'DM Mono', monospace;
-  font-size: 11px;
+  font-size: 12px;
   color: var(--sub-lite);
   margin-top: 3px;
   text-transform: uppercase;
@@ -211,7 +211,7 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
 
 .nav-label {
   font-family: 'DM Mono', monospace;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.03em;
 }
 
@@ -271,7 +271,7 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
 }
 
 .day-number {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Lora', serif;
   font-size: 28px;
   font-weight: 700;
   color: var(--gold);
@@ -286,7 +286,7 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
 
 .day-date {
   font-family: 'DM Mono', monospace;
-  font-size: 11px;
+  font-size: 12px;
   color: var(--sub-lite);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -312,7 +312,7 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
 
 .day-badge {
   font-family: 'DM Mono', monospace;
-  font-size: 10px;
+  font-size: 11px;
   padding: 2px 8px;
   border-radius: 10px;
   font-weight: 500;
@@ -333,7 +333,7 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
 
 .day-weather-chip {
   font-family: 'DM Mono', monospace;
-  font-size: 10px;
+  font-size: 11px;
   color: var(--sub-lite);
   background: rgba(255,255,255,0.05);
   padding: 2px 7px;
@@ -357,7 +357,7 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
 
 .hotel-name { font-weight: 600; color: var(--gold); }
 .hotel-meta { color: var(--sub-lite); margin-top: 2px; }
-.hotel-notes { color: var(--sub-lite); font-size: 11px; margin-top: 3px; font-style: italic; }
+.hotel-notes { color: var(--sub-lite); font-size: 12px; margin-top: 3px; font-style: italic; }
 
 /* ── Activity Timeline ── */
 .timeline {
@@ -417,7 +417,7 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
 
 .activity-time {
   font-family: 'DM Mono', monospace;
-  font-size: 10px;
+  font-size: 11px;
   color: var(--gold);
   background: rgba(200,151,58,0.12);
   padding: 1px 6px;
@@ -427,7 +427,7 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
 }
 
 .activity-title {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--text-lite);
   line-height: 1.3;
@@ -440,9 +440,9 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
 }
 
 .activity-body {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--sub-lite);
-  line-height: 1.5;
+  line-height: 1.6;
   margin-top: 3px;
 }
 
@@ -451,7 +451,7 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
   align-items: center;
   gap: 4px;
   margin-top: 4px;
-  font-size: 11px;
+  font-size: 12px;
   color: var(--gold);
   text-decoration: none;
   border-bottom: 1px solid rgba(200,151,58,0.3);
@@ -466,7 +466,7 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
 
 .btn-mini {
   font-family: 'DM Mono', monospace;
-  font-size: 10px;
+  font-size: 11px;
   padding: 3px 9px;
   border-radius: 6px;
   border: 1px solid rgba(255,255,255,0.12);
@@ -488,7 +488,7 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
 /* ── Status Chips ── */
 .status-chip {
   font-family: 'DM Mono', monospace;
-  font-size: 9px;
+  font-size: 10px;
   padding: 2px 7px;
   border-radius: 8px;
   white-space: nowrap;
@@ -509,7 +509,7 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
   gap: 6px;
   padding: 6px 0 6px 38px;
   font-family: 'DM Mono', monospace;
-  font-size: 10px;
+  font-size: 11px;
   color: var(--sub-lite);
 }
 
@@ -536,8 +536,8 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
   margin-top: 6px;
   padding: 6px 8px;
   border-radius: var(--radius-sm);
-  font-size: 11px;
-  line-height: 1.4;
+  font-size: 12px;
+  line-height: 1.5;
 }
 
 .flag-critical { background: rgba(184,74,53,0.15); border-left: 2px solid var(--red-flag); color: #f0a090; }
@@ -555,7 +555,7 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
 }
 
 .activity-tips li {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--sub-lite);
   padding-left: 12px;
   position: relative;
@@ -571,7 +571,7 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
 /* ── User-added tag ── */
 .user-added-tag {
   font-family: 'DM Mono', monospace;
-  font-size: 9px;
+  font-size: 10px;
   color: var(--gold);
   background: rgba(200,151,58,0.12);
   border: 1px solid rgba(200,151,58,0.25);
@@ -631,7 +631,7 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
 
 .filter-chip {
   font-family: 'DM Mono', monospace;
-  font-size: 11px;
+  font-size: 12px;
   padding: 5px 12px;
   border-radius: 20px;
   border: 1px solid rgba(255,255,255,0.1);
@@ -679,7 +679,7 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
 
 .eats-tag {
   font-family: 'DM Mono', monospace;
-  font-size: 9px;
+  font-size: 10px;
   padding: 2px 7px;
   border-radius: 8px;
   background: rgba(74,124,90,0.2);
@@ -710,13 +710,13 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
 
 .eats-price {
   font-family: 'DM Mono', monospace;
-  font-size: 11px;
+  font-size: 12px;
   color: var(--sub-lite);
   flex-shrink: 0;
 }
 
 .eats-meta {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--sub-lite);
   line-height: 1.5;
 }
@@ -725,13 +725,13 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
   color: var(--gold);
   text-decoration: none;
   border-bottom: 1px solid rgba(200,151,58,0.3);
-  font-size: 11px;
+  font-size: 12px;
   display: inline-block;
   margin-top: 3px;
 }
 
 .eats-note {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--sub-lite);
   margin-top: 5px;
   line-height: 1.5;
@@ -740,7 +740,7 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
 
 .eats-dishes {
   margin-top: 5px;
-  font-size: 11px;
+  font-size: 12px;
   color: var(--stone);
 }
 
@@ -758,7 +758,7 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
 
 .eats-distance {
   font-family: 'DM Mono', monospace;
-  font-size: 10px;
+  font-size: 11px;
   color: var(--sub-lite);
   background: rgba(255,255,255,0.04);
   padding: 2px 7px;
@@ -767,7 +767,7 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
 
 .eats-day-badge {
   font-family: 'DM Mono', monospace;
-  font-size: 9px;
+  font-size: 10px;
   padding: 2px 7px;
   border-radius: 8px;
   background: rgba(255,255,255,0.05);
@@ -804,7 +804,7 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
 .auth-icon { font-size: 40px; margin-bottom: 12px; }
 
 .auth-title {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Lora', serif;
   font-size: 22px;
   font-weight: 700;
   color: var(--text-lite);
@@ -916,7 +916,7 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
 
 .btn-lock {
   font-family: 'DM Mono', monospace;
-  font-size: 11px;
+  font-size: 12px;
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.1);
   color: var(--sub-lite);
@@ -948,7 +948,7 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
 
 .res-category {
   font-family: 'DM Mono', monospace;
-  font-size: 9px;
+  font-size: 10px;
   padding: 2px 8px;
   border-radius: 8px;
   background: rgba(74,124,90,0.2);
@@ -967,14 +967,14 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
 
 .res-ref {
   font-family: 'DM Mono', monospace;
-  font-size: 10px;
+  font-size: 11px;
   color: var(--sub-lite);
   margin-top: 3px;
 }
 
 .res-date {
   font-family: 'DM Mono', monospace;
-  font-size: 11px;
+  font-size: 12px;
   color: var(--gold);
   margin-top: 4px;
 }
@@ -1038,13 +1038,13 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
   align-items: center;
   justify-content: space-between;
   font-family: 'DM Mono', monospace;
-  font-size: 11px;
+  font-size: 12px;
   color: var(--sub-lite);
 }
 
 .btn-reset {
   font-family: 'DM Mono', monospace;
-  font-size: 10px;
+  font-size: 11px;
   background: rgba(184,74,53,0.15);
   border: 1px solid rgba(184,74,53,0.25);
   color: #e87a6a;
@@ -1087,7 +1087,7 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
 
 .pack-cat-count {
   font-family: 'DM Mono', monospace;
-  font-size: 10px;
+  font-size: 11px;
   color: var(--sub-lite);
 }
 
@@ -1136,9 +1136,9 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
 }
 
 .pack-item-text {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--text-lite);
-  line-height: 1.4;
+  line-height: 1.5;
   transition: all var(--transition);
   user-select: text;
 }
@@ -1151,7 +1151,7 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
 
 .pack-item-user {
   font-family: 'DM Mono', monospace;
-  font-size: 9px;
+  font-size: 10px;
   color: var(--gold);
   background: rgba(200,151,58,0.1);
   padding: 1px 5px;
@@ -1199,7 +1199,7 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
 }
 
 .modal-title {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Lora', serif;
   font-size: 20px;
   font-weight: 700;
   color: var(--text-lite);
@@ -1306,12 +1306,40 @@ select.form-input option { background: var(--pine2); }
   justify-content: center;
 }
 
+/* ── PDF Viewer ── */
+.pdf-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: var(--radius);
+  background: white;
+}
+
+.pdf-viewer-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 5;
+  padding: 9px 16px;
+  border-radius: 20px;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  border: none;
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
 /* ── Utilities ── */
 .hidden { display: none !important; }
 
 .weather-loading {
   font-family: 'DM Mono', monospace;
-  font-size: 10px;
+  font-size: 11px;
   color: var(--sub-lite);
   animation: pulse 1.5s ease infinite;
 }

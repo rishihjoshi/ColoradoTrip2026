@@ -154,11 +154,19 @@ function setupFAB() {
 
   document.querySelectorAll('.modal-overlay').forEach(modal => {
     modal.addEventListener('click', e => {
-      if (e.target === modal) closeModal(modal.id);
+      if (e.target === modal) {
+        closeModal(modal.id);
+        if (modal.id === 'modal-pdf') document.getElementById('pdf-frame').src = '';
+      }
     });
   });
 
   document.getElementById('btn-close-lightbox').addEventListener('click', () => closeModal('modal-lightbox'));
+
+  document.getElementById('btn-close-pdf').addEventListener('click', () => {
+    closeModal('modal-pdf');
+    document.getElementById('pdf-frame').src = '';
+  });
 }
 
 function openModal(id) {
@@ -1033,17 +1041,17 @@ function buildResCard(item) {
 
   const imgHtml = storedImg
     ? `<img src="${storedImg}" class="res-img-thumb" alt="Confirmation" data-res-id="${item.id}">`
-    : `<label class="res-upload-btn">
+    : (item.pdfPath ? '' : `<label class="res-upload-btn">
          📤 Add confirmation photo / PDF
          <input type="file" class="res-upload-input" accept="image/*,application/pdf" data-res-id="${item.id}">
-       </label>`;
+       </label>`);
 
   const bookBtn = (item.status === 'book-now' && item.bookingUrl)
     ? `<a href="${item.bookingUrl}" target="_blank" rel="noopener" class="btn-mini gold">⚡ Book Now</a>`
     : '';
 
   const pdfBtn = item.pdfPath
-    ? `<a href="${item.pdfPath}" target="_blank" rel="noopener" class="btn-mini gold">📄 ${item.pdfLabel || 'View Ticket'}</a>`
+    ? `<button type="button" class="btn-mini gold btn-view-pdf" data-pdf-path="${item.pdfPath}">📄 ${item.pdfLabel || 'View Ticket'}</button>`
     : '';
 
   card.innerHTML = `
@@ -1065,6 +1073,15 @@ function buildResCard(item) {
     thumb.addEventListener('click', () => {
       document.getElementById('lightbox-img').src = storedImg;
       openModal('modal-lightbox');
+    });
+  }
+
+  // Ticket PDF click → in-app viewer (with a clear way back to the app)
+  const pdfViewBtn = card.querySelector('.btn-view-pdf');
+  if (pdfViewBtn) {
+    pdfViewBtn.addEventListener('click', () => {
+      document.getElementById('pdf-frame').src = pdfViewBtn.dataset.pdfPath;
+      openModal('modal-pdf');
     });
   }
 
