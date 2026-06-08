@@ -49,7 +49,33 @@ const ACTIVITIES_DATA = [
   { id:'act6', name:'Glenwood Hot Springs Pool', location:'Glenwood Springs', locationKey:'glenwood', lat:39.5487, lon:-107.3228, address:'401 N River Street, Glenwood Springs, CO 81601', phone:'+18005377946', website:'https://hotspringspool.com', type:'activity', tags:['family','kids','swimming','water-slides'], cost:'~$21-39/adult (included with Lodge room)', note:'Sopris Splash Zone has water slides + fountains for kids. No reservations, hand stamp for re-entry. Open 8AM–10PM.', bookingStatus:'included', relevantDays:[5] },
   { id:'act7', name:'Red Rocks Park & Amphitheatre', location:'Morrison', locationKey:'denver', lat:39.6654, lon:-105.2057, address:'18300 W Alameda Pkwy, Morrison, CO 80465', website:'https://www.redrocksonline.com', type:'activity', tags:['free','family','scenic','hiking','iconic'], cost:'Free daytime entry', note:'Trading Post Trail (1.4 mi easy loop). Visitor center 7AM–7PM. Perfect Colorado farewell on Day 6.', bookingStatus:'free', relevantDays:[6] },
   { id:'act8', name:'Silver Queen Gondola — Aspen Mountain', location:'Aspen', locationKey:'aspen', lat:39.1879, lon:-106.8199, address:'601 E Dean St, Aspen, CO 81611', website:'https://www.aspensnowmass.com', type:'activity', tags:['family','gondola','scenic','views'], cost:'$40/adult, $30/child or Family Package $149', note:'18-min ride to 11,212 ft. Last ride up 4PM. Family Sightseeing Package covers 2 adults + 4 kids.', bookingStatus:'book-now', relevantDays:[4] },
-  { id:'act9', name:'Vail Farmers Market & Art Show', location:'Vail', locationKey:'vail', lat:39.6428, lon:-106.3743, address:'East Meadow Drive, Vail Village, Vail, CO 81657', website:'https://www.vailfarmersmarket.com', type:'activity', tags:['free','family','market','sunday-only'], cost:'Free entry', note:'Sundays 9:30AM–3PM. Bring cash — many vendors don\'t take cards. Arrive by 12:30PM for 2 full hours.', bookingStatus:'free', relevantDays:[3] },
+  { id:'act9',  name:'Vail Farmers Market & Art Show',          location:'Vail',             locationKey:'vail',     lat:39.6428, lon:-106.3743, address:'East Meadow Drive, Vail Village, Vail, CO 81657',                website:'https://www.vailfarmersmarket.com',        type:'activity', tags:['free','family','market','sunday-only'],       cost:'Free entry',                     note:'Sundays 9:30AM–3PM. Bring cash — many vendors don\'t take cards. Arrive by 12:30PM for 2 full hours.', bookingStatus:'free',     relevantDays:[3] },
+
+  // ── Colorado Springs ──
+  { id:'act10', name:'Cave of the Winds Mountain Park',          location:'Manitou Springs',  locationKey:'csprings', lat:38.8731, lon:-104.8943, address:'100 Cave of the Winds Rd, Manitou Springs, CO 80829', phone:'+17196851012',   website:'https://caveofthewinds.com',              type:'activity', tags:['family','caves','indoor','kids'],             cost:'$30-40/adult',                   note:'Guided cave tours year-round. "Terror-dactyl" zipline and wind tunnel add-ons. 45-min to 2-hr tours. Kids love the lantern tours.', bookingStatus:'book-now', bookingUrl:'https://caveofthewinds.com', relevantDays:[2] },
+  { id:'act11', name:'North Cheyenne Cañon Park + Helen Hunt Falls', location:'Colorado Springs', locationKey:'csprings', lat:38.7922, lon:-104.8765, address:'2120 S Cheyenne Canyon Rd, Colorado Springs, CO 80906', website:'https://coloradosprings.gov/cheyenne-canon', type:'activity', tags:['free','family','hiking','waterfall','scenic'],  cost:'Free',                           note:'Helen Hunt Falls is a quick easy 0.5mi walk. Silver Cascade Falls adds another scenic stop. Pine-scented canyon road. Very popular with locals.', bookingStatus:'free', relevantDays:[2] },
+  { id:'act12', name:'US Olympic & Paralympic Museum',            location:'Colorado Springs', locationKey:'csprings', lat:38.8290, lon:-104.8282, address:'200 S Sierra Madre St, Colorado Springs, CO 80905', website:'https://www.usopm.org',               type:'activity', tags:['family','museum','indoor','kids'],             cost:'$25/adult, $18/child',           note:'World-class interactive museum celebrating US Olympians. Downtown Colorado Springs. Allow 2-3 hrs. Kids can try simulated sports events.', bookingStatus:'optional', relevantDays:[2] },
+  { id:'act13', name:'Cheyenne Mountain Zoo',                     location:'Colorado Springs', locationKey:'csprings', lat:38.7754, lon:-104.8759, address:'4250 Cheyenne Mountain Zoo Rd, Colorado Springs, CO 80906', phone:'+17193851212', website:'https://www.cmzoo.org', type:'activity', tags:['family','kids','animals','scenic'],             cost:'$25/adult, $18/child',           note:'Only mountain zoo in America at 6,800 ft. Giraffe feeding is a highlight ($5 extra). African Rift Valley exhibit. Spectacular views of Colorado Springs below.', bookingStatus:'optional', relevantDays:[2] },
+  { id:'act14', name:'Red Rock Canyon Open Space',                location:'Colorado Springs', locationKey:'csprings', lat:38.8325, lon:-104.8821, address:'3550 W High St, Colorado Springs, CO 80904',          website:'https://coloradosprings.gov/red-rock-canyon', type:'activity', tags:['free','family','hiking','scenic'],           cost:'Free',                           note:'Same red sandstone geology as Garden of Gods — zero crowds. Mesa Trail (1.5mi easy). Views back toward GoG. Locals\' favorite. Dog-friendly.', bookingStatus:'free', relevantDays:[2] },
+
+  // ── Glenwood Springs ──
+  { id:'act15', name:'Glenwood Caverns Adventure Park',           location:'Glenwood Springs', locationKey:'glenwood', lat:39.5706, lon:-107.3304, address:'51000 Two Rivers Plaza Rd, Glenwood Springs, CO 81601', phone:'+19709451975', website:'https://glenwoodcaverns.com',              type:'activity', tags:['family','kids','caves','scenic','adventure'],   cost:'$25-80/person depending on rides', note:'Cable gondola to top of Lookout Mountain then cave tours + theme park rides. Giant Canyon Swing, alpine coaster. Kids LOVE this. Cave tours run ~45min.', bookingStatus:'book-now', bookingUrl:'https://glenwoodcaverns.com', relevantDays:[3,5] },
+  { id:'act16', name:'Hanging Lake Trail',                        location:'Glenwood Springs', locationKey:'glenwood', lat:39.5997, lon:-107.1922, address:'Hanging Lake Trailhead, Glenwood Canyon, CO 81601',   website:'https://www.recreation.gov',              type:'activity', tags:['hiking','scenic','iconic','permit-required'],  cost:'$15 permit + $15 shuttle',       note:'One of Colorado\'s most iconic hikes — turquoise hanging lake at 7,323 ft. 2.8 mi RT, strenuous (1,000 ft gain). PERMIT REQUIRED May-Nov. Book weeks ahead on recreation.gov. No kids under 5.', bookingStatus:'book-now', bookingUrl:'https://www.recreation.gov/ticket/facility/300009', relevantDays:[3,5], flag:{type:'warning', text:'Permit sells out fast. Book at recreation.gov at least 2 weeks ahead. Shuttle from Glenwood departs 7AM-4PM.'} },
+  { id:'act17', name:'Yampah Spa & Vapor Caves',                  location:'Glenwood Springs', locationKey:'glenwood', lat:39.5480, lon:-107.3258, address:'709 E 6th St, Glenwood Springs, CO 81601',           phone:'+19709450667', website:'https://yampahspa.com',               type:'activity', tags:['adults','relaxing','hot-springs','spa'],        cost:'~$18 caves / $65+ spa',          note:'North America\'s only natural underground hot springs vapor caves. Geothermal steam chambers reach 112°F. Walking distance from Hot Springs Resort. Very relaxing after rafting.', bookingStatus:'optional', relevantDays:[5] },
+  { id:'act18', name:'Rio Grande Trail (Glenwood to Aspen)',      location:'Glenwood Springs', locationKey:'glenwood', lat:39.5505, lon:-107.3248, address:'Trailhead: Two Rivers Park, Glenwood Springs, CO 81601', website:'https://rfta.com',                        type:'activity', tags:['free','family','hiking','scenic','biking'],    cost:'Free (bike rental ~$40/day)',    note:'42-mile paved trail from Glenwood to Aspen along the Roaring Fork River. Stunning canyon scenery. Easy flat ride. Your daughter can handle 5-10 miles easily. Bike rentals in Glenwood.', bookingStatus:'free', relevantDays:[3,5] },
+
+  // ── Aspen ──
+  { id:'act19', name:'John Denver Sanctuary',                     location:'Aspen',            locationKey:'aspen',    lat:39.1916, lon:-106.8190, address:'Puppy Smith St & Rio Grande Trail, Aspen, CO 81611', website:'https://www.aspenpitkin.com',              type:'activity', tags:['free','family','scenic','peaceful'],            cost:'Free',                           note:'Riverside park with stone installations engraved with John Denver lyrics. "Rocky Mountain High" was written about Colorado. Emotional and meaningful 20-min visit. Right in downtown Aspen.', bookingStatus:'free', relevantDays:[4] },
+  { id:'act20', name:'Aspen Art Museum',                          location:'Aspen',            locationKey:'aspen',    lat:39.1907, lon:-106.8183, address:'637 E Hyman Ave, Aspen, CO 81611',                  phone:'+19709258050',  website:'https://www.aspenartmuseum.org',          type:'activity', tags:['free','family','art','indoor'],                cost:'Free admission',                 note:'World-class contemporary art in a stunning building by Shigeru Ban. Rooftop terrace with mountain views is FREE even without exhibits. Open Tue–Sun 10am–6pm. Great if weather turns.', bookingStatus:'free', relevantDays:[4] },
+  { id:'act21', name:'Grottos Trail (Ice Caves)',                 location:'Aspen',            locationKey:'aspen',    lat:39.1558, lon:-106.7588, address:'Grottos Trailhead, Hwy 82, Woody Creek, CO 81656',  website:'https://www.fs.usda.gov',                 type:'activity', tags:['free','family','hiking','caves','scenic'],    cost:'Free',                           note:'Easy 1-mile loop on the Roaring Fork River with natural granite ice caves — some with ice into July. Especially magical for kids. 20 min east of Aspen on Hwy 82 toward Independence Pass.', bookingStatus:'free', relevantDays:[4] },
+
+  // ── Vail / en-route ──
+  { id:'act22', name:'Betty Ford Alpine Gardens',                 location:'Vail',             locationKey:'vail',     lat:39.6411, lon:-106.3740, address:'183 Gore Creek Dr, Vail, CO 81657',                 website:'https://bettyfordalpinegardens.org',       type:'activity', tags:['free','family','scenic','gardens'],            cost:'Free',                           note:'Highest public botanical garden in North America at 8,200 ft. Over 3,000 alpine plants. Beautiful in June — wildflowers peak. Easy 45-min stroll. Right in Vail Village, 5 min from Farmers Market.', bookingStatus:'free', relevantDays:[3] },
+  { id:'act23', name:'Colorado Ski Museum',                       location:'Vail',             locationKey:'vail',     lat:39.6420, lon:-106.3754, address:'231 S Frontage Rd E, Vail, CO 81657',                website:'https://skimuseum.net',                    type:'activity', tags:['free','family','museum','indoor'],             cost:'Free admission',                 note:'Free ski and snowboard history museum in Vail Village. Interactive exhibits, vintage equipment, Hall of Fame. Great 30-min stop alongside the Farmers Market.', bookingStatus:'free', relevantDays:[3] },
+
+  // ── Denver / Morrison ──
+  { id:'act24', name:'Dinosaur Ridge (Fossil Trace)',             location:'Morrison',         locationKey:'denver',   lat:39.6944, lon:-105.1769, address:'16831 W Alameda Pkwy, Morrison, CO 80465',          website:'https://dinoridge.org',                   type:'activity', tags:['free','family','kids','hiking','science'],    cost:'Free (guided tour $3)',          note:'Real dinosaur tracks from 100 million years ago in the rock face along the road. Easy 1.5-mile paved road. Adjacent to Red Rocks (combine both on Day 6). Kids absolutely love seeing actual fossils.', bookingStatus:'free', relevantDays:[6] },
+  { id:'act25', name:'Denver Botanic Gardens',                    location:'Denver',           locationKey:'denver',   lat:39.7329, lon:-104.9617, address:'1007 York St, Denver, CO 80206',                    phone:'+17208653500',  website:'https://botanicgardens.org',              type:'activity', tags:['family','gardens','scenic'],                  cost:'$15/adult, $10/child',           note:'23 acres of themed gardens at 5,280 ft. Summer bloom is spectacular. Japanese Garden and Tropical Conservatory. Good for a few hours if you have extra time in Denver on arrival/departure day.', bookingStatus:'optional', relevantDays:[1,6] },
 ];
 
 const LOCATION_KEY_MAP = {
@@ -88,6 +114,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   ]);
 
   setupEatsFilters();
+  setupActivitiesFilters();
+  setupSubTabs();
   setupReservations();
   setupInstallPrompt();
 });
@@ -599,18 +627,17 @@ function renderEats() {
   const restaurants = state.restaurantsData.restaurants || [];
   const userItems = getUserEatsItems();
 
-  // Combine restaurants + activities + user items
+  // Restaurants tab: show only restaurants + user-added items (activities have their own tab)
   const allItems = [
     ...restaurants.map(r => ({ ...r, _source: 'restaurant' })),
-    ...ACTIVITIES_DATA.map(a => ({ ...a, _source: 'activity' })),
-    ...userItems.map(u => ({ ...u, _source: 'user', _userAdded: true })),
+    ...userItems.filter(u => u.type !== 'activity').map(u => ({ ...u, _source: 'user', _userAdded: true })),
   ];
 
   const { cuisine, loc, search } = state.eatsFilter;
 
   let filtered = allItems.filter(item => {
     // Cuisine filter
-    if (cuisine !== 'all' && cuisine !== 'activity') {
+    if (cuisine !== 'all') {
       const cuisines = (item.cuisine || item.tags || []).map(c => c.toLowerCase());
       const match = {
         'indian':  cuisines.some(c => c.includes('indian') || c.includes('nepalese') || c.includes('himalayan')),
@@ -618,10 +645,10 @@ function renderEats() {
         'pizza':   cuisines.some(c => c.includes('pizza') || c.includes('italian')),
         'thai':    cuisines.some(c => c.includes('thai') || c.includes('asian')),
         'cafe':    cuisines.some(c => c.includes('coffee') || c.includes('breakfast') || c.includes('brunch') || c.includes('cafe') || c.includes('bakery') || c.includes('donut')),
+        'veg':     cuisines.some(c => c.includes('vegetarian') || c.includes('vegan')),
       };
       if (!match[cuisine]) return false;
     }
-    if (cuisine === 'activity' && item._source !== 'activity' && item._source !== 'user') return false;
 
     // Location filter
     if (loc !== 'all' && loc !== 'closest') {
@@ -773,6 +800,147 @@ function saveUserEatsItem() {
   localStorage.setItem('user_eats_items', JSON.stringify(items));
   document.getElementById('form-add-eats').reset();
   renderEats();
+}
+
+// ── Sub-tabs (Restaurants / Activities) ───────────────────────────────────
+
+function setupSubTabs() {
+  document.querySelectorAll('.subtab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.subtab;
+      document.querySelectorAll('.subtab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.subtab-panel').forEach(p => p.classList.add('hidden'));
+      document.getElementById(`subtab-${target}`).classList.remove('hidden');
+      if (target === 'activities') renderActivities();
+    });
+  });
+}
+
+// ── Activities Tab ─────────────────────────────────────────────────────────
+
+let actsFilter = { type: 'all', loc: 'all', search: '' };
+
+function setupActivitiesFilters() {
+  document.getElementById('acts-search').addEventListener('input', e => {
+    actsFilter.search = e.target.value.toLowerCase();
+    renderActivities();
+  });
+
+  document.getElementById('acts-type-filters').addEventListener('click', e => {
+    const chip = e.target.closest('[data-atype]');
+    if (!chip) return;
+    document.querySelectorAll('#acts-type-filters .filter-chip').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    actsFilter.type = chip.dataset.atype;
+    renderActivities();
+  });
+
+  document.getElementById('acts-loc-filters').addEventListener('click', e => {
+    const chip = e.target.closest('[data-aloc]');
+    if (!chip) return;
+    document.querySelectorAll('#acts-loc-filters .filter-chip').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    actsFilter.loc = chip.dataset.aloc;
+    renderActivities();
+  });
+}
+
+function renderActivities() {
+  const container = document.getElementById('acts-list');
+  if (!container) return;
+
+  let items = [...ACTIVITIES_DATA];
+  const { type, loc, search } = actsFilter;
+
+  // Type filter
+  if (type !== 'all') {
+    const typeMap = {
+      free:    a => a.tags.includes('free') || a.cost === 'Free' || a.cost === 'Free entry' || a.cost === 'Free daytime entry' || a.cost === 'Free admission',
+      family:  a => a.tags.includes('family') || a.tags.includes('kids'),
+      hiking:  a => a.tags.includes('hiking'),
+      water:   a => a.tags.some(t => ['water','swimming','hot-springs','river','water-slides','biking'].includes(t)),
+      scenic:  a => a.tags.includes('scenic') || a.tags.includes('views') || a.tags.includes('gondola'),
+      'must-do': a => a.tags.includes('must-do') || a.tags.includes('iconic'),
+    };
+    items = items.filter(typeMap[type] || (() => true));
+  }
+
+  // Location filter
+  if (loc !== 'all') {
+    const locMap = {
+      denver:   ['denver','morrison'],
+      csprings: ['csprings','manitou-springs'],
+      glenwood: ['glenwood'],
+      aspen:    ['aspen'],
+      vail:     ['vail'],
+    };
+    const keys = locMap[loc] || [loc];
+    items = items.filter(a => keys.includes(a.locationKey));
+  }
+
+  // Search filter
+  if (search) {
+    items = items.filter(a => {
+      return `${a.name} ${a.location} ${a.tags.join(' ')} ${a.note || ''} ${a.cost || ''}`.toLowerCase().includes(search);
+    });
+  }
+
+  if (items.length === 0) {
+    container.innerHTML = '<div class="eats-empty">No activities match your filters.</div>';
+    return;
+  }
+
+  container.innerHTML = '';
+  items.forEach(item => container.appendChild(buildActivityCard(item)));
+}
+
+function buildActivityCard(item) {
+  const card = document.createElement('div');
+  card.className = 'eats-card activity-card';
+
+  const tags = (item.tags || []).slice(0, 4).map(t =>
+    `<span class="eats-tag tag-activity">${t}</span>`
+  ).join('');
+
+  const statusChip = buildStatusChipFromString(item.bookingStatus);
+  const isMustDo = item.tags.includes('must-do') || item.tags.includes('iconic');
+  const days = item.relevantDays ? `Day${item.relevantDays.length > 1 ? 's' : ''} ${item.relevantDays.join(', ')}` : '';
+
+  const address = item.address || '';
+  const addressHtml = address
+    ? `<a href="${mapsLink(address)}" target="_blank" rel="noopener" class="eats-address-link">📍 ${address}</a>`
+    : '';
+
+  const btns = [];
+  if (item.phone)       btns.push(`<a href="tel:${item.phone}" class="btn-mini">📞 Call</a>`);
+  if (item.website)     btns.push(`<a href="${item.website}" target="_blank" rel="noopener" class="btn-mini">🌐 Web</a>`);
+  if ((item.bookingStatus === 'book-now') && item.bookingUrl) {
+    btns.push(`<a href="${item.bookingUrl}" target="_blank" rel="noopener" class="btn-mini gold">⚡ Book</a>`);
+  }
+
+  const flagHtml = item.flag
+    ? `<div class="activity-flag flag-${item.flag.type}"><span>${item.flag.text}</span></div>` : '';
+
+  card.innerHTML = `
+    <div class="eats-card-top">
+      <div class="eats-tags">${isMustDo ? '<span class="eats-tag" style="background:rgba(200,151,58,0.2);color:var(--gold);border-color:rgba(200,151,58,0.4)">⭐ Must-Do</span>' : ''}${tags}</div>
+      <span class="eats-price">${item.cost || ''}</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:3px">
+      <div class="eats-name">${item.name}</div>
+      ${statusChip}
+    </div>
+    <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--sub-lite);margin-bottom:4px">
+      📍 ${item.location}${days ? ` · <span style="color:var(--gold)">${days}</span>` : ''}
+    </div>
+    ${addressHtml}
+    ${item.note ? `<div class="eats-note">${item.note}</div>` : ''}
+    ${flagHtml}
+    ${btns.length ? `<div class="eats-btns">${btns.join('')}</div>` : ''}
+  `;
+
+  return card;
 }
 
 // ── Reservations ───────────────────────────────────────────────────────────

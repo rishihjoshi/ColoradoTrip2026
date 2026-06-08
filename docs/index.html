@@ -6,7 +6,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Colorado 26">
-  <link rel="apple-touch-icon" href="./icons/icon.svg">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
   <meta name="application-name" content="Colorado 26">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="theme-color" content="#1a2e1f">
@@ -15,7 +15,7 @@
   <link rel="icon" type="image/svg+xml" href="./icons/icon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=DM+Mono:wght@400;500&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;0,700;1,400&family=DM+Mono:ital,wght@0,400;0,500;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
   <title>Colorado 26</title>
 </head>
@@ -55,31 +55,69 @@
           <h1 class="tab-hero-title">Eats & Activities</h1>
           <p class="tab-hero-sub">Curated for vegetarian · Family of 3</p>
         </div>
-        <div class="eats-controls">
-          <div class="search-bar-wrap">
-            <input type="search" id="eats-search" class="search-input" placeholder="Search restaurants & activities…" autocomplete="off" autocorrect="off" spellcheck="false">
-            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-          </div>
-          <div class="filter-row" id="cuisine-filters">
-            <button class="filter-chip active" data-filter="all">All</button>
-            <button class="filter-chip" data-filter="indian">Indian</button>
-            <button class="filter-chip" data-filter="mexican">Mexican</button>
-            <button class="filter-chip" data-filter="pizza">Pizza/Italian</button>
-            <button class="filter-chip" data-filter="thai">Thai</button>
-            <button class="filter-chip" data-filter="cafe">Cafes</button>
-            <button class="filter-chip" data-filter="activity">Activities</button>
-          </div>
-          <div class="filter-row" id="location-filters">
-            <button class="filter-chip active" data-loc="all">All Locations</button>
-            <button class="filter-chip" data-loc="denver">Denver</button>
-            <button class="filter-chip" data-loc="csprings">Colo Springs</button>
-            <button class="filter-chip" data-loc="glenwood">Glenwood</button>
-            <button class="filter-chip" data-loc="aspen">Aspen</button>
-            <button class="filter-chip" data-loc="vail">Vail</button>
-            <button class="filter-chip" data-loc="closest">📍 Closest First</button>
-          </div>
+
+        <!-- Sub-tab toggle -->
+        <div class="subtab-bar">
+          <button class="subtab-btn active" data-subtab="restaurants">🍽 Restaurants</button>
+          <button class="subtab-btn" data-subtab="activities">🥾 Activities</button>
         </div>
-        <div id="eats-list" class="eats-list"></div>
+
+        <!-- Sub-panel: Restaurants -->
+        <div id="subtab-restaurants" class="subtab-panel">
+          <div class="eats-controls">
+            <div class="search-bar-wrap">
+              <input type="search" id="eats-search" class="search-input" placeholder="Search restaurants…" autocomplete="off" autocorrect="off" spellcheck="false">
+              <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            </div>
+            <div class="filter-row" id="cuisine-filters">
+              <button class="filter-chip active" data-filter="all">All</button>
+              <button class="filter-chip" data-filter="indian">🍛 Indian</button>
+              <button class="filter-chip" data-filter="mexican">🌮 Mexican</button>
+              <button class="filter-chip" data-filter="pizza">🍕 Pizza/Italian</button>
+              <button class="filter-chip" data-filter="thai">🍜 Thai</button>
+              <button class="filter-chip" data-filter="cafe">☕ Cafes</button>
+              <button class="filter-chip" data-filter="veg">🥗 Vegetarian</button>
+            </div>
+            <div class="filter-row" id="location-filters">
+              <button class="filter-chip active" data-loc="all">All Locations</button>
+              <button class="filter-chip" data-loc="denver">Denver</button>
+              <button class="filter-chip" data-loc="csprings">Colo Springs</button>
+              <button class="filter-chip" data-loc="glenwood">Glenwood</button>
+              <button class="filter-chip" data-loc="aspen">Aspen</button>
+              <button class="filter-chip" data-loc="vail">Vail</button>
+              <button class="filter-chip" data-loc="closest">📍 Closest First</button>
+            </div>
+          </div>
+          <div id="eats-list" class="eats-list"></div>
+        </div>
+
+        <!-- Sub-panel: Activities -->
+        <div id="subtab-activities" class="subtab-panel hidden">
+          <div class="eats-controls">
+            <div class="search-bar-wrap">
+              <input type="search" id="acts-search" class="search-input" placeholder="Search activities…" autocomplete="off" autocorrect="off" spellcheck="false">
+              <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            </div>
+            <div class="filter-row" id="acts-type-filters">
+              <button class="filter-chip active" data-atype="all">All</button>
+              <button class="filter-chip" data-atype="free">🆓 Free</button>
+              <button class="filter-chip" data-atype="family">👨‍👩‍👧 Family</button>
+              <button class="filter-chip" data-atype="hiking">🥾 Hiking</button>
+              <button class="filter-chip" data-atype="water">💧 Water</button>
+              <button class="filter-chip" data-atype="scenic">🏔 Scenic</button>
+              <button class="filter-chip" data-atype="must-do">⭐ Must-Do</button>
+            </div>
+            <div class="filter-row" id="acts-loc-filters">
+              <button class="filter-chip active" data-aloc="all">All Locations</button>
+              <button class="filter-chip" data-aloc="denver">Denver</button>
+              <button class="filter-chip" data-aloc="csprings">Colo Springs</button>
+              <button class="filter-chip" data-aloc="glenwood">Glenwood</button>
+              <button class="filter-chip" data-aloc="aspen">Aspen</button>
+              <button class="filter-chip" data-aloc="vail">Vail</button>
+            </div>
+          </div>
+          <div id="acts-list" class="eats-list"></div>
+        </div>
       </section>
 
       <!-- Tab: Reservations -->

@@ -582,6 +582,48 @@ html { overscroll-behavior: none; overscroll-behavior-y: none; }
   vertical-align: middle;
 }
 
+/* ── Sub-tabs (Eats & Activities) ── */
+.subtab-bar {
+  display: flex;
+  gap: 0;
+  padding: 0 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  background: var(--pine);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.subtab-btn {
+  flex: 1;
+  padding: 11px 8px 10px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--sub-lite);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: color var(--transition), border-color var(--transition);
+  margin-bottom: -1px;
+}
+
+.subtab-btn.active {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
+.subtab-panel {
+  /* each sub-panel fills available width */
+}
+
+.subtab-panel.hidden { display: none; }
+
 /* ── Eats Tab ── */
 .eats-controls {
   padding: 12px 12px 0;
