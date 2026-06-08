@@ -31,19 +31,19 @@ const TRIP_DATES = { start: '2026-06-19', end: '2026-06-24' };
 const FORECAST_DAYS = 16;
 
 const RESERVATION_ITEMS = [
-  { id: 'res1', title: 'Maroon Bells — Round Trip Shuttle', category: 'Hiking',    date: 'June 22, 2026', refNote: '9:15 AM depart Aspen Highlands · visitmaroonbells.com', status: 'confirmed', pdfPath: './assets/r8xKq2mP/CMBR.pdf',  pdfLabel: 'View Ticket (CMBR.pdf)' },
-  { id: 'res2', title: 'Pikes Peak Cog Railway',            category: 'Train',     date: 'June 20, 2026', refNote: '9:05 AM · Car 1, Row 15, Seats A · B · C',          status: 'confirmed', pdfPath: './assets/r8xKq2mP/PPCRT.pdf', pdfLabel: 'View Ticket (PPCRT.pdf)' },
-  { id: 'res3', title: 'Hyatt Place Denver Airport', category: 'Hotel',   date: 'Jun 19, 2026',  refNote: 'Expedia Conf: 73462444560278 · 18300 E 68th Ave', status: 'confirmed' },
-  { id: 'res4', title: 'Academy Hotel Colorado Springs',    category: 'Hotel',     date: 'Jun 20, 2026',  refNote: 'Expedia Conf: 73462463671459 · 8110 N Academy Blvd', status: 'confirmed' },
-  { id: 'res5', title: 'Residence Inn Glenwood Springs',    category: 'Hotel',     date: 'Jun 21-23, 2026', refNote: 'Expedia Conf: 73462520918893 · 125 Wulfsohn Rd', status: 'confirmed' },
-  { id: 'res6', title: 'Glenwood Hot Springs Resort',       category: 'Hotel',     date: 'Jun 23-24, 2026', refNote: 'Conf: 1042873 · 415 E 6th St · 1-800-537-7946', status: 'confirmed' },
-  { id: 'res7', title: 'Blue Sky Adventures — Rafting',     category: 'Activity',  date: 'June 23, 2026', refNote: '9:00 AM · Half-day Shoshone Rapids · Class III', status: 'book-now',  bookingUrl: 'https://blueskyrafting.com' },
+  { id: 'res1', title: 'Maroon Bells — Round Trip Shuttle', category: 'Hiking',    date: 'June 22, 2026',   refNote: '9:15 AM depart Aspen Highlands · visitmaroonbells.com', status: 'confirmed', pdfPath: './assets/r8xKq2mP/CMBR.pdf',  pdfLabel: 'View Ticket' },
+  { id: 'res2', title: 'Pikes Peak Cog Railway',            category: 'Train',     date: 'June 20, 2026',   refNote: '9:05 AM · Car 1, Row 15, Seats A · B · C',             status: 'confirmed', pdfPath: './assets/r8xKq2mP/PPCRT.pdf', pdfLabel: 'View Ticket' },
+  { id: 'res3', title: 'Quality Inn & Suites Denver Airport', category: 'Hotel',   date: 'Jun 19, 2026',    refNote: 'Expedia Conf: 73462444560278 · 6890 Tower Rd',          status: 'confirmed', imgPath: './assets/r8xKq2mP/ExQID.png' },
+  { id: 'res4', title: 'Academy Hotel Colorado Springs',    category: 'Hotel',     date: 'Jun 20, 2026',    refNote: 'Expedia Conf: 73462463671459 · 8110 N Academy Blvd',    status: 'confirmed', imgPath: './assets/r8xKq2mP/TAHCS.png' },
+  { id: 'res5', title: 'Residence Inn Glenwood Springs',    category: 'Hotel',     date: 'Jun 21-23, 2026', refNote: 'Expedia Conf: 73462520918893 · 125 Wulfsohn Rd',        status: 'confirmed', imgPath: './assets/r8xKq2mP/RIMGS.png' },
+  { id: 'res6', title: 'Glenwood Hot Springs Resort',       category: 'Hotel',     date: 'Jun 23-24, 2026', refNote: 'Conf: 1042873 · 415 E 6th St · 1-800-537-7946',        status: 'confirmed', imgPath: './assets/r8xKq2mP/PGHSL.png' },
+  { id: 'res7', title: 'Blue Sky Adventures — Rafting',     category: 'Activity',  date: 'June 23, 2026',   refNote: '9:00 AM · Half-day Shoshone Rapids · Class III',        status: 'book-now',  bookingUrl: 'https://blueskyrafting.com' },
 ];
 
 const ACTIVITIES_DATA = [
   { id:'act2', name:'Blue Sky Adventures — Whitewater Rafting', location:'Glenwood Springs', locationKey:'glenwood', lat:39.5489, lon:-107.3258, address:'152 W 6th St, Glenwood Springs, CO 81601', phone:'+19709455867', website:'https://blueskyrafting.com', type:'activity', tags:['family','adventure','river'], cost:'~$85/adult', note:'Half-day Shoshone Rapids (Class III in June). Tuesday departure 9AM. Ages 5+.', bookingStatus:'book-now', relevantDays:[5] },
-  { id:'act3', name:'Maroon Bells Shuttle', location:'Aspen', locationKey:'aspen', lat:39.0931, lon:-106.9253, address:'75 Boomerang Rd, Aspen, CO 81611', website:'https://www.visitmaroonbells.com', type:'activity', tags:['must-do','family','hiking','iconic'], cost:'✓ Booked', note:'✓ CONFIRMED. Departs 9:15AM from Aspen Highlands. At Maroon Bells by 9:30AM. Left side on shuttle for views. Hard weather stop 12:30PM. See CMBR.pdf in Passes tab.', bookingStatus:'confirmed', relevantDays:[4] },
-  { id:'act4', name:'Pikes Peak Cog Railway', location:'Manitou Springs', locationKey:'csprings', lat:38.8605, lon:-104.9223, address:'515 Ruxton Ave, Manitou Springs, CO 80829', phone:'+17196855401', website:'https://www.cograilway.com', type:'activity', tags:['must-do','family','train','scenic'], cost:'✓ Booked', note:'✓ CONFIRMED — Car 1, Row 15, Seats A · B · C. Departs 9:05AM. Sit LEFT — seats already face the panoramic views. See PPCRT.pdf in Passes tab.', bookingStatus:'confirmed', relevantDays:[2] },
+  { id:'act3', name:'Maroon Bells Shuttle', location:'Aspen', locationKey:'aspen', lat:39.0931, lon:-106.9253, address:'75 Boomerang Rd, Aspen, CO 81611', website:'https://www.visitmaroonbells.com', type:'activity', tags:['must-do','family','hiking','iconic'], cost:'✓ Booked', note:'✓ CONFIRMED. Departs 9:15AM from Aspen Highlands. At Maroon Bells by 9:30AM. Left side on shuttle for views. Hard weather stop 12:30PM. Ticket in Passes tab.', bookingStatus:'confirmed', relevantDays:[4] },
+  { id:'act4', name:'Pikes Peak Cog Railway', location:'Manitou Springs', locationKey:'csprings', lat:38.8605, lon:-104.9223, address:'515 Ruxton Ave, Manitou Springs, CO 80829', phone:'+17196855401', website:'https://www.cograilway.com', type:'activity', tags:['must-do','family','train','scenic'], cost:'✓ Booked', note:'✓ CONFIRMED — Car 1, Row 15, Seats A · B · C. Departs 9:05AM. Sit LEFT — seats already face the panoramic views. Ticket in Passes tab.', bookingStatus:'confirmed', relevantDays:[2] },
   { id:'act5', name:'Garden of the Gods', location:'Colorado Springs', locationKey:'csprings', lat:38.8784, lon:-104.8697, address:'1805 N 30th St, Colorado Springs, CO 80904', website:'https://gardenofgods.com', type:'activity', tags:['free','family','scenic','hiking'], cost:'Free', note:'Scenic loop drive + Perkins Central Garden Trail (1.5 mi). Adjacent to Red Rock Canyon Open Space.', bookingStatus:'free', relevantDays:[2] },
   { id:'act6', name:'Glenwood Hot Springs Pool', location:'Glenwood Springs', locationKey:'glenwood', lat:39.5487, lon:-107.3228, address:'401 N River Street, Glenwood Springs, CO 81601', phone:'+18005377946', website:'https://hotspringspool.com', type:'activity', tags:['family','kids','swimming','water-slides'], cost:'Included with stay', note:'Included with Glenwood Hot Springs Resort room. Sopris Splash Zone: water slides + fountains for kids. Grand Pool for adults. No reservations needed, hand stamp for re-entry. Open 8AM–10PM.', bookingStatus:'included', relevantDays:[5] },
   { id:'act7', name:'Red Rocks Park & Amphitheatre', location:'Morrison', locationKey:'denver', lat:39.6654, lon:-105.2057, address:'18300 W Alameda Pkwy, Morrison, CO 80465', website:'https://www.redrocksonline.com', type:'activity', tags:['free','family','scenic','hiking','iconic'], cost:'Free daytime entry', note:'Trading Post Trail (1.4 mi easy loop). Visitor center 7AM–7PM. Perfect Colorado farewell on Day 6.', bookingStatus:'free', relevantDays:[6] },
@@ -1220,8 +1220,10 @@ function buildResCard(item) {
   const statusChip = buildStatusChipFromString(item.status);
   const storedImg = localStorage.getItem(`reservation_img_${item.id}`);
 
-  const imgHtml = storedImg
-    ? `<img src="${storedImg}" class="res-img-thumb" alt="Confirmation" data-res-id="${item.id}">`
+  // Priority: user-uploaded > pre-built imgPath > upload prompt (if no pdfPath/imgPath)
+  const displayImg = storedImg || (item.imgPath ? item.imgPath : null);
+  const imgHtml = displayImg
+    ? `<img src="${displayImg}" class="res-img-thumb" alt="Confirmation" data-res-id="${item.id}" data-img-src="${displayImg}">`
     : (item.pdfPath ? '' : `<label class="res-upload-btn">
          📤 Add confirmation photo / PDF
          <input type="file" class="res-upload-input" accept="image/*,application/pdf" data-res-id="${item.id}">
@@ -1248,11 +1250,11 @@ function buildResCard(item) {
     ${bookBtn ? `<div class="res-btns">${bookBtn}</div>` : ''}
   `;
 
-  // Image thumbnail click → lightbox
+  // Image thumbnail click → lightbox (works for both uploaded and pre-built images)
   const thumb = card.querySelector('.res-img-thumb');
   if (thumb) {
     thumb.addEventListener('click', () => {
-      document.getElementById('lightbox-img').src = storedImg;
+      document.getElementById('lightbox-img').src = thumb.dataset.imgSrc;
       openModal('modal-lightbox');
     });
   }

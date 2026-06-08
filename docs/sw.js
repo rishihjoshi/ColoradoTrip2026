@@ -1,4 +1,4 @@
-const CACHE_NAME = 'colorado-26-v6';
+const CACHE_NAME = 'colorado-26-v7';
 const STATIC_ASSETS = [
   './index.html',
   './app.js',
@@ -11,6 +11,10 @@ const STATIC_ASSETS = [
   './icons/icon-maskable.svg',
   './assets/r8xKq2mP/PPCRT.pdf',
   './assets/r8xKq2mP/CMBR.pdf',
+  './assets/r8xKq2mP/ExQID.png',
+  './assets/r8xKq2mP/TAHCS.png',
+  './assets/r8xKq2mP/RIMGS.png',
+  './assets/r8xKq2mP/PGHSL.png',
 ];
 
 self.addEventListener('install', e => {
