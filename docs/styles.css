@@ -1334,6 +1334,21 @@ select.form-input option { background: var(--pine2); }
   white-space: nowrap;
 }
 
+.pdf-viewer-fallback {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 5;
+  padding: 9px 14px;
+  border-radius: 20px;
+  background: rgba(0,0,0,0.7);
+  color: var(--gold2);
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
 /* ── Utilities ── */
 .hidden { display: none !important; }
 

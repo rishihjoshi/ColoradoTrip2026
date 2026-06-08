@@ -155,18 +155,15 @@ function setupFAB() {
   document.querySelectorAll('.modal-overlay').forEach(modal => {
     modal.addEventListener('click', e => {
       if (e.target === modal) {
-        closeModal(modal.id);
-        if (modal.id === 'modal-pdf') document.getElementById('pdf-frame').src = '';
+        if (modal.id === 'modal-pdf') closePdfViewer();
+        else closeModal(modal.id);
       }
     });
   });
 
   document.getElementById('btn-close-lightbox').addEventListener('click', () => closeModal('modal-lightbox'));
 
-  document.getElementById('btn-close-pdf').addEventListener('click', () => {
-    closeModal('modal-pdf');
-    document.getElementById('pdf-frame').src = '';
-  });
+  document.getElementById('btn-close-pdf').addEventListener('click', closePdfViewer);
 }
 
 function openModal(id) {
@@ -177,6 +174,13 @@ function openModal(id) {
 function closeModal(id) {
   document.getElementById(id).classList.add('hidden');
   document.body.style.overflow = '';
+}
+
+function closePdfViewer() {
+  closeModal('modal-pdf');
+  // 'about:blank' actually clears the frame — an empty src resolves to the
+  // current document's URL and reloads the app inside the iframe.
+  document.getElementById('pdf-frame').src = 'about:blank';
 }
 
 // ── Itinerary ──────────────────────────────────────────────────────────────
@@ -1080,7 +1084,9 @@ function buildResCard(item) {
   const pdfViewBtn = card.querySelector('.btn-view-pdf');
   if (pdfViewBtn) {
     pdfViewBtn.addEventListener('click', () => {
-      document.getElementById('pdf-frame').src = pdfViewBtn.dataset.pdfPath;
+      const path = pdfViewBtn.dataset.pdfPath;
+      document.getElementById('pdf-frame').src = path;
+      document.getElementById('pdf-frame-fallback').href = path;
       openModal('modal-pdf');
     });
   }

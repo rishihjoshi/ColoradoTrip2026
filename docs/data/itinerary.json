@@ -210,7 +210,7 @@
           "description": "Charming mountain town on the Arkansas River — perfect spot to stop for lunch and stretch your legs. Eddyline Brewery and Deerhammer both have solid food menus, or grab a table on Main Street with views of the Collegiate Peaks. About an hour here, then push on toward Twin Lakes.",
           "address": "Buena Vista, CO 81211",
           "type": "activity",
-          "bookingStatus": "free",
+          "bookingStatus": "optional",
           "icon": "🍽️",
           "duration": "1 hour",
           "cost": "$15-25/person approx"
