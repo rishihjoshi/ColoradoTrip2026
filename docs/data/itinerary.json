@@ -32,13 +32,14 @@
       "badgeColor": "sky",
       "weatherLocationKey": 1,
       "hotel": {
-        "name": "Quality Inn & Suites Denver International Airport",
-        "address": "6890 Tower Rd, Denver, CO 80249",
-        "phone": "+13037819300",
+        "name": "Hyatt Place Denver Airport",
+        "address": "18300 E 68th Ave, Denver, CO 80249",
+        "phone": "+13033737900",
         "checkIn": "Late — ~1:00 AM",
         "nights": 1,
         "confirmationNumber": "73462444560278",
-        "bookingSource": "Expedia"
+        "bookingSource": "Expedia",
+        "notes": "10 min from DEN terminal. Free airport shuttle. No renovation. Free hot breakfast."
       },
       "activities": [
         {
@@ -65,10 +66,10 @@
         {
           "id": "d1-a3",
           "time": "1:00 AM",
-          "title": "Check Into Quality Inn & Suites Denver Airport",
+          "title": "Check Into Hyatt Place Denver Airport",
           "description": "Sleep. Early checkout tomorrow 7:00 AM for Pikes Peak drive.",
-          "address": "6890 Tower Rd, Denver, CO 80249",
-          "phone": "+13037819300",
+          "address": "18300 E 68th Ave, Denver, CO 80249",
+          "phone": "+13033737900",
           "type": "hotel",
           "bookingStatus": "confirmed",
           "icon": "🏨"
@@ -177,11 +178,11 @@
       "day": 3,
       "date": "2026-06-21",
       "dayOfWeek": "Sunday",
-      "title": "Colorado Springs → Buena Vista → Twin Lakes → Glenwood Springs",
-      "badge": "Scenic Drive",
+      "title": "Colorado Springs → Vail Farmers Market → Glenwood Springs",
+      "badge": "Drive + Market",
       "badgeColor": "forest",
       "weatherLocationKey": 3,
-      "driveFromPrevious": { "duration": "4 hrs total", "distance": "214 miles", "via": "Hwy 24 W → Hwy 285 N → Hwy 24 W → I-70 W" },
+      "driveFromPrevious": { "duration": "4.5 hrs total", "distance": "245 miles", "via": "I-25 N → I-70 W → Vail → Glenwood Canyon" },
       "hotel": {
         "name": "Residence Inn by Marriott Glenwood Springs",
         "address": "125 Wulfsohn Road, Glenwood Springs, CO 81601",
@@ -195,52 +196,32 @@
         {
           "id": "d3-a1",
           "time": "10:00 AM",
-          "title": "Checkout & Depart Colorado Springs — Scenic Drive via Buena Vista",
-          "description": "Late checkout — no rush this morning. Head west on Hwy 24 through Colorado's most dramatic mountain pass country. The route via Buena Vista and Twin Lakes is far more scenic than I-70 and only marginally longer. You'll pass the Collegiate Peaks (Harvard, Yale, Oxford, Columbia — all 14ers). About 2 hrs to Buena Vista.",
+          "title": "Checkout & Depart Colorado Springs — Drive via I-70 to Vail",
+          "description": "Late checkout — no rush this morning. Head north on I-25 then west on I-70 through the Rockies. The I-70 corridor through the Eisenhower Tunnel and into the mountains is spectacular. Arrive Vail by 12:30 PM for the Sunday Farmers Market.",
           "address": "Colorado Springs, CO",
           "type": "drive",
           "icon": "🚗",
-          "driveInfo": { "duration": "~4 hrs driving total to Glenwood", "via": "Hwy 24 W → Buena Vista → Twin Lakes → Independence Pass or Hwy 82 → Glenwood" }
+          "driveInfo": { "duration": "~2.5 hrs to Vail", "via": "I-25 N → I-70 W through Eisenhower Tunnel → Vail exit 176" }
         },
         {
           "id": "d3-a2",
-          "time": "12:00 PM",
-          "title": "Buena Vista — Lunch Stop",
-          "description": "Charming mountain town on the Arkansas River — perfect spot to stop for lunch and stretch your legs. Eddyline Brewery and Deerhammer both have solid food menus, or grab a table on Main Street with views of the Collegiate Peaks. About an hour here, then push on toward Twin Lakes.",
-          "address": "Buena Vista, CO 81211",
-          "type": "activity",
-          "bookingStatus": "optional",
-          "icon": "🍽️",
-          "duration": "1 hour",
-          "cost": "$15-25/person approx"
-        },
-        {
-          "id": "d3-drive1",
-          "type": "drive-connector",
-          "duration": "30 min",
-          "distance": "20 miles",
-          "via": "Hwy 24 W to Twin Lakes"
-        },
-        {
-          "id": "d3-a3",
-          "time": "1:30 PM",
-          "title": "Twin Lakes — Photo Stop",
-          "description": "Two stunning glacial lakes at the base of Mount Elbert (Colorado's highest peak at 14,440 ft). The reflection of the mountains in the lake is iconic. Short walk along the lake shore. 20-30 min stop. This is genuinely one of Colorado's most photogenic spots.",
-          "address": "Twin Lakes, CO 81251",
+          "time": "12:30 PM",
+          "title": "Vail Farmers Market & Art Show",
+          "description": "2026 season: Sundays Jun 14–Oct 4, 9:30AM–3PM on East Meadow Drive, Vail Village. Fresh Colorado produce, artisan foods, live music, kids activities. Bring cash — many vendors don't take cards. Arrive by 12:30PM for 2 full hours before 3PM close.",
+          "address": "East Meadow Drive, Vail Village, Vail, CO 81657",
+          "website": "https://www.vailfarmersmarket.com",
           "type": "activity",
           "bookingStatus": "free",
-          "icon": "🏔",
-          "duration": "30 min",
-          "cost": "Free",
-          "tips": ["Drive to the east end of the lake for best mountain reflection shots", "Your daughter will love the flat pebble beach for skipping stones"],
-          "flag": { "type": "info", "text": "Independence Pass (12,095 ft, Hwy 82) is the most spectacular but CLOSED to vehicles over 35 ft and may have snow in early June — check cotrip.org morning of Jun 21." }
+          "icon": "🌿",
+          "duration": "2 hours",
+          "cost": "Free entry"
         },
         {
           "id": "d3-drive2",
           "type": "drive-connector",
           "duration": "1h 45m",
-          "distance": "75 miles",
-          "via": "Hwy 82 W (or Hwy 24 + I-70 if pass closed)"
+          "distance": "95 miles",
+          "via": "I-70 W through Glenwood Canyon"
         },
         {
           "id": "d3-a4",
