@@ -1439,6 +1439,9 @@ function getTodayMDT() {
 
 // ── Ask Tab ───────────────────────────────────────────────────────────────────
 
+// Build-time placeholder replaced by GitHub Actions deploy workflow.
+// Falls back to localStorage for local development.
+const INJECTED_API_KEY    = '__ANTHROPIC_API_KEY_PLACEHOLDER__';
 const ASK_KEY_STORAGE     = 'colorado26_ask_key';
 const ASK_HISTORY_STORAGE = 'colorado26_ask_history';
 const ASK_MODEL           = 'claude-sonnet-4-20250514';
@@ -1489,6 +1492,8 @@ function saveAskKey(key) {
 }
 
 function getAskKey() {
+  // Use build-time injected key (production); fall back to localStorage (local dev)
+  if (INJECTED_API_KEY && !INJECTED_API_KEY.startsWith('__')) return INJECTED_API_KEY;
   return localStorage.getItem(ASK_KEY_STORAGE);
 }
 
