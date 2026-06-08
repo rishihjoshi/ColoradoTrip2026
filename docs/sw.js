@@ -1,4 +1,4 @@
-const CACHE_NAME = 'colorado-26-v8';
+const CACHE_NAME = 'colorado-26-v9';
 const STATIC_ASSETS = [
   './index.html',
   './app.js',

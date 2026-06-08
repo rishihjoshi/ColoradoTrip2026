@@ -1438,7 +1438,6 @@ select.form-input option { background: var(--pine2); }
   flex-direction: column;
   height: 100%;
   overflow: hidden;
-  position: relative;
 }
 
 /* ── Setup Screen ── */
@@ -1517,7 +1516,7 @@ select.form-input option { background: var(--pine2); }
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  height: 100%;
+  min-height: 0; /* required for flex children to shrink correctly */
 }
 .ask-chat-header {
   display: flex;
@@ -1549,16 +1548,15 @@ select.form-input option { background: var(--pine2); }
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Message list */
+/* Message list — flex:1 fills remaining space between header and suggestions/input */
 .ask-messages {
   flex: 1;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  padding: 12px 14px;
+  padding: 12px 14px 16px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding-bottom: calc(72px + var(--safe-b, 0px) + 16px);
 }
 .ask-msg {
   max-width: 88%;
@@ -1610,13 +1608,15 @@ select.form-input option { background: var(--pine2); }
 }
 .ask-welcome strong { color: var(--gold); font-weight: 600; }
 
-/* Suggestions */
+/* Suggestions — sits above input bar, wraps chips horizontally */
 .ask-suggestions {
-  padding: 0 14px 10px;
+  padding: 4px 14px 6px;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   gap: 6px;
   flex-shrink: 0;
+  overflow: hidden;
 }
 .ask-suggestion-chip {
   background: rgba(255,255,255,0.06);
@@ -1635,19 +1635,16 @@ select.form-input option { background: var(--pine2); }
   border-color: rgba(200,151,58,0.4);
 }
 
-/* Input bar */
+/* Input bar — flex item at the bottom of .ask-chat column, no absolute positioning */
 .ask-input-bar {
-  position: absolute;
-  bottom: calc(var(--nav-h, 62px) + var(--safe-b, 0px));
-  left: 0;
-  right: 0;
+  flex-shrink: 0;
   display: flex;
   align-items: flex-end;
   gap: 8px;
   padding: 8px 14px;
+  padding-bottom: calc(8px + var(--safe-b, 0px));
   background: var(--pine);
   border-top: 1px solid rgba(255,255,255,0.08);
-  z-index: 10;
 }
 .ask-textarea {
   flex: 1;
