@@ -33,7 +33,7 @@ const FORECAST_DAYS = 16;
 const RESERVATION_ITEMS = [
   { id: 'res1', title: 'Maroon Bells — Round Trip Shuttle', category: 'Hiking',    date: 'June 22, 2026', refNote: '9:15 AM depart Aspen Highlands · visitmaroonbells.com', status: 'confirmed', pdfPath: './assets/r8xKq2mP/CMBR.pdf',  pdfLabel: 'View Ticket (CMBR.pdf)' },
   { id: 'res2', title: 'Pikes Peak Cog Railway',            category: 'Train',     date: 'June 20, 2026', refNote: '9:05 AM · Car 1, Row 15, Seats A · B · C',          status: 'confirmed', pdfPath: './assets/r8xKq2mP/PPCRT.pdf', pdfLabel: 'View Ticket (PPCRT.pdf)' },
-  { id: 'res3', title: 'Quality Inn & Suites Denver Airport', category: 'Hotel',   date: 'Jun 19, 2026',  refNote: 'Expedia Conf: 73462444560278 · 6890 Tower Rd', status: 'confirmed' },
+  { id: 'res3', title: 'Hyatt Place Denver Airport', category: 'Hotel',   date: 'Jun 19, 2026',  refNote: 'Expedia Conf: 73462444560278 · 18300 E 68th Ave', status: 'confirmed' },
   { id: 'res4', title: 'Academy Hotel Colorado Springs',    category: 'Hotel',     date: 'Jun 20, 2026',  refNote: 'Expedia Conf: 73462463671459 · 8110 N Academy Blvd', status: 'confirmed' },
   { id: 'res5', title: 'Residence Inn Glenwood Springs',    category: 'Hotel',     date: 'Jun 21-23, 2026', refNote: 'Expedia Conf: 73462520918893 · 125 Wulfsohn Rd', status: 'confirmed' },
   { id: 'res6', title: 'Glenwood Hot Springs Resort',       category: 'Hotel',     date: 'Jun 23-24, 2026', refNote: 'Conf: 1042873 · 415 E 6th St · 1-800-537-7946', status: 'confirmed' },
@@ -142,6 +142,15 @@ function switchTab(tab) {
     p.classList.toggle('active', p.id === `tab-${tab}`)
   );
   document.getElementById('main-content').scrollTop = 0;
+
+  if (tab === 'ask') {
+    if (!askInitialized) {
+      initAskTab();
+      askInitialized = true;
+    } else {
+      updateAskContextPill();
+    }
+  }
 }
 
 // ── Offline Detection ──────────────────────────────────────────────────────
@@ -216,6 +225,7 @@ async function loadItinerary() {
   try {
     const res = await fetch('./data/itinerary.json');
     state.itineraryData = await res.json();
+    window.ITINERARY_DAYS = state.itineraryData.days;
     renderItinerary();
   } catch(e) {
     document.getElementById('itinerary-days').innerHTML = '<p style="padding:20px;color:var(--sub-lite)">Failed to load itinerary.</p>';
@@ -1425,4 +1435,492 @@ function formatDate(dateStr) {
 
 function getTodayMDT() {
   return new Date().toLocaleDateString('en-CA', { timeZone: 'America/Denver' });
+}
+
+// ── Ask Tab ───────────────────────────────────────────────────────────────────
+
+const ASK_KEY_STORAGE     = 'colorado26_ask_key';
+const ASK_HISTORY_STORAGE = 'colorado26_ask_history';
+const ASK_MODEL           = 'claude-sonnet-4-20250514';
+const ASK_MAX_TOKENS      = 1024;
+const ASK_HISTORY_LIMIT   = 6;
+
+let askConversationHistory = [];
+let askIsStreaming          = false;
+let askCurrentLocation     = null;
+let askInitialized         = false;
+
+function initAskTab() {
+  const storedKey = localStorage.getItem(ASK_KEY_STORAGE);
+  if (storedKey) {
+    showAskChat();
+    loadAskHistory();
+    updateAskContextPill();
+    if (askConversationHistory.length === 0) {
+      showAskWelcome();
+      showAskSuggestions();
+    }
+  } else {
+    showAskSetup();
+  }
+  setupAskEventListeners();
+  requestLocationSilently();
+}
+
+// ── API Key Management ───────────────────────────────────────────────────────
+
+function showAskSetup() {
+  document.getElementById('ask-setup').hidden = false;
+  document.getElementById('ask-chat').hidden  = true;
+}
+
+function showAskChat() {
+  document.getElementById('ask-setup').hidden = true;
+  document.getElementById('ask-chat').hidden  = false;
+}
+
+function saveAskKey(key) {
+  if (!key || !key.startsWith('sk-ant-')) {
+    alert('Key must start with sk-ant-');
+    return false;
+  }
+  localStorage.setItem(ASK_KEY_STORAGE, key.trim());
+  return true;
+}
+
+function getAskKey() {
+  return localStorage.getItem(ASK_KEY_STORAGE);
+}
+
+// ── Context Builder ──────────────────────────────────────────────────────────
+
+function buildTripContext() {
+  const now     = new Date();
+  const dateStr = now.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+  const timeStr = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', timeZoneName: 'short' });
+
+  const tripStart = new Date('2026-06-19');
+  const tripEnd   = new Date('2026-06-24');
+  const msPerDay  = 86400000;
+  let todayDayNum = null;
+  if (now >= tripStart && now <= tripEnd) {
+    todayDayNum = Math.floor((now - tripStart) / msPerDay) + 1;
+  }
+
+  let todayScheduleText = 'Trip has not started yet.';
+  if (todayDayNum && window.ITINERARY_DAYS) {
+    const dayData = window.ITINERARY_DAYS[todayDayNum - 1];
+    if (dayData) {
+      const activities = (dayData.activities || [])
+        .filter(a => a.type !== 'drive-connector')
+        .map(a => `  ${a.time || ''} — ${a.title}${a.address ? ' · ' + a.address : ''}`)
+        .join('\n');
+      todayScheduleText = `Day ${todayDayNum}: ${dayData.title}\n${activities}`;
+    }
+  }
+
+  const weatherKey = todayDayNum ? `weather_${todayDayNum}_2026-06-${(18 + todayDayNum).toString().padStart(2,'0')}` : null;
+  let weatherText = 'Not available';
+  if (weatherKey) {
+    try {
+      const cached = JSON.parse(localStorage.getItem(weatherKey) || '{}');
+      if (cached.data) {
+        weatherText = `${cached.data.hiC}°C (${cached.data.hiF}°F) high / ${cached.data.loC}°C (${cached.data.loF}°F) low`;
+      }
+    } catch(e) {}
+  }
+
+  const locationText = askCurrentLocation
+    ? `${askCurrentLocation.city || 'Unknown city'} (${askCurrentLocation.lat.toFixed(3)}, ${askCurrentLocation.lon.toFixed(3)})`
+    : 'Not available (location not permitted or not yet fetched)';
+
+  const needsBooking = [];
+  const confirmed    = [];
+  if (window.ITINERARY_DAYS) {
+    window.ITINERARY_DAYS.forEach(day => {
+      (day.activities || []).forEach(act => {
+        if (act.bookingStatus === 'book-now' && act.title)  needsBooking.push(act.title);
+        if (act.bookingStatus === 'confirmed' && act.title) confirmed.push(act.title);
+      });
+    });
+  }
+
+  return `You are a helpful trip assistant for the Colorado Family Trip, June 19-24 2026.
+Family: 2 adults + 10-year-old daughter. Vegetarian diet. Based in St. Louis.
+
+CURRENT DATE & TIME: ${dateStr}, ${timeStr}
+CURRENT LOCATION: ${locationText}
+TODAY'S WEATHER: ${weatherText}
+
+${todayDayNum
+  ? `TODAY IS TRIP DAY ${todayDayNum}:\n${todayScheduleText}`
+  : `The trip ${now < tripStart ? 'has not started yet' : 'has ended'}.`
+}
+
+FULL TRIP OVERVIEW (one line each):
+Day 1 — Fri Jun 19: Travel STL→Denver, arrive midnight. Hotel: Hyatt Place Denver Airport.
+Day 2 — Sat Jun 20: Pikes Peak Cog Railway (9AM) + Garden of Gods + Red Rock Canyon. Hotel: Academy Hotel Colorado Springs.
+Day 3 — Sun Jun 21: Vail Farmers Market (12:30–3PM) → Glenwood Springs. Hotel: Residence Inn Glenwood Springs.
+Day 4 — Mon Jun 22: Maroon Bells 8AM shuttle (MAIN HIGHLIGHT) + Silver Queen Gondola + Cooper St Aspen. Hotel: Residence Inn Glenwood Springs.
+Day 5 — Tue Jun 23: Blue Sky Adventures rafting (9AM) + Glenwood Hot Springs Pool + Iron Mountain Hot Springs. Hotel: Glenwood Hot Springs Lodge (Classic Double Queen, ground floor patio).
+Day 6 — Wed Jun 24: Red Rocks Park (10:30AM) + Denver RiNo lunch + fly home DEN 8:45PM (WN#1324).
+
+KEY RESERVATIONS STATUS:
+Needs booking: ${needsBooking.slice(0,5).join(', ') || 'None flagged'}
+Confirmed: ${confirmed.slice(0,5).join(', ') || 'None yet'}
+
+KEY CONTACTS & FACTS:
+- Maroon Bells shuttle: visitmaroonbells.com, booked — 9:15AM depart Aspen Highlands
+- Pikes Peak Cog Railway: confirmed — Car 1, Row 15, Seats A/B/C, 9:05AM
+- Blue Sky Adventures rafting: (970) 945-5867, 152 W 6th St Glenwood Springs, 9AM Tues
+- Residence Inn: (970) 928-0900, 125 Wulfsohn Rd, Glenwood Springs
+- Hot Springs Lodge: 1-800-537-7946, 415 E 6th St, Classic Double Queen ground floor patio
+- Maroon Bells weather hard rule: be back at lake heading to shuttle by 12:30PM
+- Nepal Restaurant: 6824 Hwy 82 Glenwood Springs — best Indian food of the trip
+- Vail Farmers Market: Sundays 9:30AM–3PM, East Meadow Drive, Vail Village (Jun–Oct)
+
+RESPONSE STYLE:
+- Mobile interface — keep answers to 2-4 sentences unless detail is requested
+- Use bullet points for lists of 3+ items
+- Mention real names, addresses, times from the itinerary when relevant
+- If asked about something not in the trip context, still try to help based on general knowledge
+- Never repeat the question back. Get straight to the answer.`;
+}
+
+// ── Location ─────────────────────────────────────────────────────────────────
+
+function requestLocationSilently() {
+  if (!('geolocation' in navigator)) return;
+  navigator.geolocation.getCurrentPosition(
+    pos => {
+      askCurrentLocation = { lat: pos.coords.latitude, lon: pos.coords.longitude, city: null };
+      updateAskContextPill();
+    },
+    err => console.log('Location not available:', err.message),
+    { timeout: 8000, maximumAge: 300000 }
+  );
+}
+
+// ── Context Pill ─────────────────────────────────────────────────────────────
+
+function updateAskContextPill() {
+  const pill = document.getElementById('ask-context-pill');
+  if (!pill) return;
+  const now       = new Date();
+  const tripStart = new Date('2026-06-19');
+  const tripEnd   = new Date('2026-06-24');
+  const msPerDay  = 86400000;
+  const parts     = [];
+
+  if (now >= tripStart && now <= tripEnd) {
+    parts.push(`Day ${Math.floor((now - tripStart) / msPerDay) + 1}`);
+  } else if (now < tripStart) {
+    parts.push(`${Math.ceil((tripStart - now) / msPerDay)}d to trip`);
+  } else {
+    parts.push('Trip complete');
+  }
+
+  if (askCurrentLocation) parts.push('📍 Located');
+
+  const dayNum    = Math.floor((now - tripStart) / msPerDay) + 1;
+  const dateStr   = now.toISOString().split('T')[0];
+  const wKey      = `weather_${dayNum}_${dateStr}`;
+  try {
+    const cached = JSON.parse(localStorage.getItem(wKey) || '{}');
+    if (cached.data) parts.push(`${cached.data.hiC}°C`);
+  } catch(e) {}
+
+  pill.textContent = parts.join(' · ');
+}
+
+// ── Suggestions ──────────────────────────────────────────────────────────────
+
+function getAskSuggestions() {
+  const now       = new Date();
+  const tripStart = new Date('2026-06-19');
+  if (now < tripStart) {
+    return [
+      'What should I book immediately?',
+      'Tips for altitude sickness prevention?',
+      'What to pack for Maroon Bells?',
+      'What time should we leave for Pikes Peak?',
+    ];
+  }
+  const dayNum = Math.min(6, Math.max(1, Math.floor((now - tripStart) / 86400000) + 1));
+  const daySuggestions = {
+    1: ['What time does the hotel shuttle run?', 'Best dinner near DEN airport?', 'Car rental pickup tips?', "What's the drive to Colorado Springs tomorrow?"],
+    2: ['What should I know before Pikes Peak?', 'Best seats on the Cog Railway?', 'How long for Garden of Gods?', 'Lunch near Manitou Springs?'],
+    3: ['What time does the Vail market close?', 'Best stop for Indian food today?', "What's in Glenwood Canyon?", 'Check-in time at Residence Inn?'],
+    4: ['What time to leave for Maroon Bells?', 'Is the weather clear at Maroon Bells?', 'What trail should we hike?', "What's the Silver Queen Gondola last ride time?"],
+    5: ['What time does rafting start today?', 'How far is Iron Mountain from the hotel?', "What's included with the Hot Springs Lodge room?", 'Best dinner in Glenwood tonight?'],
+    6: ['What time to leave for Red Rocks?', "What's the Trading Post Trail like?", 'What time must we return the rental car?', 'Best farewell lunch in Denver?'],
+  };
+  return daySuggestions[dayNum] || daySuggestions[1];
+}
+
+function showAskSuggestions() {
+  const container = document.getElementById('ask-suggestions');
+  if (!container) return;
+  container.innerHTML = getAskSuggestions()
+    .map(s => `<button class="ask-suggestion-chip" onclick="handleAskSuggestion(this.textContent)">${s}</button>`)
+    .join('');
+}
+
+function handleAskSuggestion(text) {
+  const input = document.getElementById('ask-input');
+  if (input) {
+    input.value = text;
+    input.dispatchEvent(new Event('input'));
+  }
+  sendAskMessage();
+}
+
+// ── History ───────────────────────────────────────────────────────────────────
+
+function loadAskHistory() {
+  try {
+    const stored = localStorage.getItem(ASK_HISTORY_STORAGE);
+    if (stored) {
+      askConversationHistory = JSON.parse(stored);
+      askConversationHistory.forEach(msg => {
+        if (msg.role === 'user')      appendUserMessage(msg.content);
+        else if (msg.role === 'assistant') appendAssistantMessage(msg.content);
+      });
+    }
+  } catch(e) {
+    askConversationHistory = [];
+  }
+}
+
+function saveAskHistory() {
+  const limited = askConversationHistory.slice(-ASK_HISTORY_LIMIT * 2);
+  try { localStorage.setItem(ASK_HISTORY_STORAGE, JSON.stringify(limited)); } catch(e) {}
+}
+
+function clearAskHistory() {
+  askConversationHistory = [];
+  localStorage.removeItem(ASK_HISTORY_STORAGE);
+  const messages = document.getElementById('ask-messages');
+  if (messages) messages.innerHTML = '';
+  showAskWelcome();
+  showAskSuggestions();
+}
+
+// ── Welcome Message ───────────────────────────────────────────────────────────
+
+function showAskWelcome() {
+  const messages = document.getElementById('ask-messages');
+  if (!messages) return;
+  const now       = new Date();
+  const tripStart = new Date('2026-06-19');
+  const daysUntil = Math.ceil((tripStart - now) / 86400000);
+  const welcomeText = daysUntil > 0
+    ? `<strong>Colorado Trip Assistant ✨</strong><br>${daysUntil} days until your trip. Ask me anything — what to pack, what to book first, altitude tips, restaurant suggestions, or any question about your 6-day Colorado itinerary.`
+    : `<strong>Colorado Trip Assistant ✨</strong><br>You're on the trip! Ask me what to do now, directions, nearby restaurants, activity tips, or anything else about your Colorado adventure.`;
+  const div = document.createElement('div');
+  div.className = 'ask-msg ask-welcome';
+  div.innerHTML = welcomeText;
+  messages.appendChild(div);
+}
+
+// ── Message Rendering ─────────────────────────────────────────────────────────
+
+function appendUserMessage(text) {
+  const messages = document.getElementById('ask-messages');
+  if (!messages) return;
+  const div = document.createElement('div');
+  div.className = 'ask-msg user';
+  div.textContent = text;
+  messages.appendChild(div);
+  messages.scrollTop = messages.scrollHeight;
+}
+
+function appendAssistantMessage(text) {
+  const messages = document.getElementById('ask-messages');
+  if (!messages) return;
+  const div = document.createElement('div');
+  div.className = 'ask-msg assistant';
+  div.innerHTML = formatAskResponse(text);
+  messages.appendChild(div);
+  messages.scrollTop = messages.scrollHeight;
+  return div;
+}
+
+function formatAskResponse(text) {
+  const escaped = text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+  return escaped
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.*?)\*/g, '<em>$1</em>')
+    .replace(/^- (.+)$/gm, '<li>$1</li>')
+    .replace(/(<li>[\s\S]*<\/li>)/, '<ul>$1</ul>')
+    .replace(/\n/g, '<br>');
+}
+
+// ── Send Message ──────────────────────────────────────────────────────────────
+
+async function sendAskMessage() {
+  if (askIsStreaming) return;
+  const input   = document.getElementById('ask-input');
+  const sendBtn = document.getElementById('ask-send-btn');
+  const userText = input.value.trim();
+  if (!userText) return;
+
+  const apiKey = getAskKey();
+  if (!apiKey) { showAskSetup(); return; }
+
+  const suggestions = document.getElementById('ask-suggestions');
+  if (suggestions) suggestions.innerHTML = '';
+
+  appendUserMessage(userText);
+  askConversationHistory.push({ role: 'user', content: userText });
+  input.value = '';
+  input.style.height = 'auto';
+  sendBtn.disabled = true;
+  askIsStreaming    = true;
+
+  const messages  = document.getElementById('ask-messages');
+  const loadingEl = document.createElement('div');
+  loadingEl.className = 'ask-msg assistant';
+  loadingEl.innerHTML = '<div class="ask-loading-dots"><span></span><span></span><span></span></div>';
+  messages.appendChild(loadingEl);
+  messages.scrollTop = messages.scrollHeight;
+
+  try {
+    const systemPrompt  = buildTripContext();
+    const historyToSend = askConversationHistory.slice(-(ASK_HISTORY_LIMIT * 2));
+
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true',
+      },
+      body: JSON.stringify({
+        model: ASK_MODEL,
+        max_tokens: ASK_MAX_TOKENS,
+        system: systemPrompt,
+        messages: historyToSend,
+        stream: true,
+      }),
+    });
+
+    if (!response.ok) {
+      const errData = await response.json().catch(() => ({}));
+      throw new Error(errData.error?.message || `API error ${response.status}`);
+    }
+
+    loadingEl.remove();
+    const assistantEl = document.createElement('div');
+    assistantEl.className = 'ask-msg assistant streaming';
+    messages.appendChild(assistantEl);
+
+    const reader  = response.body.getReader();
+    const decoder = new TextDecoder();
+    let fullText = '';
+    let buffer   = '';
+
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      buffer += decoder.decode(value, { stream: true });
+      const lines = buffer.split('\n');
+      buffer = lines.pop();
+
+      for (const line of lines) {
+        if (!line.startsWith('data: ')) continue;
+        const data = line.slice(6).trim();
+        if (data === '[DONE]') continue;
+        try {
+          const parsed = JSON.parse(data);
+          if (parsed.type === 'content_block_delta' && parsed.delta?.type === 'text_delta') {
+            fullText += parsed.delta.text;
+            assistantEl.innerHTML = formatAskResponse(fullText);
+            messages.scrollTop = messages.scrollHeight;
+          }
+        } catch(e) { /* skip malformed chunks */ }
+      }
+    }
+
+    assistantEl.classList.remove('streaming');
+    assistantEl.innerHTML = formatAskResponse(fullText);
+    askConversationHistory.push({ role: 'assistant', content: fullText });
+    saveAskHistory();
+
+  } catch(err) {
+    loadingEl.remove();
+    const errEl = document.createElement('div');
+    errEl.className = 'ask-msg error';
+    if (err.message.includes('401') || err.message.includes('auth')) {
+      errEl.textContent = '🔑 API key invalid or expired. Tap the key icon to update it.';
+    } else if (err.message.includes('429')) {
+      errEl.textContent = '⏳ Rate limit hit. Wait a moment and try again.';
+    } else if (!navigator.onLine) {
+      errEl.textContent = '📡 No internet connection. Ask tab requires connectivity.';
+    } else {
+      errEl.textContent = `⚠️ ${err.message}`;
+    }
+    messages.appendChild(errEl);
+    messages.scrollTop = messages.scrollHeight;
+    askConversationHistory.pop();
+  } finally {
+    askIsStreaming    = false;
+    sendBtn.disabled  = false;
+    input.focus();
+  }
+}
+
+// ── Event Listeners ───────────────────────────────────────────────────────────
+
+function setupAskEventListeners() {
+  const setup = document.getElementById('ask-setup');
+  if (setup._listenersAttached) return;
+  setup._listenersAttached = true;
+
+  document.getElementById('ask-key-save')?.addEventListener('click', () => {
+    const key = document.getElementById('ask-api-key-input').value.trim();
+    if (saveAskKey(key)) {
+      showAskChat();
+      loadAskHistory();
+      updateAskContextPill();
+      if (askConversationHistory.length === 0) {
+        showAskWelcome();
+        showAskSuggestions();
+      }
+    }
+  });
+
+  document.getElementById('ask-key-toggle')?.addEventListener('click', () => {
+    const input = document.getElementById('ask-api-key-input');
+    input.type = input.type === 'password' ? 'text' : 'password';
+  });
+
+  document.getElementById('ask-send-btn')?.addEventListener('click', sendAskMessage);
+
+  document.getElementById('ask-input')?.addEventListener('keydown', e => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      sendAskMessage();
+    }
+  });
+
+  document.getElementById('ask-input')?.addEventListener('input', e => {
+    const sendBtn = document.getElementById('ask-send-btn');
+    if (sendBtn) sendBtn.disabled = e.target.value.trim().length === 0 || askIsStreaming;
+    e.target.style.height = 'auto';
+    e.target.style.height = Math.min(e.target.scrollHeight, 100) + 'px';
+  });
+
+  document.getElementById('ask-clear-btn')?.addEventListener('click', () => {
+    if (confirm('Clear conversation history?')) clearAskHistory();
+  });
+
+  document.getElementById('ask-key-change-btn')?.addEventListener('click', () => {
+    localStorage.removeItem(ASK_KEY_STORAGE);
+    showAskSetup();
+  });
 }
