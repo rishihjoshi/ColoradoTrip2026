@@ -1,5 +1,18 @@
 'use strict';
 
+// ── Utilities ──────────────────────────────────────────────────────────────
+
+/** HTML-escape untrusted strings before inserting into innerHTML */
+function escapeHtml(s) {
+  if (!s) return '';
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 // ── Constants ──────────────────────────────────────────────────────────────
 
 const DAY_LOCATIONS = {
@@ -368,10 +381,10 @@ function buildTimeline(activities) {
         <div class="timeline-content">
           <div class="activity-header">
             ${act.time ? `<span class="activity-time">${act.time}</span>` : ''}
-            <span class="activity-title">${act.icon || ''} ${act.title}${userTag}</span>
+            <span class="activity-title">${act.icon || ''} ${act._userAdded ? escapeHtml(act.title) : act.title}${userTag}</span>
             ${statusHtml}
           </div>
-          ${act.description ? `<div class="activity-body">${act.description}</div>` : ''}
+          ${act.description ? `<div class="activity-body">${act._userAdded ? escapeHtml(act.description) : act.description}</div>` : ''}
           ${addressHtml}
           ${act.cost ? `<div class="activity-body" style="margin-top:2px">💰 ${act.cost}</div>` : ''}
           ${btns}
@@ -818,7 +831,7 @@ function buildEatsCard(item) {
     : '';
 
   const note = item.note || item.notes || '';
-  const noteHtml = note ? `<div class="eats-note">${note}</div>` : '';
+  const noteHtml = note ? `<div class="eats-note">${item._userAdded ? escapeHtml(note) : note}</div>` : '';
 
   const btns = [];
   if (item.phone) btns.push(`<a href="tel:${item.phone}" class="btn-mini">📞 Call</a>`);
@@ -837,7 +850,7 @@ function buildEatsCard(item) {
       <span class="eats-price">${item.price_range || item.cost || ''}</span>
     </div>
     <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
-      <div class="eats-name">${item.name}${userTag}</div>
+      <div class="eats-name">${item._userAdded ? escapeHtml(item.name) : item.name}${userTag}</div>
       ${statusChip}
     </div>
     ${addressHtml}
