@@ -561,7 +561,7 @@
     },
     {
       "id": 18,
-      "name": "Modern Brava Trattoria",
+      "name": "Brava Modern Trattoria",
       "full_address": "809 Grand Ave, Glenwood Springs, CO",
       "street_address": "809 Grand Ave",
       "city": "Glenwood Springs",
@@ -882,7 +882,7 @@
     },
     {
       "id": 28,
-      "name": "Kedai",
+      "name": "Kedai Pho & Japanese Cuisine",
       "full_address": "720 Grand Ave, Glenwood Springs, CO",
       "street_address": "720 Grand Ave",
       "city": "Glenwood Springs",
@@ -1556,14 +1556,14 @@
     {
       "id": 49,
       "name": "Wesley & Rose Lobby Bar",
-      "full_address": "1028 Wave St, Buena Vista, CO 81211",
-      "street_address": "1028 Wave St",
+      "full_address": "1012 Front Lp, Buena Vista, CO 81211",
+      "street_address": "1012 Front Lp",
       "city": "Buena Vista",
       "state": "CO",
       "zip_code": "81211",
       "location": {
-        "latitude": 38.8483,
-        "longitude": -106.1241
+        "latitude": 38.8447,
+        "longitude": -106.133
       },
       "cuisine": [
         "New American",
@@ -1654,15 +1654,15 @@
     },
     {
       "id": 52,
-      "name": "Riviera Scratch Kitchen",
-      "full_address": "Glenwood Springs, CO",
-      "street_address": "",
+      "name": "The Riviera Supper Club & Scratch Kitchen",
+      "full_address": "702 Grand Ave, Glenwood Springs, CO 81601",
+      "street_address": "702 Grand Ave",
       "city": "Glenwood Springs",
       "state": "CO",
-      "zip_code": "",
+      "zip_code": "81601",
       "location": {
-        "latitude": 39.5505,
-        "longitude": -107.3248
+        "latitude": 39.5508,
+        "longitude": -107.3262
       },
       "cuisine": [
         "New American"
@@ -1680,28 +1680,28 @@
       ],
       "itinerary_day": "Day 3/4/5 - Glenwood Springs",
       "itinerary_location": "Glenwood Springs",
-      "yelp_url": "",
+      "yelp_url": "https://www.yelp.com/biz/riviera-scratch-kitchen-glenwood-springs",
       "phone": "(970) 945-7692",
       "notes": "Ranked #1 on TripAdvisor in Glenwood Springs. Excellent vegetarian options, scratch-made dishes from local ingredients."
     },
     {
       "id": 53,
       "name": "Daily Bread",
-      "full_address": "Glenwood Springs, CO",
-      "street_address": "",
+      "full_address": "729 Grand Ave, Glenwood Springs, CO 81601",
+      "street_address": "729 Grand Ave",
       "city": "Glenwood Springs",
       "state": "CO",
-      "zip_code": "",
+      "zip_code": "81601",
       "location": {
-        "latitude": 39.551,
-        "longitude": -107.3252
+        "latitude": 39.5507,
+        "longitude": -107.3258
       },
       "cuisine": [
         "Breakfast & Brunch",
         "Bakeries"
       ],
       "price_range": "$",
-      "yelp_review_count": null,
+      "yelp_review_count": 516,
       "yelp_rating": null,
       "google_rating": 4.3,
       "google_review_count": null,
@@ -1713,21 +1713,21 @@
       ],
       "itinerary_day": "Day 3/4/5 - Glenwood Springs",
       "itinerary_location": "Glenwood Springs",
-      "yelp_url": "",
+      "yelp_url": "https://www.yelp.com/biz/daily-bread-glenwood-springs",
       "phone": "(970) 945-6253",
       "notes": "Top breakfast and lunch destination in Glenwood Springs. Consistently ranks among the best in town. Vegetarian-friendly menu."
     },
     {
       "id": 54,
       "name": "Glenwood Canyon Brewpub",
-      "full_address": "Glenwood Springs, CO",
-      "street_address": "",
+      "full_address": "402 7th St, Glenwood Springs, CO 81601",
+      "street_address": "402 7th St",
       "city": "Glenwood Springs",
       "state": "CO",
-      "zip_code": "",
+      "zip_code": "81601",
       "location": {
-        "latitude": 39.5498,
-        "longitude": -107.326
+        "latitude": 39.5495,
+        "longitude": -107.3261
       },
       "cuisine": [
         "Pubs",
@@ -1735,7 +1735,7 @@
         "American"
       ],
       "price_range": "$$",
-      "yelp_review_count": null,
+      "yelp_review_count": 898,
       "yelp_rating": null,
       "google_rating": 3.9,
       "google_review_count": null,
@@ -1747,28 +1747,28 @@
       ],
       "itinerary_day": "Day 3/4/5 - Glenwood Springs",
       "itinerary_location": "Glenwood Springs",
-      "yelp_url": "",
+      "yelp_url": "https://www.yelp.com/biz/glenwood-canyon-brewpub-glenwood-springs-2",
       "phone": "(970) 945-1276",
       "notes": "One of the most-reviewed restaurants in Glenwood Springs. Strong vegetarian selection, family-friendly atmosphere."
     },
     {
       "id": 55,
       "name": "Native Son Agave Bar & Kitchen",
-      "full_address": "Glenwood Springs, CO",
-      "street_address": "",
+      "full_address": "813 Grand Ave, Glenwood Springs, CO 81601",
+      "street_address": "813 Grand Ave",
       "city": "Glenwood Springs",
       "state": "CO",
-      "zip_code": "",
+      "zip_code": "81601",
       "location": {
-        "latitude": 39.5502,
-        "longitude": -107.3255
+        "latitude": 39.5509,
+        "longitude": -107.3264
       },
       "cuisine": [
         "New American",
         "Cocktail Bars"
       ],
       "price_range": "$$",
-      "yelp_review_count": null,
+      "yelp_review_count": 251,
       "yelp_rating": null,
       "google_rating": 4.1,
       "google_review_count": null,
@@ -1780,21 +1780,21 @@
       ],
       "itinerary_day": "Day 3/4/5 - Glenwood Springs",
       "itinerary_location": "Glenwood Springs",
-      "yelp_url": "",
+      "yelp_url": "https://www.yelp.com/biz/native-son-glenwood-springs-2",
       "phone": "(970) 230-9954",
       "notes": "Newer downtown restaurant with strong reviews. Buddha Bowl and solid vegetarian offerings."
     },
     {
       "id": 56,
       "name": "Spring Cafe Aspen",
-      "full_address": "Aspen, CO",
-      "street_address": "",
+      "full_address": "119 S Spring St, Aspen, CO 81611",
+      "street_address": "119 S Spring St",
       "city": "Aspen",
       "state": "CO",
-      "zip_code": "",
+      "zip_code": "81611",
       "location": {
-        "latitude": 39.0931,
-        "longitude": -106.9253
+        "latitude": 39.1899,
+        "longitude": -106.8198
       },
       "cuisine": [
         "Juice Bars & Smoothies",
@@ -1802,7 +1802,7 @@
         "Vegetarian"
       ],
       "price_range": "$$",
-      "yelp_review_count": null,
+      "yelp_review_count": 126,
       "yelp_rating": null,
       "google_rating": 4.6,
       "google_review_count": 415,
@@ -1815,27 +1815,27 @@
       ],
       "itinerary_day": "Day 4 - Aspen",
       "itinerary_location": "Aspen",
-      "yelp_url": "",
+      "yelp_url": "https://www.yelp.com/biz/spring-cafe-aspen",
       "phone": "(970) 429-8406",
-      "notes": "Best vegetarian-focused restaurant in Aspen per locals. Ideal fit for the family's dietary preferences. Organic vegetarian eatery. While highly vegetarian, it functions primarily as a Juice Bar/Smoothie café rather than matching the dinner-style cuisines requested."
+      "notes": "Organic vegetarian eatery — juice bar and smoothie cafe. ⚠️ SEASONAL: Open April only (closes mid-April). Likely CLOSED during June 19-24 trip dates. Verify before visiting."
     },
     {
       "id": 57,
       "name": "Campo de Fiori",
-      "full_address": "Aspen, CO",
-      "street_address": "",
+      "full_address": "205 S Mill St, Aspen, CO 81611",
+      "street_address": "205 S Mill St",
       "city": "Aspen",
       "state": "CO",
-      "zip_code": "",
+      "zip_code": "81611",
       "location": {
-        "latitude": 39.0935,
-        "longitude": -106.9248
+        "latitude": 39.1902,
+        "longitude": -106.82
       },
       "cuisine": [
         "Italian"
       ],
       "price_range": "$$$",
-      "yelp_review_count": null,
+      "yelp_review_count": 207,
       "yelp_rating": null,
       "google_rating": 3.9,
       "google_review_count": null,
@@ -1848,26 +1848,26 @@
       ],
       "itinerary_day": "Day 4 - Aspen",
       "itinerary_location": "Aspen",
-      "yelp_url": "",
+      "yelp_url": "https://www.yelp.com/biz/campo-de-fiori-aspen",
       "notes": "One of Aspen's most popular Italian restaurants. Great vegetarian pasta options, consistently recommended by locals."
     },
     {
       "id": 58,
       "name": "Elephant Thai",
-      "full_address": "Colorado Springs, CO",
-      "street_address": "",
+      "full_address": "4703 N Academy Blvd, Colorado Springs, CO 80918",
+      "street_address": "4703 N Academy Blvd",
       "city": "Colorado Springs",
       "state": "CO",
-      "zip_code": "",
+      "zip_code": "80918",
       "location": {
-        "latitude": 38.8339,
-        "longitude": -104.8214
+        "latitude": 38.9048,
+        "longitude": -104.7768
       },
       "cuisine": [
         "Thai"
       ],
       "price_range": "$$",
-      "yelp_review_count": null,
+      "yelp_review_count": 156,
       "yelp_rating": null,
       "google_rating": 4.4,
       "google_review_count": null,
@@ -1880,21 +1880,21 @@
       ],
       "itinerary_day": "Day 2 - Colorado Springs",
       "itinerary_location": "Colorado Springs",
-      "yelp_url": "",
+      "yelp_url": "https://www.yelp.com/biz/elephant-thai-colorado-springs",
       "phone": "(719) 597-1175",
       "notes": "Frequently recommended by locals as the best Thai in Colorado Springs. Strong vegetarian offerings, higher-rated than several Thai places on the current list."
     },
     {
       "id": 59,
       "name": "Nom Nom Thai",
-      "full_address": "Colorado Springs, CO",
-      "street_address": "",
+      "full_address": "3303 N Academy Blvd, Colorado Springs, CO 80917",
+      "street_address": "3303 N Academy Blvd",
       "city": "Colorado Springs",
       "state": "CO",
-      "zip_code": "",
+      "zip_code": "80917",
       "location": {
-        "latitude": 38.835,
-        "longitude": -104.8205
+        "latitude": 38.8914,
+        "longitude": -104.7767
       },
       "cuisine": [
         "Thai"
@@ -1913,21 +1913,21 @@
       ],
       "itinerary_day": "Day 2 - Colorado Springs",
       "itinerary_location": "Colorado Springs",
-      "yelp_url": "",
+      "yelp_url": "https://www.yelp.com/biz/nom-nom-thai-colorado-springs-3",
       "phone": "(719) 573-7004",
       "notes": "Excellent local Thai reputation, repeatedly recommended by Colorado Springs locals."
     },
     {
       "id": 60,
       "name": "Fern's Diner & Drinkery",
-      "full_address": "Manitou Springs, CO",
-      "street_address": "",
-      "city": "Manitou Springs",
+      "full_address": "4645 Fountain Ave, Cascade, CO 80809",
+      "street_address": "4645 Fountain Ave",
+      "city": "Cascade",
       "state": "CO",
-      "zip_code": "",
+      "zip_code": "80809",
       "location": {
-        "latitude": 38.8589,
-        "longitude": -104.9208
+        "latitude": 38.8723,
+        "longitude": -104.9601
       },
       "cuisine": [
         "American",
@@ -1947,8 +1947,8 @@
       ],
       "itinerary_day": "Day 2 - Colorado Springs / Manitou Springs",
       "itinerary_location": "Manitou Springs (near Pikes Peak)",
-      "yelp_url": "",
-      "notes": "Near Pikes Peak. Frequently recommended for vegetarian and vegan diners. Better fit than several average-rated options currently on the list."
+      "yelp_url": "https://www.yelp.com/biz/fern-s-diner-and-drinkery-cascade-chipita-park",
+      "notes": "⛔ PERMANENTLY CLOSED as of August 2024. Do NOT visit — remove from consideration."
     }
   ]
 }
