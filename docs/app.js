@@ -1668,7 +1668,7 @@ Day 2 — Sat Jun 20: Pikes Peak Cog Railway (9AM) + Garden of Gods + Red Rock C
 Day 3 — Sun Jun 21: Late start 10AM. Drive via US-24 W → Buena Vista (lunch at CO Ranch House) → Twin Lakes photo stop → Independence Pass (12,095 ft, check cotrip.org) → Aspen → Glenwood Springs. Evening: Grizzly Creek Trail hike 30 min. Hotel: Residence Inn Glenwood Springs (Conf: 73462520918893).
 Day 4 — Mon Jun 22: Maroon Bells 8AM shuttle (MAIN HIGHLIGHT) + Silver Queen Gondola + Cooper St Aspen. Hotel: Residence Inn Glenwood Springs.
 Day 5 — Tue Jun 23: Blue Sky Adventures rafting (9AM) + Glenwood Hot Springs Pool + Iron Mountain Hot Springs. Hotel: Glenwood Hot Springs Lodge (Classic Double Queen, ground floor patio).
-Day 6 — Wed Jun 24: Red Rocks Park (10:30AM) + Denver RiNo lunch + fly home DEN 8:45PM (WN#1324).
+Day 6 — Wed Jun 24: Late start 11AM. I-70 East → lunch Silverthorne (exit 205, Pug Ryan's/Butterhorn) → optional Idaho Springs stop → Red Rocks 2:30PM (2 hrs) → farewell dinner near DEN (Pappadeaux Aurora or Root Down DIA inside terminal) → return rental 6PM → DEN security 6:30PM → WN#1324 8:45PM → STL 11:55PM.
 
 KEY RESERVATIONS STATUS:
 Needs booking: ${needsBooking.slice(0,5).join(', ') || 'None flagged'}

@@ -464,27 +464,50 @@
       "day": 6,
       "date": "2026-06-24",
       "dayOfWeek": "Wednesday",
-      "title": "Red Rocks → Denver → Fly Home",
+      "title": "Glenwood Springs → Red Rocks → Fly Home",
       "badge": "Return Day",
       "badgeColor": "red-flag",
       "weatherLocationKey": 6,
-      "driveFromPrevious": { "duration": "2.5 hrs", "distance": "155 miles", "via": "I-70 East" },
+      "driveFromPrevious": { "duration": "~4 hrs total with stops", "distance": "~155 miles", "via": "I-70 East → Morrison → I-225 → DEN" },
       "activities": [
         {
           "id": "d6-a1",
-          "time": "7:00 AM",
-          "title": "Checkout + Drive to Red Rocks",
-          "description": "Pack tonight (Day 5). Checkout 7AM. Drive I-70 East to Morrison, CO (~155 mi, 2.5 hrs). Arrive Red Rocks ~10:30AM.",
+          "time": "11:00 AM",
+          "title": "Late Checkout — Depart Glenwood Springs",
+          "description": "Pack tonight (Day 5) — no early alarm today! Checkout by 11AM. Head east on I-70. The drive through Glenwood Canyon itself is spectacular — 12-mile slot canyon with the Colorado River. Then climb toward the Eisenhower Tunnel at 11,158 ft.",
           "address": "Glenwood Springs, CO 81601",
           "type": "drive",
           "icon": "🚗",
-          "driveInfo": { "duration": "2.5 hrs", "via": "I-70 East", "note": "Optional: Independence Pass via Hwy 82 — adds 45 min, spectacular scenery. Check cotrip.org for road conditions morning of Jun 24." }
+          "driveInfo": { "duration": "~1.5 hrs to Silverthorne", "via": "I-70 East through Glenwood Canyon → Vail → Eisenhower Tunnel" }
         },
         {
           "id": "d6-a2",
-          "time": "10:30 AM",
+          "time": "12:30 PM",
+          "title": "Lunch on I-70 — Silverthorne / Frisco",
+          "description": "Exit 205 off I-70 — Silverthorne or Frisco. Best options: Pug Ryan's Steakhouse & Brewing (Dillon, casual pub, burgers, Colorado beer — family-friendly); Butterhorn Bakery & Café (Frisco, 10 min detour — famous sandwiches and baked goods); or Sunshine Café (Silverthorne diner, fast and filling). Silverthorne Premium Outlets are steps away at exit 205 — grab any last Colorado souvenirs.",
+          "address": "Silverthorne, CO 80498",
+          "type": "restaurant",
+          "icon": "🍽️",
+          "duration": "1 hr",
+          "tips": ["Pug Ryan's: 104 Village Pl, Dillon (off exit 205) — local favorite", "Silverthorne Outlets right at exit 205 — quick souvenir stop while you're there"]
+        },
+        {
+          "id": "d6-a2b",
+          "time": "1:30 PM",
+          "title": "★ Bonus: Idaho Springs Quick Stop (Optional)",
+          "description": "Exit 240 off I-70 — 15 min off the highway into a classic Colorado gold rush town. Charming Main Street with local shops and cafés. Famous Beau Jo's Pizza if you need an extra snack. Even a slow drive-through from the highway is scenic. Adds ~30 min to the drive but worth it as a final Colorado moment.",
+          "address": "Idaho Springs, CO 80452",
+          "type": "activity",
+          "bookingStatus": "free",
+          "icon": "⭐",
+          "duration": "15-20 min",
+          "cost": "Free"
+        },
+        {
+          "id": "d6-a3",
+          "time": "2:30 PM",
           "title": "Red Rocks Park & Amphitheatre",
-          "description": "Free daytime entry. Trading Post Trail (1.4 mi easy loop — your daughter's easiest hike of the trip after a week of Colorado). Amphitheater walk — 192 stairs. Colorado Music Hall of Fame visitor center (7AM–7PM). Denver skyline visible on clear days. Perfect Colorado farewell.",
+          "description": "Free daytime entry. Trading Post Trail — 1.4 mi easy loop through red sandstone formations (your daughter's lightest hike of the whole trip). Walk the amphitheater stairs (192 steps — iconic photo). Colorado Music Hall of Fame visitor center open 7AM–7PM. Denver skyline visible on clear days. The perfect Colorado farewell.",
           "address": "18300 W Alameda Pkwy, Morrison, CO 80465",
           "website": "https://www.redrocksonline.com",
           "type": "activity",
@@ -492,40 +515,55 @@
           "icon": "🎸",
           "duration": "2 hrs",
           "cost": "Free daytime entry",
-          "tips": ["Park opens at 5AM", "Visitor center 7AM–7PM", "Trading Post Trail is easy — 1.4 mi loop"]
+          "tips": [
+            "No reservation needed for daytime entry",
+            "Trading Post Trail — 1.4 mi easy loop, all ages",
+            "Visitor center 7AM–7PM",
+            "Amphitheater stairs = 192 steps — great family photo op"
+          ],
+          "flag": { "type": "warning", "text": "Leave Red Rocks by 4:30PM. Return rental by 6PM. Inside DEN security by 6:30PM for 8:45PM flight." }
         },
         {
           "id": "d6-drive1",
           "type": "drive-connector",
-          "duration": "30 min",
-          "distance": "18 miles",
-          "via": "I-70 East to Denver"
-        },
-        {
-          "id": "d6-a3",
-          "time": "1:00 PM",
-          "title": "Farewell Lunch — RiNo Arts District Denver",
-          "description": "Denver's most interesting neighborhood. Zeppelin Station food hall for casual family lunch (global cuisines, vegetarian-friendly). Or Union Station's Denver Milk Market. Out by 3PM — don't linger.",
-          "address": "3501 Wazee St, Denver, CO 80216",
-          "type": "restaurant",
-          "icon": "🍽️",
-          "duration": "1.5 hrs",
-          "flag": { "type": "warning", "text": "Must leave lunch by 3PM. Return rental by 4:30PM. Be inside DEN by 5:30PM for 8:45PM flight." }
+          "duration": "45 min",
+          "distance": "30 miles",
+          "via": "I-70 East → I-225 North → Airport Blvd"
         },
         {
           "id": "d6-a4",
-          "time": "3:30 PM",
-          "title": "Return Rental Car at DEN",
-          "description": "DEN on-airport rental facility. Allow 30–45 min for return + shuttle to terminal. Be inside terminal by 5:30PM minimum.",
-          "address": "Denver International Airport, Denver, CO 80249",
-          "type": "transport",
-          "icon": "🚗"
+          "time": "5:00 PM",
+          "title": "Farewell Dinner — Near DEN Airport",
+          "description": "Two options: (A) Before car return — Pappadeaux Seafood Kitchen (2400 S Havana St, Aurora; Cajun/seafood, large portions, vegetarian options, 20 min from DEN — relaxed sit-down, then hand over the car at 6PM); (B) After check-in inside DEN — Root Down DIA in Concourse C (local farm-to-table, great for vegetarians, excellent cocktails) or Denver Central Market food hall. Option B is zero traffic stress — dine inside security at a great airport restaurant.",
+          "address": "Aurora / Denver International Airport, CO",
+          "type": "restaurant",
+          "icon": "🍽️",
+          "duration": "1 hr"
         },
         {
           "id": "d6-a5",
+          "time": "6:00 PM",
+          "title": "Return Rental Car at DEN",
+          "description": "Follow signs to DEN on-airport Rental Car Center off Peña Blvd. Staff takes keys curbside — very quick. Free shuttle buses depart every 5 min directly to all terminals. Allow 20-25 min from car drop to terminal entrance.",
+          "address": "DEN Rental Car Center, 8500 Peña Blvd, Denver, CO 80249",
+          "type": "transport",
+          "bookingStatus": "confirmed",
+          "icon": "🚗"
+        },
+        {
+          "id": "d6-a6",
+          "time": "6:30 PM",
+          "title": "Check In & Clear Security",
+          "description": "Southwest check-in kiosks or use app boarding passes. DEN security averages 15-25 min. Head to Concourse C (all Southwest gates). Plenty of time to grab dinner at Root Down or Denver Central Market food hall if you haven't eaten.",
+          "address": "Denver International Airport — Concourse C, Denver, CO 80249",
+          "type": "transport",
+          "icon": "🛂"
+        },
+        {
+          "id": "d6-a7",
           "time": "8:45 PM",
           "title": "WN #1324 Departs DEN → STL",
-          "description": "2h 10m flight. Arrive Lambert 11:55PM.",
+          "description": "2h 10m flight. Arrive Lambert 11:55PM. End of an amazing Colorado trip — safe travels! 🏔",
           "address": "Denver International Airport, Denver, CO 80249",
           "type": "flight",
           "bookingStatus": "confirmed",
