@@ -403,8 +403,8 @@
       "state": "CO",
       "zip_code": "",
       "location": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 39.5197,
+        "longitude": -107.309
       },
       "cuisine": [
         "Donuts",
@@ -777,8 +777,8 @@
       "state": "CO",
       "zip_code": "",
       "location": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 39.5162,
+        "longitude": -107.3095
       },
       "cuisine": [
         "Chinese"
@@ -920,8 +920,8 @@
       "state": "CO",
       "zip_code": "",
       "location": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 39.2232,
+        "longitude": -106.8672
       },
       "cuisine": [
         "New American",
@@ -1397,87 +1397,99 @@
       "itinerary_location": "Colorado Springs",
       "yelp_url": "https://www.yelp.com/biz/zaika-indian-cuisine-colorado-springs-3"
     },
-	{
-  "id": 49,
-  "name": "Wesley & Rose Lobby Bar",
-  "full_address": "1028 Wave St, Buena Vista, CO 81211",
-  "street_address": "1028 Wave St",
-  "city": "Buena Vista",
-  "state": "CO",
-  "zip_code": "81211",
-  "cuisine": [
-    "New American",
-    "Cocktail Bars"
-  ],
-  "popular_dishes": [
-  "Truffle Fries",
-  "Margherita Flatbread",
-  "Charcuterie Board",
-  "Seasonal Grain Bowl",
-  "Craft Cocktails"
-	],
-  "price_range": "$$",
-  "yelp_review_count": 245,
-  "yelp_rating": 4.5,
-  "itinerary_day": "Day 3 - Colorado Springs to Glenwood Springs (Lunch Stop)",
-  "itinerary_location": "Buena Vista",
-   "yelp_url": "https://www.yelp.com/biz/wesley-and-rose-lobby-bar-buena-vista",
-  "notes": "Located inside Surf Hotel. Upscale riverside dining and craft cocktails with vegetarian-friendly small plates."
-},
-{
-  "id": 50,
-  "name": "Eddyline Restaurant at South Main",
-  "full_address": "926 South Main St, Buena Vista, CO 81211",
-  "street_address": "926 South Main St",
-  "city": "Buena Vista",
-  "state": "CO",
-  "zip_code": "81211",
-  "cuisine": [
-    "Breweries",
-    "American"
-  ],
-  "popular_dishes": [
-  "Veggie Burger",
-  "Wood-Fired Pizza",
-  "Beer Cheese Pretzel",
-  "South Main Salad",
-  "Sweet Potato Fries"
-	],
-  "price_range": "$$",
-  "yelp_review_count": 586,
-  "yelp_rating": 3.5,
-  "itinerary_day": "Day 3 - Colorado Springs to Glenwood Springs (Lunch Stop)",
-  "itinerary_location": "Buena Vista",
-   "yelp_url":"https://www.yelp.com/biz/eddyline-restaurant-at-south-main-buena-vista",
-  "notes": "Popular South Main neighborhood brewpub. Good vegetarian burgers, salads, pizzas and outdoor seating."
-},
-{
-  "id": 51,
-  "name": "Simple Eatery",
-  "full_address": "402 E Main St, Buena Vista, CO 81211",
-  "street_address": "402 E Main St",
-  "city": "Buena Vista",
-  "state": "CO",
-  "zip_code": "81211",
-  "cuisine": [
-    "Bakeries",
-    "American"
-  ],
-  "popular_dishes": [
-  "Veggie Panini",
-  "Tomato Basil Soup",
-  "Breakfast Burrito",
-  "Fresh-Baked Cinnamon Roll",
-  "Avocado Toast"
-],
-  "price_range": "$$",
-  "yelp_review_count": 648,
-  "yelp_rating": 4.5,
-  "itinerary_day": "Day 3 - Colorado Springs to Glenwood Springs (Breakfast or Lunch Stop)",
-  "itinerary_location": "Buena Vista",
-   "yelp_url":"https://www.yelp.com/biz/simple-eatery-buena-vista-2",
-  "notes": "Excellent vegetarian-friendly café with sandwiches, soups, baked goods, coffee, and breakfast options."
-},
+    {
+      "id": 49,
+      "name": "Wesley & Rose Lobby Bar",
+      "full_address": "1028 Wave St, Buena Vista, CO 81211",
+      "street_address": "1028 Wave St",
+      "city": "Buena Vista",
+      "state": "CO",
+      "zip_code": "81211",
+      "cuisine": [
+        "New American",
+        "Cocktail Bars"
+      ],
+      "popular_dishes": [
+        "Truffle Fries",
+        "Margherita Flatbread",
+        "Charcuterie Board",
+        "Seasonal Grain Bowl",
+        "Craft Cocktails"
+      ],
+      "price_range": "$$",
+      "yelp_review_count": 245,
+      "yelp_rating": 4.5,
+      "itinerary_day": "Day 3 - Colorado Springs to Glenwood Springs (Lunch Stop)",
+      "itinerary_location": "Buena Vista",
+      "yelp_url": "https://www.yelp.com/biz/wesley-and-rose-lobby-bar-buena-vista",
+      "notes": "Located inside Surf Hotel. Upscale riverside dining and craft cocktails with vegetarian-friendly small plates.",
+      "location": {
+        "latitude": 38.8483,
+        "longitude": -106.1241
+      }
+    },
+    {
+      "id": 50,
+      "name": "Eddyline Restaurant at South Main",
+      "full_address": "926 South Main St, Buena Vista, CO 81211",
+      "street_address": "926 South Main St",
+      "city": "Buena Vista",
+      "state": "CO",
+      "zip_code": "81211",
+      "cuisine": [
+        "Breweries",
+        "American"
+      ],
+      "popular_dishes": [
+        "Veggie Burger",
+        "Wood-Fired Pizza",
+        "Beer Cheese Pretzel",
+        "South Main Salad",
+        "Sweet Potato Fries"
+      ],
+      "price_range": "$$",
+      "yelp_review_count": 586,
+      "yelp_rating": 3.5,
+      "itinerary_day": "Day 3 - Colorado Springs to Glenwood Springs (Lunch Stop)",
+      "itinerary_location": "Buena Vista",
+      "yelp_url": "https://www.yelp.com/biz/eddyline-restaurant-at-south-main-buena-vista",
+      "notes": "Popular South Main neighborhood brewpub. Good vegetarian burgers, salads, pizzas and outdoor seating.",
+      "location": {
+        "latitude": 38.836,
+        "longitude": -106.1356
+      }
+    },
+    {
+      "id": 51,
+      "name": "Simple Eatery",
+      "full_address": "402 E Main St, Buena Vista, CO 81211",
+      "street_address": "402 E Main St",
+      "city": "Buena Vista",
+      "state": "CO",
+      "zip_code": "81211",
+      "cuisine": [
+        "Bakeries",
+        "American"
+      ],
+      "popular_dishes": [
+        "Veggie Panini",
+        "Tomato Basil Soup",
+        "Breakfast Burrito",
+        "Fresh-Baked Cinnamon Roll",
+        "Avocado Toast"
+      ],
+      "price_range": "$$",
+      "yelp_review_count": 648,
+      "yelp_rating": 4.5,
+      "itinerary_day": "Day 3 - Colorado Springs to Glenwood Springs (Breakfast or Lunch Stop)",
+      "itinerary_location": "Buena Vista",
+      "yelp_url": "https://www.yelp.com/biz/simple-eatery-buena-vista-2",
+      "notes": "Excellent vegetarian-friendly café with sandwiches, soups, baked goods, coffee, and breakfast options.",
+      "location": {
+        "latitude": 38.8431,
+        "longitude": -106.1291
+      }
+    },
     {
       "id": 52,
       "name": "Riviera Scratch Kitchen",
@@ -1487,8 +1499,8 @@
       "state": "CO",
       "zip_code": "",
       "location": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 39.5505,
+        "longitude": -107.3248
       },
       "cuisine": [
         "New American"
@@ -1518,8 +1530,8 @@
       "state": "CO",
       "zip_code": "",
       "location": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 39.551,
+        "longitude": -107.3252
       },
       "cuisine": [
         "Breakfast & Brunch",
@@ -1549,8 +1561,8 @@
       "state": "CO",
       "zip_code": "",
       "location": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 39.5498,
+        "longitude": -107.326
       },
       "cuisine": [
         "Pubs",
@@ -1581,8 +1593,8 @@
       "state": "CO",
       "zip_code": "",
       "location": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 39.5502,
+        "longitude": -107.3255
       },
       "cuisine": [
         "New American",
@@ -1612,8 +1624,8 @@
       "state": "CO",
       "zip_code": "",
       "location": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 39.0931,
+        "longitude": -106.9253
       },
       "cuisine": [
         "Juice Bars & Smoothies",
@@ -1645,8 +1657,8 @@
       "state": "CO",
       "zip_code": "",
       "location": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 39.0935,
+        "longitude": -106.9248
       },
       "cuisine": [
         "Italian"
@@ -1675,8 +1687,8 @@
       "state": "CO",
       "zip_code": "",
       "location": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 38.8339,
+        "longitude": -104.8214
       },
       "cuisine": [
         "Thai"
@@ -1706,8 +1718,8 @@
       "state": "CO",
       "zip_code": "",
       "location": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 38.835,
+        "longitude": -104.8205
       },
       "cuisine": [
         "Thai"
@@ -1737,8 +1749,8 @@
       "state": "CO",
       "zip_code": "",
       "location": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 38.8589,
+        "longitude": -104.9208
       },
       "cuisine": [
         "American",
