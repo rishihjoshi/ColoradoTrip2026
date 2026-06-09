@@ -42,8 +42,8 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 147,
-      "yelp_rating": null,
-      "google_rating": null,
+      "yelp_rating": 4.2,
+      "google_rating": 4.3,
       "google_review_count": null,
       "popular_dishes": [
         "South Indian Thali",
