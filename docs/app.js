@@ -11,6 +11,18 @@ const DAY_LOCATIONS = {
   6: { name: 'Morrison / Red Rocks', lat: 39.6654, lon: -105.2057, date: '2026-06-24' },
 };
 
+// Per-destination weather spots for the forecast strip
+const WEATHER_SPOTS = [
+  { id: 'sp1', name: 'Denver Airport',    lat: 39.8561, lon: -104.6737, date: '2026-06-19', avgHi: 84, avgLo: 54 },
+  { id: 'sp2', name: 'Colo. Springs',     lat: 38.8339, lon: -104.8214, date: '2026-06-20', avgHi: 78, avgLo: 50 },
+  { id: 'sp3', name: 'Pikes Peak',        lat: 38.8405, lon: -105.0442, date: '2026-06-20', avgHi: 48, avgLo: 28 },
+  { id: 'sp4', name: 'Vail',              lat: 39.6433, lon: -106.3781, date: '2026-06-21', avgHi: 73, avgLo: 44 },
+  { id: 'sp5', name: 'Glenwood Spgs',    lat: 39.5505, lon: -107.3248, date: '2026-06-21', avgHi: 88, avgLo: 58 },
+  { id: 'sp6', name: 'Aspen',             lat: 39.0931, lon: -106.9253, date: '2026-06-22', avgHi: 72, avgLo: 44 },
+  { id: 'sp7', name: 'Maroon Bells',      lat: 39.0709, lon: -106.9890, date: '2026-06-22', avgHi: 62, avgLo: 36 },
+  { id: 'sp8', name: 'Red Rocks',         lat: 39.6654, lon: -105.2057, date: '2026-06-24', avgHi: 82, avgLo: 52 },
+];
+
 const JUNE_AVERAGES = {
   1: { hi: 84, lo: 54, desc: 'Sunny',           icon: '☀️' },
   2: { hi: 78, lo: 50, desc: 'Partly Cloudy',   icon: '⛅' },
@@ -171,6 +183,11 @@ function setupFAB() {
     if (state.currentTab === 'itinerary') openModal('modal-add-itinerary');
     else if (state.currentTab === 'eats')  openModal('modal-add-eats');
     else if (state.currentTab === 'pack')  promptAddPackItem();
+    else if (state.currentTab === 'ask') {
+      // Focus the ask input so the user can start typing immediately
+      const askInput = document.getElementById('ask-input');
+      if (askInput) { askInput.focus(); askInput.scrollIntoView({ behavior: 'smooth' }); }
+    }
   });
 
   document.getElementById('btn-cancel-itinerary').addEventListener('click', () => closeModal('modal-add-itinerary'));
@@ -233,6 +250,7 @@ async function loadItinerary() {
 }
 
 function renderItinerary() {
+  buildWeatherStrip();
   const { days } = state.itineraryData;
   const container = document.getElementById('itinerary-days');
   const today = getTodayMDT();
@@ -513,6 +531,79 @@ async function fetchAndDisplayWeather(day) {
 function renderWeatherChip(w, isToday) {
   const icon = WMO_ICONS[w.code] || '🌤';
   return `${icon} ${w.hiC}°C (${w.hiF}°F)`;
+}
+
+// ── Destination Weather Strip ───────────────────────────────────────────────
+
+function buildWeatherStrip() {
+  const strip = document.getElementById('weather-strip');
+  if (!strip || strip.dataset.built === '1') return;
+  strip.dataset.built = '1';
+
+  strip.innerHTML = WEATHER_SPOTS.map(sp => {
+    const d = new Date(sp.date + 'T12:00:00');
+    const dayLabel = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'America/Denver' });
+    return `
+      <div class="wspot-card">
+        <div class="wspot-name">${sp.name}</div>
+        <div class="wspot-date">${dayLabel}</div>
+        <div class="wspot-icon" id="wspot-icon-${sp.id}">⟳</div>
+        <div class="wspot-hi"  id="wspot-hi-${sp.id}">—</div>
+        <div class="wspot-lo"  id="wspot-lo-${sp.id}">—</div>
+      </div>`;
+  }).join('');
+
+  WEATHER_SPOTS.forEach(sp => fetchSpotWeather(sp));
+}
+
+async function fetchSpotWeather(sp) {
+  const iconEl = document.getElementById(`wspot-icon-${sp.id}`);
+  const hiEl   = document.getElementById(`wspot-hi-${sp.id}`);
+  const loEl   = document.getElementById(`wspot-lo-${sp.id}`);
+  if (!iconEl) return;
+
+  const now        = Date.now();
+  const tripStart  = new Date('2026-06-19T00:00:00-06:00').getTime();
+  const daysUntil  = (tripStart - now) / 86400000;
+
+  function showAvg() {
+    const hiC = Math.round((sp.avgHi - 32) * 5/9);
+    const loC = Math.round((sp.avgLo - 32) * 5/9);
+    iconEl.textContent = '🌤';
+    if (hiEl) hiEl.textContent = `${sp.avgHi}°F / ${hiC}°C`;
+    if (loEl) loEl.textContent = `Lo ${sp.avgLo}°F`;
+  }
+
+  if (daysUntil > 16) { showAvg(); return; }
+
+  const cacheKey = `wspot_${sp.id}_${sp.date}`;
+  const cached   = getWeatherCache(cacheKey);
+  if (cached) { renderSpotCard(cached, iconEl, hiEl, loEl); return; }
+
+  const tripDate = new Date(sp.date + 'T12:00:00-06:00');
+  if (tripDate < new Date(now - 86400000)) { showAvg(); return; }
+
+  try {
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${sp.lat}&longitude=${sp.lon}&daily=temperature_2m_max,temperature_2m_min,weathercode&temperature_unit=fahrenheit&timezone=America%2FDenver&start_date=${sp.date}&end_date=${sp.date}`;
+    const res  = await fetch(url);
+    const data = await res.json();
+    if (!data.daily?.temperature_2m_max?.[0]) throw new Error('no data');
+    const w = {
+      hiF: Math.round(data.daily.temperature_2m_max[0]),
+      loF: Math.round(data.daily.temperature_2m_min[0]),
+      hiC: Math.round((data.daily.temperature_2m_max[0] - 32) * 5/9),
+      loC: Math.round((data.daily.temperature_2m_min[0] - 32) * 5/9),
+      code: data.daily.weathercode[0],
+    };
+    setWeatherCache(cacheKey, w);
+    renderSpotCard(w, iconEl, hiEl, loEl);
+  } catch(e) { showAvg(); }
+}
+
+function renderSpotCard(w, iconEl, hiEl, loEl) {
+  iconEl.textContent = WMO_ICONS[w.code] || '🌤';
+  if (hiEl) hiEl.textContent = `${w.hiF}°F / ${w.hiC}°C`;
+  if (loEl) loEl.textContent = `Lo ${w.loF}°F`;
 }
 
 function getWeatherCache(key) {
@@ -1891,9 +1982,8 @@ async function sendAskMessage() {
 // ── Event Listeners ───────────────────────────────────────────────────────────
 
 function setupAskEventListeners() {
-  const setup = document.getElementById('ask-setup');
-  if (setup._listenersAttached) return;
-  setup._listenersAttached = true;
+  if (setupAskEventListeners._attached) return;
+  setupAskEventListeners._attached = true;
 
   document.getElementById('ask-send-btn')?.addEventListener('click', sendAskMessage);
 
