@@ -3,7 +3,7 @@
   "yelp_collection_url": "https://www.yelp.com/collection/G02VQ0XuPsBCuF_2tF0-6A/Colorado-Trip",
   "trip_dates": "June 19-24, 2026",
   "export_date": "2026-06-07",
-  "total_restaurants": 60,
+  "total_restaurants": 74,
   "itinerary_summary": {
     "Day 1 (Fri 6/19)": "Travel from STL to Denver - Overnight Denver Airport Hotel",
     "Day 2 (Sat 6/20)": "Denver to Colorado Springs - Pikes Peak, Garden of Gods - Overnight Colorado Springs",
@@ -1769,6 +1769,428 @@
       "itinerary_location": "Manitou Springs (near Pikes Peak)",
       "yelp_url": "",
       "notes": "Near Pikes Peak. Frequently recommended for vegetarian and vegan diners. Better fit than several average-rated options currently on the list."
+    },
+    {
+      "id": 61,
+      "name": "CO Ranch House",
+      "full_address": "Glenwood Springs, CO",
+      "street_address": "",
+      "city": "Glenwood Springs",
+      "state": "CO",
+      "zip_code": "",
+      "location": {
+        "latitude": 39.5497,
+        "longitude": -107.3241
+      },
+      "cuisine": [
+        "Steakhouse",
+        "American"
+      ],
+      "price_range": "$$",
+      "yelp_review_count": null,
+      "google_rating": 4.5,
+      "google_review_count": 1350,
+      "popular_dishes": [
+        "Steaks",
+        "Vegetarian Shepherd's Pie"
+      ],
+      "itinerary_day": "Day 3 - Glenwood Springs",
+      "itinerary_location": "Glenwood Springs",
+      "yelp_url": "",
+      "notes": "Steakhouse environment. While they have a Vegetarian Shepherd's Pie, it doesn't align tightly with the preferred sequence."
+    },
+    {
+      "id": 62,
+      "name": "Commonfork Bites & Brews",
+      "full_address": "Colorado Springs, CO",
+      "street_address": "",
+      "city": "Colorado Springs",
+      "state": "CO",
+      "zip_code": "",
+      "location": {
+        "latitude": 38.8672,
+        "longitude": -104.7614
+      },
+      "cuisine": [
+        "American",
+        "Pub Food"
+      ],
+      "price_range": "$$",
+      "yelp_review_count": null,
+      "google_rating": 4.7,
+      "google_review_count": 107,
+      "popular_dishes": [
+        "Thai Peanut Bowl",
+        "Cuban Sliders",
+        "Hot Italian Sandwich"
+      ],
+      "itinerary_day": "Day 2 - Colorado Springs",
+      "itinerary_location": "Colorado Springs",
+      "yelp_url": "",
+      "notes": "Pub environment. Features a Thai Peanut Bowl, but leans heavily into non-aligned items like Cuban Sliders and Hot Italian sandwiches."
+    },
+    {
+      "id": 63,
+      "name": "Slope & Hatch",
+      "full_address": "Glenwood Springs, CO",
+      "street_address": "",
+      "city": "Glenwood Springs",
+      "state": "CO",
+      "zip_code": "",
+      "location": {
+        "latitude": 39.5510,
+        "longitude": -107.3255
+      },
+      "cuisine": [
+        "Tacos",
+        "American"
+      ],
+      "price_range": "$$",
+      "yelp_review_count": null,
+      "google_rating": 4.7,
+      "google_review_count": 822,
+      "popular_dishes": [
+        "Crispy Fish Tacos",
+        "Jerk Chicken Tacos",
+        "Lamb Tacos"
+      ],
+      "itinerary_day": "Day 3/4/5 - Glenwood Springs",
+      "itinerary_location": "Glenwood Springs",
+      "yelp_url": "",
+      "notes": "Charming and cozy taco/hot dog spot. Primarily known for Crispy Fish, Jerk Chicken, and Lamb tacos."
+    },
+    {
+      "id": 64,
+      "name": "Kedai Pho & Japanese Cuisine",
+      "full_address": "Glenwood Springs, CO",
+      "street_address": "",
+      "city": "Glenwood Springs",
+      "state": "CO",
+      "zip_code": "",
+      "location": {
+        "latitude": 39.5502,
+        "longitude": -107.3248
+      },
+      "cuisine": [
+        "Japanese",
+        "Vietnamese",
+        "Ramen"
+      ],
+      "price_range": "$$",
+      "yelp_review_count": null,
+      "google_rating": 4.3,
+      "google_review_count": 215,
+      "popular_dishes": [
+        "Ramen",
+        "Bento Box",
+        "Pho"
+      ],
+      "itinerary_day": "Day 3/4/5 - Glenwood Springs",
+      "itinerary_location": "Glenwood Springs",
+      "yelp_url": "",
+      "notes": "Japanese/Vietnamese focus (Ramen/Bento). Sits outside the requested cuisine sequence."
+    },
+    {
+      "id": 65,
+      "name": "Mings Cafe",
+      "full_address": "Glenwood Springs, CO",
+      "street_address": "",
+      "city": "Glenwood Springs",
+      "state": "CO",
+      "zip_code": "",
+      "location": {
+        "latitude": 39.5495,
+        "longitude": -107.3238
+      },
+      "cuisine": [
+        "Sushi",
+        "Asian Fusion",
+        "Japanese"
+      ],
+      "price_range": "$$",
+      "yelp_review_count": null,
+      "google_rating": 4.5,
+      "google_review_count": 870,
+      "popular_dishes": [
+        "Dragon Roll",
+        "Seared Scallops",
+        "Tuna Tataki"
+      ],
+      "itinerary_day": "Day 3/4/5 - Glenwood Springs",
+      "itinerary_location": "Glenwood Springs",
+      "yelp_url": "",
+      "notes": "Sushi Bar and Asian Fusion. Heavily focused on seafood (scallops, tuna, dragon rolls)."
+    },
+    {
+      "id": 66,
+      "name": "Aspen Public House",
+      "full_address": "Aspen, CO",
+      "street_address": "",
+      "city": "Aspen",
+      "state": "CO",
+      "zip_code": "",
+      "location": {
+        "latitude": 39.1906,
+        "longitude": -106.8199
+      },
+      "cuisine": [
+        "American",
+        "Pub Food"
+      ],
+      "price_range": "$$$",
+      "yelp_review_count": null,
+      "google_rating": 4.4,
+      "google_review_count": 490,
+      "popular_dishes": [
+        "Fried Chicken Sandwich",
+        "Steak Sandwich"
+      ],
+      "itinerary_day": "Day 4 - Aspen",
+      "itinerary_location": "Aspen",
+      "yelp_url": "",
+      "notes": "New American pub. Focused on Fried Chicken and Steak sandwiches."
+    },
+    {
+      "id": 67,
+      "name": "Mawa's Kitchen",
+      "full_address": "Aspen, CO",
+      "street_address": "",
+      "city": "Aspen",
+      "state": "CO",
+      "zip_code": "",
+      "location": {
+        "latitude": 39.2232,
+        "longitude": -106.8672
+      },
+      "cuisine": [
+        "French",
+        "African",
+        "Brunch"
+      ],
+      "price_range": "$$$",
+      "yelp_review_count": null,
+      "google_rating": 4.5,
+      "google_review_count": 310,
+      "popular_dishes": [
+        "Salmon Benedict",
+        "Rotisserie Chicken",
+        "Brunch Plates"
+      ],
+      "itinerary_day": "Day 4 - Aspen",
+      "itinerary_location": "Aspen",
+      "yelp_url": "",
+      "notes": "Boutique global/French-African influenced kitchen. Focuses on Salmon Benedict, Rotisserie Chicken, and traditional egg-heavy brunch items."
+    },
+    {
+      "id": 68,
+      "name": "Big Wrap",
+      "full_address": "Aspen, CO",
+      "street_address": "",
+      "city": "Aspen",
+      "state": "CO",
+      "zip_code": "",
+      "location": {
+        "latitude": 39.1903,
+        "longitude": -106.8196
+      },
+      "cuisine": [
+        "Wraps",
+        "Fast Casual"
+      ],
+      "price_range": "$",
+      "yelp_review_count": null,
+      "google_rating": 4.6,
+      "google_review_count": 340,
+      "popular_dishes": [
+        "Veggie Wrap",
+        "Falafel Wrap",
+        "Hummus Wrap"
+      ],
+      "itinerary_day": "Day 4 - Aspen",
+      "itinerary_location": "Aspen",
+      "yelp_url": "",
+      "notes": "Cash-only fast-casual counter. Serves wraps, which falls outside the requested checklist."
+    },
+    {
+      "id": 69,
+      "name": "White House Tavern",
+      "full_address": "Aspen, CO",
+      "street_address": "",
+      "city": "Aspen",
+      "state": "CO",
+      "zip_code": "",
+      "location": {
+        "latitude": 39.1915,
+        "longitude": -106.8191
+      },
+      "cuisine": [
+        "American",
+        "Tavern"
+      ],
+      "price_range": "$$$",
+      "yelp_review_count": null,
+      "google_rating": 4.6,
+      "google_review_count": 1649,
+      "popular_dishes": [
+        "Crispy Chicken Sandwich",
+        "Fish Sandwich",
+        "Burgers"
+      ],
+      "itinerary_day": "Day 4 - Aspen",
+      "itinerary_location": "Aspen",
+      "yelp_url": "",
+      "notes": "Highly popular vibrant American tavern. Hugely popular for its Crispy Chicken and Fish sandwiches; very limited options for a strict lacto-vegetarian."
+    },
+    {
+      "id": 70,
+      "name": "The Pullman",
+      "full_address": "Glenwood Springs, CO",
+      "street_address": "",
+      "city": "Glenwood Springs",
+      "state": "CO",
+      "zip_code": "",
+      "location": {
+        "latitude": 39.5508,
+        "longitude": -107.3252
+      },
+      "cuisine": [
+        "New American",
+        "Steakhouse"
+      ],
+      "price_range": "$$$",
+      "yelp_review_count": null,
+      "google_rating": 4.5,
+      "google_review_count": 1120,
+      "popular_dishes": [
+        "Pork Belly",
+        "Pork Rinds",
+        "Steaks"
+      ],
+      "itinerary_day": "Day 3/4/5 - Glenwood Springs",
+      "itinerary_location": "Glenwood Springs",
+      "yelp_url": "",
+      "notes": "Heavily meat-focused New American. Focuses on Pork Belly, Pork Rinds, and Steaks."
+    },
+    {
+      "id": 71,
+      "name": "Himalayan Cuisine",
+      "full_address": "Glenwood Springs, CO",
+      "street_address": "",
+      "city": "Glenwood Springs",
+      "state": "CO",
+      "zip_code": "",
+      "location": {
+        "latitude": 39.5500,
+        "longitude": -107.3245
+      },
+      "cuisine": [
+        "Indian",
+        "Himalayan/Nepalese"
+      ],
+      "price_range": "$$",
+      "yelp_review_count": null,
+      "google_rating": 4.6,
+      "google_review_count": 485,
+      "popular_dishes": [
+        "Tandoori Chicken",
+        "Chicken Momo",
+        "Chicken Biryani"
+      ],
+      "itinerary_day": "Day 3/4/5 - Glenwood Springs",
+      "itinerary_location": "Glenwood Springs",
+      "yelp_url": "",
+      "notes": "Nepalese and Indian dining. Unlike their Frisco branch, their noted popular dishes here are entirely meat-centric (Tandoori/Chicken Momo/Biryani)."
+    },
+    {
+      "id": 72,
+      "name": "Piglatin Cocina",
+      "full_address": "Colorado Springs, CO",
+      "street_address": "",
+      "city": "Colorado Springs",
+      "state": "CO",
+      "zip_code": "",
+      "location": {
+        "latitude": 38.8335,
+        "longitude": -104.8220
+      },
+      "cuisine": [
+        "Latin American",
+        "Caribbean",
+        "Fusion"
+      ],
+      "price_range": "$$",
+      "yelp_review_count": null,
+      "google_rating": 4.6,
+      "google_review_count": 930,
+      "popular_dishes": [
+        "Pork Plates",
+        "Kimchi Quesadilla"
+      ],
+      "itinerary_day": "Day 2 - Colorado Springs",
+      "itinerary_location": "Colorado Springs",
+      "yelp_url": "",
+      "notes": "Latin American/Caribbean fusion. Features pork plates and kimchi quesadillas; less aligned than standard Mexican options."
+    },
+    {
+      "id": 73,
+      "name": "Wesley & Rose Lobby Bar",
+      "full_address": "Buena Vista, CO",
+      "street_address": "",
+      "city": "Buena Vista",
+      "state": "CO",
+      "zip_code": "",
+      "location": {
+        "latitude": 38.8483,
+        "longitude": -106.1241
+      },
+      "cuisine": [
+        "American",
+        "Cocktail Bar",
+        "Small Plates"
+      ],
+      "price_range": "$$$",
+      "yelp_review_count": null,
+      "google_rating": 4.5,
+      "google_review_count": 180,
+      "popular_dishes": [
+        "Charcuterie Board",
+        "Small Plates"
+      ],
+      "itinerary_day": "Day 3 - Buena Vista (en route)",
+      "itinerary_location": "Buena Vista",
+      "yelp_url": "",
+      "notes": "Upscale cocktail lounge menu inside the Surf Hotel. Focused on charcuterie and small plates rather than main courses in the requested cuisines."
+    },
+    {
+      "id": 74,
+      "name": "Spring Cafe Aspen",
+      "full_address": "Aspen, CO",
+      "street_address": "",
+      "city": "Aspen",
+      "state": "CO",
+      "zip_code": "",
+      "location": {
+        "latitude": 39.1908,
+        "longitude": -106.8202
+      },
+      "cuisine": [
+        "Vegetarian",
+        "Vegan",
+        "Juice Bar"
+      ],
+      "price_range": "$$",
+      "yelp_review_count": null,
+      "google_rating": 4.6,
+      "google_review_count": 415,
+      "popular_dishes": [
+        "Fresh Juices",
+        "Smoothies",
+        "Acai Bowls"
+      ],
+      "itinerary_day": "Day 4 - Aspen",
+      "itinerary_location": "Aspen",
+      "yelp_url": "",
+      "notes": "Organic vegetarian eatery. While highly vegetarian, it functions primarily as a Juice Bar/Smoothie café rather than matching the dinner-style cuisines requested."
     }
   ]
 }
