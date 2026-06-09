@@ -1665,7 +1665,7 @@ ${todayDayNum
 FULL TRIP OVERVIEW (one line each):
 Day 1 — Fri Jun 19: Travel STL→Denver, arrive midnight. Hotel: Quality Inn & Suites Denver Airport, 6890 Tower Rd.
 Day 2 — Sat Jun 20: Pikes Peak Cog Railway (9AM) + Garden of Gods + Red Rock Canyon. Hotel: Academy Hotel Colorado Springs.
-Day 3 — Sun Jun 21: Vail Farmers Market (12:30–3PM) → Glenwood Springs. Hotel: Residence Inn Glenwood Springs.
+Day 3 — Sun Jun 21: Late start 10AM. Drive via US-24 W → Buena Vista (lunch at CO Ranch House) → Twin Lakes photo stop → Independence Pass (12,095 ft, check cotrip.org) → Aspen → Glenwood Springs. Evening: Grizzly Creek Trail hike 30 min. Hotel: Residence Inn Glenwood Springs (Conf: 73462520918893).
 Day 4 — Mon Jun 22: Maroon Bells 8AM shuttle (MAIN HIGHLIGHT) + Silver Queen Gondola + Cooper St Aspen. Hotel: Residence Inn Glenwood Springs.
 Day 5 — Tue Jun 23: Blue Sky Adventures rafting (9AM) + Glenwood Hot Springs Pool + Iron Mountain Hot Springs. Hotel: Glenwood Hot Springs Lodge (Classic Double Queen, ground floor patio).
 Day 6 — Wed Jun 24: Red Rocks Park (10:30AM) + Denver RiNo lunch + fly home DEN 8:45PM (WN#1324).
@@ -1682,7 +1682,8 @@ KEY CONTACTS & FACTS:
 - Hot Springs Lodge: 1-800-537-7946, 415 E 6th St, Classic Double Queen ground floor patio
 - Maroon Bells weather hard rule: be back at lake heading to shuttle by 12:30PM
 - Nepal Restaurant: 6824 Hwy 82 Glenwood Springs — best Indian food of the trip
-- Vail Farmers Market: Sundays 9:30AM–3PM, East Meadow Drive, Vail Village (Jun–Oct)
+- Independence Pass (CO-82): check cotrip.org morning of Jun 21; alternate US-24 N → I-70 W if closed
+- Grizzly Creek Trail: I-70 Exit 121, flat canyon hike, 30 min, free
 
 RESPONSE STYLE:
 - Mobile interface — keep answers to 2-4 sentences unless detail is requested

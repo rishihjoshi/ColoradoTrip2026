@@ -177,11 +177,11 @@
       "day": 3,
       "date": "2026-06-21",
       "dayOfWeek": "Sunday",
-      "title": "Colorado Springs → Vail Farmers Market → Glenwood Springs",
-      "badge": "Drive + Market",
+      "title": "Colorado Springs → Buena Vista → Glenwood Springs",
+      "badge": "Scenic Drive",
       "badgeColor": "forest",
       "weatherLocationKey": 3,
-      "driveFromPrevious": { "duration": "4.5 hrs total", "distance": "245 miles", "via": "I-25 N → I-70 W → Vail → Glenwood Canyon" },
+      "driveFromPrevious": { "duration": "~4.5 hrs driving", "distance": "~214 miles", "via": "US-24 W → Buena Vista → Twin Lakes → Independence Pass → Aspen → Glenwood Springs" },
       "hotel": {
         "name": "Residence Inn by Marriott Glenwood Springs",
         "address": "125 Wulfsohn Road, Glenwood Springs, CO 81601",
@@ -195,38 +195,52 @@
         {
           "id": "d3-a1",
           "time": "10:00 AM",
-          "title": "Checkout & Depart Colorado Springs — Drive via I-70 to Vail",
-          "description": "Late checkout — no rush this morning. Head north on I-25 then west on I-70 through the Rockies. The I-70 corridor through the Eisenhower Tunnel and into the mountains is spectacular. Arrive Vail by 12:30 PM for the Sunday Farmers Market.",
+          "title": "Late Start — Depart Colorado Springs via US-24 West",
+          "description": "Relaxed morning — no early alarm today. Head west on US-24 through Woodland Park. The road follows the Arkansas River valley with views of the Collegiate Peaks (all 14ers). ~95 miles to Buena Vista, roughly 2 hrs.",
           "address": "Colorado Springs, CO",
           "type": "drive",
           "icon": "🚗",
-          "driveInfo": { "duration": "~2.5 hrs to Vail", "via": "I-25 N → I-70 W through Eisenhower Tunnel → Vail exit 176" }
+          "driveInfo": { "duration": "~2 hrs to Buena Vista", "via": "US-24 W through Woodland Park → Trout Creek Pass → Buena Vista" }
         },
         {
           "id": "d3-a2",
-          "time": "12:30 PM",
-          "title": "Vail Farmers Market & Art Show",
-          "description": "2026 season: Sundays Jun 14–Oct 4, 9:30AM–3PM on East Meadow Drive, Vail Village. Fresh Colorado produce, artisan foods, live music, kids activities. Bring cash — many vendors don't take cards. Arrive by 12:30PM for 2 full hours before 3PM close.",
-          "address": "East Meadow Drive, Vail Village, Vail, CO 81657",
-          "website": "https://www.vailfarmersmarket.com",
-          "type": "activity",
-          "bookingStatus": "free",
-          "icon": "🌿",
-          "duration": "2 hours",
-          "cost": "Free entry"
+          "time": "12:00 PM",
+          "title": "Lunch at CO Ranch House — Buena Vista",
+          "description": "Ranch-style comfort food in the heart of downtown Buena Vista. Burgers, sandwiches, and Colorado staples. Great stop mid-drive before heading up into the mountains.",
+          "address": "Buena Vista, CO 81211",
+          "type": "restaurant",
+          "icon": "🍽️",
+          "duration": "45 min"
         },
         {
-          "id": "d3-drive2",
-          "type": "drive-connector",
-          "duration": "1h 45m",
-          "distance": "95 miles",
-          "via": "I-70 W through Glenwood Canyon"
+          "id": "d3-a3",
+          "time": "1:00 PM",
+          "title": "Twin Lakes — Photo Stop",
+          "description": "Drive ~15 min east on CO-82 from Buena Vista. Twin Lakes Reservoir sits at the base of Independence Pass and reflects Mount Elbert — Colorado's highest peak at 14,440 ft. Park at the lakeside pullout for 20-30 min of photos. Genuinely postcard-perfect.",
+          "address": "Twin Lakes, CO 81251",
+          "type": "activity",
+          "bookingStatus": "free",
+          "icon": "📸",
+          "duration": "30 min",
+          "cost": "Free"
         },
         {
           "id": "d3-a4",
+          "time": "1:45 PM",
+          "title": "Independence Pass — Check Conditions & Cross",
+          "description": "CO-82 summits at 12,095 ft — one of the most dramatic drives in North America. Usually open by mid-June but check cotrip.org the morning of Jun 21. Tight switchbacks above treeline, no guardrails on sections — drive slow and enjoy. Stop at the Continental Divide marker for photos. Descend into Aspen, then north on Hwy 82 into Glenwood Canyon.",
+          "address": "Independence Pass Summit, CO-82, CO 81210",
+          "website": "https://www.cotrip.org",
+          "type": "drive",
+          "icon": "⛰️",
+          "driveInfo": { "duration": "~2 hrs Twin Lakes → Glenwood Springs", "via": "CO-82 over Independence Pass (12,095 ft) → Aspen → Hwy 82 N → Glenwood Springs" },
+          "flag": { "type": "warning", "text": "Check cotrip.org on the morning of Jun 21 for Independence Pass road conditions. Alternate route if closed: US-24 N → I-70 W (adds ~30 min, full highway)." }
+        },
+        {
+          "id": "d3-a5",
           "time": "4:00 PM",
           "title": "Check Into Residence Inn Glenwood Springs",
-          "description": "Check in, unpack. Full kitchen — settle in. You're here 2 nights.",
+          "description": "Check in and unpack. Full kitchen — settle in. You're here 2 nights. Conf: 73462520918893.",
           "address": "125 Wulfsohn Road, Glenwood Springs, CO 81601",
           "phone": "+19709280900",
           "type": "hotel",
@@ -234,16 +248,22 @@
           "icon": "🏨"
         },
         {
-          "id": "d3-a5",
+          "id": "d3-a6",
           "time": "5:00 PM",
-          "title": "Two Rivers Park — Evening Walk",
-          "description": "Confluence of the Colorado and Roaring Fork Rivers. Paved walking trail, footbridge with mountain views, picnic areas. Free and flat. Your daughter can wade in the river shallows.",
-          "address": "740 Devereux Rd, Glenwood Springs, CO 81601",
+          "title": "★ Grizzly Creek Trail — Easy 30-Min Evening Hike",
+          "description": "Best short hike in Glenwood Canyon. Drive 10 min east on I-70 to Grizzly Creek Rest Area (Exit 121). Walk the flat canyon-floor trail ~0.7 miles in — sheer 1,500 ft sandstone walls on both sides, turquoise Colorado River beside you. Zero elevation gain. Turn back whenever ready. Perfect leg-stretch after a long drive day. Kids love the creek.",
+          "address": "Grizzly Creek Rest Area, I-70 Exit 121, Glenwood Canyon, CO 81601",
           "type": "activity",
           "bookingStatus": "free",
-          "icon": "🌊",
-          "duration": "45 min",
-          "cost": "Free"
+          "icon": "🥾",
+          "duration": "30-45 min",
+          "cost": "Free",
+          "tips": [
+            "Exit 121 off I-70 East — Grizzly Creek Rest Area",
+            "Flat canyon-floor trail — easy for all ages, no gear needed",
+            "Best in evening light — golden canyon walls glow",
+            "No fee, no permit, no reservation"
+          ]
         }
       ]
     },
