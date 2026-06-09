@@ -1676,11 +1676,11 @@ ${todayDayNum
 }
 
 FULL TRIP OVERVIEW (one line each):
-Day 1 — Fri Jun 19: Travel STL→Denver, arrive midnight. Hotel: Quality Inn & Suites Denver Airport, 6890 Tower Rd.
-Day 2 — Sat Jun 20: Pikes Peak Cog Railway (9AM) + Garden of Gods + Red Rock Canyon. Hotel: Academy Hotel Colorado Springs.
+Day 1 — Fri Jun 19: Travel STL→Denver, land 11:55PM. Rental car at DEN (~12:30AM, shuttle required — add flight# to booking). Hotel: Quality Inn & Suites Denver Airport, 6890 Tower Rd. Arrive ~1:15AM.
+Day 2 — Sat Jun 20: Depart hotel 6:45AM (1h45m drive) → arrive depot 8:30AM → board 8:45AM → Pikes Peak Cog Railway 9:05AM (Car 1 Row 15 A/B/C). Call +17196855401 if running late — they can switch slots. + Garden of Gods + Red Rock Canyon. Hotel: Academy Hotel Colorado Springs.
 Day 3 — Sun Jun 21: Late start 10AM. Drive via US-24 W → Buena Vista (lunch at CO Ranch House) → Twin Lakes photo stop → Independence Pass (12,095 ft, check cotrip.org) → Aspen → Glenwood Springs. Evening: Grizzly Creek Trail hike 30 min. Hotel: Residence Inn Glenwood Springs (Conf: 73462520918893).
 Day 4 — Mon Jun 22: Maroon Bells 8AM shuttle (MAIN HIGHLIGHT) + Silver Queen Gondola + Cooper St Aspen. Hotel: Residence Inn Glenwood Springs.
-Day 5 — Tue Jun 23: Blue Sky Adventures rafting (9AM) + Glenwood Hot Springs Pool + Iron Mountain Hot Springs. Hotel: Glenwood Hot Springs Lodge (Classic Double Queen, ground floor patio).
+Day 5 — Tue Jun 23: 8:30AM load car/late checkout from Residence Inn (request night before). Blue Sky Adventures rafting 9AM. Checkout clash fix: ask for 1PM late checkout OR pack car before leaving. + Glenwood Hot Springs Pool. Hotel: Glenwood Hot Springs Lodge.
 Day 6 — Wed Jun 24: Late start 11AM. I-70 East → lunch Silverthorne (exit 205, Pug Ryan's/Butterhorn) → optional Idaho Springs stop → Red Rocks 2:30PM (2 hrs) → farewell dinner near DEN (Pappadeaux Aurora or Root Down DIA inside terminal) → return rental 6PM → DEN security 6:30PM → WN#1324 8:45PM → STL 11:55PM.
 
 KEY RESERVATIONS STATUS:

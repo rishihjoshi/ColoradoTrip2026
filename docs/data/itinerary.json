@@ -53,20 +53,26 @@
         },
         {
           "id": "d1-a2",
-          "time": "12:15 AM",
+          "time": "12:30 AM",
           "title": "Rental Car Pickup at DEN",
-          "description": "Pick up full-size SUV at DEN on-airport facility. Book in advance. Drive 10 min to hotel.",
-          "address": "Denver International Airport, Denver, CO 80249",
+          "description": "Flight lands 11:55 PM. The DEN Rental Car Center requires a shuttle ride from the terminal — realistically expect to reach the counter around 12:30–12:45 AM. Pick up full-size SUV and drive ~15 min to the hotel.",
+          "address": "DEN Rental Car Center, 8500 Peña Blvd, Denver, CO 80249",
           "type": "transport",
           "bookingStatus": "book-now",
           "bookingUrl": "https://www.enterprise.com",
-          "icon": "🚗"
+          "icon": "🚗",
+          "tips": [
+            "⚠️ Add flight number WN#3914 to your booking — rental companies track late flights and hold your car",
+            "Shuttle to Rental Car Center departs every 5 min from Level 5 Island 1 (follow blue signs)",
+            "Expect counter arrival ~12:30–12:45 AM; hotel arrival ~1:15 AM"
+          ],
+          "flag": { "type": "warning", "text": "Tip: Double-check your booking has flight number WN#3914 so the rental company knows you're arriving late and holds your car." }
         },
         {
           "id": "d1-a3",
-          "time": "1:00 AM",
+          "time": "1:15 AM",
           "title": "Check Into Quality Inn & Suites Denver Airport",
-          "description": "Sleep. Early checkout tomorrow 7:00 AM for Pikes Peak drive.",
+          "description": "Sleep. Early checkout tomorrow — leave by 6:45 AM for the Pikes Peak Cog Railway.",
           "address": "6890 Tower Rd, Denver, CO 80249",
           "phone": "+13037819300",
           "type": "hotel",
@@ -97,19 +103,19 @@
       "activities": [
         {
           "id": "d2-a1",
-          "time": "7:30 AM",
+          "time": "6:45 AM",
           "title": "Depart Hotel — Drive to Manitou Springs",
-          "description": "Leave by 7:30AM. ~45 min drive to Cog Railway depot. Arrive by 9:00AM — train departs 9:05AM.",
+          "description": "Leave by 6:45 AM sharp. ~1 hr 45 min drive to the Cog Railway depot. Arrive at 8:30 AM to park — parking fills up fast on weekends. Be at the platform by 8:45 AM for the 9:05 AM train.",
           "address": "Manitou Springs, CO 80829",
           "type": "drive",
           "icon": "🚗",
-          "driveInfo": { "duration": "1h 15m", "via": "I-25 S → Hwy 24 W" }
+          "driveInfo": { "duration": "1h 45m", "via": "I-25 S → Hwy 24 W → Ruxton Ave", "note": "Allow extra time on weekends — parking lot at depot can back up. Arrive 8:30 AM to be safe." }
         },
         {
           "id": "d2-a2",
           "time": "9:05 AM",
           "title": "Pikes Peak Cog Railway — ✓ Booked",
-          "description": "Board train. Sit LEFT side going up — Car 1, Row 15, Seats A, B, C (already assigned). 40 min at summit (14,115 ft). Buy famous cinnamon donuts at summit. Photos first — gift shop last. Back at depot by 1:30PM.",
+          "description": "Board train. Sit LEFT side going up — Car 1, Row 15, Seats A, B, C (already assigned). 40 min at summit (14,115 ft). Buy famous cinnamon donuts at summit. Photos first — gift shop last. Back at depot by 1:30 PM. Running late or need to adjust? Call visitor services at +17196855401 — if you alert them before the train leaves, they can check real-time availability for a later train and sometimes switch your slot right over the phone, saving you a stressful rush!",
           "address": "515 Ruxton Ave, Manitou Springs, CO 80829",
           "phone": "+17196855401",
           "website": "https://www.cograilway.com",
@@ -118,8 +124,15 @@
           "icon": "🚂",
           "duration": "4.5 hours",
           "cost": "Booked ✓",
-          "tips": ["✓ BOOKED — Car 1, Row 15, Seats A · B · C", "Sit LEFT side going up — seats already face the best views", "Bring layers — summit is 30°F cooler than base", "Photos first, donuts second, gift shop last"],
-          "flag": { "type": "info", "text": "Confirmed. Afternoon thunderstorms common at summit — morning departure already secured." }
+          "tips": [
+            "✓ BOOKED — Car 1, Row 15, Seats A · B · C",
+            "Depart hotel 6:45 AM — arrive depot 8:30 AM — be on platform by 8:45 AM",
+            "Sit LEFT side going up — seats already face the best views",
+            "Bring layers — summit is 30°F cooler than base",
+            "Photos first, donuts second, gift shop last",
+            "📞 Running late? Call +17196855401 immediately — they can switch you to a later train slot before departure"
+          ],
+          "flag": { "type": "info", "text": "Confirmed. If anything comes up, call +17196855401 — alerting them before the train leaves gives you the best chance of switching to a later slot stress-free." }
         },
         {
           "id": "d2-drive1",
@@ -402,10 +415,20 @@
       },
       "activities": [
         {
+          "id": "d5-a0",
+          "time": "8:30 AM",
+          "title": "Pre-Rafting: Load Car + Request Late Checkout",
+          "description": "Checkout clash alert — you check out of Residence Inn today but rafting runs 9 AM–noon. Fix it now: Either (A) request a 1:00 PM late checkout from the front desk tonight or first thing in the morning — most hotels grant this for free if asked early; OR (B) pack all bags into the SUV before 8:30 AM so your room is clear before you leave for rafting.",
+          "address": "125 Wulfsohn Road, Glenwood Springs, CO 81601",
+          "type": "transport",
+          "icon": "🧳",
+          "flag": { "type": "warning", "text": "⚠️ Ask Residence Inn for 1:00 PM late checkout tonight (Day 4) — or load bags into SUV before heading to rafting. Don't leave this until the morning of!" }
+        },
+        {
           "id": "d5-a1",
           "time": "9:00 AM",
           "title": "White Water Rafting — Shoshone Rapids",
-          "description": "Blue Sky Adventures half-day Colorado River trip. Class III Shoshone Rapids in June (snowmelt keeps water high). Baptism, Tuttle's Tumble, Tombstone, The Wall, Maneater rapids. Wildlife: bighorn sheep, bald eagles, marmots. Done by noon. Tuesday departure is 9AM.",
+          "description": "Blue Sky Adventures half-day Colorado River trip. Class III Shoshone Rapids in June (snowmelt keeps water high). Baptism, Tuttle's Tumble, Tombstone, The Wall, Maneater rapids. Wildlife: bighorn sheep, bald eagles, marmots. Done by noon. Tuesday departure is 9 AM.",
           "address": "152 W 6th St, Glenwood Springs, CO 81601",
           "phone": "+19709455867",
           "website": "https://blueskyrafting.com",
