@@ -1,0 +1,2000 @@
+{
+  "collection_name": "Colorado Trip",
+  "trip_dates": "June 19-24, 2026",
+  "total_restaurants": 59,
+  "dietary_preferences": {
+    "type": "Vegetarian (Lacto)",
+    "notes": "Milk and cheese OK. No eggs, fish, meat, or seafood.",
+    "preferred_cuisines": [
+      "Indian",
+      "Mexican",
+      "Pizza",
+      "Italian",
+      "Thai"
+    ]
+  },
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "Garnish Indian Fusion Cuisine",
+      "full_address": "6585 Greenwood Plaza Blvd, Greenwood Village, CO 80111",
+      "city": "Greenwood Village",
+      "itinerary_location": "Denver Area",
+      "itinerary_day": "Day 1 - Travel/Denver Area",
+      "trip_day_num": 1,
+      "location": {
+        "latitude": 39.597216,
+        "longitude": -104.8962968
+      },
+      "cuisine": [
+        "Indian",
+        "Breakfast & Brunch"
+      ],
+      "price_range": "$$",
+      "google_rating": 4.3,
+      "google_review_count": null,
+      "yelp_rating": 4.2,
+      "yelp_review_count": 147,
+      "trip_score": 4.3,
+      "popular_dishes": [
+        "South Indian Thali",
+        "Masala Dosa",
+        "Eggplant Butter Chicken",
+        "Tandoori Chicken",
+        "Chicken Butter Masala"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/garnish-indian-fusion-cuisine-greenwood-village-2",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 2,
+      "name": "Masala Mingle Indian Bistro",
+      "full_address": "326 S Nevada Ave, Colorado Springs, CO 80903",
+      "city": "Colorado Springs",
+      "itinerary_location": "Colorado Springs",
+      "itinerary_day": "Day 2 - Colorado Springs",
+      "trip_day_num": 2,
+      "location": {
+        "latitude": 38.8285222,
+        "longitude": -104.8223811
+      },
+      "cuisine": [
+        "Indian"
+      ],
+      "price_range": "$$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 35,
+      "trip_score": 0,
+      "popular_dishes": [
+        "Chicken Curry",
+        "Coconut Chicken Curry"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/masala-mingle-colorado-springs",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 3,
+      "name": "Pakwan Indian Restaurant and Bar",
+      "full_address": "3604 Austin Bluffs Pkwy, Colorado Springs, CO 80918",
+      "city": "Colorado Springs",
+      "itinerary_location": "Colorado Springs",
+      "itinerary_day": "Day 2 - Colorado Springs",
+      "trip_day_num": 2,
+      "location": {
+        "latitude": 38.8912959,
+        "longitude": -104.7598566
+      },
+      "cuisine": [
+        "Indian"
+      ],
+      "price_range": "$$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 112,
+      "trip_score": 0,
+      "popular_dishes": [
+        "Butter Chicken",
+        "Samosas Chaat",
+        "Bhindi Masala",
+        "Paneer Tikka Masala",
+        "Pakoda"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/pakwan-colorado-springs",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 4,
+      "name": "Mausam Indian Flavors",
+      "full_address": "3167 W Colorado Ave, Colorado Springs, CO",
+      "city": "Colorado Springs",
+      "itinerary_location": "Colorado Springs",
+      "itinerary_day": "Day 2 - Colorado Springs",
+      "trip_day_num": 2,
+      "location": {
+        "latitude": 38.854711,
+        "longitude": -104.8749346
+      },
+      "cuisine": [
+        "Indian"
+      ],
+      "price_range": "$$",
+      "google_rating": 4.8,
+      "google_review_count": 1585,
+      "yelp_rating": 4.7,
+      "yelp_review_count": 181,
+      "trip_score": 4.8,
+      "popular_dishes": [
+        "Butter Chicken",
+        "Chicken Tikka Masala",
+        "Malai Kofta",
+        "Lamb Rogan Josh",
+        "Paneer Tikka Masala"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/mausam-indian-flavors-colorado-springs",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 5,
+      "name": "Turmeric Indian Cuisine",
+      "full_address": "5535 Powers Center Point, Colorado Springs, CO",
+      "city": "Colorado Springs",
+      "itinerary_location": "Colorado Springs",
+      "itinerary_day": "Day 2 - Colorado Springs",
+      "trip_day_num": 2,
+      "location": {
+        "latitude": 38.9545559,
+        "longitude": -104.7281381
+      },
+      "cuisine": [
+        "Indian"
+      ],
+      "price_range": "$$",
+      "google_rating": 4.9,
+      "google_review_count": 768,
+      "yelp_rating": 4.7,
+      "yelp_review_count": 186,
+      "trip_score": 4.8,
+      "popular_dishes": [
+        "Butter Chicken",
+        "Chicken Tikka Masala",
+        "Lamb Vindaloo",
+        "Chicken Vindaloo",
+        "Gobi Manchurian"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/turmeric-indian-cuisine-colorado-springs",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 6,
+      "name": "Sherpa Garden Restaurant & Bar",
+      "full_address": "1005 W Colorado Ave, Colorado Springs, CO",
+      "city": "Colorado Springs",
+      "itinerary_location": "Colorado Springs",
+      "itinerary_day": "Day 2 - Colorado Springs",
+      "trip_day_num": 2,
+      "location": {
+        "latitude": 38.8349259,
+        "longitude": -104.8420922
+      },
+      "cuisine": [
+        "Himalayan/Nepalese",
+        "Indian"
+      ],
+      "price_range": "$$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 186,
+      "trip_score": 0,
+      "popular_dishes": [
+        "Jal Frezi",
+        "Lentil Soup",
+        "Chicken Tikka Masala",
+        "Dahl Soup",
+        "Chicken Momo Soup"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/sherpa-garden-restaurant-and-bar-colorado-springs",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 7,
+      "name": "Coriander",
+      "full_address": "4968 Tower Rd, Denver, CO",
+      "city": "Denver",
+      "itinerary_location": "Denver Area",
+      "itinerary_day": "Day 1 - Travel/Denver Area",
+      "trip_day_num": 1,
+      "location": {
+        "latitude": 39.786972,
+        "longitude": -104.771627
+      },
+      "cuisine": [
+        "Indian",
+        "Vegetarian"
+      ],
+      "price_range": "$$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 690,
+      "trip_score": 0,
+      "popular_dishes": [
+        "Butter Chicken",
+        "Chicken Tikka Masala",
+        "Saag Paneer",
+        "Lamb Vindaloo",
+        "Chicken Vindaloo"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/coriander-denver",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 8,
+      "name": "Monsoon Cuisine of India",
+      "full_address": "24107 E Commons Ave, Aurora, CO",
+      "city": "Aurora",
+      "itinerary_location": "Denver Area",
+      "itinerary_day": "Day 1 - Travel/Denver Area",
+      "trip_day_num": 1,
+      "location": {
+        "latitude": 39.6047797,
+        "longitude": -104.7076377
+      },
+      "cuisine": [
+        "Indian"
+      ],
+      "price_range": "$$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 956,
+      "trip_score": 0,
+      "popular_dishes": [
+        "Chicken Tikka Masala",
+        "Chicken Korma",
+        "Chicken Vindaloo",
+        "Mini Samosas",
+        "Tandoori Chicken"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/monsoon-cuisine-of-india-aurora-2",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 9,
+      "name": "Root Down",
+      "full_address": "1600 W 33rd Ave, Denver, CO",
+      "city": "Denver",
+      "itinerary_location": "Denver Area",
+      "itinerary_day": "Day 1 - Travel/Denver Area",
+      "trip_day_num": 1,
+      "location": {
+        "latitude": 39.7630633,
+        "longitude": -105.0056328
+      },
+      "cuisine": [
+        "New American",
+        "Vegan"
+      ],
+      "price_range": "$$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 4169,
+      "trip_score": 0,
+      "popular_dishes": [
+        "Lamb Sliders",
+        "Beet Salad",
+        "Devils on Horseback",
+        "House Veggie Burger",
+        "French Toast"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/root-down-denver",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 10,
+      "name": "Himalayan Cuisine (Frisco)",
+      "full_address": "842 Summit Blvd, Frisco, CO",
+      "city": "Frisco",
+      "itinerary_location": "Glenwood Springs",
+      "itinerary_day": "Day 3 - Colorado Springs to Glenwood Springs (drive through)",
+      "trip_day_num": 3,
+      "location": {
+        "latitude": 39.5884092,
+        "longitude": -106.0967113
+      },
+      "cuisine": [
+        "Indian",
+        "Himalayan/Nepalese"
+      ],
+      "price_range": "$$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 260,
+      "trip_score": 0,
+      "popular_dishes": [
+        "Chicken Tikka Masala",
+        "Butter Chicken",
+        "Saag Paneer",
+        "Tandoori Chicken",
+        "Chicken Curry"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/himalayan-cuisine-frisco-2",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 11,
+      "name": "Modern Market",
+      "full_address": "8500 Pena Blvd, Denver, CO 80249",
+      "city": "Denver",
+      "itinerary_location": "Denver Area",
+      "itinerary_day": "Day 1 - Travel/Denver Area (Denver Airport)",
+      "trip_day_num": 1,
+      "location": {
+        "latitude": 39.8440484,
+        "longitude": -104.6932096
+      },
+      "cuisine": [
+        "Breakfast & Brunch",
+        "Pizza",
+        "Sandwiches"
+      ],
+      "price_range": "$$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 721,
+      "trip_score": 0,
+      "popular_dishes": [
+        "Seasonal Bowls",
+        "Avocado Toast",
+        "Grain Bowl",
+        "Smoothies"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/modern-market-denver-4",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 12,
+      "name": "Hugo's",
+      "full_address": "1605 Grand Ave, Glenwood Springs, CO",
+      "city": "Glenwood Springs",
+      "itinerary_location": "Glenwood Springs",
+      "itinerary_day": "Day 5 - Glenwood Springs",
+      "trip_day_num": 5,
+      "location": {
+        "latitude": 39.536746,
+        "longitude": -107.3260534
+      },
+      "cuisine": [
+        "New American",
+        "Desserts",
+        "Breakfast & Brunch"
+      ],
+      "price_range": "$$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 106,
+      "trip_score": 0,
+      "popular_dishes": [
+        "Calamari",
+        "Pork Chop",
+        "Pan Seared Salmon",
+        "Chicken Lollipops",
+        "Beet Salad"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/hugo-s-glenwood-springs",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 13,
+      "name": "CO Ranch House",
+      "full_address": "704 Grand Ave, Glenwood Springs, CO",
+      "city": "Glenwood Springs",
+      "itinerary_location": "Glenwood Springs",
+      "itinerary_day": "Day 5 - Glenwood Springs",
+      "trip_day_num": 5,
+      "location": {
+        "latitude": 39.5476821,
+        "longitude": -107.3245741
+      },
+      "cuisine": [
+        "American",
+        "Steakhouses",
+        "Sandwiches"
+      ],
+      "price_range": "$$",
+      "google_rating": 4.5,
+      "google_review_count": 1350,
+      "yelp_rating": null,
+      "yelp_review_count": 835,
+      "trip_score": 4.5,
+      "popular_dishes": [
+        "Blackened Salmon Linguine",
+        "Vegetarian Shepherd's Pie",
+        "Burgers",
+        "Sandwiches"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/co-ranch-house-glenwood-springs",
+      "phone": "",
+      "notes": "Steakhouse environment. While they have a Vegetarian Shepherd's Pie, it doesn't align tightly with the preferred sequence.",
+      "seasonal_warning": false
+    },
+    {
+      "id": 14,
+      "name": "Sweet Coloradough",
+      "full_address": "2430 S Glen Ave, Glenwood Springs, CO",
+      "city": "Glenwood Springs",
+      "itinerary_location": "Glenwood Springs",
+      "itinerary_day": "Day 5 - Glenwood Springs",
+      "trip_day_num": 5,
+      "location": {
+        "latitude": 39.5197,
+        "longitude": -107.309
+      },
+      "cuisine": [
+        "Donuts",
+        "Coffee & Tea",
+        "Breakfast & Brunch"
+      ],
+      "price_range": "$$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 1005,
+      "trip_score": 0,
+      "popular_dishes": [
+        "Donuts",
+        "Vegetarian Sandwiches",
+        "Coffee",
+        "Breakfast Burritos"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/sweet-coloradough-glenwood-springs",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 15,
+      "name": "New York Pizza",
+      "full_address": "409 E Hyman Ave, Aspen, CO",
+      "city": "Aspen",
+      "itinerary_location": "Aspen",
+      "itinerary_day": "Day 4 - Aspen",
+      "trip_day_num": 4,
+      "location": {
+        "latitude": 39.188968,
+        "longitude": -106.8196143
+      },
+      "cuisine": [
+        "Pizza"
+      ],
+      "price_range": "$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 380,
+      "trip_score": 0,
+      "popular_dishes": [
+        "Vegetarian Pizza",
+        "Cheese Slices",
+        "Pepperoni Pizza",
+        "Calzone"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/new-york-pizza-aspen",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 16,
+      "name": "Brunelleschi's",
+      "full_address": "205 S Mill St, Aspen, CO",
+      "city": "Aspen",
+      "itinerary_location": "Aspen",
+      "itinerary_day": "Day 4 - Aspen",
+      "trip_day_num": 4,
+      "location": {
+        "latitude": 39.1896918,
+        "longitude": -106.8196619
+      },
+      "cuisine": [
+        "Italian",
+        "Pizza"
+      ],
+      "price_range": "$$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 239,
+      "trip_score": 0,
+      "popular_dishes": [
+        "Cheese Pizza",
+        "Bruschetta",
+        "Caprese Salad",
+        "Especial Pizza",
+        "Chicken Parm"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/brunelleschis-aspen-2",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 17,
+      "name": "Sal Mex Restaurant",
+      "full_address": "3120 Blake Ave, Glenwood Springs, CO",
+      "city": "Glenwood Springs",
+      "itinerary_location": "Glenwood Springs",
+      "itinerary_day": "Day 3 - Glenwood Springs",
+      "trip_day_num": 3,
+      "location": {
+        "latitude": 39.519617,
+        "longitude": -107.3188985
+      },
+      "cuisine": [
+        "Mexican",
+        "Salvadoran"
+      ],
+      "price_range": "$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 83,
+      "trip_score": 0,
+      "popular_dishes": [
+        "Burritos",
+        "Tacos",
+        "Quesadillas",
+        "Enchiladas"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/sal-mex-restaurant-glenwood-springs",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 18,
+      "name": "Brava Modern Trattoria",
+      "full_address": "809 Grand Ave, Glenwood Springs, CO",
+      "city": "Glenwood Springs",
+      "itinerary_location": "Glenwood Springs",
+      "itinerary_day": "Day 3 - Glenwood Springs",
+      "trip_day_num": 3,
+      "location": {
+        "latitude": 39.5462302,
+        "longitude": -107.325044
+      },
+      "cuisine": [
+        "Italian"
+      ],
+      "price_range": "$$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 293,
+      "trip_score": 0,
+      "popular_dishes": [
+        "Lobster Ravioli",
+        "Beet Salad",
+        "Mushroom and Truffle Risotto",
+        "Braised Short Ribs",
+        "Lobster Risotto"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/modern-brava-trattoria-glenwood-springs",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 19,
+      "name": "Commonfork Bites & Brews",
+      "full_address": "21 N Nevada Ave, Colorado Springs, CO",
+      "city": "Colorado Springs",
+      "itinerary_location": "Colorado Springs",
+      "itinerary_day": "Day 2 - Colorado Springs",
+      "trip_day_num": 2,
+      "location": {
+        "latitude": 38.8347477,
+        "longitude": -104.821111
+      },
+      "cuisine": [
+        "Pubs",
+        "Pizza",
+        "Sandwiches"
+      ],
+      "price_range": "$$",
+      "google_rating": 4.7,
+      "google_review_count": 107,
+      "yelp_rating": null,
+      "yelp_review_count": 107,
+      "trip_score": 4.7,
+      "popular_dishes": [
+        "Thai Peanut Buddha Bowl",
+        "Honnold Bowl",
+        "Cuban Sliders",
+        "Lettuce Cups",
+        "Hot Italian"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/commonfork-bites-and-brews-colorado-springs",
+      "phone": "",
+      "notes": "Pub environment. Features a Thai Peanut Bowl, but leans heavily into non-aligned items like Cuban Sliders and Hot Italian sandwiches.",
+      "seasonal_warning": false
+    },
+    {
+      "id": 20,
+      "name": "Savelli's Pizza",
+      "full_address": "301 Manitou Ave, Manitou Springs, CO",
+      "city": "Manitou Springs",
+      "itinerary_location": "Colorado Springs",
+      "itinerary_day": "Day 2 - Colorado Springs / Manitou Springs",
+      "trip_day_num": 2,
+      "location": {
+        "latitude": 38.857789,
+        "longitude": -104.8967117
+      },
+      "cuisine": [
+        "Pizza",
+        "Salad",
+        "Sandwiches"
+      ],
+      "price_range": "$$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 387,
+      "trip_score": 0,
+      "popular_dishes": [
+        "Pepperoni Pizza",
+        "Lasagna",
+        "Chicken Parm",
+        "New York Pizza",
+        "Fried Zucchini"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/savellis-pizza-manitou-springs",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 21,
+      "name": "Shri Ganesh",
+      "full_address": "11550 Ridgeline Dr, Colorado Springs, CO",
+      "city": "Colorado Springs",
+      "itinerary_location": "Colorado Springs",
+      "itinerary_day": "Day 2 - Colorado Springs",
+      "trip_day_num": 2,
+      "location": {
+        "latitude": 39.0025222,
+        "longitude": -104.7991302
+      },
+      "cuisine": [
+        "Indian",
+        "Himalayan/Nepalese",
+        "Vegan"
+      ],
+      "price_range": "$$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 463,
+      "trip_score": 0,
+      "popular_dishes": [
+        "Butter Chicken",
+        "Chicken Tikka Masala",
+        "Saag Paneer",
+        "Chili Chicken",
+        "Tandoori Chicken"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/shri-ganesh-colorado-springs",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 22,
+      "name": "Zesty Thai",
+      "full_address": "12225 Voyager Pkwy, Colorado Springs, CO",
+      "city": "Colorado Springs",
+      "itinerary_location": "Colorado Springs",
+      "itinerary_day": "Day 2 - Colorado Springs",
+      "trip_day_num": 2,
+      "location": {
+        "latitude": 39.0104586,
+        "longitude": -104.8061144
+      },
+      "cuisine": [
+        "Thai"
+      ],
+      "price_range": "$$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 176,
+      "trip_score": 0,
+      "popular_dishes": [
+        "Green Curry",
+        "Red Curry",
+        "Pad Thai",
+        "Tom Yum Soup",
+        "Spring Rolls"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/zesty-thai-colorado-springs",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 23,
+      "name": "Thai Taste Cuisine",
+      "full_address": "5069 N Academy Blvd, Colorado Springs, CO",
+      "city": "Colorado Springs",
+      "itinerary_location": "Colorado Springs",
+      "itinerary_day": "Day 2 - Colorado Springs",
+      "trip_day_num": 2,
+      "location": {
+        "latitude": 38.9047787,
+        "longitude": -104.776742
+      },
+      "cuisine": [
+        "Thai"
+      ],
+      "price_range": "$$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 134,
+      "trip_score": 0,
+      "popular_dishes": [
+        "Pad Thai",
+        "Green Curry",
+        "Spring Rolls",
+        "Tom Kha Soup",
+        "Fried Rice"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/thai-taste-cuisine-colorado-springs",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 24,
+      "name": "Slope & Hatch",
+      "full_address": "208 7th St, Glenwood Springs, CO",
+      "city": "Glenwood Springs",
+      "itinerary_location": "Glenwood Springs",
+      "itinerary_day": "Day 3/5 - Glenwood Springs",
+      "trip_day_num": 3,
+      "location": {
+        "latitude": 39.5477405,
+        "longitude": -107.3252949
+      },
+      "cuisine": [
+        "New American",
+        "Tacos"
+      ],
+      "price_range": "$$",
+      "google_rating": 4.7,
+      "google_review_count": 822,
+      "yelp_rating": null,
+      "yelp_review_count": 1062,
+      "trip_score": 4.7,
+      "popular_dishes": [
+        "Hot Dogs",
+        "Crispy Fish Tacos",
+        "Jerk Chicken",
+        "BBQ Chicken Tacos",
+        "Curried Lamb Tacos"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/slope-and-hatch-glenwood-springs",
+      "phone": "",
+      "notes": "Charming and cozy taco/hot dog spot. Primarily known for Crispy Fish, Jerk Chicken, and Lamb tacos.",
+      "seasonal_warning": false
+    },
+    {
+      "id": 25,
+      "name": "Annapurna Nepali and Indian Cuisine",
+      "full_address": "250 S Frontage Rd W, Vail, CO",
+      "city": "Vail",
+      "itinerary_location": "Glenwood Springs",
+      "itinerary_day": "Day 3 - Colorado Springs to Glenwood Springs (en route via Vail)",
+      "trip_day_num": 3,
+      "location": {
+        "latitude": 39.6441438,
+        "longitude": -106.3826086
+      },
+      "cuisine": [
+        "Indian",
+        "Himalayan/Nepalese"
+      ],
+      "price_range": "$$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 438,
+      "trip_score": 0,
+      "popular_dishes": [
+        "Goat Curry",
+        "Saag Paneer",
+        "Chicken Tikka Masala",
+        "Veggie Korma",
+        "Onion Kulcha"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/annapurna-nepali-and-indian-cuisine-vail",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 26,
+      "name": "Zheng Asian Bistro",
+      "full_address": "35 Market St, Glenwood Springs, CO",
+      "city": "Glenwood Springs",
+      "itinerary_location": "Glenwood Springs",
+      "itinerary_day": "Day 3/5 - Glenwood Springs",
+      "trip_day_num": 3,
+      "location": {
+        "latitude": 39.554202,
+        "longitude": -107.3429445
+      },
+      "cuisine": [
+        "Thai",
+        "Chinese"
+      ],
+      "price_range": "$$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 269,
+      "trip_score": 0,
+      "popular_dishes": [
+        "Pad Thai",
+        "Hot Sour Soup",
+        "Crab Rangoon",
+        "Lettuce Wraps",
+        "Atomic Shrimp Tempura Shrimp"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/zheng-asian-bistro-glenwood-springs",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 27,
+      "name": "China Town",
+      "full_address": "2830 S Glen Ave, Glenwood Springs, CO",
+      "city": "Glenwood Springs",
+      "itinerary_location": "Glenwood Springs",
+      "itinerary_day": "Day 3/5 - Glenwood Springs",
+      "trip_day_num": 3,
+      "location": {
+        "latitude": 39.5162,
+        "longitude": -107.3095
+      },
+      "cuisine": [
+        "Chinese"
+      ],
+      "price_range": "$$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 122,
+      "trip_score": 0,
+      "popular_dishes": [
+        "Egg Roll",
+        "Mongolian Beef",
+        "Pan Fried Dumplings",
+        "Hot Glazed Walnut Shrimp",
+        "Pineapple Chicken"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/china-town-glenwood-springs",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 28,
+      "name": "Kedai Pho & Japanese Cuisine",
+      "full_address": "720 Grand Ave, Glenwood Springs, CO",
+      "city": "Glenwood Springs",
+      "itinerary_location": "Glenwood Springs",
+      "itinerary_day": "Day 3/5 - Glenwood Springs",
+      "trip_day_num": 3,
+      "location": {
+        "latitude": 39.5475384,
+        "longitude": -107.3245864
+      },
+      "cuisine": [
+        "Japanese",
+        "Vietnamese"
+      ],
+      "price_range": "$$",
+      "google_rating": 4.3,
+      "google_review_count": 215,
+      "yelp_rating": null,
+      "yelp_review_count": 183,
+      "trip_score": 4.3,
+      "popular_dishes": [
+        "Miso Ramen",
+        "Spicy Miso Ramen",
+        "Vegan Bento Box",
+        "Add Ramen Noodles",
+        "Chicken Katsu"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/kedai-glenwood-springs",
+      "phone": "",
+      "notes": "Japanese/Vietnamese focus (Ramen/Bento). Sits outside the requested cuisine sequence.",
+      "seasonal_warning": false
+    },
+    {
+      "id": 29,
+      "name": "Mings Cafe",
+      "full_address": "721 Grand Ave, Glenwood Springs, CO",
+      "city": "Glenwood Springs",
+      "itinerary_location": "Glenwood Springs",
+      "itinerary_day": "Day 3/5 - Glenwood Springs",
+      "trip_day_num": 3,
+      "location": {
+        "latitude": 39.5475486,
+        "longitude": -107.3247986
+      },
+      "cuisine": [
+        "Sushi Bars",
+        "Asian Fusion"
+      ],
+      "price_range": "$$",
+      "google_rating": 4.5,
+      "google_review_count": 870,
+      "yelp_rating": null,
+      "yelp_review_count": 256,
+      "trip_score": 4.5,
+      "popular_dishes": [
+        "Pad Thai",
+        "Scallop",
+        "Spicy Tuna Roll",
+        "Dragon Roll",
+        "Sizzling Beef & Scallops"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/mings-cafe-glenwood-springs",
+      "phone": "",
+      "notes": "Sushi Bar and Asian Fusion. Heavily focused on seafood (scallops, tuna, dragon rolls).",
+      "seasonal_warning": false
+    },
+    {
+      "id": 30,
+      "name": "Bangkok Happy Bowl Thai Bistro and Bar",
+      "full_address": "300 Puppy Smith St, Aspen, CO",
+      "city": "Aspen",
+      "itinerary_location": "Aspen",
+      "itinerary_day": "Day 4 - Aspen",
+      "trip_day_num": 4,
+      "location": {
+        "latitude": 39.1928083,
+        "longitude": -106.8189837
+      },
+      "cuisine": [
+        "Thai",
+        "Bars"
+      ],
+      "price_range": "$$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 199,
+      "trip_score": 0,
+      "popular_dishes": [
+        "Pad Thai",
+        "Pad Kee Moa - Drunken Noodles",
+        "Drunken Noodle Jay - Vegan Lover",
+        "Bangkok Happy Wings",
+        "Pad See Ew"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/bangkok-happy-bowl-thai-bistro-and-bar-aspen-7",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 31,
+      "name": "Aspen Public House",
+      "full_address": "328 E Hyman Ave, Aspen, CO",
+      "city": "Aspen",
+      "itinerary_location": "Aspen",
+      "itinerary_day": "Day 4 - Aspen",
+      "trip_day_num": 4,
+      "location": {
+        "latitude": 39.1893129,
+        "longitude": -106.8205408
+      },
+      "cuisine": [
+        "New American"
+      ],
+      "price_range": "$$",
+      "google_rating": 4.4,
+      "google_review_count": 490,
+      "yelp_rating": null,
+      "yelp_review_count": 140,
+      "trip_score": 4.4,
+      "popular_dishes": [
+        "Fried Chicken Sandwich",
+        "Steak Sandwich",
+        "Spicy Curry Poutine",
+        "Pierogies",
+        "Charred Caesar Salad"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/aspen-public-house-aspen",
+      "phone": "",
+      "notes": "New American pub. Focused on Fried Chicken and Steak sandwiches.",
+      "seasonal_warning": false
+    },
+    {
+      "id": 32,
+      "name": "Mawa's Kitchen",
+      "full_address": "305F Aspen Airport Business Ctr, Aspen, CO",
+      "city": "Aspen",
+      "itinerary_location": "Aspen",
+      "itinerary_day": "Day 4 - Aspen",
+      "trip_day_num": 4,
+      "location": {
+        "latitude": 39.2232,
+        "longitude": -106.8672
+      },
+      "cuisine": [
+        "New American",
+        "Breakfast & Brunch"
+      ],
+      "price_range": "$$",
+      "google_rating": 4.5,
+      "google_review_count": 310,
+      "yelp_rating": null,
+      "yelp_review_count": 194,
+      "trip_score": 4.5,
+      "popular_dishes": [
+        "French Toast",
+        "Eggs Benedict",
+        "Maine Smoked Salmon Benedict",
+        "Rotisserie Chicken Sandwich",
+        "Potato Latke"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/mawas-kitchen-aspen",
+      "phone": "",
+      "notes": "Boutique global/French-African influenced kitchen. Focuses on Salmon Benedict, Rotisserie Chicken, and traditional egg-heavy brunch items.",
+      "seasonal_warning": false
+    },
+    {
+      "id": 33,
+      "name": "Sant Ambroeus Aspen Restaurant",
+      "full_address": "201 E Main St, Aspen, CO",
+      "city": "Aspen",
+      "itinerary_location": "Aspen",
+      "itinerary_day": "Day 4 - Aspen",
+      "trip_day_num": 4,
+      "location": {
+        "latitude": 39.191049,
+        "longitude": -106.821456
+      },
+      "cuisine": [
+        "Coffee & Tea",
+        "Desserts",
+        "Italian"
+      ],
+      "price_range": "$$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 27,
+      "trip_score": 0,
+      "popular_dishes": [
+        "Sant Ambroeus Ravioli",
+        "Fettuccine Alla Bolognese",
+        "Tagliatelle Cacio E Pepe",
+        "Tiramisu"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/sant-ambroeus-aspen",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 34,
+      "name": "Big Wrap",
+      "full_address": "520 E Durant Ave, Aspen, CO",
+      "city": "Aspen",
+      "itinerary_location": "Aspen",
+      "itinerary_day": "Day 4 - Aspen (Lunch at Cooper St Mall)",
+      "trip_day_num": 4,
+      "location": {
+        "latitude": 39.1873216,
+        "longitude": -106.8182882
+      },
+      "cuisine": [
+        "Wraps"
+      ],
+      "price_range": "$",
+      "google_rating": 4.6,
+      "google_review_count": 340,
+      "yelp_rating": null,
+      "yelp_review_count": 262,
+      "trip_score": 4.6,
+      "popular_dishes": [
+        "Pesto Wrapture",
+        "Garden of Eden",
+        "Mr. Potato Head",
+        "Swift Kick",
+        "Rock Your World"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/big-wrap-aspen",
+      "phone": "",
+      "notes": "Cash-only fast-casual counter. Serves wraps, which falls outside the requested checklist.",
+      "seasonal_warning": false
+    },
+    {
+      "id": 35,
+      "name": "White House Tavern",
+      "full_address": "302 E Hopkins Ave, Aspen, CO",
+      "city": "Aspen",
+      "itinerary_location": "Aspen",
+      "itinerary_day": "Day 3 - En Route to Glenwood Springs (Lunch in Aspen area)",
+      "trip_day_num": 3,
+      "location": {
+        "latitude": 39.1903711,
+        "longitude": -106.820433
+      },
+      "cuisine": [
+        "Burgers",
+        "Sandwiches",
+        "Cocktail Bars"
+      ],
+      "price_range": "$$",
+      "google_rating": 4.6,
+      "google_review_count": 1649,
+      "yelp_rating": null,
+      "yelp_review_count": 1208,
+      "trip_score": 4.6,
+      "popular_dishes": [
+        "Crispy Chicken Sandwich",
+        "Kale Salad",
+        "Macho Salad",
+        "Fish Sandwich",
+        "Deviled Eggs"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/white-house-tavern-aspen-3",
+      "phone": "",
+      "notes": "Highly popular vibrant American tavern. Hugely popular for its Crispy Chicken and Fish sandwiches; very limited options for a strict lacto-vegetarian.",
+      "seasonal_warning": false
+    },
+    {
+      "id": 36,
+      "name": "The Pullman",
+      "full_address": "330 7th St, Glenwood Springs, CO",
+      "city": "Glenwood Springs",
+      "itinerary_location": "Glenwood Springs",
+      "itinerary_day": "Day 3/4/5 - Glenwood Springs",
+      "trip_day_num": 3,
+      "location": {
+        "latitude": 39.5476704,
+        "longitude": -107.3238588
+      },
+      "cuisine": [
+        "New American",
+        "Bars"
+      ],
+      "price_range": "$$",
+      "google_rating": 4.5,
+      "google_review_count": 1120,
+      "yelp_rating": null,
+      "yelp_review_count": 1587,
+      "trip_score": 4.5,
+      "popular_dishes": [
+        "Deviled Eggs",
+        "Gnocchi Salad",
+        "Steak Salad",
+        "Pork Belly",
+        "Pork Rinds"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/the-pullman-glenwood-springs",
+      "phone": "",
+      "notes": "Heavily meat-focused New American. Focuses on Pork Belly, Pork Rinds, and Steaks.",
+      "seasonal_warning": false
+    },
+    {
+      "id": 37,
+      "name": "Tequilas Family Mexican Restaurant",
+      "full_address": "132 W 6th St, Glenwood Springs, CO",
+      "city": "Glenwood Springs",
+      "itinerary_location": "Glenwood Springs",
+      "itinerary_day": "Day 3/5 - Glenwood Springs",
+      "trip_day_num": 3,
+      "location": {
+        "latitude": 39.5511379,
+        "longitude": -107.3285178
+      },
+      "cuisine": [
+        "Mexican",
+        "Cocktail Bars"
+      ],
+      "price_range": "$$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 390,
+      "trip_score": 0,
+      "popular_dishes": [
+        "Carne Asada",
+        "Chicken Enchiladas",
+        "Chile Colorado Burrito",
+        "Cabbage Salad",
+        "Chicken Mole"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/tequilas-family-mexican-restaurant-glenwood-springs",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 38,
+      "name": "Himalayan Cuisine (Glenwood Springs)",
+      "full_address": "115 6th St, Glenwood Springs, CO",
+      "city": "Glenwood Springs",
+      "itinerary_location": "Glenwood Springs",
+      "itinerary_day": "Day 3/5 - Glenwood Springs",
+      "trip_day_num": 3,
+      "location": {
+        "latitude": 39.5505421,
+        "longitude": -107.3262845
+      },
+      "cuisine": [
+        "Himalayan/Nepalese"
+      ],
+      "price_range": "$$",
+      "google_rating": 4.6,
+      "google_review_count": 485,
+      "yelp_rating": null,
+      "yelp_review_count": 26,
+      "trip_score": 4.6,
+      "popular_dishes": [
+        "Tandoori Chicken",
+        "Chicken Jhol Momo",
+        "Chicken Haandi Biryani"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/himalayan-cuisine-no-title",
+      "phone": "",
+      "notes": "Nepalese and Indian dining. Unlike their Frisco branch, their noted popular dishes here are entirely meat-centric (Tandoori/Chicken Momo/Biryani).",
+      "seasonal_warning": false
+    },
+    {
+      "id": 39,
+      "name": "Everest Nepal Restaurant",
+      "full_address": "35 Market St, Glenwood Springs, CO",
+      "city": "Glenwood Springs",
+      "itinerary_location": "Glenwood Springs",
+      "itinerary_day": "Day 3/5 - Glenwood Springs",
+      "trip_day_num": 3,
+      "location": {
+        "latitude": 39.554202,
+        "longitude": -107.3429445
+      },
+      "cuisine": [
+        "Indian",
+        "Himalayan/Nepalese"
+      ],
+      "price_range": "$$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 59,
+      "trip_score": 0,
+      "popular_dishes": [
+        "Saag Paneer",
+        "Chicken Vindaloo",
+        "Momo",
+        "Tandoori Chicken",
+        "Baigan Bharta"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/everest-nepal-restaurant-glenwood-springs",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 40,
+      "name": "Nepal Restaurant",
+      "full_address": "6824 Hwy 82, Glenwood Springs, CO",
+      "city": "Glenwood Springs",
+      "itinerary_location": "Glenwood Springs",
+      "itinerary_day": "Day 3 - Glenwood Springs (Dinner)",
+      "trip_day_num": 3,
+      "location": {
+        "latitude": 39.5117963,
+        "longitude": -107.3086547
+      },
+      "cuisine": [
+        "Himalayan/Nepalese",
+        "Seafood"
+      ],
+      "price_range": "$$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 258,
+      "trip_score": 0,
+      "popular_dishes": [
+        "Samosa",
+        "Chicken Tikka Masala",
+        "Saag Paneer",
+        "Thali",
+        "Roti"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/nepal-restaurant-glenwood-springs",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 41,
+      "name": "Masala & Curry",
+      "full_address": "730 Cooper Ave, Glenwood Springs, CO",
+      "city": "Glenwood Springs",
+      "itinerary_location": "Glenwood Springs",
+      "itinerary_day": "Day 3/5 - Glenwood Springs",
+      "trip_day_num": 3,
+      "location": {
+        "latitude": 39.5474221,
+        "longitude": -107.3235594
+      },
+      "cuisine": [
+        "Indian",
+        "Himalayan/Nepalese",
+        "Vegetarian"
+      ],
+      "price_range": "$$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 286,
+      "trip_score": 0,
+      "popular_dishes": [
+        "Chicken Tikka Masala",
+        "Lamb Curry",
+        "Saag Paneer",
+        "Malai Kofta"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/masala-and-curry-glenwood-springs-2",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 42,
+      "name": "The Burrowing Owl",
+      "full_address": "1791 S 8th St, Colorado Springs, CO",
+      "city": "Colorado Springs",
+      "itinerary_location": "Colorado Springs",
+      "itinerary_day": "Day 2 - Colorado Springs",
+      "trip_day_num": 2,
+      "location": {
+        "latitude": 38.8039061,
+        "longitude": -104.839992
+      },
+      "cuisine": [
+        "Lounges",
+        "Vegetarian",
+        "Vegan"
+      ],
+      "price_range": "$$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 523,
+      "trip_score": 0,
+      "popular_dishes": [
+        "Spicy Mac",
+        "Taco Salad",
+        "Sloppy Mac",
+        "Potato Soup",
+        "Sloppy Joe"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/the-burrowing-owl-colorado-springs",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 43,
+      "name": "Hacienda Colorado",
+      "full_address": "5246 N Nevada Ave, Colorado Springs, CO",
+      "city": "Colorado Springs",
+      "itinerary_location": "Colorado Springs",
+      "itinerary_day": "Day 2 - Colorado Springs",
+      "trip_day_num": 2,
+      "location": {
+        "latitude": 38.904647,
+        "longitude": -104.8176248
+      },
+      "cuisine": [
+        "Mexican"
+      ],
+      "price_range": "$$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 653,
+      "trip_score": 0,
+      "popular_dishes": [
+        "Street Tacos",
+        "Fish Tacos",
+        "Chipotle Lime Chicken Tacos",
+        "Queso Blanco",
+        "Sopapillas"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/hacienda-colorado-colorado-springs",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 44,
+      "name": "Piglatin Cocina",
+      "full_address": "2825 Dublin Blvd, Colorado Springs, CO",
+      "city": "Colorado Springs",
+      "itinerary_location": "Colorado Springs",
+      "itinerary_day": "Day 2 - Colorado Springs",
+      "trip_day_num": 2,
+      "location": {
+        "latitude": 38.925742,
+        "longitude": -104.773562
+      },
+      "cuisine": [
+        "Latin American",
+        "Bars"
+      ],
+      "price_range": "$$",
+      "google_rating": 4.6,
+      "google_review_count": 930,
+      "yelp_rating": null,
+      "yelp_review_count": 863,
+      "trip_score": 4.6,
+      "popular_dishes": [
+        "Soft Shell Island Taco",
+        "Piglatin Plate",
+        "Churros",
+        "Chimi Shrimp",
+        "Kimchi Quesadilla"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/piglatin-cocina-colorado-springs-2",
+      "phone": "",
+      "notes": "Latin American/Caribbean fusion. Features pork plates and kimchi quesadillas; less aligned than standard Mexican options.",
+      "seasonal_warning": false
+    },
+    {
+      "id": 45,
+      "name": "Crystal Park Cantina",
+      "full_address": "178 Crystal Park Rd, Manitou Springs, CO",
+      "city": "Manitou Springs",
+      "itinerary_location": "Colorado Springs",
+      "itinerary_day": "Day 2 - Colorado Springs / Manitou Springs",
+      "trip_day_num": 2,
+      "location": {
+        "latitude": 38.8526381,
+        "longitude": -104.8967167
+      },
+      "cuisine": [
+        "Mexican"
+      ],
+      "price_range": "$$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 741,
+      "trip_score": 0,
+      "popular_dishes": [
+        "Queso",
+        "Avocado Pork",
+        "Chili Relleno",
+        "Mexican Mixto"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/crystal-park-cantina-manitou-springs",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 46,
+      "name": "Little Nepal: Indian Restaurant & Bar",
+      "full_address": "1747 S 8th St, Colorado Springs, CO",
+      "city": "Colorado Springs",
+      "itinerary_location": "Colorado Springs",
+      "itinerary_day": "Day 2 - Colorado Springs",
+      "trip_day_num": 2,
+      "location": {
+        "latitude": 38.807273,
+        "longitude": -104.8403263
+      },
+      "cuisine": [
+        "Indian",
+        "Himalayan/Nepalese"
+      ],
+      "price_range": "$$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 476,
+      "trip_score": 0,
+      "popular_dishes": [
+        "Chicken Tikka Masala",
+        "Saag Paneer",
+        "Butter Chicken / Chicken Makhani",
+        "Chicken Curry",
+        "Lamb Vindaloo"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/little-nepal-indian-restaurant-and-bar-colorado-springs-9",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 47,
+      "name": "Urban Tandoor",
+      "full_address": "8125 N Academy Blvd, Colorado Springs, CO",
+      "city": "Colorado Springs",
+      "itinerary_location": "Colorado Springs",
+      "itinerary_day": "Day 2 - Colorado Springs",
+      "trip_day_num": 2,
+      "location": {
+        "latitude": 38.949692,
+        "longitude": -104.8039764
+      },
+      "cuisine": [
+        "Indian"
+      ],
+      "price_range": "$$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 474,
+      "trip_score": 0,
+      "popular_dishes": [
+        "Butter Chicken",
+        "Chicken Tikka Masala",
+        "Samosa Chat",
+        "Goat Curry",
+        "Dahi Puri Chaat"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/urban-tandoor-colorado-springs",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 48,
+      "name": "Zaika Indian Cuisine",
+      "full_address": "4661 Centennial Blvd, Colorado Springs, CO",
+      "city": "Colorado Springs",
+      "itinerary_location": "Colorado Springs",
+      "itinerary_day": "Day 2 - Colorado Springs",
+      "trip_day_num": 2,
+      "location": {
+        "latitude": 38.900174,
+        "longitude": -104.8519987
+      },
+      "cuisine": [
+        "Indian"
+      ],
+      "price_range": "$$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 297,
+      "trip_score": 0,
+      "popular_dishes": [
+        "Chicken Tikka Masala",
+        "Veggie Samosa",
+        "Tandoori Chicken",
+        "Chicken Vindaloo",
+        "Onion Pakora"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/zaika-indian-cuisine-colorado-springs-3",
+      "phone": "",
+      "notes": "",
+      "seasonal_warning": false
+    },
+    {
+      "id": 49,
+      "name": "Wesley & Rose Lobby Bar",
+      "full_address": "1012 Front Lp, Buena Vista, CO 81211",
+      "city": "Buena Vista",
+      "itinerary_location": "Glenwood Springs",
+      "itinerary_day": "Day 3 - Colorado Springs to Glenwood Springs (Lunch Stop)",
+      "trip_day_num": 3,
+      "location": {
+        "latitude": 38.8447,
+        "longitude": -106.133
+      },
+      "cuisine": [
+        "New American",
+        "Cocktail Bars"
+      ],
+      "price_range": "$$",
+      "google_rating": 4.5,
+      "google_review_count": 180,
+      "yelp_rating": 4.5,
+      "yelp_review_count": 245,
+      "trip_score": 4.5,
+      "popular_dishes": [
+        "Truffle Fries",
+        "Margherita Flatbread",
+        "Charcuterie Board",
+        "Seasonal Grain Bowl",
+        "Craft Cocktails"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/wesley-and-rose-lobby-bar-buena-vista",
+      "phone": "",
+      "notes": "Located inside Surf Hotel. Upscale riverside dining and craft cocktails with vegetarian-friendly small plates. Upscale cocktail lounge menu inside the Surf Hotel. Focused on charcuterie and small plates rather than main courses in the requested cuisines.",
+      "seasonal_warning": false
+    },
+    {
+      "id": 50,
+      "name": "Eddyline Restaurant at South Main",
+      "full_address": "926 South Main St, Buena Vista, CO 81211",
+      "city": "Buena Vista",
+      "itinerary_location": "Glenwood Springs",
+      "itinerary_day": "Day 3 - Colorado Springs to Glenwood Springs (Lunch Stop)",
+      "trip_day_num": 3,
+      "location": {
+        "latitude": 38.836,
+        "longitude": -106.1356
+      },
+      "cuisine": [
+        "Breweries",
+        "American"
+      ],
+      "price_range": "$$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": 3.5,
+      "yelp_review_count": 586,
+      "trip_score": 3.5,
+      "popular_dishes": [
+        "Veggie Burger",
+        "Wood-Fired Pizza",
+        "Beer Cheese Pretzel",
+        "South Main Salad",
+        "Sweet Potato Fries"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/eddyline-restaurant-at-south-main-buena-vista",
+      "phone": "",
+      "notes": "Popular South Main neighborhood brewpub. Good vegetarian burgers, salads, pizzas and outdoor seating.",
+      "seasonal_warning": false
+    },
+    {
+      "id": 51,
+      "name": "Simple Eatery",
+      "full_address": "402 E Main St, Buena Vista, CO 81211",
+      "city": "Buena Vista",
+      "itinerary_location": "Glenwood Springs",
+      "itinerary_day": "Day 3 - Colorado Springs to Glenwood Springs (Breakfast or Lunch Stop)",
+      "trip_day_num": 3,
+      "location": {
+        "latitude": 38.8431,
+        "longitude": -106.1291
+      },
+      "cuisine": [
+        "Bakeries",
+        "American"
+      ],
+      "price_range": "$$",
+      "google_rating": null,
+      "google_review_count": null,
+      "yelp_rating": 4.5,
+      "yelp_review_count": 648,
+      "trip_score": 4.5,
+      "popular_dishes": [
+        "Veggie Panini",
+        "Tomato Basil Soup",
+        "Breakfast Burrito",
+        "Fresh-Baked Cinnamon Roll",
+        "Avocado Toast"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/simple-eatery-buena-vista-2",
+      "phone": "",
+      "notes": "Excellent vegetarian-friendly café with sandwiches, soups, baked goods, coffee, and breakfast options.",
+      "seasonal_warning": false
+    },
+    {
+      "id": 52,
+      "name": "The Riviera Supper Club & Scratch Kitchen",
+      "full_address": "702 Grand Ave, Glenwood Springs, CO 81601",
+      "city": "Glenwood Springs",
+      "itinerary_location": "Glenwood Springs",
+      "itinerary_day": "Day 3/4/5 - Glenwood Springs",
+      "trip_day_num": 3,
+      "location": {
+        "latitude": 39.5508,
+        "longitude": -107.3262
+      },
+      "cuisine": [
+        "New American"
+      ],
+      "price_range": "$$",
+      "google_rating": 4.2,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": null,
+      "trip_score": 4.2,
+      "popular_dishes": [
+        "Seasonal Vegetable Dishes",
+        "Scratch-Made Pasta",
+        "House Salads",
+        "Daily Specials"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/riviera-scratch-kitchen-glenwood-springs",
+      "phone": "(970) 945-7692",
+      "notes": "Ranked #1 on TripAdvisor in Glenwood Springs. Excellent vegetarian options, scratch-made dishes from local ingredients.",
+      "seasonal_warning": false
+    },
+    {
+      "id": 53,
+      "name": "Daily Bread",
+      "full_address": "729 Grand Ave, Glenwood Springs, CO 81601",
+      "city": "Glenwood Springs",
+      "itinerary_location": "Glenwood Springs",
+      "itinerary_day": "Day 3/4/5 - Glenwood Springs",
+      "trip_day_num": 3,
+      "location": {
+        "latitude": 39.5507,
+        "longitude": -107.3258
+      },
+      "cuisine": [
+        "Breakfast & Brunch",
+        "Bakeries"
+      ],
+      "price_range": "$",
+      "google_rating": 4.3,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 516,
+      "trip_score": 4.3,
+      "popular_dishes": [
+        "Vegetarian Breakfast Plates",
+        "Fresh-Baked Bread",
+        "Soups & Sandwiches",
+        "Breakfast Burritos"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/daily-bread-glenwood-springs",
+      "phone": "(970) 945-6253",
+      "notes": "Top breakfast and lunch destination in Glenwood Springs. Consistently ranks among the best in town. Vegetarian-friendly menu.",
+      "seasonal_warning": false
+    },
+    {
+      "id": 54,
+      "name": "Glenwood Canyon Brewpub",
+      "full_address": "402 7th St, Glenwood Springs, CO 81601",
+      "city": "Glenwood Springs",
+      "itinerary_location": "Glenwood Springs",
+      "itinerary_day": "Day 3/4/5 - Glenwood Springs",
+      "trip_day_num": 3,
+      "location": {
+        "latitude": 39.5495,
+        "longitude": -107.3261
+      },
+      "cuisine": [
+        "Pubs",
+        "Breweries",
+        "American"
+      ],
+      "price_range": "$$",
+      "google_rating": 3.9,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 898,
+      "trip_score": 3.9,
+      "popular_dishes": [
+        "Veggie Burgers",
+        "Pretzels",
+        "House Salads",
+        "Flatbreads"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/glenwood-canyon-brewpub-glenwood-springs-2",
+      "phone": "(970) 945-1276",
+      "notes": "One of the most-reviewed restaurants in Glenwood Springs. Strong vegetarian selection, family-friendly atmosphere.",
+      "seasonal_warning": false
+    },
+    {
+      "id": 55,
+      "name": "Native Son Agave Bar & Kitchen",
+      "full_address": "813 Grand Ave, Glenwood Springs, CO 81601",
+      "city": "Glenwood Springs",
+      "itinerary_location": "Glenwood Springs",
+      "itinerary_day": "Day 3/4/5 - Glenwood Springs",
+      "trip_day_num": 3,
+      "location": {
+        "latitude": 39.5509,
+        "longitude": -107.3264
+      },
+      "cuisine": [
+        "New American",
+        "Cocktail Bars"
+      ],
+      "price_range": "$$",
+      "google_rating": 4.1,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 251,
+      "trip_score": 4.1,
+      "popular_dishes": [
+        "Buddha Bowl",
+        "Vegetarian Tacos",
+        "Seasonal Salads",
+        "Craft Cocktails"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/native-son-glenwood-springs-2",
+      "phone": "(970) 230-9954",
+      "notes": "Newer downtown restaurant with strong reviews. Buddha Bowl and solid vegetarian offerings.",
+      "seasonal_warning": false
+    },
+    {
+      "id": 56,
+      "name": "Spring Cafe Aspen",
+      "full_address": "119 S Spring St, Aspen, CO 81611",
+      "city": "Aspen",
+      "itinerary_location": "Aspen",
+      "itinerary_day": "Day 4 - Aspen",
+      "trip_day_num": 4,
+      "location": {
+        "latitude": 39.1899,
+        "longitude": -106.8198
+      },
+      "cuisine": [
+        "Juice Bars & Smoothies",
+        "Vegan",
+        "Vegetarian"
+      ],
+      "price_range": "$$",
+      "google_rating": 4.6,
+      "google_review_count": 415,
+      "yelp_rating": 3.3,
+      "yelp_review_count": 126,
+      "trip_score": 4,
+      "popular_dishes": [
+        "Green Smoothie Bowls",
+        "Cold-Pressed Juices",
+        "Veggie Wraps",
+        "Acai Bowls",
+        "Avocado Toast"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/spring-cafe-aspen",
+      "phone": "(970) 429-8406",
+      "notes": "Organic vegetarian eatery — juice bar and smoothie cafe. ⚠️ SEASONAL: Open April only (closes mid-April). Likely CLOSED during June 19-24 trip dates. Verify before visiting.",
+      "seasonal_warning": true,
+      "seasonal_warning_text": "⚠️ Likely CLOSED in June — verify before visiting"
+    },
+    {
+      "id": 57,
+      "name": "Campo de Fiori",
+      "full_address": "205 S Mill St, Aspen, CO 81611",
+      "city": "Aspen",
+      "itinerary_location": "Aspen",
+      "itinerary_day": "Day 4 - Aspen",
+      "trip_day_num": 4,
+      "location": {
+        "latitude": 39.1902,
+        "longitude": -106.82
+      },
+      "cuisine": [
+        "Italian"
+      ],
+      "price_range": "$$$",
+      "google_rating": 3.9,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 207,
+      "trip_score": 3.9,
+      "popular_dishes": [
+        "Vegetarian Pasta",
+        "Margherita Pizza",
+        "Caprese Salad",
+        "Risotto",
+        "Tiramisu"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/campo-de-fiori-aspen",
+      "phone": "",
+      "notes": "One of Aspen's most popular Italian restaurants. Great vegetarian pasta options, consistently recommended by locals.",
+      "seasonal_warning": false
+    },
+    {
+      "id": 58,
+      "name": "Elephant Thai",
+      "full_address": "4703 N Academy Blvd, Colorado Springs, CO 80918",
+      "city": "Colorado Springs",
+      "itinerary_location": "Colorado Springs",
+      "itinerary_day": "Day 2 - Colorado Springs",
+      "trip_day_num": 2,
+      "location": {
+        "latitude": 38.9048,
+        "longitude": -104.7768
+      },
+      "cuisine": [
+        "Thai"
+      ],
+      "price_range": "$$",
+      "google_rating": 4.4,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": 156,
+      "trip_score": 4.4,
+      "popular_dishes": [
+        "Pad Thai",
+        "Green Curry",
+        "Massaman Curry",
+        "Spring Rolls",
+        "Tofu Stir Fry"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/elephant-thai-colorado-springs",
+      "phone": "(719) 597-1175",
+      "notes": "Frequently recommended by locals as the best Thai in Colorado Springs. Strong vegetarian offerings, higher-rated than several Thai places on the current list.",
+      "seasonal_warning": false
+    },
+    {
+      "id": 59,
+      "name": "Nom Nom Thai",
+      "full_address": "3303 N Academy Blvd, Colorado Springs, CO 80917",
+      "city": "Colorado Springs",
+      "itinerary_location": "Colorado Springs",
+      "itinerary_day": "Day 2 - Colorado Springs",
+      "trip_day_num": 2,
+      "location": {
+        "latitude": 38.8914,
+        "longitude": -104.7767
+      },
+      "cuisine": [
+        "Thai"
+      ],
+      "price_range": "$$",
+      "google_rating": 4.2,
+      "google_review_count": null,
+      "yelp_rating": null,
+      "yelp_review_count": null,
+      "trip_score": 4.2,
+      "popular_dishes": [
+        "Pad See Ew",
+        "Panang Curry",
+        "Pad Thai",
+        "Tom Kha Soup",
+        "Vegetarian Fried Rice"
+      ],
+      "yelp_url": "https://www.yelp.com/biz/nom-nom-thai-colorado-springs-3",
+      "phone": "(719) 573-7004",
+      "notes": "Excellent local Thai reputation, repeatedly recommended by Colorado Springs locals.",
+      "seasonal_warning": false
+    }
+  ]
+}

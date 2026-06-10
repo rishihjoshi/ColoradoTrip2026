@@ -65,63 +65,61 @@ const RESERVATION_ITEMS = [
   { id: 'res7', title: 'Blue Sky Adventures — Rafting',     category: 'Activity',  date: 'June 23, 2026',   refNote: '9:00 AM · Half-day Shoshone Rapids · Class III',        status: 'book-now',  bookingUrl: 'https://blueskyrafting.com' },
 ];
 
-const ACTIVITIES_DATA = [
-  { id:'act2', name:'Blue Sky Adventures — Whitewater Rafting', location:'Glenwood Springs', locationKey:'glenwood', lat:39.5489, lon:-107.3258, address:'152 W 6th St, Glenwood Springs, CO 81601', phone:'+19709455867', website:'https://blueskyrafting.com', type:'activity', tags:['family','adventure','river'], cost:'~$85/adult', note:'Half-day Shoshone Rapids (Class III in June). Tuesday departure 9AM. Ages 5+.', bookingStatus:'book-now', relevantDays:[5] },
-  { id:'act3', name:'Maroon Bells Shuttle', location:'Aspen', locationKey:'aspen', lat:39.0931, lon:-106.9253, address:'75 Boomerang Rd, Aspen, CO 81611', website:'https://www.visitmaroonbells.com', type:'activity', tags:['must-do','family','hiking','iconic'], cost:'✓ Booked', note:'✓ CONFIRMED. Departs 9:15AM from Aspen Highlands. At Maroon Bells by 9:30AM. Left side on shuttle for views. Hard weather stop 12:30PM. Ticket in Passes tab.', bookingStatus:'confirmed', relevantDays:[4] },
-  { id:'act4', name:'Pikes Peak Cog Railway', location:'Manitou Springs', locationKey:'csprings', lat:38.8605, lon:-104.9223, address:'515 Ruxton Ave, Manitou Springs, CO 80829', phone:'+17196855401', website:'https://www.cograilway.com', type:'activity', tags:['must-do','family','train','scenic'], cost:'✓ Booked', note:'✓ CONFIRMED — Car 1, Row 15, Seats A · B · C. Departs 9:05AM. Sit LEFT — seats already face the panoramic views. Ticket in Passes tab.', bookingStatus:'confirmed', relevantDays:[2] },
-  { id:'act5', name:'Garden of the Gods', location:'Colorado Springs', locationKey:'csprings', lat:38.8784, lon:-104.8697, address:'1805 N 30th St, Colorado Springs, CO 80904', website:'https://gardenofgods.com', type:'activity', tags:['free','family','scenic','hiking'], cost:'Free', note:'Scenic loop drive + Perkins Central Garden Trail (1.5 mi). Adjacent to Red Rock Canyon Open Space.', bookingStatus:'free', relevantDays:[2] },
-  { id:'act6', name:'Glenwood Hot Springs Pool', location:'Glenwood Springs', locationKey:'glenwood', lat:39.5487, lon:-107.3228, address:'401 N River Street, Glenwood Springs, CO 81601', phone:'+18005377946', website:'https://hotspringspool.com', type:'activity', tags:['family','kids','swimming','water-slides'], cost:'Included with stay', note:'Included with Glenwood Hot Springs Resort room. Sopris Splash Zone: water slides + fountains for kids. Grand Pool for adults. No reservations needed, hand stamp for re-entry. Open 8AM–10PM.', bookingStatus:'included', relevantDays:[5] },
-  { id:'act7', name:'Red Rocks Park & Amphitheatre', location:'Morrison', locationKey:'denver', lat:39.6654, lon:-105.2057, address:'18300 W Alameda Pkwy, Morrison, CO 80465', website:'https://www.redrocksonline.com', type:'activity', tags:['free','family','scenic','hiking','iconic'], cost:'Free daytime entry', note:'Trading Post Trail (1.4 mi easy loop). Visitor center 7AM–7PM. Perfect Colorado farewell on Day 6.', bookingStatus:'free', relevantDays:[6] },
-  { id:'act8', name:'Silver Queen Gondola — Aspen Mountain', location:'Aspen', locationKey:'aspen', lat:39.1879, lon:-106.8199, address:'601 E Dean St, Aspen, CO 81611', website:'https://www.aspensnowmass.com', type:'activity', tags:['family','gondola','scenic','views'], cost:'$149 Family Pkg', note:'18-min ride to 11,212 ft. Panoramic views of 4 mountain ranges. Last ride up 4PM sharp. Family Sightseeing Package: 2 adults + up to 4 kids.', bookingStatus:'book-now', bookingUrl:'https://www.aspensnowmass.com', relevantDays:[4] },
-  { id:'act9',  name:'Vail Farmers Market & Art Show',          location:'Vail',             locationKey:'vail',     lat:39.6428, lon:-106.3743, address:'East Meadow Drive, Vail Village, Vail, CO 81657',                website:'https://www.vailfarmersmarket.com',        type:'activity', tags:['free','family','market','sunday-only'],       cost:'Free entry',                     note:'Sundays 9:30AM–3PM. Bring cash — many vendors don\'t take cards. Arrive by 12:30PM for 2 full hours.', bookingStatus:'free',     relevantDays:[3] },
+// Maps each trip day number to its canonical Eats location-tab value
+const TRIP_DAY_TO_LOCATION = {
+  1: 'Denver Area',
+  2: 'Colorado Springs',
+  3: 'Glenwood Springs',
+  4: 'Aspen',
+  5: 'Glenwood Springs',
+  6: 'Denver Area',
+};
 
-  // ── Colorado Springs ──
-  { id:'act10', name:'Cave of the Winds Mountain Park',          location:'Manitou Springs',  locationKey:'csprings', lat:38.8731, lon:-104.8943, address:'100 Cave of the Winds Rd, Manitou Springs, CO 80829', phone:'+17196851012',   website:'https://caveofthewinds.com',              type:'activity', tags:['family','caves','indoor','kids'],             cost:'$30-40/adult',                   note:'Guided cave tours year-round. "Terror-dactyl" zipline and wind tunnel add-ons. 45-min to 2-hr tours. Kids love the lantern tours.', bookingStatus:'book-now', bookingUrl:'https://caveofthewinds.com', relevantDays:[2] },
-  { id:'act11', name:'North Cheyenne Cañon Park + Helen Hunt Falls', location:'Colorado Springs', locationKey:'csprings', lat:38.7922, lon:-104.8765, address:'2120 S Cheyenne Canyon Rd, Colorado Springs, CO 80906', website:'https://coloradosprings.gov/cheyenne-canon', type:'activity', tags:['free','family','hiking','waterfall','scenic'],  cost:'Free',                           note:'Helen Hunt Falls is a quick easy 0.5mi walk. Silver Cascade Falls adds another scenic stop. Pine-scented canyon road. Very popular with locals.', bookingStatus:'free', relevantDays:[2] },
-  { id:'act12', name:'US Olympic & Paralympic Museum',            location:'Colorado Springs', locationKey:'csprings', lat:38.8290, lon:-104.8282, address:'200 S Sierra Madre St, Colorado Springs, CO 80905', website:'https://www.usopm.org',               type:'activity', tags:['family','museum','indoor','kids'],             cost:'$25/adult, $18/child',           note:'World-class interactive museum celebrating US Olympians. Downtown Colorado Springs. Allow 2-3 hrs. Kids can try simulated sports events.', bookingStatus:'optional', relevantDays:[2] },
-  { id:'act13', name:'Cheyenne Mountain Zoo',                     location:'Colorado Springs', locationKey:'csprings', lat:38.7754, lon:-104.8759, address:'4250 Cheyenne Mountain Zoo Rd, Colorado Springs, CO 80906', phone:'+17193851212', website:'https://www.cmzoo.org', type:'activity', tags:['family','kids','animals','scenic'],             cost:'$25/adult, $18/child',           note:'Only mountain zoo in America at 6,800 ft. Giraffe feeding is a highlight ($5 extra). African Rift Valley exhibit. Spectacular views of Colorado Springs below.', bookingStatus:'optional', relevantDays:[2] },
-  { id:'act14', name:'Red Rock Canyon Open Space',                location:'Colorado Springs', locationKey:'csprings', lat:38.8325, lon:-104.8821, address:'3550 W High St, Colorado Springs, CO 80904',          website:'https://coloradosprings.gov/red-rock-canyon', type:'activity', tags:['free','family','hiking','scenic'],           cost:'Free',                           note:'Same red sandstone geology as Garden of Gods — zero crowds. Mesa Trail (1.5mi easy). Views back toward GoG. Locals\' favorite. Dog-friendly.', bookingStatus:'free', relevantDays:[2] },
-
-  // ── Glenwood Springs ──
-  { id:'act15', name:'Glenwood Caverns Adventure Park',           location:'Glenwood Springs', locationKey:'glenwood', lat:39.5706, lon:-107.3304, address:'51000 Two Rivers Plaza Rd, Glenwood Springs, CO 81601', phone:'+19709451975', website:'https://glenwoodcaverns.com',              type:'activity', tags:['family','kids','caves','scenic','adventure'],   cost:'$25-80/person depending on rides', note:'Cable gondola to top of Lookout Mountain then cave tours + theme park rides. Giant Canyon Swing, alpine coaster. Kids LOVE this. Cave tours run ~45min.', bookingStatus:'book-now', bookingUrl:'https://glenwoodcaverns.com', relevantDays:[3,5] },
-  { id:'act16', name:'Hanging Lake Trail',                        location:'Glenwood Springs', locationKey:'glenwood', lat:39.5997, lon:-107.1922, address:'Hanging Lake Trailhead, Glenwood Canyon, CO 81601',   website:'https://www.recreation.gov',              type:'activity', tags:['hiking','scenic','iconic','permit-required'],  cost:'$15 permit + $15 shuttle',       note:'One of Colorado\'s most iconic hikes — turquoise hanging lake at 7,323 ft. 2.8 mi RT, strenuous (1,000 ft gain). PERMIT REQUIRED May-Nov. Book weeks ahead on recreation.gov. No kids under 5.', bookingStatus:'book-now', bookingUrl:'https://www.recreation.gov/ticket/facility/300009', relevantDays:[3,5], flag:{type:'warning', text:'Permit sells out fast. Book at recreation.gov at least 2 weeks ahead. Shuttle from Glenwood departs 7AM-4PM.'} },
-  { id:'act17', name:'Yampah Spa & Vapor Caves',                  location:'Glenwood Springs', locationKey:'glenwood', lat:39.5480, lon:-107.3258, address:'709 E 6th St, Glenwood Springs, CO 81601',           phone:'+19709450667', website:'https://yampahspa.com',               type:'activity', tags:['adults','relaxing','hot-springs','spa'],        cost:'~$18 caves / $65+ spa',          note:'North America\'s only natural underground hot springs vapor caves. Geothermal steam chambers reach 112°F. Walking distance from Hot Springs Resort. Very relaxing after rafting.', bookingStatus:'optional', relevantDays:[5] },
-  { id:'act18', name:'Rio Grande Trail (Glenwood to Aspen)',      location:'Glenwood Springs', locationKey:'glenwood', lat:39.5505, lon:-107.3248, address:'Trailhead: Two Rivers Park, Glenwood Springs, CO 81601', website:'https://rfta.com',                        type:'activity', tags:['free','family','hiking','scenic','biking'],    cost:'Free (bike rental ~$40/day)',    note:'42-mile paved trail from Glenwood to Aspen along the Roaring Fork River. Stunning canyon scenery. Easy flat ride. Your daughter can handle 5-10 miles easily. Bike rentals in Glenwood.', bookingStatus:'free', relevantDays:[3,5] },
-
-  // ── Aspen ──
-  { id:'act19', name:'John Denver Sanctuary',                     location:'Aspen',            locationKey:'aspen',    lat:39.1916, lon:-106.8190, address:'Puppy Smith St & Rio Grande Trail, Aspen, CO 81611', website:'https://www.aspenpitkin.com',              type:'activity', tags:['free','family','scenic','peaceful'],            cost:'Free',                           note:'Riverside park with stone installations engraved with John Denver lyrics. "Rocky Mountain High" was written about Colorado. Emotional and meaningful 20-min visit. Right in downtown Aspen.', bookingStatus:'free', relevantDays:[4] },
-  { id:'act20', name:'Aspen Art Museum',                          location:'Aspen',            locationKey:'aspen',    lat:39.1907, lon:-106.8183, address:'637 E Hyman Ave, Aspen, CO 81611',                  phone:'+19709258050',  website:'https://www.aspenartmuseum.org',          type:'activity', tags:['free','family','art','indoor'],                cost:'Free admission',                 note:'World-class contemporary art in a stunning building by Shigeru Ban. Rooftop terrace with mountain views is FREE even without exhibits. Open Tue–Sun 10am–6pm. Great if weather turns.', bookingStatus:'free', relevantDays:[4] },
-  { id:'act21', name:'Grottos Trail (Ice Caves)',                 location:'Aspen',            locationKey:'aspen',    lat:39.1558, lon:-106.7588, address:'Grottos Trailhead, Hwy 82, Woody Creek, CO 81656',  website:'https://www.fs.usda.gov',                 type:'activity', tags:['free','family','hiking','caves','scenic'],    cost:'Free',                           note:'Easy 1-mile loop on the Roaring Fork River with natural granite ice caves — some with ice into July. Especially magical for kids. 20 min east of Aspen on Hwy 82 toward Independence Pass.', bookingStatus:'free', relevantDays:[4] },
-
-  // ── Vail / en-route ──
-  { id:'act22', name:'Betty Ford Alpine Gardens',                 location:'Vail',             locationKey:'vail',     lat:39.6411, lon:-106.3740, address:'183 Gore Creek Dr, Vail, CO 81657',                 website:'https://bettyfordalpinegardens.org',       type:'activity', tags:['free','family','scenic','gardens'],            cost:'Free',                           note:'Highest public botanical garden in North America at 8,200 ft. Over 3,000 alpine plants. Beautiful in June — wildflowers peak. Easy 45-min stroll. Right in Vail Village, 5 min from Farmers Market.', bookingStatus:'free', relevantDays:[3] },
-  { id:'act23', name:'Colorado Ski Museum',                       location:'Vail',             locationKey:'vail',     lat:39.6420, lon:-106.3754, address:'231 S Frontage Rd E, Vail, CO 81657',                website:'https://skimuseum.net',                    type:'activity', tags:['free','family','museum','indoor'],             cost:'Free admission',                 note:'Free ski and snowboard history museum in Vail Village. Interactive exhibits, vintage equipment, Hall of Fame. Great 30-min stop alongside the Farmers Market.', bookingStatus:'free', relevantDays:[3] },
-
-  // ── Denver / Morrison ──
-  { id:'act24', name:'Dinosaur Ridge (Fossil Trace)',             location:'Morrison',         locationKey:'denver',   lat:39.6944, lon:-105.1769, address:'16831 W Alameda Pkwy, Morrison, CO 80465',          website:'https://dinoridge.org',                   type:'activity', tags:['free','family','kids','hiking','science'],    cost:'Free (guided tour $3)',          note:'Real dinosaur tracks from 100 million years ago in the rock face along the road. Easy 1.5-mile paved road. Adjacent to Red Rocks (combine both on Day 6). Kids absolutely love seeing actual fossils.', bookingStatus:'free', relevantDays:[6] },
-  { id:'act25', name:'Denver Botanic Gardens',                    location:'Denver',           locationKey:'denver',   lat:39.7329, lon:-104.9617, address:'1007 York St, Denver, CO 80206',                    phone:'+17208653500',  website:'https://botanicgardens.org',              type:'activity', tags:['family','gardens','scenic'],                  cost:'$15/adult, $10/child',           note:'23 acres of themed gardens at 5,280 ft. Summer bloom is spectacular. Japanese Garden and Tropical Conservatory. Good for a few hours if you have extra time in Denver on arrival/departure day.', bookingStatus:'optional', relevantDays:[1,6] },
+const SORT_OPTIONS = [
+  { key: 'score-desc',  label: 'Trip Score (high → low)' },
+  { key: 'google-desc', label: 'Google Rating (high → low)' },
+  { key: 'yelp-desc',   label: 'Yelp Rating (high → low)' },
+  { key: 'reviews-desc',label: 'Most Reviewed' },
+  { key: 'price-asc',   label: 'Price ($ → $$$$)' },
+  { key: 'price-desc',  label: 'Price ($$$$ → $)' },
+  { key: 'distance',    label: 'Closest to Me' },
 ];
 
-const LOCATION_KEY_MAP = {
-  denver:   ['Denver', 'Aurora', 'Morrison', 'Greenwood Village'],
-  csprings: ['Colorado Springs', 'Manitou Springs', 'Buena Vista'],
-  glenwood: ['Glenwood Springs'],
-  aspen:    ['Aspen'],
-  vail:     ['Vail'],
-  frisco:   ['Frisco'],
+const CUISINE_ICONS = {
+  indian: '🍛', mexican: '🌮', pizza: '🍕', italian: '🍝', thai: '🍜',
+  american: '🍔', breakfast: '🥞', cafe: '☕', bakery: '🥐', seafood: '🦞',
+  bbq: '🍖', asian: '🥢', vegetarian: '🥗', vegan: '🌱', mediterranean: '🥙',
+  steakhouse: '🥩', dessert: '🍰', brewery: '🍺', sandwich: '🥪',
 };
+
+const CUISINE_COLORS = {
+  indian: '#e08a3c', mexican: '#5cb85c', pizza: '#d9534f', italian: '#5cb85c',
+  thai: '#9b59b6', american: '#4a90d9', breakfast: '#f0ad4e', cafe: '#a0785a',
+  bakery: '#e0a070', seafood: '#4ab8d8', bbq: '#b8542e', asian: '#9b59b6',
+  vegetarian: '#5cb85c', vegan: '#5cb85c', mediterranean: '#4ab8d8',
+  steakhouse: '#b8542e', dessert: '#e88ab0', brewery: '#c8973a', sandwich: '#a0785a',
+};
+
+const PREFERRED_CUISINES = ['Indian', 'Mexican', 'Pizza', 'Italian', 'Thai'];
 
 // ── State ──────────────────────────────────────────────────────────────────
 
 let state = {
   currentTab: 'itinerary',
   itineraryData: null,
-  restaurantsData: null,
   packingData: null,
   weatherCache: {},
-  eatsFilter: { cuisine: 'all', loc: 'all', search: '' },
   userLocation: null,
   resSessionValid: false,
+};
+
+let eatsState = {
+  restaurants: [],
+  cuisine: 'all',
+  location: 'all',
+  search: '',
+  sort: 'score-desc',
+  sortPanelOpen: false,
 };
 
 // ── Init ───────────────────────────────────────────────────────────────────
@@ -133,13 +131,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   await Promise.all([
     loadItinerary(),
-    loadRestaurants(),
     loadPacking(),
   ]);
 
-  setupEatsFilters();
-  setupActivitiesFilters();
-  setupSubTabs();
   setupReservations();
   setupInstallPrompt();
 });
@@ -175,6 +169,11 @@ function switchTab(tab) {
     } else {
       updateAskContextPill();
     }
+  }
+
+  if (tab === 'eats' && !eatsInitialized) {
+    eatsInitialized = true;
+    initEatsTab();
   }
 }
 
@@ -419,6 +418,18 @@ function buildStatusChip(act) {
     'included':   '<span class="status-chip status-included">✓ Included</span>',
   };
   return labels[s] || '';
+}
+
+function buildStatusChipFromString(s) {
+  if (!s) return '';
+  const map = {
+    'confirmed': '<span class="status-chip status-confirmed">✓ Confirmed</span>',
+    'book-now':  '<span class="status-chip status-book-now">⚡ Book Now</span>',
+    'optional':  '<span class="status-chip status-optional">Optional</span>',
+    'free':      '<span class="status-chip status-free">Free</span>',
+    'included':  '<span class="status-chip status-included">✓ Included</span>',
+  };
+  return map[s] || '';
 }
 
 function buildFlag(flag) {
@@ -673,217 +684,265 @@ function convertTo12h(t24) {
 
 // ── Restaurants / Eats ─────────────────────────────────────────────────────
 
-async function loadRestaurants() {
+async function initEatsTab() {
   try {
-    const res = await fetch('./data/Colorado_Trip_Restaurants_2026.json');
-    state.restaurantsData = await res.json();
-    renderEats();
-  } catch(e) {
-    document.getElementById('eats-list').innerHTML = '<p style="padding:20px;color:var(--sub-lite)">Failed to load restaurant data.</p>';
-  }
-}
-
-function setupEatsFilters() {
-  document.getElementById('eats-search').addEventListener('input', e => {
-    state.eatsFilter.search = e.target.value.toLowerCase();
-    renderEats();
-  });
-
-  document.getElementById('cuisine-filters').addEventListener('click', e => {
-    const chip = e.target.closest('[data-filter]');
-    if (!chip) return;
-    document.querySelectorAll('#cuisine-filters .filter-chip').forEach(c => c.classList.remove('active'));
-    chip.classList.add('active');
-    state.eatsFilter.cuisine = chip.dataset.filter;
-    renderEats();
-  });
-
-  document.getElementById('location-filters').addEventListener('click', e => {
-    const chip = e.target.closest('[data-loc]');
-    if (!chip) return;
-    document.querySelectorAll('#location-filters .filter-chip').forEach(c => c.classList.remove('active'));
-    chip.classList.add('active');
-    const loc = chip.dataset.loc;
-
-    if (loc === 'closest') {
-      requestGeolocation();
-    } else {
-      state.eatsFilter.loc = loc;
-      renderEats();
-    }
-  });
-}
-
-function requestGeolocation() {
-  if (!navigator.geolocation) {
-    state.eatsFilter.loc = 'all';
-    renderEats();
+    const res = await fetch('./data/restaurants.json');
+    const data = await res.json();
+    eatsState.restaurants = [...(data.restaurants || []), ...getUserEatsItems()];
+  } catch (e) {
+    document.getElementById('eats-grid').innerHTML = '<div class="eats-empty">Failed to load restaurant data.</div>';
     return;
   }
-  navigator.geolocation.getCurrentPosition(
-    pos => {
-      state.userLocation = { lat: pos.coords.latitude, lon: pos.coords.longitude };
-      state.eatsFilter.loc = 'closest';
-      renderEats();
-    },
-    () => {
-      state.eatsFilter.loc = 'all';
-      renderEats();
-    }
-  );
+
+  buildCuisineChips();
+  autoSelectTodayLocation();
+  setupEatsListeners();
+  renderSmartHeader();
+  rerenderEatsGrid();
 }
 
-function renderEats() {
-  const container = document.getElementById('eats-list');
-  if (!state.restaurantsData) return;
+function setupEatsListeners() {
+  // Search
+  const searchInput = document.getElementById('eats-search-input');
+  const clearBtn = document.getElementById('eats-search-clear');
+  searchInput.addEventListener('input', e => {
+    eatsState.search = e.target.value.trim().toLowerCase();
+    clearBtn.hidden = !eatsState.search;
+    rerenderEatsGrid();
+  });
+  clearBtn.addEventListener('click', () => {
+    searchInput.value = '';
+    eatsState.search = '';
+    clearBtn.hidden = true;
+    rerenderEatsGrid();
+  });
 
-  const restaurants = state.restaurantsData.restaurants || [];
-  const userItems = getUserEatsItems();
+  // Cuisine chips (delegated)
+  document.getElementById('eats-cuisine-chips').addEventListener('click', e => {
+    const chip = e.target.closest('.cuisine-chip');
+    if (!chip) return;
+    document.querySelectorAll('#eats-cuisine-chips .cuisine-chip').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    eatsState.cuisine = chip.dataset.cuisine;
+    rerenderEatsGrid();
+  });
 
-  // Restaurants tab: show only restaurants + user-added items (activities have their own tab)
-  const allItems = [
-    ...restaurants.map(r => ({ ...r, _source: 'restaurant' })),
-    ...userItems.filter(u => u.type !== 'activity').map(u => ({ ...u, _source: 'user', _userAdded: true })),
-  ];
+  // Location tabs
+  document.getElementById('eats-location-tabs').addEventListener('click', e => {
+    const tab = e.target.closest('.loc-tab');
+    if (!tab) return;
+    document.querySelectorAll('#eats-location-tabs .loc-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    eatsState.location = tab.dataset.loc;
+    rerenderEatsGrid();
+  });
 
-  const { cuisine, loc, search } = state.eatsFilter;
-
-  let filtered = allItems.filter(item => {
-    // Cuisine filter
-    if (cuisine !== 'all') {
-      const cuisines = (item.cuisine || item.tags || []).map(c => c.toLowerCase());
-      const match = {
-        'indian':  cuisines.some(c => c.includes('indian') || c.includes('nepalese') || c.includes('himalayan')),
-        'mexican': cuisines.some(c => c.includes('mexican') || c.includes('latin') || c.includes('salvadoran')),
-        'pizza':   cuisines.some(c => c.includes('pizza') || c.includes('italian')),
-        'thai':    cuisines.some(c => c.includes('thai') || c.includes('asian')),
-        'cafe':    cuisines.some(c => c.includes('coffee') || c.includes('breakfast') || c.includes('brunch') || c.includes('cafe') || c.includes('bakery') || c.includes('donut')),
-        'veg':     cuisines.some(c => c.includes('vegetarian') || c.includes('vegan')),
-      };
-      if (!match[cuisine]) return false;
+  // Sort toggle + panel
+  const sortToggle = document.getElementById('eats-sort-toggle');
+  const sortPanel = document.getElementById('eats-sort-panel');
+  sortToggle.addEventListener('click', () => {
+    eatsState.sortPanelOpen = !eatsState.sortPanelOpen;
+    if (eatsState.sortPanelOpen) renderSortPanel();
+    sortPanel.classList.toggle('hidden', !eatsState.sortPanelOpen);
+  });
+  document.addEventListener('click', e => {
+    if (eatsState.sortPanelOpen && !sortPanel.contains(e.target) && e.target !== sortToggle) {
+      eatsState.sortPanelOpen = false;
+      sortPanel.classList.add('hidden');
     }
-
-    // Location filter
-    if (loc !== 'all' && loc !== 'closest') {
-      const cities = LOCATION_KEY_MAP[loc] || [];
-      const itemCity = item.city || item.location || '';
-      if (!cities.some(c => itemCity.toLowerCase().includes(c.toLowerCase()))) {
-        // Also check locationKey
-        if (item.locationKey !== loc) return false;
-      }
+  });
+  sortPanel.addEventListener('click', e => {
+    const opt = e.target.closest('[data-sort]');
+    if (!opt) return;
+    const key = opt.dataset.sort;
+    if (key === 'distance') {
+      requestEatsGeolocation(() => {
+        eatsState.sort = 'distance';
+        renderSortPanel();
+        rerenderEatsGrid();
+      });
+      return;
     }
+    eatsState.sort = key;
+    renderSortPanel();
+    eatsState.sortPanelOpen = false;
+    sortPanel.classList.add('hidden');
+    rerenderEatsGrid();
+  });
 
-    // Search filter
+  // Grid card taps -> bottom sheet
+  document.getElementById('eats-grid').addEventListener('click', e => {
+    const card = e.target.closest('.rest-card');
+    if (!card) return;
+    openBottomSheet(card.dataset.id);
+  });
+
+  // Smart carousel taps -> bottom sheet
+  document.getElementById('eats-smart-header').addEventListener('click', e => {
+    const card = e.target.closest('.smart-card');
+    if (!card) return;
+    openBottomSheet(card.dataset.id);
+  });
+
+  // Bottom sheet close
+  const sheet = document.getElementById('eats-bottom-sheet');
+  sheet.querySelector('.bottom-sheet__overlay').addEventListener('click', closeBottomSheet);
+  setupBottomSheetSwipe();
+}
+
+function renderSortPanel() {
+  const panel = document.getElementById('eats-sort-panel');
+  panel.innerHTML = SORT_OPTIONS.map(opt => `
+    <button class="eats-sort-option ${eatsState.sort === opt.key ? 'active' : ''}" data-sort="${opt.key}">${opt.label}</button>
+  `).join('');
+}
+
+// ── Smart "For Lunch / Dinner Tonight" header ──────────────────────────────
+
+function getSmartMealContext() {
+  const hour = parseInt(new Date().toLocaleString('en-US', { timeZone: 'America/Denver', hour: 'numeric', hour12: false }), 10);
+  if (hour >= 6 && hour < 11)  return { meal: 'breakfast', label: '🥞 BREAKFAST PICKS' };
+  if (hour >= 11 && hour < 16) return { meal: 'lunch',     label: '🍽 FOR LUNCH NOW' };
+  if (hour >= 16 && hour < 22) return { meal: 'dinner',    label: '🌙 FOR DINNER TONIGHT' };
+  return { meal: 'late', label: '🌃 LATE NIGHT EATS' };
+}
+
+function getTodayTripDayNum() {
+  const today = getTodayMDT();
+  for (const [day, info] of Object.entries(DAY_LOCATIONS)) {
+    if (info.date === today) return parseInt(day, 10);
+  }
+  return null;
+}
+
+function getTodayLocation() {
+  const day = getTodayTripDayNum();
+  return day ? TRIP_DAY_TO_LOCATION[day] : null;
+}
+
+function getTripScore(r) {
+  if (typeof r.trip_score === 'number') return r.trip_score;
+  const g = r.google_rating, y = r.yelp_rating;
+  if (g && y) return Math.round(((g + y) / 2) * 10) / 10;
+  return g || y || 0;
+}
+
+function getSmartPicks() {
+  const todayLoc = getTodayLocation();
+  let pool = eatsState.restaurants.filter(r => !r.seasonal_warning);
+  let scoped = todayLoc ? pool.filter(r => r.itinerary_location === todayLoc) : pool;
+  if (scoped.length < 3) scoped = pool;
+  return [...scoped].sort((a, b) => getTripScore(b) - getTripScore(a)).slice(0, 5);
+}
+
+function renderSmartHeader() {
+  const el = document.getElementById('eats-smart-header');
+  const picks = getSmartPicks();
+  if (!picks.length) { el.innerHTML = ''; return; }
+  const ctx = getSmartMealContext();
+  el.innerHTML = `
+    <div class="eats-smart-label">${ctx.label}</div>
+    <div class="eats-smart-carousel">
+      ${picks.map((r, i) => renderSmartCard(r, i === 0)).join('')}
+    </div>
+  `;
+}
+
+function renderSmartCard(r, isTop) {
+  return `
+    <div class="smart-card ${isTop ? 'smart-card--top' : ''}" data-id="${r.id}">
+      ${isTop ? '<div class="smart-card__crown">TOP PICK</div>' : ''}
+      <div class="smart-card__score">★ ${getTripScore(r).toFixed(1)}</div>
+      <div class="smart-card__name">${escapeHtml(r.name)}</div>
+      <div class="smart-card__meta">${escapeHtml(r.price_range || '')} · ${escapeHtml((r.cuisine && r.cuisine[0]) || '')}</div>
+    </div>
+  `;
+}
+
+// ── Cuisine Filter Chips ───────────────────────────────────────────────────
+
+function buildCuisineChips() {
+  const counts = {};
+  eatsState.restaurants.forEach(r => (r.cuisine || []).forEach(c => {
+    counts[c] = (counts[c] || 0) + 1;
+  }));
+
+  const all = Object.keys(counts);
+  const preferred = PREFERRED_CUISINES.filter(c => all.includes(c));
+  const rest = all.filter(c => !PREFERRED_CUISINES.includes(c)).sort();
+  const ordered = [...preferred, ...rest];
+
+  const el = document.getElementById('eats-cuisine-chips');
+  el.innerHTML = [
+    `<button class="cuisine-chip active" data-cuisine="all">All</button>`,
+    ...ordered.map(c => {
+      const icon = CUISINE_ICONS[c.toLowerCase()] || '';
+      return `<button class="cuisine-chip" data-cuisine="${escapeHtml(c)}">${icon ? icon + ' ' : ''}${escapeHtml(c)}</button>`;
+    }),
+  ].join('');
+}
+
+function getCuisineColor(cuisine) {
+  if (!cuisine) return '#6a8a6a';
+  return CUISINE_COLORS[cuisine.toLowerCase()] || '#6a8a6a';
+}
+
+// ── Location Tabs ───────────────────────────────────────────────────────────
+
+function autoSelectTodayLocation() {
+  const todayLoc = getTodayLocation();
+  const tabs = document.querySelectorAll('#eats-location-tabs .loc-tab');
+  let target = 'all';
+  if (todayLoc && [...tabs].some(t => t.dataset.loc === todayLoc)) target = todayLoc;
+  tabs.forEach(t => t.classList.toggle('active', t.dataset.loc === target));
+  eatsState.location = target;
+}
+
+// ── Filtering & Sorting ─────────────────────────────────────────────────────
+
+function getSortedFilteredRestaurants() {
+  const { cuisine, location, search } = eatsState;
+
+  let list = eatsState.restaurants.filter(r => {
+    if (cuisine !== 'all' && !(r.cuisine || []).includes(cuisine)) return false;
+    if (location !== 'all' && r.itinerary_location !== location) return false;
     if (search) {
-      const searchIn = `${item.name} ${item.city || item.location} ${(item.cuisine || item.tags || []).join(' ')} ${item.note || ''} ${(item.popular_dishes || []).join(' ')}`.toLowerCase();
-      if (!searchIn.includes(search)) return false;
+      const haystack = `${r.name} ${(r.cuisine||[]).join(' ')} ${(r.popular_dishes||[]).join(' ')} ${r.city||''} ${r.notes||''}`.toLowerCase();
+      if (!haystack.includes(search)) return false;
     }
-
     return true;
   });
 
-  // Sort by distance if geolocation available
-  if (loc === 'closest' && state.userLocation) {
-    filtered = filtered.sort((a, b) => {
-      const da = getDistanceToItem(a);
-      const db = getDistanceToItem(b);
-      return da - db;
-    });
-  }
-
-  if (filtered.length === 0) {
-    container.innerHTML = '<div class="eats-empty">No results found.<br>Try adjusting filters.</div>';
-    return;
-  }
-
-  container.innerHTML = '';
-  filtered.forEach(item => {
-    container.appendChild(buildEatsCard(item));
-  });
+  return sortRestaurants(list, eatsState.sort);
 }
 
-function buildEatsCard(item) {
-  const card = document.createElement('div');
-  card.className = 'eats-card';
-
-  const isActivity = item._source === 'activity' || item.type === 'activity';
-  const cuisines = item.cuisine || item.tags || [];
-  const tags = cuisines.slice(0, 3).map(c =>
-    `<span class="eats-tag ${isActivity ? 'tag-activity' : ''}">${c}</span>`
-  ).join('');
-
-  const dist = state.userLocation ? getDistanceToItem(item) : null;
-  const distHtml = dist !== null && dist < 9999
-    ? `<span class="eats-distance">📍 ${dist.toFixed(1)} mi</span>`
-    : '';
-
-  const dayBadge = item.itinerary_day
-    ? `<span class="eats-day-badge">${item.itinerary_day.split('-')[0].trim()}</span>`
-    : item.relevantDays ? `<span class="eats-day-badge">Day ${item.relevantDays.join(',')}</span>` : '';
-
-  const address = item.full_address || item.address || '';
-  const addressHtml = address
-    ? `<a href="${mapsLink(address)}" target="_blank" rel="noopener" class="eats-address-link">📍 ${address}</a>`
-    : '';
-
-  const dishes = item.popular_dishes && item.popular_dishes.length
-    ? `<div class="eats-dishes"><strong>Popular: </strong>${item.popular_dishes.slice(0,4).join(', ')}</div>`
-    : '';
-
-  const note = item.note || item.notes || '';
-  const noteHtml = note ? `<div class="eats-note">${item._userAdded ? escapeHtml(note) : note}</div>` : '';
-
-  const btns = [];
-  if (item.phone) btns.push(`<a href="tel:${item.phone}" class="btn-mini">📞 Call</a>`);
-  if (item.website) btns.push(`<a href="${item.website}" target="_blank" rel="noopener" class="btn-mini">🌐 Web</a>`);
-  if (item.yelp_url) btns.push(`<a href="${item.yelp_url}" target="_blank" rel="noopener" class="btn-mini">⭐ Yelp</a>`);
-  if ((item.bookingStatus === 'book-now' || item.status === 'book-now') && item.bookingUrl) {
-    btns.push(`<a href="${item.bookingUrl}" target="_blank" rel="noopener" class="btn-mini gold">⚡ Book</a>`);
+function sortRestaurants(list, sortKey) {
+  const sorted = [...list];
+  switch (sortKey) {
+    case 'google-desc':
+      return sorted.sort((a, b) => (b.google_rating||0) - (a.google_rating||0));
+    case 'yelp-desc':
+      return sorted.sort((a, b) => (b.yelp_rating||0) - (a.yelp_rating||0));
+    case 'reviews-desc':
+      return sorted.sort((a, b) => ((b.google_review_count||0)+(b.yelp_review_count||0)) - ((a.google_review_count||0)+(a.yelp_review_count||0)));
+    case 'price-asc':
+      return sorted.sort((a, b) => (a.price_range||'').length - (b.price_range||'').length);
+    case 'price-desc':
+      return sorted.sort((a, b) => (b.price_range||'').length - (a.price_range||'').length);
+    case 'distance':
+      if (!state.userLocation) return sorted;
+      return sorted.sort((a, b) => getDistanceToRestaurant(a) - getDistanceToRestaurant(b));
+    case 'score-desc':
+    default:
+      return sorted.sort((a, b) => getTripScore(b) - getTripScore(a));
   }
-
-  const userTag = item._userAdded ? '<span class="user-added-tag">✦ Added</span>' : '';
-  const statusChip = buildStatusChipFromString(item.bookingStatus || item.status);
-
-  card.innerHTML = `
-    <div class="eats-card-top">
-      <div class="eats-tags">${tags}${item._userAdded ? '<span class="eats-tag" style="background:rgba(200,151,58,0.15);color:var(--gold);border-color:rgba(200,151,58,0.3)">Custom</span>' : ''}</div>
-      <span class="eats-price">${item.price_range || item.cost || ''}</span>
-    </div>
-    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
-      <div class="eats-name">${item._userAdded ? escapeHtml(item.name) : item.name}${userTag}</div>
-      ${statusChip}
-    </div>
-    ${addressHtml}
-    ${dishes}
-    ${noteHtml}
-    <div style="display:flex;gap:6px;margin-top:6px;align-items:center;flex-wrap:wrap">
-      ${dayBadge}
-      ${distHtml}
-    </div>
-    ${btns.length ? `<div class="eats-btns">${btns.join('')}</div>` : ''}
-  `;
-
-  return card;
 }
 
-function buildStatusChipFromString(s) {
-  if (!s) return '';
-  const map = {
-    'confirmed': '<span class="status-chip status-confirmed">✓ Confirmed</span>',
-    'book-now':  '<span class="status-chip status-book-now">⚡ Book Now</span>',
-    'optional':  '<span class="status-chip status-optional">Optional</span>',
-    'free':      '<span class="status-chip status-free">Free</span>',
-    'included':  '<span class="status-chip status-included">✓ Included</span>',
-  };
-  return map[s] || '';
-}
-
-function getDistanceToItem(item) {
-  if (!state.userLocation) return 9999;
-  const lat = item.location?.latitude || item.lat;
-  const lon = item.location?.longitude || item.lon;
-  if (!lat || !lon) return 9999;
-  return haversine(state.userLocation.lat, state.userLocation.lon, lat, lon);
+function getDistanceToRestaurant(r) {
+  if (!state.userLocation || !r.location) return 9999;
+  const { latitude, longitude } = r.location;
+  if (!latitude || !longitude) return 9999;
+  return haversine(state.userLocation.lat, state.userLocation.lon, latitude, longitude);
 }
 
 function haversine(lat1, lon1, lat2, lon2) {
@@ -895,6 +954,199 @@ function haversine(lat1, lon1, lat2, lon2) {
   return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
 }
 
+function requestEatsGeolocation(cb) {
+  if (!navigator.geolocation) { cb(); return; }
+  navigator.geolocation.getCurrentPosition(
+    pos => {
+      state.userLocation = { lat: pos.coords.latitude, lon: pos.coords.longitude };
+      cb();
+    },
+    () => cb()
+  );
+}
+
+// ── Grid Rendering ───────────────────────────────────────────────────────────
+
+function rerenderEatsGrid() {
+  const grid = document.getElementById('eats-grid');
+  const countEl = document.getElementById('eats-results-count');
+  const filtered = getSortedFilteredRestaurants();
+
+  countEl.textContent = `${filtered.length} ${filtered.length === 1 ? 'PLACE' : 'PLACES'}`;
+
+  if (!filtered.length) {
+    grid.innerHTML = '<div class="eats-empty">No restaurants found.<br>Try adjusting your filters or search.</div>';
+    return;
+  }
+
+  grid.innerHTML = filtered.map(renderRestaurantCard).join('');
+}
+
+function renderRestaurantCard(r) {
+  const warned = !!r.seasonal_warning;
+  const cuisines = (r.cuisine || []).join(' · ');
+  const dish = (r.popular_dishes && r.popular_dishes[0]) || '';
+  const dot = getCuisineColor((r.cuisine && r.cuisine[0]) || '');
+
+  return `
+    <div class="rest-card ${warned ? 'rest-card--warned' : ''}" data-id="${r.id}">
+      ${warned ? '<div class="rest-card__warn-strip"></div>' : ''}
+      <div class="rest-card__top-row">
+        <span class="rest-card__dot" style="background:${dot}"></span>
+        <span class="rest-card__score">★ ${getTripScore(r).toFixed(1)}</span>
+      </div>
+      <div class="rest-card__name">${escapeHtml(r.name)}</div>
+      <div class="rest-card__ratings">
+        ${r.google_rating ? `
+        <div class="rest-card__rating-row">
+          <span class="rest-card__platform rest-card__platform--google">G</span>
+          <span class="rest-card__stars">${renderStars(r.google_rating)}</span>
+          <span class="rest-card__count">${r.google_review_count ? `(${r.google_review_count})` : ''}</span>
+        </div>` : ''}
+        ${r.yelp_rating ? `
+        <div class="rest-card__rating-row">
+          <span class="rest-card__platform rest-card__platform--yelp">Y</span>
+          <span class="rest-card__stars">${renderStars(r.yelp_rating)}</span>
+          <span class="rest-card__count">${r.yelp_review_count ? `(${r.yelp_review_count})` : ''}</span>
+        </div>` : ''}
+      </div>
+      <div class="rest-card__cuisines">${escapeHtml(cuisines)}</div>
+      <div class="rest-card__footer">
+        <span class="rest-card__price">${escapeHtml(r.price_range || '')}</span>
+        ${r.itinerary_day ? `<span class="rest-card__day-pill">${escapeHtml(r.itinerary_day.split('-')[0].trim())}</span>` : ''}
+      </div>
+      ${dish ? `<div class="rest-card__dish">🍴 ${escapeHtml(dish)}</div>` : ''}
+      ${warned ? `<div class="rest-card__warn-label">${escapeHtml(r.seasonal_warning_text || '⚠️ Seasonal closure — verify before visiting')}</div>` : ''}
+    </div>
+  `;
+}
+
+function renderStars(rating) {
+  if (!rating) return '';
+  const full = Math.floor(rating);
+  const half = rating - full >= 0.5;
+  let out = '★'.repeat(full);
+  if (half) out += '½';
+  return `${out} ${rating.toFixed(1)}`;
+}
+
+// ── Bottom Sheet ─────────────────────────────────────────────────────────────
+
+function openBottomSheet(id) {
+  const r = eatsState.restaurants.find(x => String(x.id) === String(id));
+  if (!r) return;
+  document.getElementById('eats-sheet-content').innerHTML = renderBottomSheet(r);
+  const sheet = document.getElementById('eats-bottom-sheet');
+  sheet.hidden = false;
+  document.body.style.overflow = 'hidden';
+  requestAnimationFrame(() => sheet.classList.add('bottom-sheet--open'));
+}
+
+function closeBottomSheet() {
+  const sheet = document.getElementById('eats-bottom-sheet');
+  sheet.classList.remove('bottom-sheet--open');
+  document.body.style.overflow = '';
+  setTimeout(() => { sheet.hidden = true; }, 350);
+}
+
+function setupBottomSheetSwipe() {
+  const sheet = document.getElementById('eats-bottom-sheet');
+  const panel = sheet.querySelector('.bottom-sheet__panel');
+  let startY = 0, currentY = 0, dragging = false;
+
+  panel.addEventListener('touchstart', e => {
+    startY = e.touches[0].clientY;
+    dragging = true;
+    panel.style.transition = 'none';
+  }, { passive: true });
+
+  panel.addEventListener('touchmove', e => {
+    if (!dragging) return;
+    currentY = e.touches[0].clientY - startY;
+    if (currentY > 0) panel.style.transform = `translateY(${currentY}px)`;
+  }, { passive: true });
+
+  panel.addEventListener('touchend', () => {
+    if (!dragging) return;
+    dragging = false;
+    panel.style.transition = '';
+    panel.style.transform = '';
+    if (currentY > 100) closeBottomSheet();
+    currentY = 0;
+  });
+}
+
+function renderBottomSheet(r) {
+  const cuisines = (r.cuisine || []).join(', ');
+  const dishes = (r.popular_dishes || []).map(d => `<span class="sheet-dish-chip">${escapeHtml(d)}</span>`).join('');
+  const address = r.full_address || '';
+
+  const actions = [];
+  if (address) actions.push(`<a href="${mapsLink(address)}" target="_blank" rel="noopener" class="sheet-btn sheet-btn--primary">📍 Maps</a>`);
+  if (r.yelp_url) actions.push(`<a href="${r.yelp_url}" target="_blank" rel="noopener" class="sheet-btn sheet-btn--yelp">⭐ Yelp</a>`);
+  if (r.phone) actions.push(`<a href="tel:${r.phone}" class="sheet-btn sheet-btn--call">📞 Call</a>`);
+
+  return `
+    <div class="sheet-header">
+      <div class="sheet-name">${escapeHtml(r.name)}</div>
+      <div class="sheet-meta">
+        ${cuisines ? `<span class="sheet-cuisine-pill">${escapeHtml(cuisines)}</span>` : ''}
+        ${r.price_range ? `<span class="sheet-price">${escapeHtml(r.price_range)}</span>` : ''}
+        ${r.itinerary_day ? `<span class="sheet-day">${escapeHtml(r.itinerary_day)}</span>` : ''}
+      </div>
+    </div>
+
+    ${r.seasonal_warning ? `<div class="sheet-warn-box">${escapeHtml(r.seasonal_warning_text || '⚠️ Seasonal closure — verify before visiting')}</div>` : ''}
+
+    <div class="sheet-ratings">
+      ${r.google_rating ? `
+      <div class="sheet-rating-block">
+        <div class="sheet-rating-logo sheet-rating-logo--google">Google</div>
+        <div class="sheet-rating-stars">
+          <div>
+            <div class="sheet-star-row">${renderStars(r.google_rating)}</div>
+            <div class="sheet-rating-count">${r.google_review_count ? `${r.google_review_count} reviews` : ''}</div>
+          </div>
+        </div>
+      </div>` : ''}
+      ${r.yelp_rating ? `
+      <div class="sheet-rating-divider"></div>
+      <div class="sheet-rating-block">
+        <div class="sheet-rating-logo sheet-rating-logo--yelp">Yelp</div>
+        <div class="sheet-rating-stars">
+          <div>
+            <div class="sheet-star-row">${renderStars(r.yelp_rating)}</div>
+            <div class="sheet-rating-count">${r.yelp_review_count ? `${r.yelp_review_count} reviews` : ''}</div>
+          </div>
+        </div>
+      </div>` : ''}
+      <div class="sheet-rating-divider"></div>
+      <div class="sheet-rating-block">
+        <div class="sheet-rating-logo">Trip Score</div>
+        <div class="sheet-trip-score">${getTripScore(r).toFixed(1)}</div>
+      </div>
+    </div>
+
+    ${address ? `
+    <div class="sheet-address">
+      <span class="sheet-addr-icon">📍</span>
+      <a href="${mapsLink(address)}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">${escapeHtml(address)}</a>
+    </div>` : ''}
+
+    ${dishes ? `
+    <div class="sheet-dishes">
+      <div class="sheet-dishes-label">Popular Dishes</div>
+      <div class="sheet-dishes-chips">${dishes}</div>
+    </div>` : ''}
+
+    ${r.notes ? `<div class="sheet-notes">${escapeHtml(r.notes)}</div>` : ''}
+
+    <div class="sheet-actions">${actions.join('')}</div>
+  `;
+}
+
+// ── User-added Restaurants ──────────────────────────────────────────────────
+
 function getUserEatsItems() {
   try { return JSON.parse(localStorage.getItem('user_eats_items') || '[]'); }
   catch { return []; }
@@ -902,158 +1154,38 @@ function getUserEatsItems() {
 
 function saveUserEatsItem() {
   const name     = document.getElementById('eats-add-name').value.trim();
-  const type     = document.getElementById('eats-add-type').value;
   const location = document.getElementById('eats-add-location').value.trim();
   const address  = document.getElementById('eats-add-address').value.trim();
   const note     = document.getElementById('eats-add-note').value.trim();
   if (!name) return;
 
   const items = getUserEatsItems();
-  items.push({ id: `user-eats-${Date.now()}`, name, type, location, address, note, cuisine: [type], _userAdded: true });
+  const item = {
+    id: `user-${Date.now()}`,
+    name,
+    full_address: address,
+    city: location,
+    itinerary_location: 'Denver Area',
+    cuisine: ['Custom'],
+    price_range: '',
+    google_rating: null,
+    google_review_count: null,
+    yelp_rating: null,
+    yelp_review_count: null,
+    trip_score: 0,
+    popular_dishes: [],
+    notes: note,
+    _userAdded: true,
+  };
+  items.push(item);
   localStorage.setItem('user_eats_items', JSON.stringify(items));
   document.getElementById('form-add-eats').reset();
-  renderEats();
-}
 
-// ── Sub-tabs (Restaurants / Activities) ───────────────────────────────────
-
-function setupSubTabs() {
-  document.querySelectorAll('.subtab-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const target = btn.dataset.subtab;
-      document.querySelectorAll('.subtab-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      document.querySelectorAll('.subtab-panel').forEach(p => p.classList.add('hidden'));
-      document.getElementById(`subtab-${target}`).classList.remove('hidden');
-      if (target === 'activities') renderActivities();
-    });
-  });
-}
-
-// ── Activities Tab ─────────────────────────────────────────────────────────
-
-let actsFilter = { type: 'all', loc: 'all', search: '' };
-
-function setupActivitiesFilters() {
-  document.getElementById('acts-search').addEventListener('input', e => {
-    actsFilter.search = e.target.value.toLowerCase();
-    renderActivities();
-  });
-
-  document.getElementById('acts-type-filters').addEventListener('click', e => {
-    const chip = e.target.closest('[data-atype]');
-    if (!chip) return;
-    document.querySelectorAll('#acts-type-filters .filter-chip').forEach(c => c.classList.remove('active'));
-    chip.classList.add('active');
-    actsFilter.type = chip.dataset.atype;
-    renderActivities();
-  });
-
-  document.getElementById('acts-loc-filters').addEventListener('click', e => {
-    const chip = e.target.closest('[data-aloc]');
-    if (!chip) return;
-    document.querySelectorAll('#acts-loc-filters .filter-chip').forEach(c => c.classList.remove('active'));
-    chip.classList.add('active');
-    actsFilter.loc = chip.dataset.aloc;
-    renderActivities();
-  });
-}
-
-function renderActivities() {
-  const container = document.getElementById('acts-list');
-  if (!container) return;
-
-  let items = [...ACTIVITIES_DATA];
-  const { type, loc, search } = actsFilter;
-
-  // Type filter
-  if (type !== 'all') {
-    const typeMap = {
-      free:    a => a.tags.includes('free') || a.cost === 'Free' || a.cost === 'Free entry' || a.cost === 'Free daytime entry' || a.cost === 'Free admission',
-      family:  a => a.tags.includes('family') || a.tags.includes('kids'),
-      hiking:  a => a.tags.includes('hiking'),
-      water:   a => a.tags.some(t => ['water','swimming','hot-springs','river','water-slides','biking'].includes(t)),
-      scenic:  a => a.tags.includes('scenic') || a.tags.includes('views') || a.tags.includes('gondola'),
-      'must-do': a => a.tags.includes('must-do') || a.tags.includes('iconic'),
-    };
-    items = items.filter(typeMap[type] || (() => true));
+  if (eatsInitialized) {
+    eatsState.restaurants.push(item);
+    if (!eatsState.restaurants.some(r => (r.cuisine||[]).includes('Custom'))) buildCuisineChips();
+    rerenderEatsGrid();
   }
-
-  // Location filter
-  if (loc !== 'all') {
-    const locMap = {
-      denver:   ['denver','morrison'],
-      csprings: ['csprings','manitou-springs'],
-      glenwood: ['glenwood'],
-      aspen:    ['aspen'],
-      vail:     ['vail'],
-    };
-    const keys = locMap[loc] || [loc];
-    items = items.filter(a => keys.includes(a.locationKey));
-  }
-
-  // Search filter
-  if (search) {
-    items = items.filter(a => {
-      return `${a.name} ${a.location} ${a.tags.join(' ')} ${a.note || ''} ${a.cost || ''}`.toLowerCase().includes(search);
-    });
-  }
-
-  if (items.length === 0) {
-    container.innerHTML = '<div class="eats-empty">No activities match your filters.</div>';
-    return;
-  }
-
-  container.innerHTML = '';
-  items.forEach(item => container.appendChild(buildActivityCard(item)));
-}
-
-function buildActivityCard(item) {
-  const card = document.createElement('div');
-  card.className = 'eats-card activity-card';
-
-  const tags = (item.tags || []).slice(0, 4).map(t =>
-    `<span class="eats-tag tag-activity">${t}</span>`
-  ).join('');
-
-  const statusChip = buildStatusChipFromString(item.bookingStatus);
-  const isMustDo = item.tags.includes('must-do') || item.tags.includes('iconic');
-  const days = item.relevantDays ? `Day${item.relevantDays.length > 1 ? 's' : ''} ${item.relevantDays.join(', ')}` : '';
-
-  const address = item.address || '';
-  const addressHtml = address
-    ? `<a href="${mapsLink(address)}" target="_blank" rel="noopener" class="eats-address-link">📍 ${address}</a>`
-    : '';
-
-  const btns = [];
-  if (item.phone)       btns.push(`<a href="tel:${item.phone}" class="btn-mini">📞 Call</a>`);
-  if (item.website)     btns.push(`<a href="${item.website}" target="_blank" rel="noopener" class="btn-mini">🌐 Web</a>`);
-  if ((item.bookingStatus === 'book-now') && item.bookingUrl) {
-    btns.push(`<a href="${item.bookingUrl}" target="_blank" rel="noopener" class="btn-mini gold">⚡ Book</a>`);
-  }
-
-  const flagHtml = item.flag
-    ? `<div class="activity-flag flag-${item.flag.type}"><span>${item.flag.text}</span></div>` : '';
-
-  card.innerHTML = `
-    <div class="eats-card-top">
-      <div class="eats-tags">${isMustDo ? '<span class="eats-tag" style="background:rgba(200,151,58,0.2);color:var(--gold);border-color:rgba(200,151,58,0.4)">⭐ Must-Do</span>' : ''}${tags}</div>
-      <span class="eats-price">${item.cost || ''}</span>
-    </div>
-    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:3px">
-      <div class="eats-name">${item.name}</div>
-      ${statusChip}
-    </div>
-    <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--sub-lite);margin-bottom:4px">
-      📍 ${item.location}${days ? ` · <span style="color:var(--gold)">${days}</span>` : ''}
-    </div>
-    ${addressHtml}
-    ${item.note ? `<div class="eats-note">${item.note}</div>` : ''}
-    ${flagHtml}
-    ${btns.length ? `<div class="eats-btns">${btns.join('')}</div>` : ''}
-  `;
-
-  return card;
 }
 
 // ── Reservations ───────────────────────────────────────────────────────────
@@ -1567,6 +1699,7 @@ let askConversationHistory = [];
 let askIsStreaming          = false;
 let askCurrentLocation     = null;
 let askInitialized         = false;
+let eatsInitialized        = false;
 
 function initAskTab() {
   // Key is always available (injected at build time); show chat directly
