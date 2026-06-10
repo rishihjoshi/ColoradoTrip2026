@@ -54,76 +54,64 @@
         <div id="itinerary-days" class="days-list"></div>
       </section>
 
-      <!-- Tab: Eats & Activities -->
+      <!-- Tab: Eats -->
       <section id="tab-eats" class="tab-panel" role="tabpanel">
-        <div class="tab-hero">
-          <h1 class="tab-hero-title">Eats & Activities</h1>
-          <p class="tab-hero-sub">Curated for vegetarian · Family of 3</p>
-        </div>
-
-        <!-- Sub-tab toggle -->
-        <div class="subtab-bar">
-          <button class="subtab-btn active" data-subtab="restaurants">🍽 Restaurants</button>
-          <button class="subtab-btn" data-subtab="activities">🥾 Activities</button>
-        </div>
-
-        <!-- Sub-panel: Restaurants -->
-        <div id="subtab-restaurants" class="subtab-panel">
-          <div class="eats-controls">
-            <div class="search-bar-wrap">
-              <input type="search" id="eats-search" class="search-input" placeholder="Search restaurants…" autocomplete="off" autocorrect="off" spellcheck="false">
-              <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <div class="eats-header">
+          <div class="eats-title-row">
+            <div>
+              <h2 class="eats-title">Restaurants</h2>
+              <p class="eats-subtitle">VEGETARIAN · FAMILY OF 3 · 59 PLACES</p>
             </div>
-            <div class="filter-row" id="cuisine-filters">
-              <button class="filter-chip active" data-filter="all">All</button>
-              <button class="filter-chip" data-filter="indian">🍛 Indian</button>
-              <button class="filter-chip" data-filter="mexican">🌮 Mexican</button>
-              <button class="filter-chip" data-filter="pizza">🍕 Pizza/Italian</button>
-              <button class="filter-chip" data-filter="thai">🍜 Thai</button>
-              <button class="filter-chip" data-filter="cafe">☕ Cafes</button>
-              <button class="filter-chip" data-filter="veg">🥗 Vegetarian</button>
-            </div>
-            <div class="filter-row" id="location-filters">
-              <button class="filter-chip active" data-loc="all">All Locations</button>
-              <button class="filter-chip" data-loc="denver">Denver</button>
-              <button class="filter-chip" data-loc="csprings">Colo Springs</button>
-              <button class="filter-chip" data-loc="glenwood">Glenwood</button>
-              <button class="filter-chip" data-loc="aspen">Aspen</button>
-              <button class="filter-chip" data-loc="vail">Vail</button>
-              <button class="filter-chip" data-loc="closest">📍 Closest First</button>
-            </div>
+            <div id="eats-sort-toggle" class="eats-sort-btn" title="Sort options">⇅</div>
           </div>
-          <div id="eats-list" class="eats-list"></div>
+          <div id="eats-sort-panel" class="eats-sort-panel hidden"></div>
         </div>
 
-        <!-- Sub-panel: Activities -->
-        <div id="subtab-activities" class="subtab-panel hidden">
-          <div class="eats-controls">
-            <div class="search-bar-wrap">
-              <input type="search" id="acts-search" class="search-input" placeholder="Search activities…" autocomplete="off" autocorrect="off" spellcheck="false">
-              <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-            </div>
-            <div class="filter-row" id="acts-type-filters">
-              <button class="filter-chip active" data-atype="all">All</button>
-              <button class="filter-chip" data-atype="free">🆓 Free</button>
-              <button class="filter-chip" data-atype="family">👨‍👩‍👧 Family</button>
-              <button class="filter-chip" data-atype="hiking">🥾 Hiking</button>
-              <button class="filter-chip" data-atype="water">💧 Water</button>
-              <button class="filter-chip" data-atype="scenic">🏔 Scenic</button>
-              <button class="filter-chip" data-atype="must-do">⭐ Must-Do</button>
-            </div>
-            <div class="filter-row" id="acts-loc-filters">
-              <button class="filter-chip active" data-aloc="all">All Locations</button>
-              <button class="filter-chip" data-aloc="denver">Denver</button>
-              <button class="filter-chip" data-aloc="csprings">Colo Springs</button>
-              <button class="filter-chip" data-aloc="glenwood">Glenwood</button>
-              <button class="filter-chip" data-aloc="aspen">Aspen</button>
-              <button class="filter-chip" data-aloc="vail">Vail</button>
-            </div>
-          </div>
-          <div id="acts-list" class="eats-list"></div>
+        <!-- Smart "For Lunch / Dinner" header -->
+        <div class="eats-smart-header" id="eats-smart-header"></div>
+
+        <!-- Search -->
+        <div class="eats-search-wrap">
+          <div class="eats-search-icon">🔍</div>
+          <input
+            type="search"
+            id="eats-search-input"
+            class="eats-search-input"
+            placeholder="Search restaurants, dishes, or cuisine…"
+            autocomplete="off"
+            autocorrect="off"
+            spellcheck="false"
+          />
+          <button id="eats-search-clear" class="eats-search-clear" hidden>✕</button>
         </div>
+
+        <!-- Cuisine filter chips -->
+        <div class="eats-cuisine-chips" id="eats-cuisine-chips"></div>
+
+        <!-- Location tabs -->
+        <div class="eats-location-tabs" id="eats-location-tabs">
+          <button class="loc-tab" data-loc="all">All</button>
+          <button class="loc-tab" data-loc="Denver Area">Denver</button>
+          <button class="loc-tab" data-loc="Colorado Springs">Colo Springs</button>
+          <button class="loc-tab" data-loc="Glenwood Springs">Glenwood</button>
+          <button class="loc-tab" data-loc="Aspen">Aspen</button>
+        </div>
+
+        <!-- Results count -->
+        <div class="eats-results-count" id="eats-results-count"></div>
+
+        <!-- Restaurant grid -->
+        <div class="eats-grid" id="eats-grid"></div>
       </section>
+
+      <!-- Bottom Sheet: Restaurant Detail -->
+      <div id="eats-bottom-sheet" class="bottom-sheet" hidden>
+        <div class="bottom-sheet__overlay"></div>
+        <div class="bottom-sheet__panel">
+          <div class="bottom-sheet__handle"></div>
+          <div class="bottom-sheet__content" id="eats-sheet-content"></div>
+        </div>
+      </div>
 
       <!-- Tab: Reservations -->
       <section id="tab-reservations" class="tab-panel" role="tabpanel">
@@ -320,16 +308,10 @@
   <div id="modal-add-eats" class="modal-overlay hidden" role="dialog" aria-modal="true">
     <div class="modal-sheet">
       <div class="modal-handle"></div>
-      <h3 class="modal-title">Add Restaurant or Activity</h3>
+      <h3 class="modal-title">Add Restaurant</h3>
       <form id="form-add-eats" class="modal-form">
         <label class="form-label">Name
-          <input type="text" class="form-input" id="eats-add-name" placeholder="Restaurant or activity name" required>
-        </label>
-        <label class="form-label">Type
-          <select class="form-input" id="eats-add-type">
-            <option value="restaurant">Restaurant</option>
-            <option value="activity">Activity</option>
-          </select>
+          <input type="text" class="form-input" id="eats-add-name" placeholder="Restaurant name" required>
         </label>
         <label class="form-label">Location / City
           <input type="text" class="form-input" id="eats-add-location" placeholder="e.g. Glenwood Springs">

@@ -1,11 +1,11 @@
-const CACHE_NAME = 'colorado-26-v19';
+const CACHE_NAME = 'colorado-26-v20';
 const STATIC_ASSETS = [
   './index.html',
   './app.js',
   './styles.css',
   './manifest.json',
   './data/itinerary.json',
-  './data/Colorado_Trip_Restaurants_2026.json',
+  './data/restaurants.json',
   './data/packing.json',
   './icons/icon.svg',
   './icons/icon-maskable.svg',
