@@ -142,7 +142,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 function setupNavigation() {
   document.querySelectorAll('.nav-item').forEach(btn => {
-    btn.addEventListener('click', () => switchTab(btn.dataset.tab));
+    btn.addEventListener('click', () => {
+      switchTab(btn.dataset.tab);
+      if (btn.dataset.tab === 'reservations') setTimeout(checkResAuth, 50);
+    });
   });
 
   // Delegated handler for Book Now chips (avoids inline onclick in innerHTML)
@@ -386,6 +389,7 @@ function buildTimeline(activities) {
           ${act.description ? `<div class="activity-body">${act._userAdded ? escapeHtml(act.description) : act.description}</div>` : ''}
           ${addressHtml}
           ${act.cost ? `<div class="activity-body" style="margin-top:2px">💰 ${act.cost}</div>` : ''}
+          ${act.driveInfo ? `<div class="activity-drive-info">🚗 ${act.driveInfo.duration}${act.driveInfo.via ? ` · ${act.driveInfo.via}` : ''}</div>` : ''}
           ${btns}
           ${tipsHtml}
           ${flagHtml}
@@ -1193,8 +1197,6 @@ function saveUserEatsItem() {
 function setupReservations() {
   const hasSetup = localStorage.getItem('res_setup_done');
 
-  document.getElementById('tab-reservations').addEventListener('click-check', () => {});
-
   // Show correct initial screen
   if (!hasSetup) {
     showScreen('res-setup-screen');
@@ -1217,17 +1219,6 @@ function setupReservations() {
   // Lock button
   document.getElementById('btn-lock').addEventListener('click', lockReservations);
 }
-
-// Called when user switches to reservations tab
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.nav-item').forEach(btn => {
-    btn.addEventListener('click', () => {
-      if (btn.dataset.tab === 'reservations') {
-        setTimeout(checkResAuth, 50);
-      }
-    });
-  });
-});
 
 function checkResAuth() {
   const hasSetup = localStorage.getItem('res_setup_done');
@@ -1271,8 +1262,15 @@ async function setupFaceID() {
     const credId = btoa(String.fromCharCode(...new Uint8Array(credential.rawId)));
     localStorage.setItem('biometric_credential_id', credId);
     localStorage.setItem('biometric_registered', 'true');
-    localStorage.setItem('res_setup_done', 'true');
-    grantResAccess();
+
+    // Face ID alone isn't enough — a PIN is still required as a backup
+    // (e.g. if biometrics fail or the device changes), so prompt for one.
+    const faceBtn = document.getElementById('btn-setup-faceid');
+    if (faceBtn) {
+      faceBtn.disabled = true;
+      faceBtn.textContent = '✓ Face ID enabled';
+    }
+    showPinSetupFlow();
   } catch(e) {
     // Fall back to PIN setup
     showPinSetupFlow();
@@ -1360,10 +1358,7 @@ function onAuthPinDigit(digit) {
 
       const hash = await hashPin(entered);
       const storedHash = localStorage.getItem('res_pin_hash');
-
-      // Fall back to default hash if no PIN has been set up yet
-      const defaultHash = await hashPin('202606');
-      const correct = hash === storedHash || (!storedHash && hash === defaultHash);
+      const correct = !!storedHash && hash === storedHash;
 
       if (correct) {
         pinAttempts = 0;
@@ -1521,11 +1516,21 @@ function buildResCard(item) {
     fileInput.addEventListener('change', e => {
       const file = e.target.files[0];
       if (!file) return;
+      const maxBytes = 4 * 1024 * 1024; // 4MB — data URLs are stored in localStorage (~5-10MB total quota)
+      if (file.size > maxBytes) {
+        alert('File too large. Please choose an image or PDF under 4MB.');
+        fileInput.value = '';
+        return;
+      }
       const resId = fileInput.dataset.resId;
       const reader = new FileReader();
       reader.onload = ev => {
-        localStorage.setItem(`reservation_img_${resId}`, ev.target.result);
-        renderReservations();
+        try {
+          localStorage.setItem(`reservation_img_${resId}`, ev.target.result);
+          renderReservations();
+        } catch (err) {
+          alert('Could not save file — storage may be full.');
+        }
       };
       reader.readAsDataURL(file);
     });
@@ -1603,7 +1608,7 @@ function buildPackCategory(cat, items, ci, checked) {
             <div class="pack-checkbox">
               ${isChecked ? '<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--pine)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>' : ''}
             </div>
-            <div class="pack-item-text">${text}</div>
+            <div class="pack-item-text">${isUser ? escapeHtml(text) : text}</div>
             ${isUser ? '<span class="pack-item-user">✦</span>' : ''}
           </div>
         `;
