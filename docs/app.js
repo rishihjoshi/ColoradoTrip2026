@@ -1687,9 +1687,9 @@ function getTodayMDT() {
 
 // ── Ask Tab ───────────────────────────────────────────────────────────────────
 
-// Build-time placeholder replaced by GitHub Actions deploy workflow.
-// Falls back to localStorage for local development.
-const INJECTED_API_KEY    = '__ANTHROPIC_API_KEY_PLACEHOLDER__';
+// Each user supplies their own Anthropic API key, stored only in this
+// browser's localStorage. It is never bundled, committed, or sent anywhere
+// except directly to api.anthropic.com.
 const ASK_KEY_STORAGE     = 'colorado26_ask_key';
 const ASK_HISTORY_STORAGE = 'colorado26_ask_history';
 const ASK_MODEL           = 'claude-sonnet-4-5';
@@ -1700,10 +1700,20 @@ let askConversationHistory = [];
 let askIsStreaming          = false;
 let askCurrentLocation     = null;
 let askInitialized         = false;
+let askChatStarted         = false;
 let eatsInitialized        = false;
 
 function initAskTab() {
-  // Key is always available (injected at build time); show chat directly
+  setupAskKeyEventListeners();
+  if (getAskKey()) {
+    startAskChat();
+  } else {
+    showAskSetup();
+  }
+}
+
+function startAskChat() {
+  askChatStarted = true;
   showAskChat();
   loadAskHistory();
   updateAskContextPill();
@@ -1739,9 +1749,30 @@ function saveAskKey(key) {
 }
 
 function getAskKey() {
-  // Use build-time injected key (production); fall back to localStorage (local dev)
-  if (INJECTED_API_KEY && !INJECTED_API_KEY.startsWith('__')) return INJECTED_API_KEY;
   return localStorage.getItem(ASK_KEY_STORAGE);
+}
+
+function setupAskKeyEventListeners() {
+  if (setupAskKeyEventListeners._attached) return;
+  setupAskKeyEventListeners._attached = true;
+
+  document.getElementById('ask-key-toggle')?.addEventListener('click', () => {
+    const input = document.getElementById('ask-key-input');
+    if (!input) return;
+    input.type = input.type === 'password' ? 'text' : 'password';
+  });
+
+  document.getElementById('ask-key-save-btn')?.addEventListener('click', () => {
+    const input = document.getElementById('ask-key-input');
+    if (!input) return;
+    if (saveAskKey(input.value)) {
+      input.value = '';
+      if (askChatStarted) showAskChat();
+      else startAskChat();
+    }
+  });
+
+  document.getElementById('ask-key-update-btn')?.addEventListener('click', showAskSetup);
 }
 
 // ── Context Builder ──────────────────────────────────────────────────────────
