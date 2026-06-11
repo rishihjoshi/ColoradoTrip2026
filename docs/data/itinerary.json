@@ -194,7 +194,7 @@
       "badge": "Scenic Drive",
       "badgeColor": "forest",
       "weatherLocationKey": 3,
-      "driveFromPrevious": { "duration": "~4.5 hrs driving", "distance": "~214 miles", "via": "US-24 W → Buena Vista → Twin Lakes → Independence Pass → Aspen → Glenwood Springs" },
+      "driveFromPrevious": { "duration": "~4 hrs 45 min driving", "distance": "~230 miles", "via": "US-24 W → Buena Vista → Twin Lakes → US-24 N → Leadville → I-70 W → Glenwood Springs" },
       "hotel": {
         "name": "Residence Inn by Marriott Glenwood Springs",
         "address": "125 Wulfsohn Road, Glenwood Springs, CO 81601",
@@ -228,26 +228,17 @@
         {
           "id": "d3-a3",
           "time": "1:00 PM",
-          "title": "Twin Lakes — Photo Stop",
-          "description": "Drive ~15 min east on CO-82 from Buena Vista. Twin Lakes Reservoir sits at the base of Independence Pass and reflects Mount Elbert — Colorado's highest peak at 14,440 ft. Park at the lakeside pullout for 20-30 min of photos. Genuinely postcard-perfect.",
-          "address": "Twin Lakes, CO 81251",
+          "title": "Twin Lakes — Mountain View Overlook",
+          "description": "Park at the Mountain View Overlook — a paved pullout on the north (right) side of CO-82, 2.8 miles west of the US-24 junction. Large brown scenic byway signs mark the spot. Walk to the lake edge for the postcard Mt. Elbert reflection shot — Colorado's highest peak at 14,440 ft reflected in the reservoir. Allow 20–30 min.",
+          "address": "CO-82, Twin Lakes, CO 81251",
+          "lat": 39.08332,
+          "lon": -106.33852,
           "type": "activity",
           "bookingStatus": "free",
           "icon": "📸",
-          "duration": "30 min",
-          "cost": "Free"
-        },
-        {
-          "id": "d3-a4",
-          "time": "1:45 PM",
-          "title": "Independence Pass — Check Conditions & Cross",
-          "description": "CO-82 summits at 12,095 ft — one of the most dramatic drives in North America. Usually open by mid-June but check cotrip.org the morning of Jun 21. Tight switchbacks above treeline, no guardrails on sections — drive slow and enjoy. Stop at the Continental Divide marker for photos. Descend into Aspen, then north on Hwy 82 into Glenwood Canyon.",
-          "address": "Independence Pass Summit, CO-82, CO 81210",
-          "website": "https://www.cotrip.org",
-          "type": "drive",
-          "icon": "⛰️",
-          "driveInfo": { "duration": "~2 hrs Twin Lakes → Glenwood Springs", "via": "CO-82 over Independence Pass (12,095 ft) → Aspen → Hwy 82 N → Glenwood Springs" },
-          "flag": { "type": "warning", "text": "Check cotrip.org on the morning of Jun 21 for Independence Pass road conditions. Alternate route if closed: US-24 N → I-70 W (adds ~30 min, full highway)." }
+          "duration": "20-30 min",
+          "cost": "Free",
+          "driveInfo": { "duration": "~2h 15m to Glenwood Springs", "via": "US-24 N → Leadville → I-70 W → Glenwood Springs" }
         },
         {
           "id": "d3-a5",

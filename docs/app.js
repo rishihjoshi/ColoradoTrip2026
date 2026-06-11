@@ -364,7 +364,7 @@ function buildTimeline(activities) {
     const flagHtml = buildFlag(act.flag);
     const tipsHtml = buildTips(act.tips);
     const addressHtml = act.address && act.type !== 'drive'
-      ? `<a href="${mapsLink(act.address)}" target="_blank" rel="noopener" class="activity-address">📍 ${act.address}</a>`
+      ? `<a href="${mapsLink(act.address, act.lat, act.lon)}" target="_blank" rel="noopener" class="activity-address">📍 ${act.address}</a>`
       : '';
 
     const btns = buildActivityBtns(act);
@@ -1671,7 +1671,8 @@ function setupInstallPrompt() {
 
 // ── Utils ──────────────────────────────────────────────────────────────────
 
-function mapsLink(address) {
+function mapsLink(address, lat, lon) {
+  if (lat != null && lon != null) return `https://maps.google.com/?q=${lat},${lon}`;
   return `https://maps.google.com/?q=${encodeURIComponent(address)}`;
 }
 
