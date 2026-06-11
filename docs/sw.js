@@ -1,4 +1,4 @@
-const CACHE_NAME = 'colorado-26-v20';
+const CACHE_NAME = 'colorado-26-v21';
 const STATIC_ASSETS = [
   './index.html',
   './app.js',
@@ -21,7 +21,6 @@ self.addEventListener('install', e => {
   e.waitUntil(
     caches.open(CACHE_NAME)
       .then(c => c.addAll(STATIC_ASSETS))
-      .then(() => self.skipWaiting())
   );
 });
 
@@ -33,6 +32,12 @@ self.addEventListener('activate', e => {
       ))
       .then(() => self.clients.claim())
   );
+});
+
+self.addEventListener('message', e => {
+  if (e.data && e.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
 });
 
 self.addEventListener('fetch', e => {

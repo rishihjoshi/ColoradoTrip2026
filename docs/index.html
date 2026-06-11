@@ -361,10 +361,56 @@
     </div>
   </div>
 
+  <!-- Update banner: shown when a new app version is ready -->
+  <div id="update-banner" class="update-banner hidden">
+    <span>A new version is available.</span>
+    <button id="btn-update-reload" type="button">Refresh</button>
+  </div>
+
   <script src="./app.js"></script>
   <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./sw.js').catch(err => console.warn('SW:', err));
+      navigator.serviceWorker.register('./sw.js').then(reg => {
+        // Check for an updated service worker on load and whenever the tab regains focus.
+        reg.update();
+        document.addEventListener('visibilitychange', () => {
+          if (document.visibilityState === 'visible') reg.update();
+        });
+
+        const showUpdateBanner = () => {
+          const banner = document.getElementById('update-banner');
+          if (banner) banner.classList.remove('hidden');
+        };
+
+        if (reg.waiting) showUpdateBanner();
+
+        reg.addEventListener('updatefound', () => {
+          const newWorker = reg.installing;
+          if (!newWorker) return;
+          newWorker.addEventListener('statechange', () => {
+            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+              showUpdateBanner();
+            }
+          });
+        });
+      }).catch(err => console.warn('SW:', err));
+
+      let reloading = false;
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        if (reloading) return;
+        reloading = true;
+        window.location.reload();
+      });
+
+      document.getElementById('btn-update-reload')?.addEventListener('click', () => {
+        navigator.serviceWorker.getRegistration().then(reg => {
+          if (reg && reg.waiting) {
+            reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+          } else {
+            window.location.reload();
+          }
+        });
+      });
     }
   </script>
 </body>
