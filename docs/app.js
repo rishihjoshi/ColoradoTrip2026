@@ -699,6 +699,7 @@ async function initEatsTab() {
   }
 
   buildCuisineChips();
+  buildLocationTabs();
   autoSelectTodayLocation();
   setupEatsListeners();
   renderSmartHeader();
@@ -831,6 +832,10 @@ function getTripScore(r) {
   return g || y || 0;
 }
 
+function renderTripScore(r) {
+  return r.rating_unavailable ? 'NEW' : getTripScore(r).toFixed(1);
+}
+
 function getSmartPicks() {
   const todayLoc = getTodayLocation();
   let pool = eatsState.restaurants.filter(r => !r.seasonal_warning);
@@ -856,7 +861,7 @@ function renderSmartCard(r, isTop) {
   return `
     <div class="smart-card ${isTop ? 'smart-card--top' : ''}" data-id="${r.id}">
       ${isTop ? '<div class="smart-card__crown">TOP PICK</div>' : ''}
-      <div class="smart-card__score">★ ${getTripScore(r).toFixed(1)}</div>
+      <div class="smart-card__score">★ ${renderTripScore(r)}</div>
       <div class="smart-card__name">${escapeHtml(r.name)}</div>
       <div class="smart-card__meta">${escapeHtml(r.price_range || '')} · ${escapeHtml((r.cuisine && r.cuisine[0]) || '')}</div>
     </div>
@@ -893,6 +898,15 @@ function getCuisineColor(cuisine) {
 
 // ── Location Tabs ───────────────────────────────────────────────────────────
 
+function buildLocationTabs() {
+  const cities = [...new Set(eatsState.restaurants.map(r => r.city).filter(Boolean))].sort();
+  const el = document.getElementById('eats-location-tabs');
+  el.innerHTML = [
+    `<button class="loc-tab active" data-loc="all">All</button>`,
+    ...cities.map(c => `<button class="loc-tab" data-loc="${escapeHtml(c)}">${escapeHtml(c)}</button>`),
+  ].join('');
+}
+
 function autoSelectTodayLocation() {
   const todayLoc = getTodayLocation();
   const tabs = document.querySelectorAll('#eats-location-tabs .loc-tab');
@@ -909,9 +923,9 @@ function getSortedFilteredRestaurants() {
 
   let list = eatsState.restaurants.filter(r => {
     if (cuisine !== 'all' && !(r.cuisine || []).includes(cuisine)) return false;
-    if (location !== 'all' && r.itinerary_location !== location) return false;
+    if (location !== 'all' && r.city !== location) return false;
     if (search) {
-      const haystack = `${r.name} ${(r.cuisine||[]).join(' ')} ${(r.popular_dishes||[]).join(' ')} ${r.city||''} ${r.notes||''}`.toLowerCase();
+      const haystack = `${r.name} ${(r.cuisine||[]).join(' ')} ${(r.popular_dishes||[]).map(getDishName).join(' ')} ${r.city||''} ${r.notes||''}`.toLowerCase();
       if (!haystack.includes(search)) return false;
     }
     return true;
@@ -989,15 +1003,18 @@ function rerenderEatsGrid() {
 function renderRestaurantCard(r) {
   const warned = !!r.seasonal_warning;
   const cuisines = (r.cuisine || []).join(' · ');
-  const dish = (r.popular_dishes && r.popular_dishes[0]) || '';
+  const dish = getDishName((r.popular_dishes && r.popular_dishes[0]));
   const dot = getCuisineColor((r.cuisine && r.cuisine[0]) || '');
 
   return `
     <div class="rest-card ${warned ? 'rest-card--warned' : ''}" data-id="${r.id}">
       ${warned ? '<div class="rest-card__warn-strip"></div>' : ''}
       <div class="rest-card__top-row">
-        <span class="rest-card__dot" style="background:${dot}"></span>
-        <span class="rest-card__score">★ ${getTripScore(r).toFixed(1)}</span>
+        <span class="rest-card__top-left">
+          <span class="rest-card__dot" style="background:${dot}"></span>
+          <span class="rest-card__score">★ ${renderTripScore(r)}</span>
+        </span>
+        ${r.city ? `<span class="rest-card__city">${escapeHtml(r.city)}</span>` : ''}
       </div>
       <div class="rest-card__name">${escapeHtml(r.name)}</div>
       <div class="rest-card__ratings">
@@ -1013,6 +1030,7 @@ function renderRestaurantCard(r) {
           <span class="rest-card__stars">${renderStars(r.yelp_rating)}</span>
           <span class="rest-card__count">${r.yelp_review_count ? `(${r.yelp_review_count})` : ''}</span>
         </div>` : ''}
+        ${r.rating_unavailable ? `<div class="rest-card__rating-row rest-card__no-rating">No ratings yet</div>` : ''}
       </div>
       <div class="rest-card__cuisines">${escapeHtml(cuisines)}</div>
       <div class="rest-card__footer">
@@ -1023,6 +1041,21 @@ function renderRestaurantCard(r) {
       ${warned ? `<div class="rest-card__warn-label">${escapeHtml(r.seasonal_warning_text || '⚠️ Seasonal closure — verify before visiting')}</div>` : ''}
     </div>
   `;
+}
+
+// A popular dish entry can be a plain string (legacy/user-added items)
+// or an object { name, vegetarian } once classified.
+function getDishName(dish) {
+  if (!dish) return '';
+  return typeof dish === 'string' ? dish : dish.name;
+}
+
+function renderDishChip(dish) {
+  if (typeof dish === 'string') {
+    return `<span class="sheet-dish-chip">${escapeHtml(dish)}</span>`;
+  }
+  const dot = dish.vegetarian ? '🟢' : '🔴';
+  return `<span class="sheet-dish-chip">${dot} ${escapeHtml(dish.name)}</span>`;
 }
 
 function renderStars(rating) {
@@ -1082,7 +1115,7 @@ function setupBottomSheetSwipe() {
 
 function renderBottomSheet(r) {
   const cuisines = (r.cuisine || []).join(', ');
-  const dishes = (r.popular_dishes || []).map(d => `<span class="sheet-dish-chip">${escapeHtml(d)}</span>`).join('');
+  const dishes = (r.popular_dishes || []).map(renderDishChip).join('');
   const address = r.full_address || '';
 
   const actions = [];
@@ -1096,6 +1129,7 @@ function renderBottomSheet(r) {
       <div class="sheet-meta">
         ${cuisines ? `<span class="sheet-cuisine-pill">${escapeHtml(cuisines)}</span>` : ''}
         ${r.price_range ? `<span class="sheet-price">${escapeHtml(r.price_range)}</span>` : ''}
+        ${r.city ? `<span class="sheet-day">${escapeHtml(r.city)}</span>` : ''}
         ${r.itinerary_day ? `<span class="sheet-day">${escapeHtml(r.itinerary_day)}</span>` : ''}
       </div>
     </div>
@@ -1124,10 +1158,15 @@ function renderBottomSheet(r) {
           </div>
         </div>
       </div>` : ''}
+      ${r.rating_unavailable ? `
+      <div class="sheet-rating-block">
+        <div class="sheet-rating-logo">Ratings</div>
+        <div class="sheet-rating-count">Not yet available — verify before visiting</div>
+      </div>` : ''}
       <div class="sheet-rating-divider"></div>
       <div class="sheet-rating-block">
         <div class="sheet-rating-logo">Trip Score</div>
-        <div class="sheet-trip-score">${getTripScore(r).toFixed(1)}</div>
+        <div class="sheet-trip-score">${renderTripScore(r)}</div>
       </div>
     </div>
 
