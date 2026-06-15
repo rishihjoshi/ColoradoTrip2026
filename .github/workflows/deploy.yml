@@ -24,6 +24,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Inject Anthropic API key
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          printf "window.ANTHROPIC_API_KEY = '%s';\n" "$ANTHROPIC_API_KEY" > docs/config.js
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
