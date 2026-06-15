@@ -142,7 +142,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 function setupNavigation() {
   document.querySelectorAll('.nav-item').forEach(btn => {
-    btn.addEventListener('click', () => switchTab(btn.dataset.tab));
+    btn.addEventListener('click', () => {
+      switchTab(btn.dataset.tab);
+      if (btn.dataset.tab === 'reservations') setTimeout(checkResAuth, 50);
+    });
   });
 
   // Delegated handler for Book Now chips (avoids inline onclick in innerHTML)
@@ -364,7 +367,7 @@ function buildTimeline(activities) {
     const flagHtml = buildFlag(act.flag);
     const tipsHtml = buildTips(act.tips);
     const addressHtml = act.address && act.type !== 'drive'
-      ? `<a href="${mapsLink(act.address)}" target="_blank" rel="noopener" class="activity-address">📍 ${act.address}</a>`
+      ? `<a href="${mapsLink(act.address, act.lat, act.lon)}" target="_blank" rel="noopener" class="activity-address">📍 ${act.address}</a>`
       : '';
 
     const btns = buildActivityBtns(act);
@@ -386,6 +389,7 @@ function buildTimeline(activities) {
           ${act.description ? `<div class="activity-body">${act._userAdded ? escapeHtml(act.description) : act.description}</div>` : ''}
           ${addressHtml}
           ${act.cost ? `<div class="activity-body" style="margin-top:2px">💰 ${act.cost}</div>` : ''}
+          ${act.driveInfo ? `<div class="activity-drive-info">🚗 ${act.driveInfo.duration}${act.driveInfo.via ? ` · ${act.driveInfo.via}` : ''}</div>` : ''}
           ${btns}
           ${tipsHtml}
           ${flagHtml}
@@ -695,6 +699,7 @@ async function initEatsTab() {
   }
 
   buildCuisineChips();
+  buildLocationTabs();
   autoSelectTodayLocation();
   setupEatsListeners();
   renderSmartHeader();
@@ -827,6 +832,10 @@ function getTripScore(r) {
   return g || y || 0;
 }
 
+function renderTripScore(r) {
+  return r.rating_unavailable ? 'NEW' : getTripScore(r).toFixed(1);
+}
+
 function getSmartPicks() {
   const todayLoc = getTodayLocation();
   let pool = eatsState.restaurants.filter(r => !r.seasonal_warning);
@@ -852,7 +861,7 @@ function renderSmartCard(r, isTop) {
   return `
     <div class="smart-card ${isTop ? 'smart-card--top' : ''}" data-id="${r.id}">
       ${isTop ? '<div class="smart-card__crown">TOP PICK</div>' : ''}
-      <div class="smart-card__score">★ ${getTripScore(r).toFixed(1)}</div>
+      <div class="smart-card__score">★ ${renderTripScore(r)}</div>
       <div class="smart-card__name">${escapeHtml(r.name)}</div>
       <div class="smart-card__meta">${escapeHtml(r.price_range || '')} · ${escapeHtml((r.cuisine && r.cuisine[0]) || '')}</div>
     </div>
@@ -889,6 +898,15 @@ function getCuisineColor(cuisine) {
 
 // ── Location Tabs ───────────────────────────────────────────────────────────
 
+function buildLocationTabs() {
+  const cities = [...new Set(eatsState.restaurants.map(r => r.city).filter(Boolean))].sort();
+  const el = document.getElementById('eats-location-tabs');
+  el.innerHTML = [
+    `<button class="loc-tab active" data-loc="all">All</button>`,
+    ...cities.map(c => `<button class="loc-tab" data-loc="${escapeHtml(c)}">${escapeHtml(c)}</button>`),
+  ].join('');
+}
+
 function autoSelectTodayLocation() {
   const todayLoc = getTodayLocation();
   const tabs = document.querySelectorAll('#eats-location-tabs .loc-tab');
@@ -905,9 +923,9 @@ function getSortedFilteredRestaurants() {
 
   let list = eatsState.restaurants.filter(r => {
     if (cuisine !== 'all' && !(r.cuisine || []).includes(cuisine)) return false;
-    if (location !== 'all' && r.itinerary_location !== location) return false;
+    if (location !== 'all' && r.city !== location) return false;
     if (search) {
-      const haystack = `${r.name} ${(r.cuisine||[]).join(' ')} ${(r.popular_dishes||[]).join(' ')} ${r.city||''} ${r.notes||''}`.toLowerCase();
+      const haystack = `${r.name} ${(r.cuisine||[]).join(' ')} ${(r.popular_dishes||[]).map(getDishName).join(' ')} ${r.city||''} ${r.notes||''}`.toLowerCase();
       if (!haystack.includes(search)) return false;
     }
     return true;
@@ -985,15 +1003,18 @@ function rerenderEatsGrid() {
 function renderRestaurantCard(r) {
   const warned = !!r.seasonal_warning;
   const cuisines = (r.cuisine || []).join(' · ');
-  const dish = (r.popular_dishes && r.popular_dishes[0]) || '';
+  const dish = getDishName((r.popular_dishes && r.popular_dishes[0]));
   const dot = getCuisineColor((r.cuisine && r.cuisine[0]) || '');
 
   return `
     <div class="rest-card ${warned ? 'rest-card--warned' : ''}" data-id="${r.id}">
       ${warned ? '<div class="rest-card__warn-strip"></div>' : ''}
       <div class="rest-card__top-row">
-        <span class="rest-card__dot" style="background:${dot}"></span>
-        <span class="rest-card__score">★ ${getTripScore(r).toFixed(1)}</span>
+        <span class="rest-card__top-left">
+          <span class="rest-card__dot" style="background:${dot}"></span>
+          <span class="rest-card__score">★ ${renderTripScore(r)}</span>
+        </span>
+        ${r.city ? `<span class="rest-card__city">${escapeHtml(r.city)}</span>` : ''}
       </div>
       <div class="rest-card__name">${escapeHtml(r.name)}</div>
       <div class="rest-card__ratings">
@@ -1009,6 +1030,7 @@ function renderRestaurantCard(r) {
           <span class="rest-card__stars">${renderStars(r.yelp_rating)}</span>
           <span class="rest-card__count">${r.yelp_review_count ? `(${r.yelp_review_count})` : ''}</span>
         </div>` : ''}
+        ${r.rating_unavailable ? `<div class="rest-card__rating-row rest-card__no-rating">No ratings yet</div>` : ''}
       </div>
       <div class="rest-card__cuisines">${escapeHtml(cuisines)}</div>
       <div class="rest-card__footer">
@@ -1019,6 +1041,21 @@ function renderRestaurantCard(r) {
       ${warned ? `<div class="rest-card__warn-label">${escapeHtml(r.seasonal_warning_text || '⚠️ Seasonal closure — verify before visiting')}</div>` : ''}
     </div>
   `;
+}
+
+// A popular dish entry can be a plain string (legacy/user-added items)
+// or an object { name, vegetarian } once classified.
+function getDishName(dish) {
+  if (!dish) return '';
+  return typeof dish === 'string' ? dish : dish.name;
+}
+
+function renderDishChip(dish) {
+  if (typeof dish === 'string') {
+    return `<span class="sheet-dish-chip">${escapeHtml(dish)}</span>`;
+  }
+  const dot = dish.vegetarian ? '🟢' : '🔴';
+  return `<span class="sheet-dish-chip">${dot} ${escapeHtml(dish.name)}</span>`;
 }
 
 function renderStars(rating) {
@@ -1078,7 +1115,7 @@ function setupBottomSheetSwipe() {
 
 function renderBottomSheet(r) {
   const cuisines = (r.cuisine || []).join(', ');
-  const dishes = (r.popular_dishes || []).map(d => `<span class="sheet-dish-chip">${escapeHtml(d)}</span>`).join('');
+  const dishes = (r.popular_dishes || []).map(renderDishChip).join('');
   const address = r.full_address || '';
 
   const actions = [];
@@ -1092,6 +1129,7 @@ function renderBottomSheet(r) {
       <div class="sheet-meta">
         ${cuisines ? `<span class="sheet-cuisine-pill">${escapeHtml(cuisines)}</span>` : ''}
         ${r.price_range ? `<span class="sheet-price">${escapeHtml(r.price_range)}</span>` : ''}
+        ${r.city ? `<span class="sheet-day">${escapeHtml(r.city)}</span>` : ''}
         ${r.itinerary_day ? `<span class="sheet-day">${escapeHtml(r.itinerary_day)}</span>` : ''}
       </div>
     </div>
@@ -1120,10 +1158,15 @@ function renderBottomSheet(r) {
           </div>
         </div>
       </div>` : ''}
+      ${r.rating_unavailable ? `
+      <div class="sheet-rating-block">
+        <div class="sheet-rating-logo">Ratings</div>
+        <div class="sheet-rating-count">Not yet available — verify before visiting</div>
+      </div>` : ''}
       <div class="sheet-rating-divider"></div>
       <div class="sheet-rating-block">
         <div class="sheet-rating-logo">Trip Score</div>
-        <div class="sheet-trip-score">${getTripScore(r).toFixed(1)}</div>
+        <div class="sheet-trip-score">${renderTripScore(r)}</div>
       </div>
     </div>
 
@@ -1193,8 +1236,6 @@ function saveUserEatsItem() {
 function setupReservations() {
   const hasSetup = localStorage.getItem('res_setup_done');
 
-  document.getElementById('tab-reservations').addEventListener('click-check', () => {});
-
   // Show correct initial screen
   if (!hasSetup) {
     showScreen('res-setup-screen');
@@ -1217,17 +1258,6 @@ function setupReservations() {
   // Lock button
   document.getElementById('btn-lock').addEventListener('click', lockReservations);
 }
-
-// Called when user switches to reservations tab
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.nav-item').forEach(btn => {
-    btn.addEventListener('click', () => {
-      if (btn.dataset.tab === 'reservations') {
-        setTimeout(checkResAuth, 50);
-      }
-    });
-  });
-});
 
 function checkResAuth() {
   const hasSetup = localStorage.getItem('res_setup_done');
@@ -1271,8 +1301,15 @@ async function setupFaceID() {
     const credId = btoa(String.fromCharCode(...new Uint8Array(credential.rawId)));
     localStorage.setItem('biometric_credential_id', credId);
     localStorage.setItem('biometric_registered', 'true');
-    localStorage.setItem('res_setup_done', 'true');
-    grantResAccess();
+
+    // Face ID alone isn't enough — a PIN is still required as a backup
+    // (e.g. if biometrics fail or the device changes), so prompt for one.
+    const faceBtn = document.getElementById('btn-setup-faceid');
+    if (faceBtn) {
+      faceBtn.disabled = true;
+      faceBtn.textContent = '✓ Face ID enabled';
+    }
+    showPinSetupFlow();
   } catch(e) {
     // Fall back to PIN setup
     showPinSetupFlow();
@@ -1360,10 +1397,7 @@ function onAuthPinDigit(digit) {
 
       const hash = await hashPin(entered);
       const storedHash = localStorage.getItem('res_pin_hash');
-
-      // Fall back to default hash if no PIN has been set up yet
-      const defaultHash = await hashPin('202606');
-      const correct = hash === storedHash || (!storedHash && hash === defaultHash);
+      const correct = !!storedHash && hash === storedHash;
 
       if (correct) {
         pinAttempts = 0;
@@ -1521,11 +1555,21 @@ function buildResCard(item) {
     fileInput.addEventListener('change', e => {
       const file = e.target.files[0];
       if (!file) return;
+      const maxBytes = 4 * 1024 * 1024; // 4MB — data URLs are stored in localStorage (~5-10MB total quota)
+      if (file.size > maxBytes) {
+        alert('File too large. Please choose an image or PDF under 4MB.');
+        fileInput.value = '';
+        return;
+      }
       const resId = fileInput.dataset.resId;
       const reader = new FileReader();
       reader.onload = ev => {
-        localStorage.setItem(`reservation_img_${resId}`, ev.target.result);
-        renderReservations();
+        try {
+          localStorage.setItem(`reservation_img_${resId}`, ev.target.result);
+          renderReservations();
+        } catch (err) {
+          alert('Could not save file — storage may be full.');
+        }
       };
       reader.readAsDataURL(file);
     });
@@ -1603,7 +1647,7 @@ function buildPackCategory(cat, items, ci, checked) {
             <div class="pack-checkbox">
               ${isChecked ? '<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--pine)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>' : ''}
             </div>
-            <div class="pack-item-text">${text}</div>
+            <div class="pack-item-text">${isUser ? escapeHtml(text) : text}</div>
             ${isUser ? '<span class="pack-item-user">✦</span>' : ''}
           </div>
         `;
@@ -1671,7 +1715,8 @@ function setupInstallPrompt() {
 
 // ── Utils ──────────────────────────────────────────────────────────────────
 
-function mapsLink(address) {
+function mapsLink(address, lat, lon) {
+  if (lat != null && lon != null) return `https://maps.google.com/?q=${lat},${lon}`;
   return `https://maps.google.com/?q=${encodeURIComponent(address)}`;
 }
 
@@ -1686,9 +1731,9 @@ function getTodayMDT() {
 
 // ── Ask Tab ───────────────────────────────────────────────────────────────────
 
-// Build-time placeholder replaced by GitHub Actions deploy workflow.
-// Falls back to localStorage for local development.
-const INJECTED_API_KEY    = '__ANTHROPIC_API_KEY_PLACEHOLDER__';
+// Each user supplies their own Anthropic API key, stored only in this
+// browser's localStorage. It is never bundled, committed, or sent anywhere
+// except directly to api.anthropic.com.
 const ASK_KEY_STORAGE     = 'colorado26_ask_key';
 const ASK_HISTORY_STORAGE = 'colorado26_ask_history';
 const ASK_MODEL           = 'claude-sonnet-4-5';
@@ -1699,10 +1744,20 @@ let askConversationHistory = [];
 let askIsStreaming          = false;
 let askCurrentLocation     = null;
 let askInitialized         = false;
+let askChatStarted         = false;
 let eatsInitialized        = false;
 
 function initAskTab() {
-  // Key is always available (injected at build time); show chat directly
+  setupAskKeyEventListeners();
+  if (getAskKey()) {
+    startAskChat();
+  } else {
+    showAskSetup();
+  }
+}
+
+function startAskChat() {
+  askChatStarted = true;
   showAskChat();
   loadAskHistory();
   updateAskContextPill();
@@ -1738,9 +1793,30 @@ function saveAskKey(key) {
 }
 
 function getAskKey() {
-  // Use build-time injected key (production); fall back to localStorage (local dev)
-  if (INJECTED_API_KEY && !INJECTED_API_KEY.startsWith('__')) return INJECTED_API_KEY;
   return localStorage.getItem(ASK_KEY_STORAGE);
+}
+
+function setupAskKeyEventListeners() {
+  if (setupAskKeyEventListeners._attached) return;
+  setupAskKeyEventListeners._attached = true;
+
+  document.getElementById('ask-key-toggle')?.addEventListener('click', () => {
+    const input = document.getElementById('ask-key-input');
+    if (!input) return;
+    input.type = input.type === 'password' ? 'text' : 'password';
+  });
+
+  document.getElementById('ask-key-save-btn')?.addEventListener('click', () => {
+    const input = document.getElementById('ask-key-input');
+    if (!input) return;
+    if (saveAskKey(input.value)) {
+      input.value = '';
+      if (askChatStarted) showAskChat();
+      else startAskChat();
+    }
+  });
+
+  document.getElementById('ask-key-update-btn')?.addEventListener('click', showAskSetup);
 }
 
 // ── Context Builder ──────────────────────────────────────────────────────────

@@ -37,11 +37,26 @@
       "yelp_review_count": 147,
       "trip_score": 4.3,
       "popular_dishes": [
-        "South Indian Thali",
-        "Masala Dosa",
-        "Eggplant Butter Chicken",
-        "Tandoori Chicken",
-        "Chicken Butter Masala"
+        {
+          "name": "South Indian Thali",
+          "vegetarian": true
+        },
+        {
+          "name": "Masala Dosa",
+          "vegetarian": true
+        },
+        {
+          "name": "Paneer Tikka Masala",
+          "vegetarian": true
+        },
+        {
+          "name": "Saag Paneer",
+          "vegetarian": true
+        },
+        {
+          "name": "Dal Makhani",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/garnish-indian-fusion-cuisine-greenwood-village-2",
       "phone": "",
@@ -64,14 +79,20 @@
         "Indian"
       ],
       "price_range": "$$",
-      "google_rating": null,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_rating": 4.8,
+      "google_review_count": 416,
+      "yelp_rating": 4.6,
       "yelp_review_count": 35,
-      "trip_score": 0,
+      "trip_score": 4.7,
       "popular_dishes": [
-        "Chicken Curry",
-        "Coconut Chicken Curry"
+        {
+          "name": "Paneer Tikka Masala",
+          "vegetarian": true
+        },
+        {
+          "name": "Saag Paneer",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/masala-mingle-colorado-springs",
       "phone": "",
@@ -94,17 +115,32 @@
         "Indian"
       ],
       "price_range": "$$",
-      "google_rating": null,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_rating": 4.7,
+      "google_review_count": 844,
+      "yelp_rating": 4.5,
       "yelp_review_count": 112,
-      "trip_score": 0,
+      "trip_score": 4.6,
       "popular_dishes": [
-        "Butter Chicken",
-        "Samosas Chaat",
-        "Bhindi Masala",
-        "Paneer Tikka Masala",
-        "Pakoda"
+        {
+          "name": "Saag Paneer",
+          "vegetarian": true
+        },
+        {
+          "name": "Samosas Chaat",
+          "vegetarian": true
+        },
+        {
+          "name": "Bhindi Masala",
+          "vegetarian": true
+        },
+        {
+          "name": "Paneer Tikka Masala",
+          "vegetarian": true
+        },
+        {
+          "name": "Pakoda",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/pakwan-colorado-springs",
       "phone": "",
@@ -133,11 +169,26 @@
       "yelp_review_count": 181,
       "trip_score": 4.8,
       "popular_dishes": [
-        "Butter Chicken",
-        "Chicken Tikka Masala",
-        "Malai Kofta",
-        "Lamb Rogan Josh",
-        "Paneer Tikka Masala"
+        {
+          "name": "Saag Paneer",
+          "vegetarian": true
+        },
+        {
+          "name": "Dal Makhani",
+          "vegetarian": true
+        },
+        {
+          "name": "Malai Kofta",
+          "vegetarian": true
+        },
+        {
+          "name": "Vegetable Biryani",
+          "vegetarian": true
+        },
+        {
+          "name": "Paneer Tikka Masala",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/mausam-indian-flavors-colorado-springs",
       "phone": "",
@@ -166,11 +217,26 @@
       "yelp_review_count": 186,
       "trip_score": 4.8,
       "popular_dishes": [
-        "Butter Chicken",
-        "Chicken Tikka Masala",
-        "Lamb Vindaloo",
-        "Chicken Vindaloo",
-        "Gobi Manchurian"
+        {
+          "name": "Paneer Tikka Masala",
+          "vegetarian": true
+        },
+        {
+          "name": "Saag Paneer",
+          "vegetarian": true
+        },
+        {
+          "name": "Dal Makhani",
+          "vegetarian": true
+        },
+        {
+          "name": "Malai Kofta",
+          "vegetarian": true
+        },
+        {
+          "name": "Gobi Manchurian",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/turmeric-indian-cuisine-colorado-springs",
       "phone": "",
@@ -194,17 +260,32 @@
         "Indian"
       ],
       "price_range": "$$",
-      "google_rating": null,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_rating": 4.6,
+      "google_review_count": 917,
+      "yelp_rating": 4.5,
       "yelp_review_count": 186,
-      "trip_score": 0,
+      "trip_score": 4.6,
       "popular_dishes": [
-        "Jal Frezi",
-        "Lentil Soup",
-        "Chicken Tikka Masala",
-        "Dahl Soup",
-        "Chicken Momo Soup"
+        {
+          "name": "Jal Frezi",
+          "vegetarian": true
+        },
+        {
+          "name": "Lentil Soup",
+          "vegetarian": true
+        },
+        {
+          "name": "Vegetable Momo",
+          "vegetarian": true
+        },
+        {
+          "name": "Dahl Soup",
+          "vegetarian": true
+        },
+        {
+          "name": "Saag Paneer",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/sherpa-garden-restaurant-and-bar-colorado-springs",
       "phone": "",
@@ -228,17 +309,32 @@
         "Vegetarian"
       ],
       "price_range": "$$",
-      "google_rating": null,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_rating": 4.6,
+      "google_review_count": 2542,
+      "yelp_rating": 4.5,
       "yelp_review_count": 690,
-      "trip_score": 0,
+      "trip_score": 4.6,
       "popular_dishes": [
-        "Butter Chicken",
-        "Chicken Tikka Masala",
-        "Saag Paneer",
-        "Lamb Vindaloo",
-        "Chicken Vindaloo"
+        {
+          "name": "Paneer Tikka Masala",
+          "vegetarian": true
+        },
+        {
+          "name": "Dal Makhani",
+          "vegetarian": true
+        },
+        {
+          "name": "Saag Paneer",
+          "vegetarian": true
+        },
+        {
+          "name": "Malai Kofta",
+          "vegetarian": true
+        },
+        {
+          "name": "Vegetable Biryani",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/coriander-denver",
       "phone": "",
@@ -261,17 +357,32 @@
         "Indian"
       ],
       "price_range": "$$",
-      "google_rating": null,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_rating": 4.6,
+      "google_review_count": 1430,
+      "yelp_rating": 4.5,
       "yelp_review_count": 956,
-      "trip_score": 0,
+      "trip_score": 4.6,
       "popular_dishes": [
-        "Chicken Tikka Masala",
-        "Chicken Korma",
-        "Chicken Vindaloo",
-        "Mini Samosas",
-        "Tandoori Chicken"
+        {
+          "name": "Paneer Tikka Masala",
+          "vegetarian": true
+        },
+        {
+          "name": "Saag Paneer",
+          "vegetarian": true
+        },
+        {
+          "name": "Dal Makhani",
+          "vegetarian": true
+        },
+        {
+          "name": "Mini Samosas",
+          "vegetarian": true
+        },
+        {
+          "name": "Malai Kofta",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/monsoon-cuisine-of-india-aurora-2",
       "phone": "",
@@ -295,17 +406,32 @@
         "Vegan"
       ],
       "price_range": "$$",
-      "google_rating": null,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_rating": 4.6,
+      "google_review_count": 3519,
+      "yelp_rating": 4.4,
       "yelp_review_count": 4169,
-      "trip_score": 0,
+      "trip_score": 4.5,
       "popular_dishes": [
-        "Lamb Sliders",
-        "Beet Salad",
-        "Devils on Horseback",
-        "House Veggie Burger",
-        "French Toast"
+        {
+          "name": "Veggie Burger",
+          "vegetarian": true
+        },
+        {
+          "name": "Beet Salad",
+          "vegetarian": true
+        },
+        {
+          "name": "Caprese Sandwich",
+          "vegetarian": true
+        },
+        {
+          "name": "House Veggie Burger",
+          "vegetarian": true
+        },
+        {
+          "name": "French Toast",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/root-down-denver",
       "phone": "",
@@ -329,17 +455,32 @@
         "Himalayan/Nepalese"
       ],
       "price_range": "$$",
-      "google_rating": null,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_rating": 4.4,
+      "google_review_count": 980,
+      "yelp_rating": 3.6,
       "yelp_review_count": 260,
-      "trip_score": 0,
+      "trip_score": 4,
       "popular_dishes": [
-        "Chicken Tikka Masala",
-        "Butter Chicken",
-        "Saag Paneer",
-        "Tandoori Chicken",
-        "Chicken Curry"
+        {
+          "name": "Paneer Tikka Masala",
+          "vegetarian": true
+        },
+        {
+          "name": "Dal Makhani",
+          "vegetarian": true
+        },
+        {
+          "name": "Saag Paneer",
+          "vegetarian": true
+        },
+        {
+          "name": "Malai Kofta",
+          "vegetarian": true
+        },
+        {
+          "name": "Vegetable Biryani",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/himalayan-cuisine-frisco-2",
       "phone": "",
@@ -364,16 +505,28 @@
         "Sandwiches"
       ],
       "price_range": "$$",
-      "google_rating": null,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_rating": 4.4,
+      "google_review_count": 867,
+      "yelp_rating": 4,
       "yelp_review_count": 721,
-      "trip_score": 0,
+      "trip_score": 4.2,
       "popular_dishes": [
-        "Seasonal Bowls",
-        "Avocado Toast",
-        "Grain Bowl",
-        "Smoothies"
+        {
+          "name": "Seasonal Bowls",
+          "vegetarian": true
+        },
+        {
+          "name": "Avocado Toast",
+          "vegetarian": true
+        },
+        {
+          "name": "Grain Bowl",
+          "vegetarian": true
+        },
+        {
+          "name": "Smoothies",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/modern-market-denver-4",
       "phone": "",
@@ -398,17 +551,32 @@
         "Breakfast & Brunch"
       ],
       "price_range": "$$",
-      "google_rating": null,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_rating": 4.7,
+      "google_review_count": 631,
+      "yelp_rating": 4.5,
       "yelp_review_count": 106,
-      "trip_score": 0,
+      "trip_score": 4.6,
       "popular_dishes": [
-        "Calamari",
-        "Pork Chop",
-        "Pan Seared Salmon",
-        "Chicken Lollipops",
-        "Beet Salad"
+        {
+          "name": "Veggie Burger",
+          "vegetarian": true
+        },
+        {
+          "name": "Caprese Sandwich",
+          "vegetarian": true
+        },
+        {
+          "name": "Garden Salad",
+          "vegetarian": true
+        },
+        {
+          "name": "Grilled Cheese Sandwich",
+          "vegetarian": true
+        },
+        {
+          "name": "Beet Salad",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/hugo-s-glenwood-springs",
       "phone": "",
@@ -439,10 +607,22 @@
       "yelp_review_count": 835,
       "trip_score": 4.5,
       "popular_dishes": [
-        "Blackened Salmon Linguine",
-        "Vegetarian Shepherd's Pie",
-        "Burgers",
-        "Sandwiches"
+        {
+          "name": "Veggie Burger",
+          "vegetarian": true
+        },
+        {
+          "name": "Vegetarian Shepherd's Pie",
+          "vegetarian": true
+        },
+        {
+          "name": "Burgers",
+          "vegetarian": true
+        },
+        {
+          "name": "Sandwiches",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/co-ranch-house-glenwood-springs",
       "phone": "",
@@ -467,16 +647,28 @@
         "Breakfast & Brunch"
       ],
       "price_range": "$$",
-      "google_rating": null,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_rating": 4.8,
+      "google_review_count": 2442,
+      "yelp_rating": 4.7,
       "yelp_review_count": 1005,
-      "trip_score": 0,
+      "trip_score": 4.8,
       "popular_dishes": [
-        "Donuts",
-        "Vegetarian Sandwiches",
-        "Coffee",
-        "Breakfast Burritos"
+        {
+          "name": "Donuts",
+          "vegetarian": true
+        },
+        {
+          "name": "Vegetarian Sandwiches",
+          "vegetarian": true
+        },
+        {
+          "name": "Coffee",
+          "vegetarian": true
+        },
+        {
+          "name": "Breakfast Burritos",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/sweet-coloradough-glenwood-springs",
       "phone": "",
@@ -499,16 +691,28 @@
         "Pizza"
       ],
       "price_range": "$",
-      "google_rating": null,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_rating": 4.1,
+      "google_review_count": 1115,
+      "yelp_rating": 3.5,
       "yelp_review_count": 380,
-      "trip_score": 0,
+      "trip_score": 3.8,
       "popular_dishes": [
-        "Vegetarian Pizza",
-        "Cheese Slices",
-        "Pepperoni Pizza",
-        "Calzone"
+        {
+          "name": "Vegetarian Pizza",
+          "vegetarian": true
+        },
+        {
+          "name": "Cheese Slices",
+          "vegetarian": true
+        },
+        {
+          "name": "Margherita Pizza",
+          "vegetarian": true
+        },
+        {
+          "name": "Calzone",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/new-york-pizza-aspen",
       "phone": "",
@@ -532,17 +736,32 @@
         "Pizza"
       ],
       "price_range": "$$",
-      "google_rating": null,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_rating": 3.9,
+      "google_review_count": 508,
+      "yelp_rating": 3.5,
       "yelp_review_count": 239,
-      "trip_score": 0,
+      "trip_score": 3.7,
       "popular_dishes": [
-        "Cheese Pizza",
-        "Bruschetta",
-        "Caprese Salad",
-        "Especial Pizza",
-        "Chicken Parm"
+        {
+          "name": "Cheese Pizza",
+          "vegetarian": true
+        },
+        {
+          "name": "Bruschetta",
+          "vegetarian": true
+        },
+        {
+          "name": "Caprese Salad",
+          "vegetarian": true
+        },
+        {
+          "name": "Especial Pizza",
+          "vegetarian": true
+        },
+        {
+          "name": "Margherita Pizza",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/brunelleschis-aspen-2",
       "phone": "",
@@ -566,16 +785,28 @@
         "Salvadoran"
       ],
       "price_range": "$",
-      "google_rating": null,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_rating": 4.6,
+      "google_review_count": 340,
+      "yelp_rating": 4.3,
       "yelp_review_count": 83,
-      "trip_score": 0,
+      "trip_score": 4.4,
       "popular_dishes": [
-        "Burritos",
-        "Tacos",
-        "Quesadillas",
-        "Enchiladas"
+        {
+          "name": "Burritos",
+          "vegetarian": true
+        },
+        {
+          "name": "Tacos",
+          "vegetarian": true
+        },
+        {
+          "name": "Quesadillas",
+          "vegetarian": true
+        },
+        {
+          "name": "Enchiladas",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/sal-mex-restaurant-glenwood-springs",
       "phone": "",
@@ -598,17 +829,32 @@
         "Italian"
       ],
       "price_range": "$$",
-      "google_rating": null,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_rating": 4.5,
+      "google_review_count": 970,
+      "yelp_rating": 4.3,
       "yelp_review_count": 293,
-      "trip_score": 0,
+      "trip_score": 4.4,
       "popular_dishes": [
-        "Lobster Ravioli",
-        "Beet Salad",
-        "Mushroom and Truffle Risotto",
-        "Braised Short Ribs",
-        "Lobster Risotto"
+        {
+          "name": "Margherita Pizza",
+          "vegetarian": true
+        },
+        {
+          "name": "Beet Salad",
+          "vegetarian": true
+        },
+        {
+          "name": "Mushroom and Truffle Risotto",
+          "vegetarian": true
+        },
+        {
+          "name": "Pasta Primavera",
+          "vegetarian": true
+        },
+        {
+          "name": "Eggplant Parmesan",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/modern-brava-trattoria-glenwood-springs",
       "phone": "",
@@ -639,11 +885,26 @@
       "yelp_review_count": 107,
       "trip_score": 4.7,
       "popular_dishes": [
-        "Thai Peanut Buddha Bowl",
-        "Honnold Bowl",
-        "Cuban Sliders",
-        "Lettuce Cups",
-        "Hot Italian"
+        {
+          "name": "Thai Peanut Buddha Bowl",
+          "vegetarian": true
+        },
+        {
+          "name": "Honnold Bowl",
+          "vegetarian": true
+        },
+        {
+          "name": "Margherita Pizza",
+          "vegetarian": true
+        },
+        {
+          "name": "Lettuce Cups",
+          "vegetarian": true
+        },
+        {
+          "name": "Hot Italian",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/commonfork-bites-and-brews-colorado-springs",
       "phone": "",
@@ -668,17 +929,32 @@
         "Sandwiches"
       ],
       "price_range": "$$",
-      "google_rating": null,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_rating": 4.5,
+      "google_review_count": 1841,
+      "yelp_rating": 4.3,
       "yelp_review_count": 387,
-      "trip_score": 0,
+      "trip_score": 4.4,
       "popular_dishes": [
-        "Pepperoni Pizza",
-        "Lasagna",
-        "Chicken Parm",
-        "New York Pizza",
-        "Fried Zucchini"
+        {
+          "name": "Margherita Pizza",
+          "vegetarian": true
+        },
+        {
+          "name": "Lasagna",
+          "vegetarian": true
+        },
+        {
+          "name": "Veggie Supreme Pizza",
+          "vegetarian": true
+        },
+        {
+          "name": "New York Pizza",
+          "vegetarian": true
+        },
+        {
+          "name": "Fried Zucchini",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/savellis-pizza-manitou-springs",
       "phone": "",
@@ -703,17 +979,32 @@
         "Vegan"
       ],
       "price_range": "$$",
-      "google_rating": null,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_rating": 4.8,
+      "google_review_count": 1379,
+      "yelp_rating": 4.4,
       "yelp_review_count": 463,
-      "trip_score": 0,
+      "trip_score": 4.6,
       "popular_dishes": [
-        "Butter Chicken",
-        "Chicken Tikka Masala",
-        "Saag Paneer",
-        "Chili Chicken",
-        "Tandoori Chicken"
+        {
+          "name": "Paneer Tikka Masala",
+          "vegetarian": true
+        },
+        {
+          "name": "Dal Makhani",
+          "vegetarian": true
+        },
+        {
+          "name": "Saag Paneer",
+          "vegetarian": true
+        },
+        {
+          "name": "Malai Kofta",
+          "vegetarian": true
+        },
+        {
+          "name": "Vegetable Biryani",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/shri-ganesh-colorado-springs",
       "phone": "",
@@ -736,17 +1027,32 @@
         "Thai"
       ],
       "price_range": "$$",
-      "google_rating": null,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_rating": 4.7,
+      "google_review_count": 794,
+      "yelp_rating": 4.6,
       "yelp_review_count": 176,
-      "trip_score": 0,
+      "trip_score": 4.7,
       "popular_dishes": [
-        "Green Curry",
-        "Red Curry",
-        "Pad Thai",
-        "Tom Yum Soup",
-        "Spring Rolls"
+        {
+          "name": "Green Curry",
+          "vegetarian": true
+        },
+        {
+          "name": "Red Curry",
+          "vegetarian": true
+        },
+        {
+          "name": "Pad Thai",
+          "vegetarian": true
+        },
+        {
+          "name": "Tom Yum Soup",
+          "vegetarian": true
+        },
+        {
+          "name": "Spring Rolls",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/zesty-thai-colorado-springs",
       "phone": "",
@@ -769,17 +1075,32 @@
         "Thai"
       ],
       "price_range": "$$",
-      "google_rating": null,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_rating": 4.6,
+      "google_review_count": 628,
+      "yelp_rating": 4.7,
       "yelp_review_count": 134,
-      "trip_score": 0,
+      "trip_score": 4.7,
       "popular_dishes": [
-        "Pad Thai",
-        "Green Curry",
-        "Spring Rolls",
-        "Tom Kha Soup",
-        "Fried Rice"
+        {
+          "name": "Pad Thai",
+          "vegetarian": true
+        },
+        {
+          "name": "Green Curry",
+          "vegetarian": true
+        },
+        {
+          "name": "Spring Rolls",
+          "vegetarian": true
+        },
+        {
+          "name": "Tom Kha Soup",
+          "vegetarian": true
+        },
+        {
+          "name": "Fried Rice",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/thai-taste-cuisine-colorado-springs",
       "phone": "",
@@ -809,11 +1130,26 @@
       "yelp_review_count": 1062,
       "trip_score": 4.7,
       "popular_dishes": [
-        "Hot Dogs",
-        "Crispy Fish Tacos",
-        "Jerk Chicken",
-        "BBQ Chicken Tacos",
-        "Curried Lamb Tacos"
+        {
+          "name": "Veggie Burger",
+          "vegetarian": true
+        },
+        {
+          "name": "Caprese Sandwich",
+          "vegetarian": true
+        },
+        {
+          "name": "Garden Salad",
+          "vegetarian": true
+        },
+        {
+          "name": "Grilled Cheese Sandwich",
+          "vegetarian": true
+        },
+        {
+          "name": "Veggie Wrap",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/slope-and-hatch-glenwood-springs",
       "phone": "",
@@ -837,17 +1173,32 @@
         "Himalayan/Nepalese"
       ],
       "price_range": "$$",
-      "google_rating": null,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_rating": 4.4,
+      "google_review_count": 1104,
+      "yelp_rating": 4.5,
       "yelp_review_count": 438,
-      "trip_score": 0,
+      "trip_score": 4.5,
       "popular_dishes": [
-        "Goat Curry",
-        "Saag Paneer",
-        "Chicken Tikka Masala",
-        "Veggie Korma",
-        "Onion Kulcha"
+        {
+          "name": "Paneer Tikka Masala",
+          "vegetarian": true
+        },
+        {
+          "name": "Saag Paneer",
+          "vegetarian": true
+        },
+        {
+          "name": "Dal Makhani",
+          "vegetarian": true
+        },
+        {
+          "name": "Veggie Korma",
+          "vegetarian": true
+        },
+        {
+          "name": "Onion Kulcha",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/annapurna-nepali-and-indian-cuisine-vail",
       "phone": "",
@@ -871,17 +1222,32 @@
         "Chinese"
       ],
       "price_range": "$$",
-      "google_rating": null,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_rating": 4.3,
+      "google_review_count": 1121,
+      "yelp_rating": 3.7,
       "yelp_review_count": 269,
-      "trip_score": 0,
+      "trip_score": 4,
       "popular_dishes": [
-        "Pad Thai",
-        "Hot Sour Soup",
-        "Crab Rangoon",
-        "Lettuce Wraps",
-        "Atomic Shrimp Tempura Shrimp"
+        {
+          "name": "Pad Thai",
+          "vegetarian": true
+        },
+        {
+          "name": "Hot Sour Soup",
+          "vegetarian": true
+        },
+        {
+          "name": "Vegetable Pad Thai",
+          "vegetarian": true
+        },
+        {
+          "name": "Lettuce Wraps",
+          "vegetarian": true
+        },
+        {
+          "name": "Green Curry with Tofu",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/zheng-asian-bistro-glenwood-springs",
       "phone": "",
@@ -904,17 +1270,32 @@
         "Chinese"
       ],
       "price_range": "$$",
-      "google_rating": null,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_rating": 3.8,
+      "google_review_count": 206,
+      "yelp_rating": 4,
       "yelp_review_count": 122,
-      "trip_score": 0,
+      "trip_score": 3.9,
       "popular_dishes": [
-        "Egg Roll",
-        "Mongolian Beef",
-        "Pan Fried Dumplings",
-        "Hot Glazed Walnut Shrimp",
-        "Pineapple Chicken"
+        {
+          "name": "Vegetable Fried Rice",
+          "vegetarian": true
+        },
+        {
+          "name": "Mapo Tofu",
+          "vegetarian": true
+        },
+        {
+          "name": "Pan Fried Dumplings",
+          "vegetarian": true
+        },
+        {
+          "name": "Vegetable Lo Mein",
+          "vegetarian": true
+        },
+        {
+          "name": "Garlic Eggplant",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/china-town-glenwood-springs",
       "phone": "",
@@ -944,11 +1325,26 @@
       "yelp_review_count": 183,
       "trip_score": 4.3,
       "popular_dishes": [
-        "Miso Ramen",
-        "Spicy Miso Ramen",
-        "Vegan Bento Box",
-        "Add Ramen Noodles",
-        "Chicken Katsu"
+        {
+          "name": "Miso Ramen",
+          "vegetarian": true
+        },
+        {
+          "name": "Spicy Miso Ramen",
+          "vegetarian": true
+        },
+        {
+          "name": "Vegan Bento Box",
+          "vegetarian": true
+        },
+        {
+          "name": "Add Ramen Noodles",
+          "vegetarian": true
+        },
+        {
+          "name": "Vegetable Tempura Roll",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/kedai-glenwood-springs",
       "phone": "",
@@ -978,11 +1374,26 @@
       "yelp_review_count": 256,
       "trip_score": 4.5,
       "popular_dishes": [
-        "Pad Thai",
-        "Scallop",
-        "Spicy Tuna Roll",
-        "Dragon Roll",
-        "Sizzling Beef & Scallops"
+        {
+          "name": "Pad Thai",
+          "vegetarian": true
+        },
+        {
+          "name": "Avocado Roll",
+          "vegetarian": true
+        },
+        {
+          "name": "Cucumber Roll",
+          "vegetarian": true
+        },
+        {
+          "name": "Vegetable Tempura Roll",
+          "vegetarian": true
+        },
+        {
+          "name": "Sweet Potato Roll",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/mings-cafe-glenwood-springs",
       "phone": "",
@@ -1006,17 +1417,32 @@
         "Bars"
       ],
       "price_range": "$$",
-      "google_rating": null,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_rating": 3.7,
+      "google_review_count": 426,
+      "yelp_rating": 3.2,
       "yelp_review_count": 199,
-      "trip_score": 0,
+      "trip_score": 3.5,
       "popular_dishes": [
-        "Pad Thai",
-        "Pad Kee Moa - Drunken Noodles",
-        "Drunken Noodle Jay - Vegan Lover",
-        "Bangkok Happy Wings",
-        "Pad See Ew"
+        {
+          "name": "Pad Thai",
+          "vegetarian": true
+        },
+        {
+          "name": "Vegetable Pad Thai",
+          "vegetarian": true
+        },
+        {
+          "name": "Drunken Noodle Jay - Vegan Lover",
+          "vegetarian": true
+        },
+        {
+          "name": "Green Curry with Tofu",
+          "vegetarian": true
+        },
+        {
+          "name": "Pad See Ew",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/bangkok-happy-bowl-thai-bistro-and-bar-aspen-7",
       "phone": "",
@@ -1045,11 +1471,26 @@
       "yelp_review_count": 140,
       "trip_score": 4.4,
       "popular_dishes": [
-        "Fried Chicken Sandwich",
-        "Steak Sandwich",
-        "Spicy Curry Poutine",
-        "Pierogies",
-        "Charred Caesar Salad"
+        {
+          "name": "Veggie Burger",
+          "vegetarian": true
+        },
+        {
+          "name": "Caprese Sandwich",
+          "vegetarian": true
+        },
+        {
+          "name": "Spicy Curry Poutine",
+          "vegetarian": true
+        },
+        {
+          "name": "Pierogies",
+          "vegetarian": true
+        },
+        {
+          "name": "Charred Caesar Salad",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/aspen-public-house-aspen",
       "phone": "",
@@ -1079,11 +1520,26 @@
       "yelp_review_count": 194,
       "trip_score": 4.5,
       "popular_dishes": [
-        "French Toast",
-        "Eggs Benedict",
-        "Maine Smoked Salmon Benedict",
-        "Rotisserie Chicken Sandwich",
-        "Potato Latke"
+        {
+          "name": "French Toast",
+          "vegetarian": true
+        },
+        {
+          "name": "Eggs Benedict",
+          "vegetarian": true
+        },
+        {
+          "name": "Veggie Burger",
+          "vegetarian": true
+        },
+        {
+          "name": "Caprese Sandwich",
+          "vegetarian": true
+        },
+        {
+          "name": "Potato Latke",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/mawas-kitchen-aspen",
       "phone": "",
@@ -1107,17 +1563,29 @@
         "Desserts",
         "Italian"
       ],
-      "price_range": "$$",
-      "google_rating": null,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "price_range": "$$$",
+      "google_rating": 4.7,
+      "google_review_count": 82,
+      "yelp_rating": 4.4,
       "yelp_review_count": 27,
-      "trip_score": 0,
+      "trip_score": 4.6,
       "popular_dishes": [
-        "Sant Ambroeus Ravioli",
-        "Fettuccine Alla Bolognese",
-        "Tagliatelle Cacio E Pepe",
-        "Tiramisu"
+        {
+          "name": "Sant Ambroeus Ravioli",
+          "vegetarian": true
+        },
+        {
+          "name": "Fettuccine Alla Bolognese",
+          "vegetarian": true
+        },
+        {
+          "name": "Tagliatelle Cacio E Pepe",
+          "vegetarian": true
+        },
+        {
+          "name": "Tiramisu",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/sant-ambroeus-aspen",
       "phone": "",
@@ -1146,11 +1614,26 @@
       "yelp_review_count": 262,
       "trip_score": 4.6,
       "popular_dishes": [
-        "Pesto Wrapture",
-        "Garden of Eden",
-        "Mr. Potato Head",
-        "Swift Kick",
-        "Rock Your World"
+        {
+          "name": "Pesto Wrapture",
+          "vegetarian": true
+        },
+        {
+          "name": "Garden of Eden",
+          "vegetarian": true
+        },
+        {
+          "name": "Mr. Potato Head",
+          "vegetarian": true
+        },
+        {
+          "name": "Swift Kick",
+          "vegetarian": true
+        },
+        {
+          "name": "Rock Your World",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/big-wrap-aspen",
       "phone": "",
@@ -1181,11 +1664,26 @@
       "yelp_review_count": 1208,
       "trip_score": 4.6,
       "popular_dishes": [
-        "Crispy Chicken Sandwich",
-        "Kale Salad",
-        "Macho Salad",
-        "Fish Sandwich",
-        "Deviled Eggs"
+        {
+          "name": "Veggie Burger",
+          "vegetarian": true
+        },
+        {
+          "name": "Kale Salad",
+          "vegetarian": true
+        },
+        {
+          "name": "Macho Salad",
+          "vegetarian": true
+        },
+        {
+          "name": "Caprese Sandwich",
+          "vegetarian": true
+        },
+        {
+          "name": "Deviled Eggs",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/white-house-tavern-aspen-3",
       "phone": "",
@@ -1215,11 +1713,26 @@
       "yelp_review_count": 1587,
       "trip_score": 4.5,
       "popular_dishes": [
-        "Deviled Eggs",
-        "Gnocchi Salad",
-        "Steak Salad",
-        "Pork Belly",
-        "Pork Rinds"
+        {
+          "name": "Deviled Eggs",
+          "vegetarian": true
+        },
+        {
+          "name": "Gnocchi Salad",
+          "vegetarian": true
+        },
+        {
+          "name": "Veggie Burger",
+          "vegetarian": true
+        },
+        {
+          "name": "Caprese Sandwich",
+          "vegetarian": true
+        },
+        {
+          "name": "Garden Salad",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/the-pullman-glenwood-springs",
       "phone": "",
@@ -1243,17 +1756,32 @@
         "Cocktail Bars"
       ],
       "price_range": "$$",
-      "google_rating": null,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_rating": 4.1,
+      "google_review_count": 2499,
+      "yelp_rating": 3.5,
       "yelp_review_count": 390,
-      "trip_score": 0,
+      "trip_score": 3.8,
       "popular_dishes": [
-        "Carne Asada",
-        "Chicken Enchiladas",
-        "Chile Colorado Burrito",
-        "Cabbage Salad",
-        "Chicken Mole"
+        {
+          "name": "Veggie Tacos",
+          "vegetarian": true
+        },
+        {
+          "name": "Cheese Enchiladas",
+          "vegetarian": true
+        },
+        {
+          "name": "Chile Colorado Burrito",
+          "vegetarian": true
+        },
+        {
+          "name": "Cabbage Salad",
+          "vegetarian": true
+        },
+        {
+          "name": "Bean & Cheese Burrito",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/tequilas-family-mexican-restaurant-glenwood-springs",
       "phone": "",
@@ -1282,9 +1810,18 @@
       "yelp_review_count": 26,
       "trip_score": 4.6,
       "popular_dishes": [
-        "Tandoori Chicken",
-        "Chicken Jhol Momo",
-        "Chicken Haandi Biryani"
+        {
+          "name": "Vegetable Momo",
+          "vegetarian": true
+        },
+        {
+          "name": "Saag Paneer",
+          "vegetarian": true
+        },
+        {
+          "name": "Dal Bhat Tarkari",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/himalayan-cuisine-no-title",
       "phone": "",
@@ -1308,17 +1845,32 @@
         "Himalayan/Nepalese"
       ],
       "price_range": "$$",
-      "google_rating": null,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_rating": 4.3,
+      "google_review_count": 428,
+      "yelp_rating": 4.1,
       "yelp_review_count": 59,
-      "trip_score": 0,
+      "trip_score": 4.2,
       "popular_dishes": [
-        "Saag Paneer",
-        "Chicken Vindaloo",
-        "Momo",
-        "Tandoori Chicken",
-        "Baigan Bharta"
+        {
+          "name": "Saag Paneer",
+          "vegetarian": true
+        },
+        {
+          "name": "Paneer Tikka Masala",
+          "vegetarian": true
+        },
+        {
+          "name": "Momo",
+          "vegetarian": true
+        },
+        {
+          "name": "Dal Makhani",
+          "vegetarian": true
+        },
+        {
+          "name": "Baigan Bharta",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/everest-nepal-restaurant-glenwood-springs",
       "phone": "",
@@ -1342,17 +1894,32 @@
         "Seafood"
       ],
       "price_range": "$$",
-      "google_rating": null,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_rating": 4.5,
+      "google_review_count": 885,
+      "yelp_rating": 4.5,
       "yelp_review_count": 258,
-      "trip_score": 0,
+      "trip_score": 4.5,
       "popular_dishes": [
-        "Samosa",
-        "Chicken Tikka Masala",
-        "Saag Paneer",
-        "Thali",
-        "Roti"
+        {
+          "name": "Samosa",
+          "vegetarian": true
+        },
+        {
+          "name": "Vegetable Momo",
+          "vegetarian": true
+        },
+        {
+          "name": "Saag Paneer",
+          "vegetarian": true
+        },
+        {
+          "name": "Thali",
+          "vegetarian": true
+        },
+        {
+          "name": "Roti",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/nepal-restaurant-glenwood-springs",
       "phone": "",
@@ -1377,16 +1944,28 @@
         "Vegetarian"
       ],
       "price_range": "$$",
-      "google_rating": null,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_rating": 4.3,
+      "google_review_count": 1365,
+      "yelp_rating": 4.5,
       "yelp_review_count": 286,
-      "trip_score": 0,
+      "trip_score": 4.4,
       "popular_dishes": [
-        "Chicken Tikka Masala",
-        "Lamb Curry",
-        "Saag Paneer",
-        "Malai Kofta"
+        {
+          "name": "Paneer Tikka Masala",
+          "vegetarian": true
+        },
+        {
+          "name": "Dal Makhani",
+          "vegetarian": true
+        },
+        {
+          "name": "Saag Paneer",
+          "vegetarian": true
+        },
+        {
+          "name": "Malai Kofta",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/masala-and-curry-glenwood-springs-2",
       "phone": "",
@@ -1411,17 +1990,32 @@
         "Vegan"
       ],
       "price_range": "$$",
-      "google_rating": null,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_rating": 4.7,
+      "google_review_count": 2494,
+      "yelp_rating": 4.4,
       "yelp_review_count": 523,
-      "trip_score": 0,
+      "trip_score": 4.6,
       "popular_dishes": [
-        "Spicy Mac",
-        "Taco Salad",
-        "Sloppy Mac",
-        "Potato Soup",
-        "Sloppy Joe"
+        {
+          "name": "Spicy Mac",
+          "vegetarian": true
+        },
+        {
+          "name": "Taco Salad",
+          "vegetarian": true
+        },
+        {
+          "name": "Sloppy Mac",
+          "vegetarian": true
+        },
+        {
+          "name": "Potato Soup",
+          "vegetarian": true
+        },
+        {
+          "name": "Sloppy Joe",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/the-burrowing-owl-colorado-springs",
       "phone": "",
@@ -1444,17 +2038,32 @@
         "Mexican"
       ],
       "price_range": "$$",
-      "google_rating": null,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_rating": 4.2,
+      "google_review_count": 4306,
+      "yelp_rating": 3.4,
       "yelp_review_count": 653,
-      "trip_score": 0,
+      "trip_score": 3.8,
       "popular_dishes": [
-        "Street Tacos",
-        "Fish Tacos",
-        "Chipotle Lime Chicken Tacos",
-        "Queso Blanco",
-        "Sopapillas"
+        {
+          "name": "Street Tacos",
+          "vegetarian": true
+        },
+        {
+          "name": "Veggie Tacos",
+          "vegetarian": true
+        },
+        {
+          "name": "Cheese Enchiladas",
+          "vegetarian": true
+        },
+        {
+          "name": "Queso Blanco",
+          "vegetarian": true
+        },
+        {
+          "name": "Sopapillas",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/hacienda-colorado-colorado-springs",
       "phone": "",
@@ -1484,11 +2093,26 @@
       "yelp_review_count": 863,
       "trip_score": 4.6,
       "popular_dishes": [
-        "Soft Shell Island Taco",
-        "Piglatin Plate",
-        "Churros",
-        "Chimi Shrimp",
-        "Kimchi Quesadilla"
+        {
+          "name": "Soft Shell Island Taco",
+          "vegetarian": true
+        },
+        {
+          "name": "Piglatin Plate",
+          "vegetarian": true
+        },
+        {
+          "name": "Churros",
+          "vegetarian": true
+        },
+        {
+          "name": "Veggie Tacos",
+          "vegetarian": true
+        },
+        {
+          "name": "Kimchi Quesadilla",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/piglatin-cocina-colorado-springs-2",
       "phone": "",
@@ -1511,16 +2135,28 @@
         "Mexican"
       ],
       "price_range": "$$",
-      "google_rating": null,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_rating": 4.4,
+      "google_review_count": 2305,
+      "yelp_rating": 4,
       "yelp_review_count": 741,
-      "trip_score": 0,
+      "trip_score": 4.2,
       "popular_dishes": [
-        "Queso",
-        "Avocado Pork",
-        "Chili Relleno",
-        "Mexican Mixto"
+        {
+          "name": "Queso",
+          "vegetarian": true
+        },
+        {
+          "name": "Veggie Tacos",
+          "vegetarian": true
+        },
+        {
+          "name": "Chili Relleno",
+          "vegetarian": true
+        },
+        {
+          "name": "Mexican Mixto",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/crystal-park-cantina-manitou-springs",
       "phone": "",
@@ -1544,17 +2180,32 @@
         "Himalayan/Nepalese"
       ],
       "price_range": "$$",
-      "google_rating": null,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_rating": 4.3,
+      "google_review_count": 1647,
+      "yelp_rating": 3.9,
       "yelp_review_count": 476,
-      "trip_score": 0,
+      "trip_score": 4.1,
       "popular_dishes": [
-        "Chicken Tikka Masala",
-        "Saag Paneer",
-        "Butter Chicken / Chicken Makhani",
-        "Chicken Curry",
-        "Lamb Vindaloo"
+        {
+          "name": "Paneer Tikka Masala",
+          "vegetarian": true
+        },
+        {
+          "name": "Saag Paneer",
+          "vegetarian": true
+        },
+        {
+          "name": "Dal Makhani",
+          "vegetarian": true
+        },
+        {
+          "name": "Malai Kofta",
+          "vegetarian": true
+        },
+        {
+          "name": "Vegetable Biryani",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/little-nepal-indian-restaurant-and-bar-colorado-springs-9",
       "phone": "",
@@ -1577,17 +2228,32 @@
         "Indian"
       ],
       "price_range": "$$",
-      "google_rating": null,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_rating": 4.5,
+      "google_review_count": 2643,
+      "yelp_rating": 4.2,
       "yelp_review_count": 474,
-      "trip_score": 0,
+      "trip_score": 4.4,
       "popular_dishes": [
-        "Butter Chicken",
-        "Chicken Tikka Masala",
-        "Samosa Chat",
-        "Goat Curry",
-        "Dahi Puri Chaat"
+        {
+          "name": "Paneer Tikka Masala",
+          "vegetarian": true
+        },
+        {
+          "name": "Saag Paneer",
+          "vegetarian": true
+        },
+        {
+          "name": "Samosa Chat",
+          "vegetarian": true
+        },
+        {
+          "name": "Dal Makhani",
+          "vegetarian": true
+        },
+        {
+          "name": "Dahi Puri Chaat",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/urban-tandoor-colorado-springs",
       "phone": "",
@@ -1610,17 +2276,32 @@
         "Indian"
       ],
       "price_range": "$$",
-      "google_rating": null,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_rating": 4.5,
+      "google_review_count": 1431,
+      "yelp_rating": 4.4,
       "yelp_review_count": 297,
-      "trip_score": 0,
+      "trip_score": 4.5,
       "popular_dishes": [
-        "Chicken Tikka Masala",
-        "Veggie Samosa",
-        "Tandoori Chicken",
-        "Chicken Vindaloo",
-        "Onion Pakora"
+        {
+          "name": "Paneer Tikka Masala",
+          "vegetarian": true
+        },
+        {
+          "name": "Veggie Samosa",
+          "vegetarian": true
+        },
+        {
+          "name": "Saag Paneer",
+          "vegetarian": true
+        },
+        {
+          "name": "Dal Makhani",
+          "vegetarian": true
+        },
+        {
+          "name": "Onion Pakora",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/zaika-indian-cuisine-colorado-springs-3",
       "phone": "",
@@ -1650,11 +2331,26 @@
       "yelp_review_count": 245,
       "trip_score": 4.5,
       "popular_dishes": [
-        "Truffle Fries",
-        "Margherita Flatbread",
-        "Charcuterie Board",
-        "Seasonal Grain Bowl",
-        "Craft Cocktails"
+        {
+          "name": "Truffle Fries",
+          "vegetarian": true
+        },
+        {
+          "name": "Margherita Flatbread",
+          "vegetarian": true
+        },
+        {
+          "name": "Charcuterie Board",
+          "vegetarian": true
+        },
+        {
+          "name": "Seasonal Grain Bowl",
+          "vegetarian": true
+        },
+        {
+          "name": "Craft Cocktails",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/wesley-and-rose-lobby-bar-buena-vista",
       "phone": "",
@@ -1684,11 +2380,26 @@
       "yelp_review_count": 586,
       "trip_score": 3.5,
       "popular_dishes": [
-        "Veggie Burger",
-        "Wood-Fired Pizza",
-        "Beer Cheese Pretzel",
-        "South Main Salad",
-        "Sweet Potato Fries"
+        {
+          "name": "Veggie Burger",
+          "vegetarian": true
+        },
+        {
+          "name": "Wood-Fired Pizza",
+          "vegetarian": true
+        },
+        {
+          "name": "Beer Cheese Pretzel",
+          "vegetarian": true
+        },
+        {
+          "name": "South Main Salad",
+          "vegetarian": true
+        },
+        {
+          "name": "Sweet Potato Fries",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/eddyline-restaurant-at-south-main-buena-vista",
       "phone": "",
@@ -1718,11 +2429,26 @@
       "yelp_review_count": 648,
       "trip_score": 4.5,
       "popular_dishes": [
-        "Veggie Panini",
-        "Tomato Basil Soup",
-        "Breakfast Burrito",
-        "Fresh-Baked Cinnamon Roll",
-        "Avocado Toast"
+        {
+          "name": "Veggie Panini",
+          "vegetarian": true
+        },
+        {
+          "name": "Tomato Basil Soup",
+          "vegetarian": true
+        },
+        {
+          "name": "Breakfast Burrito",
+          "vegetarian": true
+        },
+        {
+          "name": "Fresh-Baked Cinnamon Roll",
+          "vegetarian": true
+        },
+        {
+          "name": "Avocado Toast",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/simple-eatery-buena-vista-2",
       "phone": "",
@@ -1751,10 +2477,22 @@
       "yelp_review_count": null,
       "trip_score": 4.2,
       "popular_dishes": [
-        "Seasonal Vegetable Dishes",
-        "Scratch-Made Pasta",
-        "House Salads",
-        "Daily Specials"
+        {
+          "name": "Seasonal Vegetable Dishes",
+          "vegetarian": true
+        },
+        {
+          "name": "Scratch-Made Pasta",
+          "vegetarian": true
+        },
+        {
+          "name": "House Salads",
+          "vegetarian": true
+        },
+        {
+          "name": "Daily Specials",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/riviera-scratch-kitchen-glenwood-springs",
       "phone": "(970) 945-7692",
@@ -1784,10 +2522,22 @@
       "yelp_review_count": 516,
       "trip_score": 4.3,
       "popular_dishes": [
-        "Vegetarian Breakfast Plates",
-        "Fresh-Baked Bread",
-        "Soups & Sandwiches",
-        "Breakfast Burritos"
+        {
+          "name": "Vegetarian Breakfast Plates",
+          "vegetarian": true
+        },
+        {
+          "name": "Fresh-Baked Bread",
+          "vegetarian": true
+        },
+        {
+          "name": "Soups & Sandwiches",
+          "vegetarian": true
+        },
+        {
+          "name": "Breakfast Burritos",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/daily-bread-glenwood-springs",
       "phone": "(970) 945-6253",
@@ -1818,10 +2568,22 @@
       "yelp_review_count": 898,
       "trip_score": 3.9,
       "popular_dishes": [
-        "Veggie Burgers",
-        "Pretzels",
-        "House Salads",
-        "Flatbreads"
+        {
+          "name": "Veggie Burgers",
+          "vegetarian": true
+        },
+        {
+          "name": "Pretzels",
+          "vegetarian": true
+        },
+        {
+          "name": "House Salads",
+          "vegetarian": true
+        },
+        {
+          "name": "Flatbreads",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/glenwood-canyon-brewpub-glenwood-springs-2",
       "phone": "(970) 945-1276",
@@ -1851,10 +2613,22 @@
       "yelp_review_count": 251,
       "trip_score": 4.1,
       "popular_dishes": [
-        "Buddha Bowl",
-        "Vegetarian Tacos",
-        "Seasonal Salads",
-        "Craft Cocktails"
+        {
+          "name": "Buddha Bowl",
+          "vegetarian": true
+        },
+        {
+          "name": "Vegetarian Tacos",
+          "vegetarian": true
+        },
+        {
+          "name": "Seasonal Salads",
+          "vegetarian": true
+        },
+        {
+          "name": "Craft Cocktails",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/native-son-glenwood-springs-2",
       "phone": "(970) 230-9954",
@@ -1885,11 +2659,26 @@
       "yelp_review_count": 126,
       "trip_score": 4,
       "popular_dishes": [
-        "Green Smoothie Bowls",
-        "Cold-Pressed Juices",
-        "Veggie Wraps",
-        "Acai Bowls",
-        "Avocado Toast"
+        {
+          "name": "Green Smoothie Bowls",
+          "vegetarian": true
+        },
+        {
+          "name": "Cold-Pressed Juices",
+          "vegetarian": true
+        },
+        {
+          "name": "Veggie Wraps",
+          "vegetarian": true
+        },
+        {
+          "name": "Acai Bowls",
+          "vegetarian": true
+        },
+        {
+          "name": "Avocado Toast",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/spring-cafe-aspen",
       "phone": "(970) 429-8406",
@@ -1919,11 +2708,26 @@
       "yelp_review_count": 207,
       "trip_score": 3.9,
       "popular_dishes": [
-        "Vegetarian Pasta",
-        "Margherita Pizza",
-        "Caprese Salad",
-        "Risotto",
-        "Tiramisu"
+        {
+          "name": "Vegetarian Pasta",
+          "vegetarian": true
+        },
+        {
+          "name": "Margherita Pizza",
+          "vegetarian": true
+        },
+        {
+          "name": "Caprese Salad",
+          "vegetarian": true
+        },
+        {
+          "name": "Risotto",
+          "vegetarian": true
+        },
+        {
+          "name": "Tiramisu",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/campo-de-fiori-aspen",
       "phone": "",
@@ -1952,11 +2756,26 @@
       "yelp_review_count": 156,
       "trip_score": 4.4,
       "popular_dishes": [
-        "Pad Thai",
-        "Green Curry",
-        "Massaman Curry",
-        "Spring Rolls",
-        "Tofu Stir Fry"
+        {
+          "name": "Pad Thai",
+          "vegetarian": true
+        },
+        {
+          "name": "Green Curry",
+          "vegetarian": true
+        },
+        {
+          "name": "Massaman Curry",
+          "vegetarian": true
+        },
+        {
+          "name": "Spring Rolls",
+          "vegetarian": true
+        },
+        {
+          "name": "Tofu Stir Fry",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/elephant-thai-colorado-springs",
       "phone": "(719) 597-1175",
@@ -1985,11 +2804,26 @@
       "yelp_review_count": null,
       "trip_score": 4.2,
       "popular_dishes": [
-        "Pad See Ew",
-        "Panang Curry",
-        "Pad Thai",
-        "Tom Kha Soup",
-        "Vegetarian Fried Rice"
+        {
+          "name": "Pad See Ew",
+          "vegetarian": true
+        },
+        {
+          "name": "Panang Curry",
+          "vegetarian": true
+        },
+        {
+          "name": "Pad Thai",
+          "vegetarian": true
+        },
+        {
+          "name": "Tom Kha Soup",
+          "vegetarian": true
+        },
+        {
+          "name": "Vegetarian Fried Rice",
+          "vegetarian": true
+        }
       ],
       "yelp_url": "https://www.yelp.com/biz/nom-nom-thai-colorado-springs-3",
       "phone": "(719) 573-7004",
