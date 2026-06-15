@@ -1,7 +1,8 @@
-const CACHE_NAME = 'colorado-26-v21';
+const CACHE_NAME = 'colorado-26-v22';
 const STATIC_ASSETS = [
   './index.html',
   './app.js',
+  './config.js',
   './styles.css',
   './manifest.json',
   './data/itinerary.json',
@@ -43,6 +44,12 @@ self.addEventListener('message', e => {
 self.addEventListener('fetch', e => {
   const { request } = e;
   const url = new URL(request.url);
+
+  // Non-GET requests (e.g. Ask tab POSTs to api.anthropic.com): pass straight
+  // through to the network. Never cache or fall back to index.html.
+  if (request.method !== 'GET') {
+    return;
+  }
 
   // Open-Meteo API: network-first with cache fallback
   if (url.hostname === 'api.open-meteo.com') {

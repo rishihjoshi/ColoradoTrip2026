@@ -176,31 +176,11 @@
       <!-- Tab: Ask (AI Trip Assistant) -->
       <section id="tab-ask" class="tab-panel" role="tabpanel">
 
-        <!-- API Key Setup -->
-        <div id="ask-setup" class="ask-setup" hidden>
-          <div class="ask-setup-inner">
-            <div class="ask-setup-icon">🔑</div>
-            <h2 class="ask-setup-title">Trip Assistant Setup</h2>
-            <p class="ask-setup-desc">
-              Enter your own Anthropic API key to chat with the trip assistant. The key is
-              stored only in this browser (localStorage) and is sent directly to Anthropic's
-              API — never to any other server.
-            </p>
-            <div class="ask-key-input-wrap">
-              <input type="password" id="ask-key-input" class="ask-key-input" placeholder="sk-ant-..." autocomplete="off" spellcheck="false">
-              <button type="button" id="ask-key-toggle" class="ask-key-toggle" aria-label="Show key">👁</button>
-            </div>
-            <button type="button" id="ask-key-save-btn" class="ask-key-btn">Save &amp; Start Chatting</button>
-            <p class="ask-key-note">Get a key at <a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener noreferrer">console.anthropic.com</a></p>
-          </div>
-        </div>
-
         <!-- Chat Interface -->
         <div id="ask-chat" class="ask-chat" hidden>
           <div class="ask-chat-header">
             <div id="ask-context-pill" class="ask-context-pill"></div>
             <div class="ask-chat-actions">
-              <button id="ask-key-update-btn" class="ask-icon-btn" aria-label="Update API key" title="Update API key">🔑</button>
               <button id="ask-clear-btn" class="ask-icon-btn" aria-label="Clear chat" title="Clear conversation">🗑</button>
             </div>
           </div>
@@ -367,6 +347,7 @@
     <button id="btn-update-reload" type="button">Refresh</button>
   </div>
 
+  <script src="./config.js"></script>
   <script src="./app.js"></script>
   <script>
     if ('serviceWorker' in navigator) {

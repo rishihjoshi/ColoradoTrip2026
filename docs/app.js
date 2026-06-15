@@ -1731,10 +1731,8 @@ function getTodayMDT() {
 
 // ── Ask Tab ───────────────────────────────────────────────────────────────────
 
-// Each user supplies their own Anthropic API key, stored only in this
-// browser's localStorage. It is never bundled, committed, or sent anywhere
-// except directly to api.anthropic.com.
-const ASK_KEY_STORAGE     = 'colorado26_ask_key';
+// The Anthropic API key is injected into config.js at deploy time from the
+// repo's ANTHROPIC_API_KEY secret. It is sent directly to api.anthropic.com.
 const ASK_HISTORY_STORAGE = 'colorado26_ask_history';
 const ASK_MODEL           = 'claude-sonnet-4-5';
 const ASK_MAX_TOKENS      = 1024;
@@ -1744,21 +1742,14 @@ let askConversationHistory = [];
 let askIsStreaming          = false;
 let askCurrentLocation     = null;
 let askInitialized         = false;
-let askChatStarted         = false;
 let eatsInitialized        = false;
 
 function initAskTab() {
-  setupAskKeyEventListeners();
-  if (getAskKey()) {
-    startAskChat();
-  } else {
-    showAskSetup();
-  }
+  startAskChat();
 }
 
 function startAskChat() {
-  askChatStarted = true;
-  showAskChat();
+  document.getElementById('ask-chat').hidden = false;
   loadAskHistory();
   updateAskContextPill();
   if (askConversationHistory.length === 0) {
@@ -1767,56 +1758,6 @@ function startAskChat() {
   }
   setupAskEventListeners();
   requestLocationSilently();
-}
-
-// ── API Key Management ───────────────────────────────────────────────────────
-
-function showAskSetup() {
-  const setup = document.getElementById('ask-setup');
-  if (setup) setup.hidden = false;
-  document.getElementById('ask-chat').hidden = true;
-}
-
-function showAskChat() {
-  const setup = document.getElementById('ask-setup');
-  if (setup) setup.hidden = true;
-  document.getElementById('ask-chat').hidden = false;
-}
-
-function saveAskKey(key) {
-  if (!key || !key.startsWith('sk-ant-')) {
-    alert('Key must start with sk-ant-');
-    return false;
-  }
-  localStorage.setItem(ASK_KEY_STORAGE, key.trim());
-  return true;
-}
-
-function getAskKey() {
-  return localStorage.getItem(ASK_KEY_STORAGE);
-}
-
-function setupAskKeyEventListeners() {
-  if (setupAskKeyEventListeners._attached) return;
-  setupAskKeyEventListeners._attached = true;
-
-  document.getElementById('ask-key-toggle')?.addEventListener('click', () => {
-    const input = document.getElementById('ask-key-input');
-    if (!input) return;
-    input.type = input.type === 'password' ? 'text' : 'password';
-  });
-
-  document.getElementById('ask-key-save-btn')?.addEventListener('click', () => {
-    const input = document.getElementById('ask-key-input');
-    if (!input) return;
-    if (saveAskKey(input.value)) {
-      input.value = '';
-      if (askChatStarted) showAskChat();
-      else startAskChat();
-    }
-  });
-
-  document.getElementById('ask-key-update-btn')?.addEventListener('click', showAskSetup);
 }
 
 // ── Context Builder ──────────────────────────────────────────────────────────
@@ -2096,8 +2037,19 @@ async function sendAskMessage() {
   const userText = input.value.trim();
   if (!userText) return;
 
-  const apiKey = getAskKey();
-  if (!apiKey) { showAskSetup(); return; }
+  const apiKey = window.ANTHROPIC_API_KEY;
+  if (!apiKey) {
+    appendUserMessage(userText);
+    input.value = '';
+    input.style.height = 'auto';
+    const messages = document.getElementById('ask-messages');
+    const errEl = document.createElement('div');
+    errEl.className = 'ask-msg error';
+    errEl.textContent = '🔒 Trip assistant is temporarily unavailable. Please try again later.';
+    messages.appendChild(errEl);
+    messages.scrollTop = messages.scrollHeight;
+    return;
+  }
 
   const suggestions = document.getElementById('ask-suggestions');
   if (suggestions) suggestions.innerHTML = '';
@@ -2184,7 +2136,7 @@ async function sendAskMessage() {
     const errEl = document.createElement('div');
     errEl.className = 'ask-msg error';
     if (err.message.includes('401') || err.message.includes('auth')) {
-      errEl.textContent = '🔑 API key invalid or expired. Tap the key icon to update it.';
+      errEl.textContent = '🔒 Trip assistant is temporarily unavailable. Please try again later.';
     } else if (err.message.includes('429')) {
       errEl.textContent = '⏳ Rate limit hit. Wait a moment and try again.';
     } else if (!navigator.onLine) {
