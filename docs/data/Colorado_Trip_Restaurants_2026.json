@@ -3,7 +3,7 @@
   "yelp_collection_url": "https://www.yelp.com/collection/G02VQ0XuPsBCuF_2tF0-6A/Colorado-Trip",
   "trip_dates": "June 19-24, 2026",
   "export_date": "2026-06-07",
-  "total_restaurants": 60,
+  "total_restaurants": 59,
   "itinerary_summary": {
     "Day 1 (Fri 6/19)": "Travel from STL to Denver - Overnight Denver Airport Hotel",
     "Day 2 (Sat 6/20)": "Denver to Colorado Springs - Pikes Peak, Garden of Gods - Overnight Colorado Springs",
@@ -44,7 +44,7 @@
       "yelp_review_count": 147,
       "yelp_rating": 4.2,
       "google_rating": 4.3,
-      "google_review_count": null,
+      "google_review_count": 1369,
       "popular_dishes": [
         "South Indian Thali",
         "Masala Dosa",
@@ -54,7 +54,9 @@
       ],
       "itinerary_day": "Day 1 - Travel/Denver Area",
       "itinerary_location": "Denver Area",
-      "yelp_url": "https://www.yelp.com/biz/garnish-indian-fusion-cuisine-greenwood-village-2"
+      "yelp_url": "https://www.yelp.com/biz/garnish-indian-fusion-cuisine-greenwood-village-2",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 2,
@@ -71,18 +73,20 @@
       "cuisine": [
         "Indian"
       ],
-      "price_range": "",
+      "price_range": "$$",
       "yelp_review_count": 35,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 4.6,
+      "google_rating": 4.8,
+      "google_review_count": 416,
       "popular_dishes": [
         "Chicken Curry",
         "Coconut Chicken Curry"
       ],
       "itinerary_day": "Day 2 - Colorado Springs",
       "itinerary_location": "Colorado Springs",
-      "yelp_url": "https://www.yelp.com/biz/masala-mingle-colorado-springs"
+      "yelp_url": "https://www.yelp.com/biz/masala-mingle-colorado-springs",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 3,
@@ -99,11 +103,11 @@
       "cuisine": [
         "Indian"
       ],
-      "price_range": "",
+      "price_range": "$$",
       "yelp_review_count": 112,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 4.5,
+      "google_rating": 4.7,
+      "google_review_count": 844,
       "popular_dishes": [
         "Butter Chicken",
         "Samosas Chaat",
@@ -113,7 +117,9 @@
       ],
       "itinerary_day": "Day 2 - Colorado Springs",
       "itinerary_location": "Colorado Springs",
-      "yelp_url": "https://www.yelp.com/biz/pakwan-colorado-springs"
+      "yelp_url": "https://www.yelp.com/biz/pakwan-colorado-springs",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 4,
@@ -132,9 +138,9 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 181,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 4.7,
+      "google_rating": 4.8,
+      "google_review_count": 1585,
       "popular_dishes": [
         "Butter Chicken",
         "Chicken Tikka Masala",
@@ -144,7 +150,9 @@
       ],
       "itinerary_day": "Day 2 - Colorado Springs",
       "itinerary_location": "Colorado Springs",
-      "yelp_url": "https://www.yelp.com/biz/mausam-indian-flavors-colorado-springs"
+      "yelp_url": "https://www.yelp.com/biz/mausam-indian-flavors-colorado-springs",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 5,
@@ -163,9 +171,9 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 186,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 4.7,
+      "google_rating": 4.9,
+      "google_review_count": 768,
       "popular_dishes": [
         "Butter Chicken",
         "Chicken Tikka Masala",
@@ -175,7 +183,9 @@
       ],
       "itinerary_day": "Day 2 - Colorado Springs",
       "itinerary_location": "Colorado Springs",
-      "yelp_url": "https://www.yelp.com/biz/turmeric-indian-cuisine-colorado-springs"
+      "yelp_url": "https://www.yelp.com/biz/turmeric-indian-cuisine-colorado-springs",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 6,
@@ -195,9 +205,9 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 186,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 4.5,
+      "google_rating": 4.6,
+      "google_review_count": 917,
       "popular_dishes": [
         "Jal Frezi",
         "Lentil Soup",
@@ -207,7 +217,9 @@
       ],
       "itinerary_day": "Day 2 - Colorado Springs",
       "itinerary_location": "Colorado Springs",
-      "yelp_url": "https://www.yelp.com/biz/sherpa-garden-restaurant-and-bar-colorado-springs"
+      "yelp_url": "https://www.yelp.com/biz/sherpa-garden-restaurant-and-bar-colorado-springs",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 7,
@@ -227,9 +239,9 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 690,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 4.5,
+      "google_rating": 4.6,
+      "google_review_count": 2542,
       "popular_dishes": [
         "Butter Chicken",
         "Chicken Tikka Masala",
@@ -239,7 +251,9 @@
       ],
       "itinerary_day": "Day 1 - Travel/Denver Area",
       "itinerary_location": "Denver Area",
-      "yelp_url": "https://www.yelp.com/biz/coriander-denver"
+      "yelp_url": "https://www.yelp.com/biz/coriander-denver",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 8,
@@ -258,9 +272,9 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 956,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 4.5,
+      "google_rating": 4.6,
+      "google_review_count": 1430,
       "popular_dishes": [
         "Chicken Tikka Masala",
         "Chicken Korma",
@@ -270,7 +284,9 @@
       ],
       "itinerary_day": "Day 1 - Travel/Denver Area",
       "itinerary_location": "Denver/Aurora Area",
-      "yelp_url": "https://www.yelp.com/biz/monsoon-cuisine-of-india-aurora-2"
+      "yelp_url": "https://www.yelp.com/biz/monsoon-cuisine-of-india-aurora-2",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 9,
@@ -290,9 +306,9 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 4169,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 4.4,
+      "google_rating": 4.6,
+      "google_review_count": 3519,
       "popular_dishes": [
         "Lamb Sliders",
         "Beet Salad",
@@ -302,7 +318,9 @@
       ],
       "itinerary_day": "Day 1 - Travel/Denver Area",
       "itinerary_location": "Denver Area",
-      "yelp_url": "https://www.yelp.com/biz/root-down-denver"
+      "yelp_url": "https://www.yelp.com/biz/root-down-denver",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 10,
@@ -322,9 +340,9 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 260,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 3.6,
+      "google_rating": 4.4,
+      "google_review_count": 980,
       "popular_dishes": [
         "Chicken Tikka Masala",
         "Butter Chicken",
@@ -334,7 +352,9 @@
       ],
       "itinerary_day": "Day 3 - Colorado Springs to Glenwood Springs (drive through)",
       "itinerary_location": "Frisco, CO (en route)",
-      "yelp_url": "https://www.yelp.com/biz/himalayan-cuisine-frisco-2"
+      "yelp_url": "https://www.yelp.com/biz/himalayan-cuisine-frisco-2",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 11,
@@ -355,9 +375,9 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 721,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 4.0,
+      "google_rating": 4.4,
+      "google_review_count": 867,
       "popular_dishes": [
         "Seasonal Bowls",
         "Avocado Toast",
@@ -366,7 +386,9 @@
       ],
       "itinerary_day": "Day 1 - Travel/Denver Area (Denver Airport)",
       "itinerary_location": "Denver International Airport",
-      "yelp_url": "https://www.yelp.com/biz/modern-market-denver-4"
+      "yelp_url": "https://www.yelp.com/biz/modern-market-denver-4",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 12,
@@ -385,11 +407,11 @@
         "Desserts",
         "Breakfast & Brunch"
       ],
-      "price_range": "",
+      "price_range": "$$",
       "yelp_review_count": 106,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 4.5,
+      "google_rating": 4.7,
+      "google_review_count": 631,
       "popular_dishes": [
         "Calamari",
         "Pork Chop",
@@ -399,7 +421,9 @@
       ],
       "itinerary_day": "Day 5 - Glenwood Springs",
       "itinerary_location": "Glenwood Springs",
-      "yelp_url": "https://www.yelp.com/biz/hugo-s-glenwood-springs"
+      "yelp_url": "https://www.yelp.com/biz/hugo-s-glenwood-springs",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 13,
@@ -420,7 +444,7 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 835,
-      "yelp_rating": null,
+      "yelp_rating": 4.5,
       "google_rating": 4.5,
       "google_review_count": 1350,
       "popular_dishes": [
@@ -432,7 +456,8 @@
       "itinerary_day": "Day 5 - Glenwood Springs",
       "itinerary_location": "Glenwood Springs",
       "yelp_url": "https://www.yelp.com/biz/co-ranch-house-glenwood-springs",
-      "notes": "Steakhouse environment. While they have a Vegetarian Shepherd's Pie, it doesn't align tightly with the preferred sequence."
+      "notes": "Steakhouse environment. While they have a Vegetarian Shepherd's Pie, it doesn't align tightly with the preferred sequence.",
+      "phone": ""
     },
     {
       "id": 14,
@@ -453,9 +478,9 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 1005,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 4.7,
+      "google_rating": 4.8,
+      "google_review_count": 2442,
       "popular_dishes": [
         "Donuts",
         "Vegetarian Sandwiches",
@@ -464,7 +489,9 @@
       ],
       "itinerary_day": "Day 5 - Glenwood Springs",
       "itinerary_location": "Glenwood Springs",
-      "yelp_url": "https://www.yelp.com/biz/sweet-coloradough-glenwood-springs"
+      "yelp_url": "https://www.yelp.com/biz/sweet-coloradough-glenwood-springs",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 15,
@@ -483,9 +510,9 @@
       ],
       "price_range": "$",
       "yelp_review_count": 380,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 3.5,
+      "google_rating": 4.1,
+      "google_review_count": 1115,
       "popular_dishes": [
         "Vegetarian Pizza",
         "Cheese Slices",
@@ -494,7 +521,9 @@
       ],
       "itinerary_day": "Day 4 - Aspen",
       "itinerary_location": "Aspen",
-      "yelp_url": "https://www.yelp.com/biz/new-york-pizza-aspen"
+      "yelp_url": "https://www.yelp.com/biz/new-york-pizza-aspen",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 16,
@@ -514,9 +543,9 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 239,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 3.5,
+      "google_rating": 3.9,
+      "google_review_count": 508,
       "popular_dishes": [
         "Cheese Pizza",
         "Bruschetta",
@@ -526,7 +555,9 @@
       ],
       "itinerary_day": "Day 4 - Aspen",
       "itinerary_location": "Aspen",
-      "yelp_url": "https://www.yelp.com/biz/brunelleschis-aspen-2"
+      "yelp_url": "https://www.yelp.com/biz/brunelleschis-aspen-2",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 17,
@@ -546,9 +577,9 @@
       ],
       "price_range": "$",
       "yelp_review_count": 83,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 4.3,
+      "google_rating": 4.6,
+      "google_review_count": 340,
       "popular_dishes": [
         "Burritos",
         "Tacos",
@@ -557,7 +588,9 @@
       ],
       "itinerary_day": "Day 3 - Glenwood Springs",
       "itinerary_location": "Glenwood Springs",
-      "yelp_url": "https://www.yelp.com/biz/sal-mex-restaurant-glenwood-springs"
+      "yelp_url": "https://www.yelp.com/biz/sal-mex-restaurant-glenwood-springs",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 18,
@@ -576,9 +609,9 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 293,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 4.3,
+      "google_rating": 4.5,
+      "google_review_count": 970,
       "popular_dishes": [
         "Lobster Ravioli",
         "Beet Salad",
@@ -588,7 +621,9 @@
       ],
       "itinerary_day": "Day 3 - Glenwood Springs",
       "itinerary_location": "Glenwood Springs",
-      "yelp_url": "https://www.yelp.com/biz/modern-brava-trattoria-glenwood-springs"
+      "yelp_url": "https://www.yelp.com/biz/modern-brava-trattoria-glenwood-springs",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 19,
@@ -609,7 +644,7 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 107,
-      "yelp_rating": null,
+      "yelp_rating": 4.7,
       "google_rating": 4.7,
       "google_review_count": 107,
       "popular_dishes": [
@@ -622,7 +657,8 @@
       "itinerary_day": "Day 2 - Colorado Springs",
       "itinerary_location": "Colorado Springs",
       "yelp_url": "https://www.yelp.com/biz/commonfork-bites-and-brews-colorado-springs",
-      "notes": "Pub environment. Features a Thai Peanut Bowl, but leans heavily into non-aligned items like Cuban Sliders and Hot Italian sandwiches."
+      "notes": "Pub environment. Features a Thai Peanut Bowl, but leans heavily into non-aligned items like Cuban Sliders and Hot Italian sandwiches.",
+      "phone": ""
     },
     {
       "id": 20,
@@ -643,9 +679,9 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 387,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 4.3,
+      "google_rating": 4.5,
+      "google_review_count": 1841,
       "popular_dishes": [
         "Pepperoni Pizza",
         "Lasagna",
@@ -655,7 +691,9 @@
       ],
       "itinerary_day": "Day 2 - Colorado Springs / Manitou Springs",
       "itinerary_location": "Manitou Springs (near Garden of Gods)",
-      "yelp_url": "https://www.yelp.com/biz/savellis-pizza-manitou-springs"
+      "yelp_url": "https://www.yelp.com/biz/savellis-pizza-manitou-springs",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 21,
@@ -676,9 +714,9 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 463,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 4.4,
+      "google_rating": 4.8,
+      "google_review_count": 1379,
       "popular_dishes": [
         "Butter Chicken",
         "Chicken Tikka Masala",
@@ -688,7 +726,9 @@
       ],
       "itinerary_day": "Day 2 - Colorado Springs",
       "itinerary_location": "Colorado Springs",
-      "yelp_url": "https://www.yelp.com/biz/shri-ganesh-colorado-springs"
+      "yelp_url": "https://www.yelp.com/biz/shri-ganesh-colorado-springs",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 22,
@@ -707,9 +747,9 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 176,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 4.6,
+      "google_rating": 4.7,
+      "google_review_count": 794,
       "popular_dishes": [
         "Green Curry",
         "Red Curry",
@@ -719,7 +759,9 @@
       ],
       "itinerary_day": "Day 2 - Colorado Springs",
       "itinerary_location": "Colorado Springs",
-      "yelp_url": "https://www.yelp.com/biz/zesty-thai-colorado-springs"
+      "yelp_url": "https://www.yelp.com/biz/zesty-thai-colorado-springs",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 23,
@@ -736,11 +778,11 @@
       "cuisine": [
         "Thai"
       ],
-      "price_range": "",
+      "price_range": "$$",
       "yelp_review_count": 134,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 4.7,
+      "google_rating": 4.6,
+      "google_review_count": 628,
       "popular_dishes": [
         "Pad Thai",
         "Green Curry",
@@ -750,7 +792,9 @@
       ],
       "itinerary_day": "Day 2 - Colorado Springs",
       "itinerary_location": "Colorado Springs",
-      "yelp_url": "https://www.yelp.com/biz/thai-taste-cuisine-colorado-springs"
+      "yelp_url": "https://www.yelp.com/biz/thai-taste-cuisine-colorado-springs",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 24,
@@ -770,7 +814,7 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 1062,
-      "yelp_rating": null,
+      "yelp_rating": 4.5,
       "google_rating": 4.7,
       "google_review_count": 822,
       "popular_dishes": [
@@ -783,7 +827,8 @@
       "itinerary_day": "Day 3/5 - Glenwood Springs",
       "itinerary_location": "Glenwood Springs",
       "yelp_url": "https://www.yelp.com/biz/slope-and-hatch-glenwood-springs",
-      "notes": "Charming and cozy taco/hot dog spot. Primarily known for Crispy Fish, Jerk Chicken, and Lamb tacos."
+      "notes": "Charming and cozy taco/hot dog spot. Primarily known for Crispy Fish, Jerk Chicken, and Lamb tacos.",
+      "phone": ""
     },
     {
       "id": 25,
@@ -803,9 +848,9 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 438,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 4.5,
+      "google_rating": 4.4,
+      "google_review_count": 1104,
       "popular_dishes": [
         "Goat Curry",
         "Saag Paneer",
@@ -815,7 +860,9 @@
       ],
       "itinerary_day": "Day 3 - Colorado Springs to Glenwood Springs (en route via Vail)",
       "itinerary_location": "Vail, CO (en route Day 3)",
-      "yelp_url": "https://www.yelp.com/biz/annapurna-nepali-and-indian-cuisine-vail"
+      "yelp_url": "https://www.yelp.com/biz/annapurna-nepali-and-indian-cuisine-vail",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 26,
@@ -835,9 +882,9 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 269,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 3.7,
+      "google_rating": 4.3,
+      "google_review_count": 1121,
       "popular_dishes": [
         "Pad Thai",
         "Hot Sour Soup",
@@ -847,7 +894,9 @@
       ],
       "itinerary_day": "Day 3/5 - Glenwood Springs",
       "itinerary_location": "Glenwood Springs",
-      "yelp_url": "https://www.yelp.com/biz/zheng-asian-bistro-glenwood-springs"
+      "yelp_url": "https://www.yelp.com/biz/zheng-asian-bistro-glenwood-springs",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 27,
@@ -866,9 +915,9 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 122,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 4.0,
+      "google_rating": 3.8,
+      "google_review_count": 206,
       "popular_dishes": [
         "Egg Roll",
         "Mongolian Beef",
@@ -878,7 +927,9 @@
       ],
       "itinerary_day": "Day 3/5 - Glenwood Springs",
       "itinerary_location": "Glenwood Springs",
-      "yelp_url": "https://www.yelp.com/biz/china-town-glenwood-springs"
+      "yelp_url": "https://www.yelp.com/biz/china-town-glenwood-springs",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 28,
@@ -898,7 +949,7 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 183,
-      "yelp_rating": null,
+      "yelp_rating": 3.8,
       "google_rating": 4.3,
       "google_review_count": 215,
       "popular_dishes": [
@@ -911,7 +962,8 @@
       "itinerary_day": "Day 3/5 - Glenwood Springs",
       "itinerary_location": "Glenwood Springs",
       "yelp_url": "https://www.yelp.com/biz/kedai-glenwood-springs",
-      "notes": "Japanese/Vietnamese focus (Ramen/Bento). Sits outside the requested cuisine sequence."
+      "notes": "Japanese/Vietnamese focus (Ramen/Bento). Sits outside the requested cuisine sequence.",
+      "phone": ""
     },
     {
       "id": 29,
@@ -931,7 +983,7 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 256,
-      "yelp_rating": null,
+      "yelp_rating": 4.1,
       "google_rating": 4.5,
       "google_review_count": 870,
       "popular_dishes": [
@@ -944,7 +996,8 @@
       "itinerary_day": "Day 3/5 - Glenwood Springs",
       "itinerary_location": "Glenwood Springs",
       "yelp_url": "https://www.yelp.com/biz/mings-cafe-glenwood-springs",
-      "notes": "Sushi Bar and Asian Fusion. Heavily focused on seafood (scallops, tuna, dragon rolls)."
+      "notes": "Sushi Bar and Asian Fusion. Heavily focused on seafood (scallops, tuna, dragon rolls).",
+      "phone": ""
     },
     {
       "id": 30,
@@ -964,9 +1017,9 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 199,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 3.2,
+      "google_rating": 3.7,
+      "google_review_count": 426,
       "popular_dishes": [
         "Pad Thai",
         "Pad Kee Moa - Drunken Noodles",
@@ -976,7 +1029,9 @@
       ],
       "itinerary_day": "Day 4 - Aspen",
       "itinerary_location": "Aspen",
-      "yelp_url": "https://www.yelp.com/biz/bangkok-happy-bowl-thai-bistro-and-bar-aspen-7"
+      "yelp_url": "https://www.yelp.com/biz/bangkok-happy-bowl-thai-bistro-and-bar-aspen-7",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 31,
@@ -993,9 +1048,9 @@
       "cuisine": [
         "New American"
       ],
-      "price_range": "",
+      "price_range": "$$",
       "yelp_review_count": 140,
-      "yelp_rating": null,
+      "yelp_rating": 4.0,
       "google_rating": 4.4,
       "google_review_count": 490,
       "popular_dishes": [
@@ -1008,7 +1063,8 @@
       "itinerary_day": "Day 4 - Aspen",
       "itinerary_location": "Aspen",
       "yelp_url": "https://www.yelp.com/biz/aspen-public-house-aspen",
-      "notes": "New American pub. Focused on Fried Chicken and Steak sandwiches."
+      "notes": "New American pub. Focused on Fried Chicken and Steak sandwiches.",
+      "phone": ""
     },
     {
       "id": 32,
@@ -1028,7 +1084,7 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 194,
-      "yelp_rating": null,
+      "yelp_rating": 4.3,
       "google_rating": 4.5,
       "google_review_count": 310,
       "popular_dishes": [
@@ -1041,7 +1097,8 @@
       "itinerary_day": "Day 4 - Aspen",
       "itinerary_location": "Aspen",
       "yelp_url": "https://www.yelp.com/biz/mawas-kitchen-aspen",
-      "notes": "Boutique global/French-African influenced kitchen. Focuses on Salmon Benedict, Rotisserie Chicken, and traditional egg-heavy brunch items."
+      "notes": "Boutique global/French-African influenced kitchen. Focuses on Salmon Benedict, Rotisserie Chicken, and traditional egg-heavy brunch items.",
+      "phone": ""
     },
     {
       "id": 33,
@@ -1060,11 +1117,11 @@
         "Desserts",
         "Italian"
       ],
-      "price_range": "",
+      "price_range": "$$$",
       "yelp_review_count": 27,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 4.4,
+      "google_rating": 4.7,
+      "google_review_count": 82,
       "popular_dishes": [
         "Sant Ambroeus Ravioli",
         "Fettuccine Alla Bolognese",
@@ -1073,7 +1130,9 @@
       ],
       "itinerary_day": "Day 4 - Aspen",
       "itinerary_location": "Aspen",
-      "yelp_url": "https://www.yelp.com/biz/sant-ambroeus-aspen"
+      "yelp_url": "https://www.yelp.com/biz/sant-ambroeus-aspen",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 34,
@@ -1092,7 +1151,7 @@
       ],
       "price_range": "$",
       "yelp_review_count": 262,
-      "yelp_rating": null,
+      "yelp_rating": 4.3,
       "google_rating": 4.6,
       "google_review_count": 340,
       "popular_dishes": [
@@ -1105,7 +1164,8 @@
       "itinerary_day": "Day 4 - Aspen (Lunch at Cooper St Mall)",
       "itinerary_location": "Aspen",
       "yelp_url": "https://www.yelp.com/biz/big-wrap-aspen",
-      "notes": "Cash-only fast-casual counter. Serves wraps, which falls outside the requested checklist."
+      "notes": "Cash-only fast-casual counter. Serves wraps, which falls outside the requested checklist.",
+      "phone": ""
     },
     {
       "id": 35,
@@ -1126,7 +1186,7 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 1208,
-      "yelp_rating": null,
+      "yelp_rating": 4.4,
       "google_rating": 4.6,
       "google_review_count": 1649,
       "popular_dishes": [
@@ -1139,7 +1199,8 @@
       "itinerary_day": "Day 3 - En Route to Glenwood Springs (Lunch in Aspen area)",
       "itinerary_location": "Aspen (Day 3 Lunch)",
       "yelp_url": "https://www.yelp.com/biz/white-house-tavern-aspen-3",
-      "notes": "Highly popular vibrant American tavern. Hugely popular for its Crispy Chicken and Fish sandwiches; very limited options for a strict lacto-vegetarian."
+      "notes": "Highly popular vibrant American tavern. Hugely popular for its Crispy Chicken and Fish sandwiches; very limited options for a strict lacto-vegetarian.",
+      "phone": ""
     },
     {
       "id": 36,
@@ -1159,7 +1220,7 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 1587,
-      "yelp_rating": null,
+      "yelp_rating": 4.4,
       "google_rating": 4.5,
       "google_review_count": 1120,
       "popular_dishes": [
@@ -1172,7 +1233,8 @@
       "itinerary_day": "Day 3/4/5 - Glenwood Springs",
       "itinerary_location": "Glenwood Springs",
       "yelp_url": "https://www.yelp.com/biz/the-pullman-glenwood-springs",
-      "notes": "Heavily meat-focused New American. Focuses on Pork Belly, Pork Rinds, and Steaks."
+      "notes": "Heavily meat-focused New American. Focuses on Pork Belly, Pork Rinds, and Steaks.",
+      "phone": ""
     },
     {
       "id": 37,
@@ -1192,9 +1254,9 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 390,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 3.5,
+      "google_rating": 4.1,
+      "google_review_count": 2499,
       "popular_dishes": [
         "Carne Asada",
         "Chicken Enchiladas",
@@ -1204,7 +1266,9 @@
       ],
       "itinerary_day": "Day 3/5 - Glenwood Springs",
       "itinerary_location": "Glenwood Springs",
-      "yelp_url": "https://www.yelp.com/biz/tequilas-family-mexican-restaurant-glenwood-springs"
+      "yelp_url": "https://www.yelp.com/biz/tequilas-family-mexican-restaurant-glenwood-springs",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 38,
@@ -1221,9 +1285,9 @@
       "cuisine": [
         "Himalayan/Nepalese"
       ],
-      "price_range": "",
+      "price_range": "$$",
       "yelp_review_count": 26,
-      "yelp_rating": null,
+      "yelp_rating": 4.3,
       "google_rating": 4.6,
       "google_review_count": 485,
       "popular_dishes": [
@@ -1234,7 +1298,8 @@
       "itinerary_day": "Day 3/5 - Glenwood Springs",
       "itinerary_location": "Glenwood Springs",
       "yelp_url": "https://www.yelp.com/biz/himalayan-cuisine-no-title",
-      "notes": "Nepalese and Indian dining. Unlike their Frisco branch, their noted popular dishes here are entirely meat-centric (Tandoori/Chicken Momo/Biryani)."
+      "notes": "Nepalese and Indian dining. Unlike their Frisco branch, their noted popular dishes here are entirely meat-centric (Tandoori/Chicken Momo/Biryani).",
+      "phone": ""
     },
     {
       "id": 39,
@@ -1252,11 +1317,11 @@
         "Indian",
         "Himalayan/Nepalese"
       ],
-      "price_range": "",
+      "price_range": "$$",
       "yelp_review_count": 59,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 4.1,
+      "google_rating": 4.3,
+      "google_review_count": 428,
       "popular_dishes": [
         "Saag Paneer",
         "Chicken Vindaloo",
@@ -1266,7 +1331,9 @@
       ],
       "itinerary_day": "Day 3/5 - Glenwood Springs",
       "itinerary_location": "Glenwood Springs",
-      "yelp_url": "https://www.yelp.com/biz/everest-nepal-restaurant-glenwood-springs"
+      "yelp_url": "https://www.yelp.com/biz/everest-nepal-restaurant-glenwood-springs",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 40,
@@ -1286,9 +1353,9 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 258,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 4.5,
+      "google_rating": 4.5,
+      "google_review_count": 885,
       "popular_dishes": [
         "Samosa",
         "Chicken Tikka Masala",
@@ -1298,7 +1365,9 @@
       ],
       "itinerary_day": "Day 3 - Glenwood Springs (Dinner)",
       "itinerary_location": "Glenwood Springs",
-      "yelp_url": "https://www.yelp.com/biz/nepal-restaurant-glenwood-springs"
+      "yelp_url": "https://www.yelp.com/biz/nepal-restaurant-glenwood-springs",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 41,
@@ -1319,9 +1388,9 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 286,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 4.5,
+      "google_rating": 4.3,
+      "google_review_count": 1365,
       "popular_dishes": [
         "Chicken Tikka Masala",
         "Lamb Curry",
@@ -1330,7 +1399,9 @@
       ],
       "itinerary_day": "Day 3/5 - Glenwood Springs",
       "itinerary_location": "Glenwood Springs",
-      "yelp_url": "https://www.yelp.com/biz/masala-and-curry-glenwood-springs-2"
+      "yelp_url": "https://www.yelp.com/biz/masala-and-curry-glenwood-springs-2",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 42,
@@ -1351,9 +1422,9 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 523,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 4.4,
+      "google_rating": 4.7,
+      "google_review_count": 2494,
       "popular_dishes": [
         "Spicy Mac",
         "Taco Salad",
@@ -1363,7 +1434,9 @@
       ],
       "itinerary_day": "Day 2 - Colorado Springs",
       "itinerary_location": "Colorado Springs",
-      "yelp_url": "https://www.yelp.com/biz/the-burrowing-owl-colorado-springs"
+      "yelp_url": "https://www.yelp.com/biz/the-burrowing-owl-colorado-springs",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 43,
@@ -1382,9 +1455,9 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 653,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 3.4,
+      "google_rating": 4.2,
+      "google_review_count": 4306,
       "popular_dishes": [
         "Street Tacos",
         "Fish Tacos",
@@ -1394,7 +1467,9 @@
       ],
       "itinerary_day": "Day 2 - Colorado Springs",
       "itinerary_location": "Colorado Springs",
-      "yelp_url": "https://www.yelp.com/biz/hacienda-colorado-colorado-springs"
+      "yelp_url": "https://www.yelp.com/biz/hacienda-colorado-colorado-springs",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 44,
@@ -1414,7 +1489,7 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 863,
-      "yelp_rating": null,
+      "yelp_rating": 4.1,
       "google_rating": 4.6,
       "google_review_count": 930,
       "popular_dishes": [
@@ -1427,7 +1502,8 @@
       "itinerary_day": "Day 2 - Colorado Springs",
       "itinerary_location": "Colorado Springs",
       "yelp_url": "https://www.yelp.com/biz/piglatin-cocina-colorado-springs-2",
-      "notes": "Latin American/Caribbean fusion. Features pork plates and kimchi quesadillas; less aligned than standard Mexican options."
+      "notes": "Latin American/Caribbean fusion. Features pork plates and kimchi quesadillas; less aligned than standard Mexican options.",
+      "phone": ""
     },
     {
       "id": 45,
@@ -1446,9 +1522,9 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 741,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 4.0,
+      "google_rating": 4.4,
+      "google_review_count": 2305,
       "popular_dishes": [
         "Queso",
         "Avocado Pork",
@@ -1457,7 +1533,9 @@
       ],
       "itinerary_day": "Day 2 - Colorado Springs / Manitou Springs",
       "itinerary_location": "Manitou Springs (near Garden of Gods)",
-      "yelp_url": "https://www.yelp.com/biz/crystal-park-cantina-manitou-springs"
+      "yelp_url": "https://www.yelp.com/biz/crystal-park-cantina-manitou-springs",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 46,
@@ -1477,9 +1555,9 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 476,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 3.9,
+      "google_rating": 4.3,
+      "google_review_count": 1647,
       "popular_dishes": [
         "Chicken Tikka Masala",
         "Saag Paneer",
@@ -1489,7 +1567,9 @@
       ],
       "itinerary_day": "Day 2 - Colorado Springs",
       "itinerary_location": "Colorado Springs",
-      "yelp_url": "https://www.yelp.com/biz/little-nepal-indian-restaurant-and-bar-colorado-springs-9"
+      "yelp_url": "https://www.yelp.com/biz/little-nepal-indian-restaurant-and-bar-colorado-springs-9",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 47,
@@ -1508,9 +1588,9 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 474,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 4.2,
+      "google_rating": 4.5,
+      "google_review_count": 2643,
       "popular_dishes": [
         "Butter Chicken",
         "Chicken Tikka Masala",
@@ -1520,7 +1600,9 @@
       ],
       "itinerary_day": "Day 2 - Colorado Springs",
       "itinerary_location": "Colorado Springs",
-      "yelp_url": "https://www.yelp.com/biz/urban-tandoor-colorado-springs"
+      "yelp_url": "https://www.yelp.com/biz/urban-tandoor-colorado-springs",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 48,
@@ -1539,9 +1621,9 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 297,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
+      "yelp_rating": 4.4,
+      "google_rating": 4.5,
+      "google_review_count": 1431,
       "popular_dishes": [
         "Chicken Tikka Masala",
         "Veggie Samosa",
@@ -1551,7 +1633,9 @@
       ],
       "itinerary_day": "Day 2 - Colorado Springs",
       "itinerary_location": "Colorado Springs",
-      "yelp_url": "https://www.yelp.com/biz/zaika-indian-cuisine-colorado-springs-3"
+      "yelp_url": "https://www.yelp.com/biz/zaika-indian-cuisine-colorado-springs-3",
+      "phone": "",
+      "notes": ""
     },
     {
       "id": 49,
@@ -1584,7 +1668,8 @@
       "itinerary_day": "Day 3 - Colorado Springs to Glenwood Springs (Lunch Stop)",
       "itinerary_location": "Buena Vista",
       "yelp_url": "https://www.yelp.com/biz/wesley-and-rose-lobby-bar-buena-vista",
-      "notes": "Located inside Surf Hotel. Upscale riverside dining and craft cocktails with vegetarian-friendly small plates. Upscale cocktail lounge menu inside the Surf Hotel. Focused on charcuterie and small plates rather than main courses in the requested cuisines."
+      "notes": "Located inside Surf Hotel. Upscale riverside dining and craft cocktails with vegetarian-friendly small plates. Upscale cocktail lounge menu inside the Surf Hotel. Focused on charcuterie and small plates rather than main courses in the requested cuisines.",
+      "phone": ""
     },
     {
       "id": 50,
@@ -1605,8 +1690,8 @@
       "price_range": "$$",
       "yelp_review_count": 586,
       "yelp_rating": 3.5,
-      "google_rating": null,
-      "google_review_count": null,
+      "google_rating": 4.3,
+      "google_review_count": 969,
       "popular_dishes": [
         "Veggie Burger",
         "Wood-Fired Pizza",
@@ -1617,7 +1702,8 @@
       "itinerary_day": "Day 3 - Colorado Springs to Glenwood Springs (Lunch Stop)",
       "itinerary_location": "Buena Vista",
       "yelp_url": "https://www.yelp.com/biz/eddyline-restaurant-at-south-main-buena-vista",
-      "notes": "Popular South Main neighborhood brewpub. Good vegetarian burgers, salads, pizzas and outdoor seating."
+      "notes": "Popular South Main neighborhood brewpub. Good vegetarian burgers, salads, pizzas and outdoor seating.",
+      "phone": ""
     },
     {
       "id": 51,
@@ -1638,8 +1724,8 @@
       "price_range": "$$",
       "yelp_review_count": 648,
       "yelp_rating": 4.5,
-      "google_rating": null,
-      "google_review_count": null,
+      "google_rating": 4.7,
+      "google_review_count": 2031,
       "popular_dishes": [
         "Veggie Panini",
         "Tomato Basil Soup",
@@ -1650,7 +1736,8 @@
       "itinerary_day": "Day 3 - Colorado Springs to Glenwood Springs (Breakfast or Lunch Stop)",
       "itinerary_location": "Buena Vista",
       "yelp_url": "https://www.yelp.com/biz/simple-eatery-buena-vista-2",
-      "notes": "Excellent vegetarian-friendly café with sandwiches, soups, baked goods, coffee, and breakfast options."
+      "notes": "Excellent vegetarian-friendly café with sandwiches, soups, baked goods, coffee, and breakfast options.",
+      "phone": ""
     },
     {
       "id": 52,
@@ -1668,10 +1755,10 @@
         "New American"
       ],
       "price_range": "$$",
-      "yelp_review_count": null,
-      "yelp_rating": null,
+      "yelp_review_count": 454,
+      "yelp_rating": 4.2,
       "google_rating": 4.2,
-      "google_review_count": null,
+      "google_review_count": 987,
       "popular_dishes": [
         "Seasonal Vegetable Dishes",
         "Scratch-Made Pasta",
@@ -1702,9 +1789,9 @@
       ],
       "price_range": "$",
       "yelp_review_count": 516,
-      "yelp_rating": null,
+      "yelp_rating": 4.3,
       "google_rating": 4.3,
-      "google_review_count": null,
+      "google_review_count": 1534,
       "popular_dishes": [
         "Vegetarian Breakfast Plates",
         "Fresh-Baked Bread",
@@ -1736,9 +1823,9 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 898,
-      "yelp_rating": null,
+      "yelp_rating": 3.9,
       "google_rating": 3.9,
-      "google_review_count": null,
+      "google_review_count": 3607,
       "popular_dishes": [
         "Veggie Burgers",
         "Pretzels",
@@ -1769,9 +1856,9 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 251,
-      "yelp_rating": null,
+      "yelp_rating": 4.1,
       "google_rating": 4.1,
-      "google_review_count": null,
+      "google_review_count": 763,
       "popular_dishes": [
         "Buddha Bowl",
         "Vegetarian Tacos",
@@ -1803,7 +1890,7 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 126,
-      "yelp_rating": null,
+      "yelp_rating": 3.3,
       "google_rating": 4.6,
       "google_review_count": 415,
       "popular_dishes": [
@@ -1836,9 +1923,9 @@
       ],
       "price_range": "$$$",
       "yelp_review_count": 207,
-      "yelp_rating": null,
+      "yelp_rating": 3.9,
       "google_rating": 3.9,
-      "google_review_count": null,
+      "google_review_count": 295,
       "popular_dishes": [
         "Vegetarian Pasta",
         "Margherita Pizza",
@@ -1849,7 +1936,8 @@
       "itinerary_day": "Day 4 - Aspen",
       "itinerary_location": "Aspen",
       "yelp_url": "https://www.yelp.com/biz/campo-de-fiori-aspen",
-      "notes": "One of Aspen's most popular Italian restaurants. Great vegetarian pasta options, consistently recommended by locals."
+      "notes": "One of Aspen's most popular Italian restaurants. Great vegetarian pasta options, consistently recommended by locals.",
+      "phone": ""
     },
     {
       "id": 58,
@@ -1868,9 +1956,9 @@
       ],
       "price_range": "$$",
       "yelp_review_count": 156,
-      "yelp_rating": null,
+      "yelp_rating": 4.4,
       "google_rating": 4.4,
-      "google_review_count": null,
+      "google_review_count": 547,
       "popular_dishes": [
         "Pad Thai",
         "Green Curry",
@@ -1900,10 +1988,10 @@
         "Thai"
       ],
       "price_range": "$$",
-      "yelp_review_count": null,
-      "yelp_rating": null,
+      "yelp_review_count": 102,
+      "yelp_rating": 4.2,
       "google_rating": 4.2,
-      "google_review_count": null,
+      "google_review_count": 680,
       "popular_dishes": [
         "Pad See Ew",
         "Panang Curry",
@@ -1916,39 +2004,6 @@
       "yelp_url": "https://www.yelp.com/biz/nom-nom-thai-colorado-springs-3",
       "phone": "(719) 573-7004",
       "notes": "Excellent local Thai reputation, repeatedly recommended by Colorado Springs locals."
-    },
-    {
-      "id": 60,
-      "name": "Fern's Diner & Drinkery",
-      "full_address": "4645 Fountain Ave, Cascade, CO 80809",
-      "street_address": "4645 Fountain Ave",
-      "city": "Cascade",
-      "state": "CO",
-      "zip_code": "80809",
-      "location": {
-        "latitude": 38.8723,
-        "longitude": -104.9601
-      },
-      "cuisine": [
-        "American",
-        "Vegetarian",
-        "Vegan"
-      ],
-      "price_range": "$$",
-      "yelp_review_count": null,
-      "yelp_rating": null,
-      "google_rating": null,
-      "google_review_count": null,
-      "popular_dishes": [
-        "Veggie Burgers",
-        "Vegan Bowls",
-        "Breakfast Plates",
-        "House Salads"
-      ],
-      "itinerary_day": "Day 2 - Colorado Springs / Manitou Springs",
-      "itinerary_location": "Manitou Springs (near Pikes Peak)",
-      "yelp_url": "https://www.yelp.com/biz/fern-s-diner-and-drinkery-cascade-chipita-park",
-      "notes": "⛔ PERMANENTLY CLOSED as of August 2024. Do NOT visit — remove from consideration."
     }
   ]
 }

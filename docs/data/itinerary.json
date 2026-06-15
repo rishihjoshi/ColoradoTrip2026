@@ -483,116 +483,139 @@
         }
       ]
     },
+   {
+  "day": 6,
+  "date": "2026-06-24",
+  "dayOfWeek": "Wednesday",
+  "title": "Glenwood Springs → Red Rocks → Fly Home",
+  "badge": "Return Day",
+  "badgeColor": "red-flag",
+  "weatherLocationKey": 6,
+  "driveFromPrevious": {
+    "duration": "~4 hrs total",
+    "distance": "~155 miles",
+    "via": "I-70 East → Morrison → C-470 → Peña Blvd → DEN"
+  },
+  "activities": [
     {
-      "day": 6,
-      "date": "2026-06-24",
-      "dayOfWeek": "Wednesday",
-      "title": "Glenwood Springs → Red Rocks → Fly Home",
-      "badge": "Return Day",
-      "badgeColor": "red-flag",
-      "weatherLocationKey": 6,
-      "driveFromPrevious": { "duration": "~4 hrs total with stops", "distance": "~155 miles", "via": "I-70 East → Morrison → I-225 → DEN" },
-      "activities": [
-        {
-          "id": "d6-a1",
-          "time": "11:00 AM",
-          "title": "Late Checkout — Depart Glenwood Springs",
-          "description": "Pack tonight (Day 5) — no early alarm today! Checkout by 11AM. Head east on I-70. The drive through Glenwood Canyon itself is spectacular — 12-mile slot canyon with the Colorado River. Then climb toward the Eisenhower Tunnel at 11,158 ft.",
-          "address": "Glenwood Springs, CO 81601",
-          "type": "drive",
-          "icon": "🚗",
-          "driveInfo": { "duration": "~1.5 hrs to Silverthorne", "via": "I-70 East through Glenwood Canyon → Vail → Eisenhower Tunnel" }
-        },
-        {
-          "id": "d6-a2",
-          "time": "12:30 PM",
-          "title": "Lunch on I-70 — Silverthorne / Frisco",
-          "description": "Exit 205 off I-70 — Silverthorne or Frisco. Best options: Pug Ryan's Steakhouse & Brewing (Dillon, casual pub, burgers, Colorado beer — family-friendly); Butterhorn Bakery & Café (Frisco, 10 min detour — famous sandwiches and baked goods); or Sunshine Café (Silverthorne diner, fast and filling). Silverthorne Premium Outlets are steps away at exit 205 — grab any last Colorado souvenirs.",
-          "address": "Silverthorne, CO 80498",
-          "type": "restaurant",
-          "icon": "🍽️",
-          "duration": "1 hr",
-          "tips": ["Pug Ryan's: 104 Village Pl, Dillon (off exit 205) — local favorite", "Silverthorne Outlets right at exit 205 — quick souvenir stop while you're there"]
-        },
-        {
-          "id": "d6-a2b",
-          "time": "1:30 PM",
-          "title": "★ Bonus: Idaho Springs Quick Stop (Optional)",
-          "description": "Exit 240 off I-70 — 15 min off the highway into a classic Colorado gold rush town. Charming Main Street with local shops and cafés. Famous Beau Jo's Pizza if you need an extra snack. Even a slow drive-through from the highway is scenic. Adds ~30 min to the drive but worth it as a final Colorado moment.",
-          "address": "Idaho Springs, CO 80452",
-          "type": "activity",
-          "bookingStatus": "free",
-          "icon": "⭐",
-          "duration": "15-20 min",
-          "cost": "Free"
-        },
-        {
-          "id": "d6-a3",
-          "time": "2:30 PM",
-          "title": "Red Rocks Park & Amphitheatre",
-          "description": "Free daytime entry. Trading Post Trail — 1.4 mi easy loop through red sandstone formations (your daughter's lightest hike of the whole trip). Walk the amphitheater stairs (192 steps — iconic photo). Colorado Music Hall of Fame visitor center open 7AM–7PM. Denver skyline visible on clear days. The perfect Colorado farewell.",
-          "address": "18300 W Alameda Pkwy, Morrison, CO 80465",
-          "website": "https://www.redrocksonline.com",
-          "type": "activity",
-          "bookingStatus": "free",
-          "icon": "🎸",
-          "duration": "2 hrs",
-          "cost": "Free daytime entry",
-          "tips": [
-            "No reservation needed for daytime entry",
-            "Trading Post Trail — 1.4 mi easy loop, all ages",
-            "Visitor center 7AM–7PM",
-            "Amphitheater stairs = 192 steps — great family photo op"
-          ],
-          "flag": { "type": "warning", "text": "Leave Red Rocks by 4:30PM. Return rental by 6PM. Inside DEN security by 6:30PM for 8:45PM flight." }
-        },
-        {
-          "id": "d6-drive1",
-          "type": "drive-connector",
-          "duration": "45 min",
-          "distance": "30 miles",
-          "via": "I-70 East → I-225 North → Airport Blvd"
-        },
-        {
-          "id": "d6-a4",
-          "time": "5:00 PM",
-          "title": "Farewell Dinner — Near DEN Airport",
-          "description": "Two options: (A) Before car return — Pappadeaux Seafood Kitchen (2400 S Havana St, Aurora; Cajun/seafood, large portions, vegetarian options, 20 min from DEN — relaxed sit-down, then hand over the car at 6PM); (B) After check-in inside DEN — Root Down DIA in Concourse C (local farm-to-table, great for vegetarians, excellent cocktails) or Denver Central Market food hall. Option B is zero traffic stress — dine inside security at a great airport restaurant.",
-          "address": "Aurora / Denver International Airport, CO",
-          "type": "restaurant",
-          "icon": "🍽️",
-          "duration": "1 hr"
-        },
-        {
-          "id": "d6-a5",
-          "time": "6:00 PM",
-          "title": "Return Rental Car at DEN",
-          "description": "Follow signs to DEN on-airport Rental Car Center off Peña Blvd. Staff takes keys curbside — very quick. Free shuttle buses depart every 5 min directly to all terminals. Allow 20-25 min from car drop to terminal entrance.",
-          "address": "DEN Rental Car Center, 8500 Peña Blvd, Denver, CO 80249",
-          "type": "transport",
-          "bookingStatus": "confirmed",
-          "icon": "🚗"
-        },
-        {
-          "id": "d6-a6",
-          "time": "6:30 PM",
-          "title": "Check In & Clear Security",
-          "description": "Southwest check-in kiosks or use app boarding passes. DEN security averages 15-25 min. Head to Concourse C (all Southwest gates). Plenty of time to grab dinner at Root Down or Denver Central Market food hall if you haven't eaten.",
-          "address": "Denver International Airport — Concourse C, Denver, CO 80249",
-          "type": "transport",
-          "icon": "🛂"
-        },
-        {
-          "id": "d6-a7",
-          "time": "8:45 PM",
-          "title": "WN #1324 Departs DEN → STL",
-          "description": "2h 10m flight. Arrive Lambert 11:55PM. End of an amazing Colorado trip — safe travels! 🏔",
-          "address": "Denver International Airport, Denver, CO 80249",
-          "type": "flight",
-          "bookingStatus": "confirmed",
-          "icon": "✈️"
-        }
+      "id": "d6-a1",
+      "time": "11:00 AM",
+      "title": "Check Out & Depart Glenwood Springs",
+      "description": "Pack the night before to ensure a smooth departure. Check out of Glenwood Hot Springs Resort by 11:00 AM and begin driving east immediately. Skip Silverthorne, Frisco, Idaho Springs, and all other intermediate stops to avoid Summit County congestion and minimize the risk of delays on I-70.",
+      "address": "415 E 6th St, Glenwood Springs, CO 81601",
+      "type": "drive",
+      "icon": "🚗",
+      "driveInfo": {
+        "duration": "~3 hrs 15 min",
+        "distance": "~145 miles",
+        "via": "I-70 East through Glenwood Canyon → Vail Pass → Eisenhower Tunnel → Morrison",
+        "note": "No sightseeing stops. This strategy provides additional buffer time for Denver traffic and airport procedures."
+      },
+      "flag": {
+        "type": "info",
+        "text": "Skipping Summit County stops reduces stress and significantly lowers the risk of missing your flight due to I-70 traffic."
+      }
+    },
+    {
+      "id": "d6-a2",
+      "time": "2:15 PM",
+      "title": "Lunch at Morrison Inn",
+      "description": "Classic Mexican restaurant located in the heart of Morrison. Family-friendly atmosphere with excellent vegetarian options including cheese enchiladas, veggie fajitas, chile rellenos, quesadillas, rice, and beans. A relaxing lunch after clearing the mountain corridor.",
+      "address": "301 Bear Creek Ave, Morrison, CO 80465",
+      "phone": "+13036972491",
+      "type": "restaurant",
+      "icon": "🍽️",
+      "duration": "45 min",
+      "tips": [
+        "Vegetarian-friendly menu with multiple meat-free options",
+        "Located only 5 minutes from Red Rocks",
+        "Street parking available nearby",
+        "Arriving after the mountain drive helps avoid rushing through lunch"
       ]
+    },
+    {
+      "id": "d6-drive1",
+      "type": "drive-connector",
+      "duration": "5 min",
+      "distance": "2 miles",
+      "via": "Morrison Rd → Red Rocks Park Rd"
+    },
+    {
+      "id": "d6-a3",
+      "time": "3:15 PM",
+      "title": "Red Rocks Park & Amphitheatre",
+      "description": "Free daytime entry. Explore the iconic amphitheater, visit the Colorado Music Hall of Fame, climb the famous 192 amphitheater steps, and enjoy panoramic views toward Denver. If energy allows, walk part of the Trading Post Trail through the dramatic red sandstone formations.",
+      "address": "18300 W Alameda Pkwy, Morrison, CO 80465",
+      "website": "https://www.redrocksonline.com",
+      "type": "activity",
+      "bookingStatus": "free",
+      "icon": "🎸",
+      "duration": "1 hr 45 min",
+      "cost": "Free daytime entry",
+      "tips": [
+        "No reservation required during daytime hours",
+        "Visitor Center and Colorado Music Hall of Fame open 7 AM–7 PM",
+        "Trading Post Trail is an easy 1.4-mile loop",
+        "The amphitheater stairs make for a memorable family photo",
+        "Denver skyline views are spectacular on clear afternoons"
+      ],
+      "flag": {
+        "type": "warning",
+        "text": "Depart Red Rocks by 5:00 PM to maintain a comfortable airport buffer."
+      }
+    },
+    {
+      "id": "d6-drive2",
+      "type": "drive-connector",
+      "duration": "40 min",
+      "distance": "37 miles",
+      "via": "C-470 North → Peña Blvd → DEN"
+    },
+    {
+      "id": "d6-a4",
+      "time": "5:40 PM",
+      "title": "Return Rental Car at DEN",
+      "description": "Follow signs to the DEN Rental Car Center off Peña Boulevard. Staff typically accepts keys curbside, making the process quick and efficient. Complimentary shuttle buses run every few minutes to the terminal.",
+      "address": "DEN Rental Car Center, 8500 Peña Blvd, Denver, CO 80249",
+      "type": "transport",
+      "bookingStatus": "confirmed",
+      "icon": "🚗"
+    },
+    {
+      "id": "d6-a5",
+      "time": "6:00 PM",
+      "title": "Check In & Clear Security",
+      "description": "Use Southwest mobile boarding passes or self-service kiosks. Proceed through security and head to Concourse C. You'll have ample time before boarding to relax and enjoy dinner inside the airport.",
+      "address": "Denver International Airport — Concourse C, Denver, CO 80249",
+      "type": "transport",
+      "icon": "🛂"
+    },
+    {
+      "id": "d6-a6",
+      "time": "6:30 PM",
+      "title": "Farewell Dinner Inside DEN",
+      "description": "Enjoy a relaxed final meal after clearing security. Root Down is a local favorite with excellent vegetarian choices, while other Concourse C dining options offer quick and convenient alternatives.",
+      "address": "Denver International Airport — Concourse C, Denver, CO 80249",
+      "type": "restaurant",
+      "icon": "🍽️",
+      "duration": "1 hr 30 min",
+      "tips": [
+        "Root Down offers several vegetarian dishes",
+        "Dining after security eliminates traffic-related stress",
+        "Charge devices and refill water bottles before boarding"
+      ]
+    },
+    {
+      "id": "d6-a7",
+      "time": "8:45 PM",
+      "title": "WN #1324 Departs DEN → STL",
+      "description": "Board Southwest Flight 1324 for the journey home. Reflect on an unforgettable Colorado adventure filled with mountains, hot springs, rafting, Aspen, and Red Rocks.",
+      "address": "Denver International Airport, Denver, CO 80249",
+      "type": "flight",
+      "bookingStatus": "confirmed",
+      "icon": "✈️"
     }
+  ]
+}
   ]
 }
