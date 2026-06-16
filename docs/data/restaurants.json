@@ -1,7 +1,7 @@
 {
   "collection_name": "Colorado Trip",
   "trip_dates": "June 19-24, 2026",
-  "total_restaurants": 59,
+  "total_restaurants": 69,
   "dietary_preferences": {
     "type": "Vegetarian (Lacto)",
     "notes": "Milk and cheese OK. No eggs, fish, meat, or seafood.",
@@ -32,7 +32,7 @@
       ],
       "price_range": "$$",
       "google_rating": 4.3,
-      "google_review_count": null,
+      "google_review_count": 1369,
       "yelp_rating": 4.2,
       "yelp_review_count": 147,
       "trip_score": 4.3,
@@ -603,7 +603,7 @@
       "price_range": "$$",
       "google_rating": 4.5,
       "google_review_count": 1350,
-      "yelp_rating": null,
+      "yelp_rating": 4.5,
       "yelp_review_count": 835,
       "trip_score": 4.5,
       "popular_dishes": [
@@ -881,7 +881,7 @@
       "price_range": "$$",
       "google_rating": 4.7,
       "google_review_count": 107,
-      "yelp_rating": null,
+      "yelp_rating": 4.7,
       "yelp_review_count": 107,
       "trip_score": 4.7,
       "popular_dishes": [
@@ -1126,7 +1126,7 @@
       "price_range": "$$",
       "google_rating": 4.7,
       "google_review_count": 822,
-      "yelp_rating": null,
+      "yelp_rating": 4.5,
       "yelp_review_count": 1062,
       "trip_score": 4.7,
       "popular_dishes": [
@@ -1321,7 +1321,7 @@
       "price_range": "$$",
       "google_rating": 4.3,
       "google_review_count": 215,
-      "yelp_rating": null,
+      "yelp_rating": 3.8,
       "yelp_review_count": 183,
       "trip_score": 4.3,
       "popular_dishes": [
@@ -1370,7 +1370,7 @@
       "price_range": "$$",
       "google_rating": 4.5,
       "google_review_count": 870,
-      "yelp_rating": null,
+      "yelp_rating": 4.1,
       "yelp_review_count": 256,
       "trip_score": 4.5,
       "popular_dishes": [
@@ -1467,7 +1467,7 @@
       "price_range": "$$",
       "google_rating": 4.4,
       "google_review_count": 490,
-      "yelp_rating": null,
+      "yelp_rating": 4.0,
       "yelp_review_count": 140,
       "trip_score": 4.4,
       "popular_dishes": [
@@ -1516,7 +1516,7 @@
       "price_range": "$$",
       "google_rating": 4.5,
       "google_review_count": 310,
-      "yelp_rating": null,
+      "yelp_rating": 4.3,
       "yelp_review_count": 194,
       "trip_score": 4.5,
       "popular_dishes": [
@@ -1610,7 +1610,7 @@
       "price_range": "$",
       "google_rating": 4.6,
       "google_review_count": 340,
-      "yelp_rating": null,
+      "yelp_rating": 4.3,
       "yelp_review_count": 262,
       "trip_score": 4.6,
       "popular_dishes": [
@@ -1660,7 +1660,7 @@
       "price_range": "$$",
       "google_rating": 4.6,
       "google_review_count": 1649,
-      "yelp_rating": null,
+      "yelp_rating": 4.4,
       "yelp_review_count": 1208,
       "trip_score": 4.6,
       "popular_dishes": [
@@ -1709,7 +1709,7 @@
       "price_range": "$$",
       "google_rating": 4.5,
       "google_review_count": 1120,
-      "yelp_rating": null,
+      "yelp_rating": 4.4,
       "yelp_review_count": 1587,
       "trip_score": 4.5,
       "popular_dishes": [
@@ -1806,7 +1806,7 @@
       "price_range": "$$",
       "google_rating": 4.6,
       "google_review_count": 485,
-      "yelp_rating": null,
+      "yelp_rating": 4.3,
       "yelp_review_count": 26,
       "trip_score": 4.6,
       "popular_dishes": [
@@ -2089,7 +2089,7 @@
       "price_range": "$$",
       "google_rating": 4.6,
       "google_review_count": 930,
-      "yelp_rating": null,
+      "yelp_rating": 4.1,
       "yelp_review_count": 863,
       "trip_score": 4.6,
       "popular_dishes": [
@@ -2374,8 +2374,8 @@
         "American"
       ],
       "price_range": "$$",
-      "google_rating": null,
-      "google_review_count": null,
+      "google_rating": 4.3,
+      "google_review_count": 969,
       "yelp_rating": 3.5,
       "yelp_review_count": 586,
       "trip_score": 3.5,
@@ -2423,8 +2423,8 @@
         "American"
       ],
       "price_range": "$$",
-      "google_rating": null,
-      "google_review_count": null,
+      "google_rating": 4.7,
+      "google_review_count": 2031,
       "yelp_rating": 4.5,
       "yelp_review_count": 648,
       "trip_score": 4.5,
@@ -2472,9 +2472,9 @@
       ],
       "price_range": "$$",
       "google_rating": 4.2,
-      "google_review_count": null,
-      "yelp_rating": null,
-      "yelp_review_count": null,
+      "google_review_count": 987,
+      "yelp_rating": 4.2,
+      "yelp_review_count": 454,
       "trip_score": 4.2,
       "popular_dishes": [
         {
@@ -2517,8 +2517,8 @@
       ],
       "price_range": "$",
       "google_rating": 4.3,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_review_count": 1534,
+      "yelp_rating": 4.3,
       "yelp_review_count": 516,
       "trip_score": 4.3,
       "popular_dishes": [
@@ -2563,8 +2563,8 @@
       ],
       "price_range": "$$",
       "google_rating": 3.9,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_review_count": 3607,
+      "yelp_rating": 3.9,
       "yelp_review_count": 898,
       "trip_score": 3.9,
       "popular_dishes": [
@@ -2608,8 +2608,8 @@
       ],
       "price_range": "$$",
       "google_rating": 4.1,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_review_count": 763,
+      "yelp_rating": 4.1,
       "yelp_review_count": 251,
       "trip_score": 4.1,
       "popular_dishes": [
@@ -2703,8 +2703,8 @@
       ],
       "price_range": "$$$",
       "google_rating": 3.9,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_review_count": 295,
+      "yelp_rating": 3.9,
       "yelp_review_count": 207,
       "trip_score": 3.9,
       "popular_dishes": [
@@ -2751,8 +2751,8 @@
       ],
       "price_range": "$$",
       "google_rating": 4.4,
-      "google_review_count": null,
-      "yelp_rating": null,
+      "google_review_count": 547,
+      "yelp_rating": 4.4,
       "yelp_review_count": 156,
       "trip_score": 4.4,
       "popular_dishes": [
@@ -2799,9 +2799,9 @@
       ],
       "price_range": "$$",
       "google_rating": 4.2,
-      "google_review_count": null,
-      "yelp_rating": null,
-      "yelp_review_count": null,
+      "google_review_count": 680,
+      "yelp_rating": 4.2,
+      "yelp_review_count": 102,
       "trip_score": 4.2,
       "popular_dishes": [
         {
@@ -2829,6 +2829,324 @@
       "phone": "(719) 573-7004",
       "notes": "Excellent local Thai reputation, repeatedly recommended by Colorado Springs locals.",
       "seasonal_warning": false
+    },
+    {
+      "id": 60,
+      "name": "Paravicini's Italian Bistro",
+      "full_address": "2802 W Colorado Ave, Colorado Springs, CO 80904",
+      "street_address": "2802 W Colorado Ave",
+      "city": "Colorado Springs",
+      "state": "CO",
+      "zip_code": "80904",
+      "location": {
+        "latitude": 38.8363,
+        "longitude": -104.8517
+      },
+      "cuisine": [
+        "Italian",
+        "Pasta"
+      ],
+      "price_range": "$$",
+      "yelp_review_count": 1252,
+      "yelp_rating": 4.1,
+      "google_rating": 4.5,
+      "google_review_count": 5118,
+      "popular_dishes": [
+        "Rigatoni Carmella",
+        "Risotto",
+        "Pasta Primavera"
+      ],
+      "itinerary_day": null,
+      "itinerary_location": "Colorado Springs",
+      "yelp_url": "https://www.yelp.com/biz/paravicinis-italian-bistro-colorado-springs-4",
+      "phone": null,
+      "notes": "Local Italian institution since 2003. Excellent vegetarian pastas and risotto. 4.5★ Google with 5000+ reviews."
+    },
+    {
+      "id": 61,
+      "name": "EIM Thai",
+      "full_address": "1466 Garden of the Gods Rd #148, Colorado Springs, CO 80907",
+      "street_address": "1466 Garden of the Gods Rd #148",
+      "city": "Colorado Springs",
+      "state": "CO",
+      "zip_code": "80907",
+      "location": {
+        "latitude": 38.9027,
+        "longitude": -104.8505
+      },
+      "cuisine": [
+        "Thai"
+      ],
+      "price_range": "$",
+      "yelp_review_count": 317,
+      "yelp_rating": 4.4,
+      "google_rating": 4.6,
+      "google_review_count": 848,
+      "popular_dishes": [
+        "Pad Thai",
+        "Green Curry",
+        "Tofu Stir Fry"
+      ],
+      "itinerary_day": null,
+      "itinerary_location": "Colorado Springs",
+      "yelp_url": "https://www.yelp.com/biz/eim-thai-colorado-springs",
+      "phone": "(719) 598-0980",
+      "notes": "Near Garden of the Gods. Family-operated. Dedicated vegetarian/vegan menu. 4.6★ Google."
+    },
+    {
+      "id": 62,
+      "name": "Il Vicino Wood Oven Pizza",
+      "full_address": "5214 N Nevada Ave, Colorado Springs, CO 80918",
+      "street_address": "5214 N Nevada Ave",
+      "city": "Colorado Springs",
+      "state": "CO",
+      "zip_code": "80918",
+      "location": {
+        "latitude": 38.9392,
+        "longitude": -104.8211
+      },
+      "cuisine": [
+        "Pizza",
+        "Italian"
+      ],
+      "price_range": "$",
+      "yelp_review_count": 243,
+      "yelp_rating": 4.0,
+      "google_rating": 4.5,
+      "google_review_count": 1570,
+      "popular_dishes": [
+        "Margherita Pizza",
+        "Pesto Pizza",
+        "Calzone"
+      ],
+      "itinerary_day": null,
+      "itinerary_location": "Colorado Springs",
+      "yelp_url": "https://www.yelp.com/biz/il-vicino-wood-oven-pizza-university-village-colorado-springs",
+      "phone": null,
+      "notes": "Wood-fired Neapolitan-style pizza. Vegetarian-friendly toppings, vegan cheese available."
+    },
+    {
+      "id": 63,
+      "name": "Frida's Authentic Mexican Food",
+      "full_address": "1814 Grand Ave, Glenwood Springs, CO 81601",
+      "street_address": "1814 Grand Ave",
+      "city": "Glenwood Springs",
+      "state": "CO",
+      "zip_code": "81601",
+      "location": {
+        "latitude": 39.5491,
+        "longitude": -107.3248
+      },
+      "cuisine": [
+        "Mexican"
+      ],
+      "price_range": "$",
+      "yelp_review_count": 104,
+      "yelp_rating": 3.8,
+      "google_rating": 4.4,
+      "google_review_count": 960,
+      "popular_dishes": [
+        "Vegan Fajitas",
+        "Bean Burrito",
+        "Veggie Enchiladas"
+      ],
+      "itinerary_day": null,
+      "itinerary_location": "Glenwood Springs",
+      "yelp_url": "https://www.yelp.com/biz/fridas-glenwood-springs",
+      "phone": "(970) 230-9492",
+      "notes": "Authentic Mexican with homemade salsas and fresh ingredients. Excellent vegan fajitas. Strong vegetarian options."
+    },
+    {
+      "id": 64,
+      "name": "Euro Italian Underground Restaurant",
+      "full_address": "715 Grand Ave, Glenwood Springs, CO 81601",
+      "street_address": "715 Grand Ave",
+      "city": "Glenwood Springs",
+      "state": "CO",
+      "zip_code": "81601",
+      "location": {
+        "latitude": 39.5501,
+        "longitude": -107.3246
+      },
+      "cuisine": [
+        "Italian"
+      ],
+      "price_range": "$$",
+      "yelp_review_count": 508,
+      "yelp_rating": 3.5,
+      "google_rating": 4.1,
+      "google_review_count": 2005,
+      "popular_dishes": [
+        "Pasta Primavera",
+        "Ravioli",
+        "Lasagna"
+      ],
+      "itinerary_day": null,
+      "itinerary_location": "Glenwood Springs",
+      "yelp_url": "https://www.yelp.com/biz/euro-italian-underground-restaurant-glenwood-springs",
+      "phone": null,
+      "notes": "30+ year Glenwood Springs landmark Italian restaurant. Dinner only. Salad included with entrees."
+    },
+    {
+      "id": 65,
+      "name": "Sherpa Cafe",
+      "full_address": "1110 E Rainbow Blvd, Salida, CO 81201",
+      "street_address": "1110 E Rainbow Blvd",
+      "city": "Salida",
+      "state": "CO",
+      "zip_code": "81201",
+      "location": {
+        "latitude": 38.5338,
+        "longitude": -105.9924
+      },
+      "cuisine": [
+        "Himalayan/Nepalese",
+        "Indian"
+      ],
+      "price_range": "$",
+      "yelp_review_count": 56,
+      "yelp_rating": 4.7,
+      "google_rating": 4.7,
+      "google_review_count": 330,
+      "popular_dishes": [
+        "Dal Bhat",
+        "Paneer Korma",
+        "Vegetable Curry",
+        "Garlic Naan"
+      ],
+      "itinerary_day": null,
+      "itinerary_location": "Salida",
+      "yelp_url": "https://www.yelp.com/biz/sherpa-cafe-salida",
+      "phone": null,
+      "notes": "Excellent Nepalese/Indian on the route between Colorado Springs and Glenwood Springs. Outstanding vegetarian options. 4.7★ on both Yelp and Google."
+    },
+    {
+      "id": 66,
+      "name": "Casa Calaca",
+      "full_address": "413 W Rainbow Blvd, Salida, CO 81201",
+      "street_address": "413 W Rainbow Blvd",
+      "city": "Salida",
+      "state": "CO",
+      "zip_code": "81201",
+      "location": {
+        "latitude": 38.5352,
+        "longitude": -106.0001
+      },
+      "cuisine": [
+        "Mexican"
+      ],
+      "price_range": "$",
+      "yelp_review_count": 122,
+      "yelp_rating": 4.5,
+      "google_rating": 4.6,
+      "google_review_count": 798,
+      "popular_dishes": [
+        "Bean Tacos",
+        "Veggie Burrito",
+        "Cheese Quesadilla",
+        "Fresh Salsa"
+      ],
+      "itinerary_day": null,
+      "itinerary_location": "Salida",
+      "yelp_url": "https://www.yelp.com/biz/casa-calaca-salida",
+      "phone": null,
+      "notes": "Downtown Salida Mexican restaurant. Highly rated with great vegetarian options. 4.5★ Yelp, 4.6★ Google."
+    },
+    {
+      "id": 67,
+      "name": "Phat Thai",
+      "full_address": "343 Main St, Carbondale, CO 81623",
+      "street_address": "343 Main St",
+      "city": "Carbondale",
+      "state": "CO",
+      "zip_code": "81623",
+      "location": {
+        "latitude": 39.4019,
+        "longitude": -107.2111
+      },
+      "cuisine": [
+        "Thai"
+      ],
+      "price_range": "$$",
+      "yelp_review_count": 134,
+      "yelp_rating": 4.1,
+      "google_rating": 4.4,
+      "google_review_count": 285,
+      "popular_dishes": [
+        "Pad Thai",
+        "Green Curry",
+        "Tom Kha Soup"
+      ],
+      "itinerary_day": null,
+      "itinerary_location": "Carbondale",
+      "yelp_url": "https://www.yelp.com/biz/phat-thai-carbondale",
+      "phone": "(970) 963-7001",
+      "notes": "Dinner-only Thai in Carbondale, between Glenwood Springs and Aspen. Good vegetarian menu. Open Mon-Sat 5-9pm."
+    },
+    {
+      "id": 68,
+      "name": "Village Smithy Restaurant",
+      "full_address": "26 S 3rd St, Carbondale, CO 81623",
+      "street_address": "26 S 3rd St",
+      "city": "Carbondale",
+      "state": "CO",
+      "zip_code": "81623",
+      "location": {
+        "latitude": 39.402,
+        "longitude": -107.2113
+      },
+      "cuisine": [
+        "Breakfast & Brunch",
+        "American",
+        "Vegetarian"
+      ],
+      "price_range": "$$",
+      "yelp_review_count": 425,
+      "yelp_rating": 4.6,
+      "google_rating": 4.7,
+      "google_review_count": 1276,
+      "popular_dishes": [
+        "Tofu Scramble",
+        "Veggie Green Chili",
+        "French Toast",
+        "Huevos Rancheros"
+      ],
+      "itinerary_day": null,
+      "itinerary_location": "Carbondale",
+      "yelp_url": "https://www.yelp.com/biz/village-smithy-restaurant-carbondale-2",
+      "phone": null,
+      "notes": "#1 restaurant in Carbondale. Breakfast/brunch icon since 1975. Vegetarian-forward menu. Open 7am-2pm daily."
+    },
+    {
+      "id": 69,
+      "name": "NaRai Siam Cuisine",
+      "full_address": "120 E Cheyenne Mountain Blvd, Colorado Springs, CO 80906",
+      "street_address": "120 E Cheyenne Mountain Blvd",
+      "city": "Colorado Springs",
+      "state": "CO",
+      "zip_code": "80906",
+      "location": {
+        "latitude": 38.7815,
+        "longitude": -104.8419
+      },
+      "cuisine": [
+        "Thai"
+      ],
+      "price_range": "$",
+      "yelp_review_count": 220,
+      "yelp_rating": 3.9,
+      "google_rating": 4.3,
+      "google_review_count": 526,
+      "popular_dishes": [
+        "Pad See Ew",
+        "Massaman Curry",
+        "Spring Rolls"
+      ],
+      "itinerary_day": null,
+      "itinerary_location": "Colorado Springs",
+      "yelp_url": "https://www.yelp.com/biz/narai-siam-cuisine-colorado-springs-2",
+      "phone": "(719) 434-1975",
+      "notes": "South Colorado Springs Thai near Broadmoor/Cheyenne Mountain area. Good vegetarian options."
     }
   ]
 }
