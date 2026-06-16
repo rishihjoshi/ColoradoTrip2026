@@ -164,6 +164,7 @@ function switchTab(tab) {
     p.classList.toggle('active', p.id === `tab-${tab}`)
   );
   document.getElementById('main-content').scrollTop = 0;
+  updateFABForTab(tab);
 
   if (tab === 'ask') {
     if (!askInitialized) {
@@ -192,6 +193,21 @@ function setupOfflineDetection() {
 
 // ── FAB ────────────────────────────────────────────────────────────────────
 
+function updateFABForTab(tab) {
+  const iconAdd     = document.getElementById('fab-icon-add');
+  const iconRefresh = document.getElementById('fab-icon-refresh');
+  const fab         = document.getElementById('fab-btn');
+  if (tab === 'ask') {
+    iconAdd.style.display     = 'none';
+    iconRefresh.style.display = '';
+    fab.setAttribute('aria-label', 'Refresh app');
+  } else {
+    iconAdd.style.display     = '';
+    iconRefresh.style.display = 'none';
+    fab.setAttribute('aria-label', 'Add item');
+  }
+}
+
 function setupFAB() {
   const fab = document.getElementById('fab-btn');
   fab.addEventListener('click', () => {
@@ -199,9 +215,7 @@ function setupFAB() {
     else if (state.currentTab === 'eats')  openModal('modal-add-eats');
     else if (state.currentTab === 'pack')  promptAddPackItem();
     else if (state.currentTab === 'ask') {
-      // Focus the ask input so the user can start typing immediately
-      const askInput = document.getElementById('ask-input');
-      if (askInput) { askInput.focus(); askInput.scrollIntoView({ behavior: 'smooth' }); }
+      window.location.reload();
     }
   });
 
@@ -697,6 +711,9 @@ async function initEatsTab() {
     document.getElementById('eats-grid').innerHTML = '<div class="eats-empty">Failed to load restaurant data.</div>';
     return;
   }
+
+  const subtitleEl = document.getElementById('eats-subtitle');
+  if (subtitleEl) subtitleEl.textContent = `VEGETARIAN · FAMILY OF 3 · ${eatsState.restaurants.length} PLACES`;
 
   buildCuisineChips();
   buildLocationTabs();
